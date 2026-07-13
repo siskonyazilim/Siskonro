@@ -1,0 +1,42 @@
+{
+  "name": "siskon-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "node .next/standalone/server.js",
+    "lint": "eslint",
+    "optimize-images": "node scripts/optimize-images.js",
+    "qa:en-routes": "node scripts/validate-en-routes.js"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.5.0",
+    "next": "^16.2.6",
+    "nodemailer": "^8.0.7",
+    "prop-types": "^15.8.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-google-recaptcha": "^3.1.0",
+    "sharp": "^0.34.5",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.4.0",
+    "eslint-config-next": "^16.2.6",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "postcss": "8.5.14"
+  },
+  "browserslist": [
+    "chrome >= 90",
+    "firefox >= 90",
+    "safari >= 14",
+    "edge >= 90"
+  ]
+}

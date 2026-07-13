@@ -1,0 +1,50 @@
+﻿SISKON SOFTWARE & AUTOMATION S.R.L.
+POLITICA DE COOKIE-URI
+1. SCOP ȘI SFERĂ
+Această Politică privind Cookie-urile ("Politica") descrie cookie-urile și tehnologiile similare de urmărire utilizate pe site-ul www.siskon.ro ("Site") operat de Siskon Software & Automation S.R.L. ("SiskonRO" sau "Compania"). A fost întocmit în conformitate cu Regulamentul General privind Protecția Datelor al UE (Regulamentul 2016/679, "GDPR"), Legea nr. 190/2018 privind măsurile de aplicare a GDPR și Legea nr. 506/2004 privind prelucrarea datelor personale și protecția vieții private în sectorul comunicațiilor electronice.
+Această Politică este o parte complementară a Politicii de confidențialitate a SiskonRO și trebuie citită împreună cu ea.
+2. CE ESTE UN COOKIE?
+Cookie-urile sunt fișiere text mici pe care un site web le plasează pe dispozitivul tău (calculator, tabletă, telefon mobil) prin browser atunci când vizitezi. Cookie-urile sunt folosite pentru a menține sesiunea dumneavoastră, pentru a vă aminti limba și preferințele de afișare, pentru a asigura securitatea și performanța site-ului și pentru a analiza utilizarea.
+După durată, cookie-urile sunt împărțite în două categorii:
+Cookie-uri de sesiune: stocate doar pe durata sesiunii de browser și șterse când browserul este închis.
+Cookie-uri persistente: stocate pe dispozitivul tău pentru o perioadă definită sau până la ștergerea manuală.
+După origine, cookie-urile sunt împărțite în două categorii:
+Cookie-uri first-party: setate direct de domeniul pe care îl vizitezi (siskon.ro).
+Cookie-uri terțe: setate de servicii terțe integrate pe site (de exemplu, Google Analytics, pluginuri pentru social media).
+3. CATEGORII DE COOKIE-URI
+În conformitate cu articolul 4(2) din Legea română nr. 506/2004, Ghidurile EDPB 03/2022 privind modelele de design înșelător și recomandările EDPB privind bannerele cu cookie-uri, site-ul nostru folosește patru categorii principale de cookie-uri:
+(a) Cookie-uri strict necesare. Cookie-uri strict necesare pentru funcționarea de bază a site-ului. Acestea sunt folosite pentru scopuri precum gestionarea sesiunii, securitatea (protecția CSRF), echilibrarea încărcării și stocarea preferințelor cookie-urilor. Aceste cookie-uri nu necesită consimțământul vizitatorului conform articolului 4(2) din Legea nr. 506/2004 și sunt plasate pe baza interesului legitim conform articolului 6(1)(f) GDPR. Dacă este dezactivat, funcțiile de bază ale site-ului nu vor funcționa.
+(b) Cookie-uri de performanță / analiză. Folosit pentru a înțelege modul în care este folosit site-ul, a măsura numărul de vizitatori, a identifica cele mai vizitate pagini și a îmbunătăți performanța. Acestea au scopuri de analiză statistică și, în general, colectează date anonimizate. Sub rezerva consimțământului dumneavoastră prealabil, explicit și informat conform articolului 4(1) din Legea nr. 506/2004 și a articolului 6(1)(a) GDPR.
+(c) Cookie-uri de funcționalitate. Folosit pentru a-și aminti preferințele utilizatorului, cum ar fi limba, setările de afișare și controalele pentru playerul video. Sub rezerva consimțământului tău explicit.
+(d) Cookie-uri de targetare / publicitate. Folosit pentru a livra conținut sau publicitate adaptat intereselor vizitatorilor, a integra rețelele sociale și a măsura campanii de marketing digital. Acestea pot fi setate de rețele de publicitate terțe (Google Ads, LinkedIn Insight, Meta Pixel etc.). Sub rezerva consimțământului tău explicit.
+4. COOKIE-URI FOLOSITE PE SITE
+Tabelul de mai jos listează cookie-urile folosite în prezent pe site-ul nostru. Lista se poate modifica pe măsură ce serviciile terțe sunt actualizate; Cea mai recentă versiune este întotdeauna disponibilă prin panoul nostru de gestionare a cookie-urilor.²
+² Tabelul de mai sus este ilustrativ. Lista completă și actuală a cookie-urilor folosite activ pe site este disponibilă prin panoul nostru de gestionare a cookie-urilor (bannerul de consimțământ pentru cookie-uri). Această politică este actualizată ori de câte ori panoul de cookie-uri este modificat.
+5. COOKIE-URI TERȚE ȘI TRANSFERURI INTERNAȚIONALE
+Datorită integrării serviciilor terțe pe site-ul nostru (Google Analytics, LinkedIn Insight, pluginuri de social media etc.), furnizorii relevanți pot plasa propriile cookie-uri pe dispozitivul dumneavoastră. Datele colectate prin aceste cookie-uri sunt procesate de infrastructura furnizorilor și sunt supuse politicilor lor de confidențialitate respective.
+O parte semnificativă a serviciilor terțe au servere situate în afara Spațiului Economic European. Astfel de transferuri se realizează prin baza garanțiilor adecvate prevăzute de articolele 44-46 din GDPR: (i) deciziile Comisiei Europene privind adecvarea acolo unde sunt disponibile, (ii) Clauzele contractuale standard (Decizia de Implementare a Comisiei (UE) 2021/914) sau (iii) Regulile Corporative Obligatorii. Atunci când astfel de măsuri de siguranță nu sunt în vigoare, consimțământul dumneavoastră explicit conform articolului 49(1)(a) GDPR este folosit pentru plasarea cookie-urilor.
+Notificare importantă de transparență — Locația găzduirii: La data intrării în vigoare a acestei politici, infrastructura tehnică a www.siskon.ro este găzduită în Turcia (Istanbul, de către Çizgi Telekomünikasyon A.Ș., AS34619). Aceasta înseamnă că datele despre cookie-uri, jurnalele de acces la server și formularele trimise pot fi stocate temporar pe infrastructură situată în afara Spațiului Economic European. Turcia nu este în prezent supusă unei decizii de adecvare a Comisiei Europene conform articolului 45 din GDPR. Compania a implementat garanții adecvate conform Articolului 46 GDPR (inclusiv Clauze Contractuale Standard cu furnizorul de gazdă și măsuri tehnice și organizaționale suplimentare). Compania este în proces de migrare www.siskon.ro către un furnizor de găzduire situat în cadrul Spațiului Economic European; Această notificare de transparență va fi actualizată la finalizarea migrării.
+6. GESTIONAREA PREFERINȚELOR TALE PRIVIND COOKIE-URILE
+Panoul de gestionare a cookie-urilor. Prin bannerul pentru cookie-uri afișat la prima ta vizită pe site-ul nostru, poți accepta, respinge sau modifica preferințele tale pentru cookie-uri în funcție de categorie. Consimțământul dumneavoastră este stocat în browserul dumneavoastră și poate fi modificat oricând; poți reaccesa panoul făcând clic pe linkul "Preferințe cookie-uri" din partea de jos a paginii.
+Setările browserului. De asemenea, poți gestiona preferințele tale privind cookie-urile prin setările browserului:
+Google Chrome: Setări > Confidențialitate și securitate > Cookie-uri și alte date ale site-ului
+Mozilla Firefox: Setări > Confidențialitate și Securitate > Cookie-uri și Date ale Site-ului
+Microsoft Edge: Setări > Cookie-uri și permisiuni ale site-ului
+Safari: Preferințe > Confidențialitate > Cookie-uri și date despre site-uri web
+Safari iOS: Setări > Safari > blochează toate cookie-urile
+Notă importantă. Dacă dezactivezi cookie-urile strict necesare, anumite funcții de bază ale site-ului (cum ar fi autentificarea sau trimiterea unui formular securizat) s-ar putea să nu funcționeze.
+7. BAZA LEGALĂ ȘI PĂSTRAREA
+Motivele legale pentru procesarea datelor personale prin cookie-uri variază în funcție de categorie:
+Cookie-uri strict necesare: GDPR articolul 6(1)(f) (interes legitim) și articolul 4(2) din Legea nr. 506/2004; nu este necesar consimțământul.
+Cookie-uri de performanță, funcționalitate și targetare: GDPR articolul 6(1)(a) și articolul 4(1) din Legea nr. 506/2004 — consimțământ explicit, prealabil și informat.
+Datele personale colectate prin cookie-uri sunt eliminate când expiră perioada de păstrare a cookie-ului sau când consimțământul este retras. Jurnalele de acces la server sunt păstrate în scopuri tehnice și de securitate pentru maximum 12 luni, cu excepția cazului în care legea sau procedurile legale impun o retenție mai lungă.
+8. DREPTURILE TALE ȘI CUM SĂ NE CONTACTEZI
+Aveți drepturile prevăzute în GDPR Articolele 15-22 (drept de acces, rectificare, ștergere, restricție, portabilitate a datelor, obiecție și drepturi legate de luarea deciziilor automate) în ceea ce privește datele personale prelucrate prin cookie-uri. Pentru a exercita aceste drepturi sau pentru informații suplimentare, vă rugăm să consultați Politica noastră de confidențialitate și să ne contactați:
+Operator de date: Siskon Software & Automation S.R.L.
+Registru comercial / TVA: J2024006055402 / RO49803550
+Sediu social: Str. Turnului Nr.5, Cladirea M.U.M., Scara 3, Etajul 2, Biroul 5, 500152 Brașov, Romania
+E-mail (chestiuni de confidențialitate): info@siskon.ro
+Dreptul de a depune o plângere: Fără a aduce atingere oricărei alte căi de atac administrative sau judiciare, aveți dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, 010336 București, www.dataprotection.ro, anspdcp@dataprotection.ro.
+9. ACTUALIZĂRI ALE ACESTEI POLITICI
+Putem actualiza această Politică privind Cookie-urile din când în când ca răspuns la modificări legislative, actualizări ale tehnologiilor utilizate pe site web sau modificări ale proceselor noastre de afaceri. Versiunea actuală este întotdeauna publicată pe site-ul web. Pentru modificări importante, vizitatorii vor fi notificați suplimentar prin bannerul cu cookie-uri sau printr-o notificare pe site.
+Data intrării în vigoare: .../.../......      Versiune: 2.0

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 61 61">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" x=".5" y=".5" width="60" height="60"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-2" x=".5" y=".5" width="60" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g class="cls-4">
+        <g>
+          <g class="cls-3">
+            <path class="cls-1" d="M35.02,4.25c-.64-.24-1.36,0-1.75.55l-19.99,28.7c-.32.46-.36,1.06-.1,1.55.26.5.77.81,1.33.81h12.34l-1.84,19.35c-.06.68.34,1.32.98,1.55.17.06.34.09.51.09.48,0,.95-.23,1.23-.65l19.99-28.98c.32-.46.35-1.06.09-1.55-.26-.49-.77-.8-1.33-.8h-12.34l1.84-19.06c.07-.68-.33-1.32-.97-1.55M43.63,27.87l-15.09,21.88,1.45-15.25c.04-.42-.1-.84-.38-1.15s-.69-.49-1.11-.49h-11.12l15.07-21.64-1.45,15c-.04.42.1.84.38,1.15s.69.49,1.11.49h11.14Z"/>
+          </g>
+          <rect class="cls-2" x=".5" y=".5" width="60" height="60"/>
+        </g>
+      </g>
+      <rect class="cls-2" x=".5" y=".5" width="60" height="60"/>
+    </g>
+  </g>
+</svg>

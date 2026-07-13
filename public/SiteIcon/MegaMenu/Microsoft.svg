@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64.43 65.83">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-2 {
+        stroke: #02529f;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-6 {
+        fill: #02529f;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" x="-100.41" y="-338.53" width="841.89" height="595.28"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="-100.41" y="-338.53" width="841.89" height="595.28"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-1" x="-100.41" y="-338.53" width="841.89" height="595.28"/>
+    </clipPath>
+  </defs>
+  <g class="cls-5">
+    <g class="cls-3">
+      <g class="cls-4">
+        <path class="cls-6" d="M32.53,4.57c3.86,0,9.47,10.98,9.47,28.18s-5.61,28.18-9.47,28.18-9.47-10.98-9.47-28.18,5.61-28.18,9.47-28.18M32.53,1.57c-6.89,0-12.47,13.96-12.47,31.18s5.58,31.18,12.47,31.18,12.47-13.96,12.47-31.18S39.42,1.57,32.53,1.57"/>
+        <line class="cls-2" x1="1.35" y1="32.76" x2="63.72" y2="32.76"/>
+        <path class="cls-6" d="M32.53,4.57c15.54,0,28.18,12.64,28.18,28.18s-12.64,28.18-28.18,28.18S4.35,48.29,4.35,32.76,17,4.57,32.53,4.57M32.53,1.57C15.31,1.57,1.35,15.53,1.35,32.76s13.96,31.18,31.18,31.18,31.18-13.96,31.18-31.18S49.76,1.57,32.53,1.57"/>
+      </g>
+    </g>
+  </g>
+</svg>
