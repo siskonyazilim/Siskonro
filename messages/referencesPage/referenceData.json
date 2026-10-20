@@ -1,0 +1,150 @@
+{
+  "tutun": [
+    {
+      "id": "jti",
+      "name": "JTI",
+      "logo": "JTI_Logo.svg",
+      "website": "https://www.jti.com",
+      "sections": [
+        {
+          "title": "Global",
+          "items": [
+            "Quality Information Management System (QIMS) GSC/R&D/LEAF/Border",
+            "Global Supply Chain Analytics (GSCA) Machinery/KPI (Machinery)",
+            "Machine Data Collection (Torbalı, Andorra, Jordan)",
+            "MIRA Global Functional Training (Global)",
+            "Feedback Management System"
+          ]
+        },
+        {
+          "title": "Local",
+          "items": [
+            "Rainbow Logistic Software",
+            "Energy Power Analyzer Data Collection",
+            "Data Transfer to WinCC from Factory Link",
+            "COS Tobacco Distribution Control",
+            "AGV SAP System Interface",
+            "Eva Bend Cooling Unit Automation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "philip-morris",
+      "name": "Philip Morris",
+      "logo": "philip_morris_sa.svg",
+      "blackLogo": "PhilipMorrisBlack.svg",
+      "website": "https://www.pmi.com",
+      "tableProjects": [
+        "Filter Distribution",
+        "TwinCAT Training",
+        "Barcode Alarm System",
+        "OPCServer",
+        "Triacetin Distribution & Tow Control System",
+        "Focke Case Packer Machine Upgrade",
+        "Domino Rejection System",
+        "Traicetin Distribution System",
+        "Filter Tracking",
+        "Door Automation",
+        "Packing Machine Revision"
+      ]
+    }
+  ],
+  "otomotiv": [
+    {
+      "id": "borgwarner",
+      "name": "BorgWarner",
+      "logo": "borgwarner-seeklogo.svg",
+      "website": "https://www.borgwarner.com/",
+      "projects": [
+        "Safety Light Curtains Project",
+        "Phosphate Machine Automation",
+        "BorgWarner Systems - Safety Light Curtains Project",
+        "BorgWarner - Zink Nickel Coating",
+        "BorgWarner - Warehouse Automation"
+      ]
+    },
+    {
+      "id": "phinia",
+      "name": "Phinia",
+      "logo": "phinia.svg",
+      "website": "https://www.phinia.com/"
+    },
+    {
+      "id": "nemak",
+      "name": "Nemak",
+      "logo": "nemak.svg",
+      "website": "https://www.nemak.com/"
+    },
+    {
+      "id": "tirsan-kardan",
+      "name": "Tirsan-Kardan",
+      "logo": "tirsan-seeklogo.webp",
+      "website": "https://www.tirsankardan.com/"
+    },
+    {
+      "id": "maxion-inci-celik",
+      "name": "Maxion İnci Çelik",
+      "logo": "maxion_inci.svg",
+      "website": "https://www.maxionwheelsturkey.com/"
+    }
+  ],
+  "beyaz-esya": [
+    {
+      "id": "vaillant",
+      "name": "Vaillant",
+      "logo": "Vaillant.svg",
+      "website": "https://www.vaillant.com.tr/"
+    },
+    {
+      "id": "group-atlantic",
+      "name": "Group Atlantic",
+      "logo": "groupe-atlantic-logo-vector.svg",
+      "website": "https://www.groupe-atlantic.fr/"
+    },
+    {
+      "id": "bsh",
+      "name": "BSH",
+      "logo": "BSH_Bosch_und_Siemens_Hausgerate_logo.svg",
+      "website": "https://www.bsh-group.com/tr/"
+    },
+    {
+      "id": "bosch-home",
+      "name": "Bosch",
+      "logo": "Bosch-logo.svg",
+      "website": "https://www.bosch-home.com.tr/"
+    },
+    {
+      "id": "candy-hoover-renta",
+      "name": "Candy Hoover - Renta",
+      "logo": "Hoover_Logo.svg",
+      "website": "https://www.hoover-home.com/"
+    }
+  ],
+  "gida-icecek": [
+    {
+      "id": "mey-diageo",
+      "name": "Mey Diageo",
+      "logo": "mey-diageo.svg",
+      "website": "https://www.meydiageo.com/"
+    },
+    {
+      "id": "nuhun-ankara",
+      "name": "Nuh'un Ankara",
+      "logo": "NuhunAnkaraLogo.webp",
+      "website": "https://www.nuh.com.tr"
+    },
+    {
+      "id": "duru-bulgur",
+      "name": "Duru Bulgur",
+      "logo": "durubulgur-min-removebg-preview.webp",
+      "website": "https://www.durubulgur.com/"
+    },
+    {
+      "id": "turk-tuborg",
+      "name": "Türk Tuborg",
+      "logo": "turk-tuborg_logo.svg",
+      "website": "https://www.turktuborg.com.tr"
+    }
+  ]
+}

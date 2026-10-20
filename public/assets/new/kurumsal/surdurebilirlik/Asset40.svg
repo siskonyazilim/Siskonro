@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 166.13 251.19">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 4.5px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #03499a;
+      }
+
+      .cls-2 {
+        stroke: #21409a;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: #05f2af;
+        stroke-linejoin: round;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2.25" y1="125.6" x2="163.88" y2="125.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05f2af"/>
+      <stop offset="1" stop-color="#05f2af" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="_1200x30_Layout" data-name="1200x30 Layout">
+    <g>
+      <polygon class="cls-4" points="105.98 15.48 83.07 2.25 83.07 28.71 105.98 15.48"/>
+      <path class="cls-3" d="M163.88,125.6c0,44.64-36.19,80.82-80.82,80.82S2.25,170.23,2.25,125.6,38.43,44.77,83.06,44.77s80.82,36.19,80.82,80.82Z"/>
+      <line class="cls-1" x1="2.24" y1="125.6" x2="163.88" y2="125.6"/>
+      <ellipse class="cls-2" cx="82.59" cy="125.59" rx="36.41" ry="80.82"/>
+      <path class="cls-2" d="M144.33,70.98c-16.56,8.1-38.14,13-61.75,13s-44.28-4.69-60.7-12.49"/>
+      <path class="cls-2" d="M21.89,180.21c16.56-8.1,38.14-13,61.75-13s44.28,4.69,60.7,12.49"/>
+      <path class="cls-2" d="M82.39,83.98c-43.1,0-78.03-15.33-78.03-34.25S39.29,15.48,82.39,15.48"/>
+      <polygon class="cls-4" points="59.87 235.71 82.79 248.94 82.79 222.48 59.87 235.71"/>
+      <path class="cls-2" d="M83.47,167.21c43.1,0,78.03,15.33,78.03,34.25s-34.94,34.25-78.03,34.25"/>
+    </g>
+  </g>
+</svg>

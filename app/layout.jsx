@@ -1,31 +1,39 @@
 import './globals.css';
 import { headers } from 'next/headers';
-import Script from 'next/script';
 import PropTypes from 'prop-types';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import HeaderServer from './components/HeaderServer';
+import FooterServer from './components/FooterServer';
 import Interactions from './components/Interactions';
 import SearchModal from './components/SearchModal';
 import ClientMetadataSync from './components/ClientMetadataSync';
-import CerezgoUnlock from './components/CerezgoUnlock';
 import { LanguageProvider } from './_context/LanguageContext';
-import { detectLocale } from './lib/i18n/routes';
+import JsonLd from './components/JsonLd';
+import { detectLocale, toInternalPath } from './lib/i18n/routes';
 import { buildLocalizedMetadata, getRequestPathFromHeaders, getSiteUrlFromHeaders } from './lib/seo/routeMetadata';
+import { buildSiteGraph } from './lib/seo/jsonld';
+
+// Dahili arama sonuç sayfası: değer katmayan, sorguya göre değişen içerik → indekslenmesin.
+// (robots.txt ile engellenmez: Google'ın noindex'i görebilmesi için taranabilir kalmalı.)
+function isNoIndexPath(pathname) {
+  const internal = toInternalPath(pathname, detectLocale(pathname));
+  return internal === '/search' || internal.startsWith('/search/');
+}
 
 export async function generateMetadata() {
   const requestHeaders = await headers();
   const requestPath = getRequestPathFromHeaders(requestHeaders);
   const siteUrl = getSiteUrlFromHeaders(requestHeaders);
   const localized = buildLocalizedMetadata({ pathname: requestPath, siteUrl });
+  const noIndex = isNoIndexPath(requestPath);
 
   return {
     ...localized,
     metadataBase: new URL(siteUrl),
     robots: {
-      index: true,
+      index: !noIndex,
       follow: true,
       googleBot: {
-        index: true,
+        index: !noIndex,
         follow: true,
       },
     },
@@ -40,35 +48,22 @@ export default async function RootLayout({ children }) {
   const requestHeaders = await headers();
   const requestPath = getRequestPathFromHeaders(requestHeaders);
   const siteUrl = getSiteUrlFromHeaders(requestHeaders);
+
+  // Not: Next.js rewrites /en → /?_locale=en yapıyor, path kayboluyor.
+  // LanguageContext client-side'da window.location.pathname'den doğru locale'i alıyor.
+  // HeaderServer tüm locale'leri paralel çekip client'a bırakıyor.
+  // Bu locale sadece <html lang=> ve LanguageProvider initialLocale için kullanılıyor.
   const locale = detectLocale(requestPath);
   const htmlLang = locale === 'en' ? 'en' : locale === 'ro' ? 'ro' : 'tr';
 
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Siskon',
-    url: siteUrl,
-    logo: `${siteUrl}/assets/new/common/siskon-logo.svg`,
-    email: 'info@siskon.com.tr',
-    telephone: '+90-232-245-00-76',
-    sameAs: [
-      'https://tr.linkedin.com/company/siskonyazilimveotomasyon',
-      'https://www.youtube.com/@SiskonYazilimveOtomasyon',
-      'https://www.instagram.com/siskonotomasyon/',
-    ],
-  };
-
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Siskon',
-    url: siteUrl,
-    inLanguage: ['ro-RO', 'tr-TR', 'en-US'],
-  };
+  // Tek @graph: Organization + WebSite + (varsa) sayfaya özel WebPage/Service/Breadcrumb düğümleri.
+  // Düğümler @id ile birbirine bağlanır (bkz. app/lib/seo/jsonld.js).
+  const structuredData = buildSiteGraph({ pathname: requestPath, siteUrl });
 
   return (
-    <html lang={htmlLang} data-scroll-behavior="smooth">
+    <html lang={htmlLang} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="antialiased min-h-screen flex flex-col">
+        {/* CerezGo geçici olarak devre dışı — mobil scroll testi için
         <Script
           id="cerezgo-sdk"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
@@ -76,20 +71,14 @@ export default async function RootLayout({ children }) {
           data-id="nt"
           strategy="afterInteractive"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
+        */}
+        <JsonLd data={structuredData} />
         <LanguageProvider initialLocale={locale}>
-          <CerezgoUnlock />
+          {/* <CerezgoUnlock /> — CerezGo devre dışı olduğu için gerek yok */}
           <ClientMetadataSync />
-          <Header />
+          <HeaderServer />
           <main className="w-full flex-1 flex flex-col">{children}</main>
-          <Footer />
+          <FooterServer />
           <Interactions />
           <SearchModal />
         </LanguageProvider>

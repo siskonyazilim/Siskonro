@@ -1,0 +1,323 @@
+{
+  "heroTitle": "OnSuite — Smart Manufacturing Platform",
+  "heroSubtitle": "Siskon's next-generation smart manufacturing platform",
+  "breadcrumbHome": "Home",
+  "breadcrumbProducts": "Products",
+  "breadcrumbOnSuite": "OnSuite",
+  "introEyebrow": "Product",
+  "introDesc": "OnSuite is an industrial software family consisting of 11 modules. Each module can be deployed independently or as an integrated suite, on-premise or in the cloud. It is designed with React + C# API + MS SQL architecture, stored procedure-focused approach and fully automated SQL testing with tSQLt. It offers open protocol support with OPC UA, PackML, ISA-88, MTConnect, REST and MQTT.",
+  "modulesEyebrow": "Modules",
+  "modulesTitle": "OnSuite Modules",
+  "modulesDesc": "Deploy OnSuite modules individually or configure them as a single connected ecosystem from production to management.",
+  "moduleOverview": "Module Overview",
+  "exploreSolution": "Explore Solution",
+  "architectureEyebrow": "Architecture & Technology",
+  "architectureTitle": "Integrated Architecture & Technological Capabilities",
+  "benefitsEyebrow": "Benefits",
+  "benefitsTitle": "What Does OnSuite Provide You?",
+  "technicalEyebrow": "Technical Capabilities",
+  "technicalTitle": "Technical Capabilities & Shopfloor Visibility",
+  "ctaTitle": "Let's Shape the Industrial Future Together",
+  "ctaDesc": "Contact us to make your factory smarter with OnSuite.",
+  "ctaButton": "Contact Us",
+  "title": "OnSuite - Smart Manufacturing Platform",
+  "subtitle": "Scalable and modular industrial platform uniting shopfloor data under a single backbone.",
+  "modulesSub": "All Shopfloor Operations Under Control with 11 Modules",
+  "gainsTitle": "Key Gains Achieved with OnSuite",
+  "faqTitle": "Frequently Asked Questions",
+  "modules": [
+    {
+      "sub": "IIoT Connectivity",
+      "desc": "Industrial data collection layer with open protocol support from shopfloor to cloud: OPC UA, Beckhoff, Siemens, MQTT, Modbus, REST.",
+      "icon": "/assets/strapi/connectivity_2c3f207de1.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/connect",
+      "name": "OnSuite Connect",
+      "features": [
+        "OPC UA & DA Support",
+        "Siemens & Beckhoff Integration",
+        "MQTT & REST Pipeline",
+        "Edge Computing Infrastructure"
+      ]
+    },
+    {
+      "sub": "Real-time Monitoring",
+      "desc": "Real-time visibility of production: machines, operators, lines, and processes in a single live view.",
+      "icon": "/assets/strapi/monitora_753b00ba39.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/live",
+      "name": "OnSuite Live",
+      "features": [
+        "Live Machine States",
+        "Operator Performance Tracking",
+        "Fault & Downtime Alerts",
+        "Andon Screen Management"
+      ]
+    },
+    {
+      "sub": "Performance Analytics",
+      "desc": "OEE monitoring with downtime, scrap, and performance analytics including root-cause, Pareto, and bottleneck analysis.",
+      "icon": "/SiteIcon/products/optima",
+      "link": "https://www.onsuite.com.tr/en/modules/optima",
+      "name": "OnSuite Optima",
+      "features": [
+        "OEE / TEEP / OMT Calculations",
+        "Root Cause Analysis (RCA)",
+        "Bottleneck Detection",
+        "Automated Pareto Reports"
+      ]
+    },
+    {
+      "sub": "Traceability",
+      "desc": "End-to-end traceability from raw material to finished goods with GS1 standards, serialization, and track-and-trace.",
+      "icon": "/assets/strapi/izlenebilirlik_2c63f41105.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/trace",
+      "name": "OnSuite Trace",
+      "features": [
+        "Serial & Lot Tracking",
+        "BOM Integration",
+        "Backward Traceability",
+        "Quality Certificate Matching"
+      ]
+    },
+    {
+      "sub": "Paperless Operations",
+      "desc": "Digital SmartForms for 5S, OPL, and quality control, replacing paper with auditable field workflows.",
+      "icon": "/assets/strapi/dsf_248c6b59f4.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/forms",
+      "name": "OnSuite Forms",
+      "features": [
+        "Digital Form Designer",
+        "Offline Data Entry",
+        "Approval Flows",
+        "Audit Trail"
+      ]
+    },
+    {
+      "sub": "CNC Optimization",
+      "desc": "Protocol-level data from Fanuc, Siemens, Mazak, and other CNCs with tool life and performance analytics.",
+      "icon": "/assets/strapi/cnc_7850af27b8.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/cnc",
+      "name": "OnSuite CNC",
+      "features": [
+        "G-Code Analysis",
+        "Tool Life Tracking",
+        "Axial Load Monitoring",
+        "Part Program Management"
+      ]
+    },
+    {
+      "sub": "OPC UA Tool Management",
+      "desc": "Real-world OPC UA TMC implementation experience tailored for tobacco industry operations.",
+      "icon": "/assets/strapi/opctmc_9311b1be59.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/tmc",
+      "name": "OnSuite TMC",
+      "features": [
+        "TMC Standard Compliance",
+        "Tobacco Machine Integration",
+        "High-precision Data Collection",
+        "Global Reporting"
+      ]
+    },
+    {
+      "sub": "ERP Integration",
+      "desc": "Two-way, real-time integration with SAP, Canias, and other ERP systems.",
+      "icon": "/assets/strapi/entegrasyon_bdeb37a81b.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/integra",
+      "name": "OnSuite Integra",
+      "features": [
+        "SAP BAPI / RFC Integration",
+        "Real-time Inventory Sync",
+        "Work Order Automation",
+        "Production Confirmation Transfer"
+      ]
+    },
+    {
+      "sub": "Energy Management",
+      "desc": "ISO 50001 compliant consumption monitoring and analytics that make energy costs visible and manageable.",
+      "icon": "/assets/strapi/enerji_5b3c7e115f.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/energy",
+      "name": "OnSuite Energy",
+      "features": [
+        "ISO 50001 Compliance",
+        "Cost Analytics",
+        "Load Profile Monitoring",
+        "Efficiency Forecasts"
+      ]
+    },
+    {
+      "sub": "ESG & Carbon",
+      "desc": "Industrial platform for carbon footprint tracking, sustainability metrics, and ESG reporting.",
+      "icon": "/assets/strapi/carboniq_47fee307c1.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/green",
+      "name": "OnSuite Green",
+      "features": [
+        "Carbon Footprint Measurement",
+        "Emission Reporting",
+        "Sustainability KPIs",
+        "Regulatory Compliance"
+      ]
+    },
+    {
+      "sub": "Platform Foundation",
+      "desc": "React + C# API + MS SQL architecture with stored procedure design and tSQLt automated SQL testing.",
+      "icon": "/assets/strapi/core_9d7965b69c.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/core",
+      "name": "OnSuite Core",
+      "features": [
+        "C# .NET API Foundation",
+        "Stored Procedure Optimization",
+        "tSQLt Test Framework",
+        "High Availability"
+      ]
+    },
+    {
+      "sub": "Crisis Management",
+      "desc": "Dual-channel emergency roll-call and crisis management system for industrial facilities. Provides simultaneous querying via WhatsApp and SMS, centralized visibility, and automatic escalation.",
+      "icon": "/SiteIcon/products/engage.svg",
+      "link": "https://www.onsuite.com.tr/en/modules/engage",
+      "name": "OnSuite Engage",
+      "features": [
+        "Rapid Status Confirmation",
+        "Centralized Crisis Visibility",
+        "Dual-Channel Communication",
+        "Recorded Incident Management"
+      ]
+    }
+  ],
+  "architectureItems": [
+    {
+      "icon": "/assets/strapi/system_3d6b0fa09f.svg",
+      "title": "React + C# API + MS SQL",
+      "description": "Stored procedure-based architecture independent from Entity Framework."
+    },
+    {
+      "icon": "/assets/strapi/vtopcua_f225cb5584.svg",
+      "title": "Open Protocol Support",
+      "description": "OPC UA · PackML · ISA-88 · MTConnect · REST · MQTT."
+    },
+    {
+      "icon": "/assets/strapi/organization_8393429306.svg",
+      "title": "Single Source of Data",
+      "description": "Consistent and reliable reporting through unified architecture."
+    },
+    {
+      "icon": "/assets/strapi/connectivity_2c3f207de1.svg",
+      "title": "Edge-to-Cloud Pipeline",
+      "description": "Open-protocol data pipeline from shopfloor to cloud."
+    },
+    {
+      "icon": "/assets/strapi/approve_b97f357c4f.svg",
+      "title": "CI/CD & Automation",
+      "description": "Fully automated SQL tests with Azure DevOps and tSQLt."
+    },
+    {
+      "icon": "/assets/strapi/security_c6193ac05b.svg",
+      "title": "High Information Security",
+      "description": "Full compliance with ISO/IEC 27001:2022 standards."
+    }
+  ],
+  "gainItems": [
+    {
+      "icon": "/assets/strapi/monitora_753b00ba39.svg",
+      "title": "Real-time visibility"
+    },
+    {
+      "icon": "/assets/strapi/oee_bd8de82488.svg",
+      "title": "Live OEE and performance analytics"
+    },
+    {
+      "icon": "/assets/strapi/dsf_248c6b59f4.svg",
+      "title": "Paperless digital shopfloor operations"
+    },
+    {
+      "icon": "/assets/strapi/organization_8393429306.svg",
+      "title": "Multi-site scalability"
+    },
+    {
+      "icon": "/assets/strapi/entegrasyon_bdeb37a81b.svg",
+      "title": "Enterprise ERP integration (SAP etc.)"
+    },
+    {
+      "icon": "/assets/strapi/notif_677853708f.svg",
+      "title": "Downtime and root-cause analytics"
+    },
+    {
+      "icon": "/assets/strapi/enerji_5b3c7e115f.svg",
+      "title": "Energy monitoring and ISO 50001 compliance"
+    },
+    {
+      "icon": "/assets/strapi/notification_763964601b.svg",
+      "title": "Alarm management and Andon screens"
+    }
+  ],
+  "technicalCards": [
+    {
+      "desc": "Comprehensive system check.",
+      "image": "/assets/strapi/asset_56_400x_388f6fedab.png",
+      "title": "Management Panel"
+    },
+    {
+      "desc": "Manual and automatic data collection options.",
+      "image": "/assets/strapi/veri_toplama_400x_16a97e217f.png",
+      "title": "Data Collection and Processing"
+    },
+    {
+      "desc": "Automated performance tracking with custom dashboards.",
+      "image": "/assets/strapi/dashboard_400x_5c971077f0.png",
+      "title": "Dashboard"
+    },
+    {
+      "desc": "Track and improve energy consumption.",
+      "image": "/assets/strapi/enerji_kaynak_400x_0ce9ea4831.png",
+      "title": "Energy and Resource Management"
+    },
+    {
+      "desc": "Immediate warning system in critical conditions.",
+      "image": "/assets/strapi/alarm_400x_3a526b70e1.png",
+      "title": "Alarm Management"
+    },
+    {
+      "desc": "Seamless data sharing with all enterprise systems.",
+      "image": "/assets/strapi/erp_400x_7c5fc9a564.png",
+      "title": "ERP and System Integration"
+    },
+    {
+      "desc": "End-to-end production control with real-time data.",
+      "image": "/assets/strapi/entegrasyon_400x_cd9cd03a1a.png",
+      "title": "Integration and Reporting"
+    },
+    {
+      "desc": "Total shop-floor control via digital panels.",
+      "image": "/assets/strapi/proses_400x_b9803cea02.png",
+      "title": "Process and Operator Management"
+    },
+    {
+      "desc": "Maximum performance through root-cause analytics.",
+      "image": "/assets/strapi/analiz_400x_663c7aed55.png",
+      "title": "Analysis and Optimization"
+    }
+  ],
+  "productBadge": "Product",
+  "productDetailDesc": "OnSuite is an industrial software family with 11 modules. Each module can be deployed independently or as a fully integrated suite, on-premise or in the cloud. React + C# API + MS SQL architecture is designed with a stored procedure focused approach and fully automated SQL testing with tSQLt. Open protocol support includes OPC UA, PackML, ISA-88, MTConnect, REST, and MQTT.",
+  "productImageAlt": "OnSuite Smart Manufacturing Suite - Integrated Production Management Platform",
+  "viewAllModules": "View All Modules",
+  "showLessModules": "Show Less",
+  "moduleOverviewLabel": "Module Overview",
+  "moduleIconAlt": "module icon",
+  "modulePlatformAlt": "industrial manufacturing platform module",
+  "exploreSolutionButton": "Explore Solution",
+  "gainsEyebrow": "Benefits",
+  "gainsTitleMain": "What Do You Gain with OnSuite?",
+  "desktopImageAlt": "OnSuite desktop platform visual",
+  "viewAllGains": "View All",
+  "showLessGains": "Show Less",
+  "architectureTitleMain": "From Shopfloor to Cloud Industrial Grade",
+  "technicalTitleMain": "What Are the Technical Capabilities?",
+  "ctaTitleMain": "Let's Shape the Industrial Future Together",
+  "ctaDescMain": "Contact us to make your factory smarter with OnSuite.",
+  "ctaButtonMain": "Contact Us",
+  "logo": "/assets/strapi/onsuite_logo_99ebb0221e.svg",
+  "productImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
+  "desktopImage": "/assets/strapi/Onsuite_Desktop_8102bc7bc2.webp",
+  "buttonText": "onsuite.com.tr",
+  "buttonUrl": "https://www.onsuite.com.tr/main/"
+}

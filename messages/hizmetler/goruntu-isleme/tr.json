@@ -1,0 +1,52 @@
+{
+  "subtitle": "Görüntü işleme teknolojileriyle üretimde kusursuzluğu yakalayın!",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "service": "HİZMET",
+  "title": "Görüntü İşleme  Çözümleri",
+  "description": "Endüstriyel görüntü işleme çözümlerimiz ile üretim hatlarınızda kalite kontrolü, boyutsal ölçüm, etiket okuma ve yüzey hata tespiti gibi kritik süreçleri otomatikleştirin. Yapay zeka destekli görüntü analizi ile hata oranlarını minimize edin ve verimliliği artırın.",
+  "requestQuote": "Teklif İsteyin",
+  "benefits": [
+    "Sektöre özel proses bilgisi ile doğru teknoloji kullanımı",
+    "Optimum aydınlatma çözümleri",
+    "Otomasyon ve SCADA sistemleri ile entegrasyon",
+    "ERP sistemleri ile entegrasyon",
+    "Gerçek zamanlı veri analizi",
+    "Uzaktan izleme, bakım desteği ve eğitim"
+  ],
+  "benefitsEyebrow": "Kazanımlar",
+  "benefitsTitle": "Görüntü İzleme Çözümlerinde Neden Siskon?",
+  "capabilities": [
+    "Var-Yok kontrolü",
+    "Yüzey hata kontrolü",
+    "Boyutsal ölçüm ve ürün sayma",
+    "Pozisyon kontrolü",
+    "Etiket ve SKT kontrolü",
+    "Desen eşleştirme ve doğrulama",
+    "Optik karakter tanıma (OCR)",
+    "Sınıflandırma",
+    "3D Profilleme çözümleri"
+  ],
+  "capabilitiesEyebrow": "Yetkinlikler",
+  "capabilitiesTitle": "Ne Tür Görüntü İşleme Çözümleri Sunuyoruz?",
+  "ctaTitle": "Kalite Kontrolünüzü Otomatikleştirin",
+  "ctaDescription": "Görüntü işleme çözümlerimiz hakkında detaylı bilgi almak için bizimle iletişime geçin.",
+  "ctaButton": "Bize Ulaşın",
+  "imageAlt": "Siskon Görüntü İşleme Çözümleri - Otomatik Kalite Kontrol",
+  "imageAlt2": "Etiket kontrol kamera senaryosu",
+  "imageAlt3": "Var-yok kontrol kamera senaryosu",
+  "imageAlt4": "Barkod okuma kamera senaryosu",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "heroTitle": "Görüntü İşleme  Çözümleri",
+  "heroSubtitle": "Görüntü işleme teknolojileriyle üretimde kusursuzluğu yakalayın!",
+  "heroDescription": "Endüstriyel görüntü işleme çözümlerimiz ile üretim hatlarınızda kalite kontrolü, boyutsal ölçüm, etiket okuma ve yüzey hata tespiti gibi kritik süreçleri otomatikleştirin. Yapay zeka destekli görüntü analizi ile hata oranlarını minimize edin ve verimliliği artırın.",
+  "heroImage": "/assets/strapi/Goruntu_Izleme_Watch_33e2d645e2.webp",
+  "serviceLabel": "HİZMET",
+  "ctaDesc": "Görüntü işleme çözümlerimiz hakkında detaylı bilgi almak için bizimle iletişime geçin.",
+  "moreImages": [
+    "/assets/strapi/Alt_Menu_6_6c125b7fad.svg",
+    "/assets/strapi/Alt_Menu_3_e9a7733e9c.svg",
+    "/assets/strapi/Alt_Menu_2_c55bd05d50.svg"
+  ]
+}

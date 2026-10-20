@@ -17,6 +17,8 @@ export function proxy(request: NextRequest) {
 
   // Pass the real browser URL to server metadata builders.
   requestHeaders.set('x-original-url', originalPath);
+  // Locale tespiti için rewrite öncesi orijinal path (detectLocale bunu okur)
+  requestHeaders.set('x-pathname', request.nextUrl.pathname);
 
   const response = NextResponse.next({
     request: {
@@ -40,5 +42,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|api).*)'],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js)$|api).*)'],
 };

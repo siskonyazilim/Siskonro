@@ -1,0 +1,60 @@
+{
+  "title": "Soluții AI și Machine Learning",
+  "subtitle": "Transformați datele în decizii puternice și inteligente.",
+  "description": "Soluțiile AI și Machine Learning vă pregătesc afacerea pentru viitor prin informațiile valoroase obținute din datele dumneavoastră. Prin analize avansate și algoritmi de ínvățare automată, descoperim potențialul ascuns din seturile de date colectate din procesele operaționale, optimizăm activitățile și vă ajutăm să luați decizii de afaceri mai eficiente. Transformați-vă datele în oportunități strategice cu soluțiile noastre de Machine Learning.",
+  "breadcrumbHome": "Acasă",
+  "breadcrumbServices": "Servicii",
+  "serviceLabel": "Serviciu",
+  "heroImageAlt": "Vizualizare soluții AI și Machine Learning Siskon",
+  "benefitsEyebrow": "Kazanımlar",
+  "benefitsTitle": "Ce Valoare Aduc Soluțiile Siskon AI/ML?",
+  "capabilitiesEyebrow": "Capacități",
+  "applicationsEyebrow": "Aplicații",
+  "solutionsVisualAlt": "Vizualizare soluții machine learning",
+  "diagramAlt": "Diagramă de relații deep learning",
+  "etlVisualAlt": "Vizualizare arhitectură ETL",
+  "ctaTitle": "Luați Decizii Bazate pe Date",
+  "ctaDesc": "Transformați-vă operațiunile în sisteme inteligente cu soluțiile noastre ML.",
+  "ctaButton": "Contactați-ne",
+  "showMore": "Apasă pentru mai multe",
+  "showLess": "Arată mai puțin",
+  "benefits": [
+    "Soluții specifice industriei, susținute de o expertiză vastă în domeniu",
+    "Aplicații de machine learning personalizate, aliniate cu fluxurile de afaceri",
+    "Infrastructură flexibilă care se integrează cu sistemele existente",
+    "Cicluri de decizie mai rapide prin procesarea datelor în timp real",
+    "Economii ale costurilor operaționale prin optimizare bazată pe date",
+    "Sisteme fiabile, concepute pentru medii industriale exigente"
+  ],
+  "solutionsEyebrow": "Çözümler",
+  "solutionsTitle": "Ce Tipuri de Soluții de Învățare Automată Oferim?",
+  "solutions": [
+    "Soluții de analiză de date și raportare",
+    "Detectarea anomaliilor",
+    "Sisteme automate de suport decizional",
+    "Soluții de optimizare",
+    "Integrare IoT",
+    "Aplicații de mentenanță predictivă",
+    "Aplicații de calitate predictivă",
+    "Dezvoltare de software personalizat",
+    "Optimizarea stocurilor",
+    "Optimizarea lanțului de aprovizionare și a logisticii"
+  ],
+  "deepLearning": {
+    "title": "Aplicații Deep Learning",
+    "spot": "Folosiți puterea deep learning pentru soluții de înaltă performanță!",
+    "desc": "Tehnologiile deep learning vă fac procesele de afaceri mai inteligente și mai rapide prin cazuri de utilizare precum recunoașterea imaginilor, procesarea limbajului natural și analize predictive. Aceste sisteme vă optimizează forța de muncă și vă ajută să descoperiți oportunități în operațiunile dumneavoastră."
+  },
+  "etlApp": {
+    "title": "Aplicații ETL",
+    "spot": "Valorificați-vă datele cu aplicațiile ETL și propulsați-vă afacerea în viitor!",
+    "desc": "Aplicațiile ETL vă accelerează integrarea datelor și fluxurile de lucru de analiză, îmbunătățesc calitatea datelor, funcționează perfect cu platformele de big data și oferă economii de costuri."
+  },
+  "heroTitle": "Soluții AI și Machine Learning",
+  "heroSubtitle": "Transformați datele în decizii puternice și inteligente.",
+  "heroDescription": "Soluțiile AI și Machine Learning vă pregătesc afacerea pentru viitor prin informațiile valoroase obținute din datele dumneavoastră. Prin analize avansate și algoritmi de ínvățare automată, descoperim potențialul ascuns din seturile de date colectate din procesele operaționale, optimizăm activitățile și vă ajutăm să luați decizii de afaceri mai eficiente. Transformați-vă datele în oportunități strategice cu soluțiile noastre de Machine Learning.",
+  "heroImage": "/assets/strapi/aivemakineogrenmesi_477c412326.webp",
+  "solutionsImage": "/assets/strapi/aivemakineogrenmesi2_7f2eecf3bc.webp",
+  "deepLearningImage": "/assets/strapi/AI_Makine_Ogrenmesi_Iliski_9013d65cd3.svg",
+  "etlAppImage": "/assets/strapi/AI_Makine_Ogrenmesi_Baglanti_0457dbd79f.svg"
+}

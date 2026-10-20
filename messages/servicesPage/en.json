@@ -1,0 +1,145 @@
+{
+  "pageTitle": "Our Services",
+  "pageSubtitle": "Achieve operational excellence with industry-specific software and automation solutions. Measure efficiency, optimize your processes, add value to your production.",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "solutionPartnerEyebrow": "Your Solution Partner",
+  "solutionPartnerTitle": "We Manage Digital <br /> <span class=\"text-sky-600\">Transformation</span> <br /> with Engineering.",
+  "solutionPartnerDesc": "Since 1997, we have combined deep shopfloor experience gained across 40+ countries with modern software architectures. We don't just write code, we strengthen your factory's operational infrastructure.",
+  "whySiskonTitle": "Why Siskon?",
+  "strategicPlanningEyebrow": "Strategic Planning",
+  "strategicPlanningTitle": "Digital Roadmap Tailored to Your Needs",
+  "strategicPlanningDesc": "We analyze your current infrastructure and determine the most suitable technology stack for your factory's future vision.",
+  "strategicPlanningCta": "Get in Touch",
+  "methodologyEyebrow": "Our Methodology",
+  "methodologyTitle": "Implementation with Engineering Discipline",
+  "methodologyDesc": "A standards-compliant, testable and sustainable project lifecycle.",
+  "ctaTitle": "Let's Program the Future Together.",
+  "ctaDesc": "Schedule a meeting to evaluate your project with our expert engineers.",
+  "ctaCta": "Get in Touch",
+  "exploreService": "Explore Service",
+  "whySiskonItems": [
+    {
+      "t": "Independent Engineering",
+      "d": "Vendor-neutral technology selection based on your actual needs."
+    },
+    {
+      "t": "Shopfloor Experience",
+      "d": "Solutions validated on real machines in real factories."
+    },
+    {
+      "t": "End-to-End Integration",
+      "d": "Uninterrupted data flow from sensor to cloud (Edge-to-Cloud)."
+    }
+  ],
+  "methodologySteps": [
+    {
+      "t": "Analysis & Discovery",
+      "d": "We identify shop-floor realities and bottlenecks with data."
+    },
+    {
+      "t": "Architecture Design",
+      "d": "We design a flexible, modular, and scalable system architecture."
+    },
+    {
+      "t": "Agile Development",
+      "d": "A sprint-based, transparent, and continuously tested delivery process."
+    },
+    {
+      "t": "Continuous Support",
+      "d": "We stay with you to maintain lifecycle efficiency across your systems."
+    }
+  ],
+  "serviceMeta": [
+    {
+      "key": "musteriye-ozel-yazilim",
+      "desc": "Scalable and secure enterprise software ecosystems fully aligned with your processes.",
+      "tags": [
+        "tSQLt Test",
+        "Microservices",
+        "ERP Integration"
+      ]
+    },
+    {
+      "key": "iiot",
+      "desc": "End-to-end IIoT pipelines that transform raw shop-floor data into business decisions in seconds.",
+      "tags": [
+        "OPC UA",
+        "MQTT",
+        "Edge Computing"
+      ]
+    },
+    {
+      "key": "izlenebilirlik-cozumleri",
+      "desc": "End-to-end product and process traceability from raw material to shipment with auditable digital records.",
+      "tags": [
+        "GS1",
+        "Serial Tracking",
+        "Compliance"
+      ]
+    },
+    {
+      "key": "makine-proses-otomasyonu",
+      "desc": "Maximum productivity on your production lines with Beckhoff expertise and advanced control algorithms.",
+      "tags": [
+        "PLC/SCADA",
+        "TwinCAT",
+        "ISA-88"
+      ]
+    },
+    {
+      "key": "robot-cozumleri",
+      "desc": "Robotic automation cells and integration projects that increase speed, quality, and workplace safety.",
+      "tags": [
+        "Robot Cells",
+        "Safety",
+        "Integration"
+      ]
+    },
+    {
+      "key": "goruntu-isleme",
+      "desc": "AI-based quality control, monitoring, and counting automation systems for zero-defect production.",
+      "tags": [
+        "Deep Learning",
+        "Quality Assurance",
+        "VGG/ResNet"
+      ]
+    },
+    {
+      "key": "ai-makine-ogrenmesi",
+      "desc": "Advanced machine learning models delivering data-driven predictive maintenance and energy optimization.",
+      "tags": [
+        "Predictive Maintenance",
+        "Big Data",
+        "Anomaly Detection"
+      ]
+    },
+    {
+      "key": "microsoft-cozumleri",
+      "desc": "Microsoft ecosystem consulting, licensing, and platform integration from Microsoft 365 to Azure and Power Platform.",
+      "tags": [
+        "Azure",
+        "Power Platform",
+        "Licensing"
+      ]
+    },
+    {
+      "key": "velotic",
+      "desc": "Velotic-centered industrial data, performance, and operations analytics deployments for manufacturing excellence.",
+      "tags": [
+        "Velotic",
+        "MES",
+        "Industrial Analytics"
+      ]
+    },
+    {
+      "key": "egitim-danismanlik",
+      "desc": "Technical training and consultancy programs that strengthen teams and sustain digital transformation outcomes.",
+      "tags": [
+        "Training",
+        "Consulting",
+        "Capability Building"
+      ]
+    }
+  ]
+}

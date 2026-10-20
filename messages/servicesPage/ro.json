@@ -1,0 +1,145 @@
+{
+  "pageTitle": "Serviciile Noastre",
+  "pageSubtitle": "Atingeți excelența operațională cu soluții software și automatizare specifice industriei. Măsurați eficiența, optimizați procesele, adăugați valoare producției dvs.",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbServices": "Servicii",
+  "solutionPartnerEyebrow": "Partenerul Dvs. de Soluții",
+  "solutionPartnerTitle": "Gestionăm Transformarea <br /> <span class=\"text-sky-600\">Digitală</span> <br /> prin Inginerie.",
+  "solutionPartnerDesc": "Din 1997, am combinat experiența profundă de pe teren dobândită în 40+ de țări cu arhitecturi software moderne. Nu scriem doar cod, întărim infrastructura operațională a fabricii dvs.",
+  "whySiskonTitle": "De ce Siskon?",
+  "strategicPlanningEyebrow": "Planificare Strategică",
+  "strategicPlanningTitle": "Foaie de Parcurs Digitală Adaptată Nevoilor Dvs.",
+  "strategicPlanningDesc": "Analizăm infrastructura dvs. actuală și determinăm setul tehnologic cel mai potrivit pentru viziunea de viitor a fabricii dvs.",
+  "strategicPlanningCta": "Programați o sesiune gratuită de descoperire",
+  "methodologyEyebrow": "Metodologia Noastră",
+  "methodologyTitle": "Implementare cu Disciplină de Inginerie",
+  "methodologyDesc": "Un ciclu de viață al proiectului conform standardelor, testabil și sustenabil.",
+  "ctaTitle": "Să Programăm Împreună Viitorul.",
+  "ctaDesc": "Programați o întâlnire pentru a evalua proiectul dvs. cu inginerii noștri experți.",
+  "ctaCta": "Luați Legătura",
+  "exploreService": "Explorati Serviciul",
+  "whySiskonItems": [
+    {
+      "t": "Inginerie Independentă",
+      "d": "Selecție tehnologică neutră față de furnizori, bazată pe nevoile dvs. reale."
+    },
+    {
+      "t": "Experiență din Teren",
+      "d": "Soluții validate pe mașini reale în fabrici reale."
+    },
+    {
+      "t": "Integrare End-to-End",
+      "d": "Flux de date neîentrerupt de la senzor la cloud (Edge-to-Cloud)."
+    }
+  ],
+  "methodologySteps": [
+    {
+      "t": "Analiză și Descoperire",
+      "d": "Identificăm realitățile din teren și blocajele cu date."
+    },
+    {
+      "t": "Design Arhitectural",
+      "d": "Proiectăm o arhitectură de sistem flexibilă, modulară și scalabilă."
+    },
+    {
+      "t": "Dezvoltare Agilă",
+      "d": "Un proces de livrare bazat pe sprint-uri, transparent și continuu testat."
+    },
+    {
+      "t": "Suport Continuu",
+      "d": "Rămânem alături de dvs. pentru a menține eficiența pe durata ciclului de viață a sistemelor."
+    }
+  ],
+  "serviceMeta": [
+    {
+      "key": "musteriye-ozel-yazilim",
+      "desc": "Ecosisteme software enterprise scalabile și sigure, perfect aliniate cu procesele dvs.",
+      "tags": [
+        "tSQLt Test",
+        "Microservices",
+        "ERP Integration"
+      ]
+    },
+    {
+      "key": "iiot",
+      "desc": "Fluxuri IIoT end-to-end care transformă datele brute din fabrică în decizii de afaceri în secunde.",
+      "tags": [
+        "OPC UA",
+        "MQTT",
+        "Edge Computing"
+      ]
+    },
+    {
+      "key": "izlenebilirlik-cozumleri",
+      "desc": "Trasabilitate completă produs și proces de la materia primă la expediere, cu înregistrări digitale auditabile.",
+      "tags": [
+        "GS1",
+        "Serial Tracking",
+        "Compliance"
+      ]
+    },
+    {
+      "key": "makine-proses-otomasyonu",
+      "desc": "Productivitate maximă pe liniile de producție cu expertiză Beckhoff și algoritmi avansați de control.",
+      "tags": [
+        "PLC/SCADA",
+        "TwinCAT",
+        "ISA-88"
+      ]
+    },
+    {
+      "key": "robot-cozumleri",
+      "desc": "Celule de automatizare robotică și proiecte de integrare care cresc viteza, calitatea și siguranța la locul de muncă.",
+      "tags": [
+        "Robot Cells",
+        "Safety",
+        "Integration"
+      ]
+    },
+    {
+      "key": "goruntu-isleme",
+      "desc": "Sisteme de automatizare pentru control calitate, monitorizare și numărare bazate pe AI, pentru producție fără defecte.",
+      "tags": [
+        "Deep Learning",
+        "Quality Assurance",
+        "VGG/ResNet"
+      ]
+    },
+    {
+      "key": "ai-makine-ogrenmesi",
+      "desc": "Modele avansate de machine learning pentru mentenanță predictivă bazată pe date și optimizare energetică.",
+      "tags": [
+        "Predictive Maintenance",
+        "Big Data",
+        "Anomaly Detection"
+      ]
+    },
+    {
+      "key": "microsoft-cozumleri",
+      "desc": "Consultanță, licențiere și integrare platformă Microsoft de la Microsoft 365 la Azure și Power Platform.",
+      "tags": [
+        "Azure",
+        "Power Platform",
+        "Licensing"
+      ]
+    },
+    {
+      "key": "velotic",
+      "desc": "Implementări Velotic pentru date industriale, performanță și analiză operațională în vederea excelenței în producție.",
+      "tags": [
+        "Velotic",
+        "MES",
+        "Industrial Analytics"
+      ]
+    },
+    {
+      "key": "egitim-danismanlik",
+      "desc": "Programe de formare tehnică și consultanță care întăresc echipele și susțin rezultatele transformării digitale.",
+      "tags": [
+        "Training",
+        "Consulting",
+        "Capability Building"
+      ]
+    }
+  ]
+}

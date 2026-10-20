@@ -1,0 +1,145 @@
+{
+  "pageTitle": "Hizmetlerimiz",
+  "pageSubtitle": "Endüstriye özel yazılım ve otomasyon çözümleri ile operasyonel mükemmelliğe ulaşın, verimliliği ölçün, süreçlerinizi optimize edin, üretiminize değer katın.",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "solutionPartnerEyebrow": "Çözüm Ortağınız",
+  "solutionPartnerTitle": "Dijital Dönüşümü <br /> <span class=\"text-sky-600\">Mühendislikle</span> <br /> Yönetiyoruz.",
+  "solutionPartnerDesc": "1997'den bugüne, 40+ ülkede edindiğimiz derin saha tecrübesini modern yazılım mimarileriyle birleştiriyoruz. Sadece kod yazmıyor, fabrikanızın operasyonel  operasyonel altyapısını güçlendiriyoruz.",
+  "whySiskonTitle": "Neden Siskon?",
+  "strategicPlanningEyebrow": "Stratejik Planlama",
+  "strategicPlanningTitle": "İhtiyacınıza Özel Dijital Yol Haritası",
+  "strategicPlanningDesc": "Mevcut altyapınızı analiz ediyor, fabrikanızın gelecek vizyonuna en uygun teknoloji setini belirliyoruz.",
+  "strategicPlanningCta": "Bize Ulaşın",
+  "methodologyEyebrow": "Çalışma Metodolojimiz",
+  "methodologyTitle": "Mühendislik Disipliniyle Uygulama",
+  "methodologyDesc": "Standartlara bağlı, test edilebilir ve sürdürülebilir bir proje yaşam döngüsü.",
+  "ctaTitle": "Geleceği Birlikte Programlayalım.",
+  "ctaDesc": "Projenizi uzman mühendislerimizle değerlendirmek için bir toplantı planlayın.",
+  "ctaCta": "Bize Ulaşın",
+  "exploreService": "Hizmeti İnceleyin",
+  "whySiskonItems": [
+    {
+      "t": "Bağımsız Mühendislik",
+      "d": "Marka bağımsız, ihtiyaca en uygun teknoloji seçimi."
+    },
+    {
+      "t": "Saha Tecrübesi",
+      "d": "Gerçek fabrikalarda, gerçek makineler üzerinde test edilmiş çözümler."
+    },
+    {
+      "t": "Uçtan Uca Entegrasyon",
+      "d": "Sensörden buluta (Edge-to-Cloud) kesintisiz veri akışı."
+    }
+  ],
+  "methodologySteps": [
+    {
+      "t": "Analiz & Keşif",
+      "d": "Saha gerçeklerini ve darboğazları verilerle tespit ediyoruz."
+    },
+    {
+      "t": "Mimari Tasarım",
+      "d": "Esnek, modüler ve ölçeklenebilir bir sistem kurguluyoruz."
+    },
+    {
+      "t": "Çevik Geliştirme",
+      "d": "Sprint odaklı, şeffaf ve sürekli test edilen bir üretim süreci."
+    },
+    {
+      "t": "Sürekli Destek",
+      "d": "Sistemlerinizin yaşam boyu verimliliği için yanınızdayız."
+    }
+  ],
+  "serviceMeta": [
+    {
+      "key": "musteriye-ozel-yazilim",
+      "desc": "Proseslerinize tam uyum sağlayan, ölçeklenebilir ve güvenli kurumsal yazılım ekosistemleri sunar.",
+      "tags": [
+        "tSQLt Test",
+        "Microservices",
+        "ERP Integration"
+      ]
+    },
+    {
+      "key": "iiot",
+      "desc": "Uçtan uca IIoT veri akışları, saha verisini ham halinden alıp saniyeler içinde iş kararlarına dönüştürür.",
+      "tags": [
+        "OPC UA",
+        "MQTT",
+        "Edge Computing"
+      ]
+    },
+    {
+      "key": "izlenebilirlik-cozumleri",
+      "desc": "Hammaddeden sevkiyata kadar ürün ve süreç izlenebilirliği sağlayan, denetlenebilir bir dijital kayıt altyapısı sunar.",
+      "tags": [
+        "GS1",
+        "Serial Tracking",
+        "Compliance"
+      ]
+    },
+    {
+      "key": "makine-proses-otomasyonu",
+      "desc": "Siskon otomasyon çözümleri, makinelerinizin ve proseslerinizin güvenli yazılım altyapıları ile kontrol edilmesini sağlar.",
+      "tags": [
+        "PLC/SCADA",
+        "TwinCAT",
+        "ISA-88"
+      ]
+    },
+    {
+      "key": "robot-cozumleri",
+      "desc": "Hız, kalite ve iş güvenliğini artıran robotik otomasyon hücreleri ve entegrasyon projeleri sunar.",
+      "tags": [
+        "Robot Cells",
+        "Safety",
+        "Integration"
+      ]
+    },
+    {
+      "key": "goruntu-isleme",
+      "desc": "Hatasız üretim için yapay zeka temelli kalite kontrol, izleme ve sayım otomasyon sistemleri sunar.",
+      "tags": [
+        "Deep Learning",
+        "Quality Assurance",
+        "VGG/ResNet"
+      ]
+    },
+    {
+      "key": "ai-makine-ogrenmesi",
+      "desc": "AI ve Makine Öğrenmesi Çözümleri, verilerinizden elde edilen içgörülerle işletmenizi geleceğe hazırlar.",
+      "tags": [
+        "Predictive Maintenance",
+        "Big Data",
+        "Anomaly Detection"
+      ]
+    },
+    {
+      "key": "microsoft-cozumleri",
+      "desc": "Microsoft 365, Azure ve Power Platform ekseninde danışmanlık, lisanslama ve platform entegrasyonu sunar.",
+      "tags": [
+        "Azure",
+        "Power Platform",
+        "Licensing"
+      ]
+    },
+    {
+      "key": "velotic",
+      "desc": "Velotic odaklı endüstriyel veri, performans ve operasyon analizi kurulumları ile üretim mükemmeliyeti sağlar.",
+      "tags": [
+        "Velotic",
+        "MES",
+        "Industrial Analytics"
+      ]
+    },
+    {
+      "key": "egitim-danismanlik",
+      "desc": "Ekipleri güçlendiren ve dijital dönüşüm kazanımlarını kalıcı hale getiren teknik eğitim ve danışmanlık programları sunar.",
+      "tags": [
+        "Training",
+        "Consulting",
+        "Capability Building"
+      ]
+    }
+  ]
+}

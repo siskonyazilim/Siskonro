@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Career",
+  "pageSubtitle": "Build the future of industrial software with our engineering teams",
+  "heroHeading": "If you are looking for a team to share your goals, grow together, and succeed together — you are in the right place.",
+  "heroLine1": "If you are looking for a team to share your goals,",
+  "heroLine2": "grow together, and succeed together,",
+  "heroLine3": "you are in the right place.",
+  "statYears": "Years of Experience",
+  "statOpenRoles": "Open Positions",
+  "statTeam": "Expert Team",
+  "breadcrumbHome": "Home",
+  "breadcrumbCorporate": "Corporate",
+  "breadcrumbCareer": "Career",
+  "openPositionsTitle": "Open Positions",
+  "openPositionsSubtitle": "Join teams that build software and automation solutions for measurable production excellence.",
+  "openings": [
+    "Full Stack Developer (React / .NET)",
+    "Industrial Automation Engineer",
+    "Data & AI Engineer",
+    "Field Service Engineer"
+  ],
+  "applyNow": "Apply Now",
+  "sendCv": "Send CV",
+  "roleHighlights": [
+    {
+      "title": "Engineering Depth",
+      "text": "Work on real production systems, industrial protocols, and mission-critical software used in global manufacturing plants."
+    },
+    {
+      "title": "Cross-functional Collaboration",
+      "text": "Build solutions together with automation, software, and field teams from architecture to deployment."
+    },
+    {
+      "title": "Continuous Growth",
+      "text": "Develop your expertise with hands-on projects in AI, IIoT, MES, and high-availability enterprise systems."
+    }
+  ],
+  "applicationProcessTitle": "Application Process",
+  "processSteps": [
+    "Share your CV and short motivation note via contact form or e-mail.",
+    "Technical pre-screen and role fit evaluation by our team.",
+    "Project-focused interview with the engineering leads.",
+    "Final feedback and onboarding plan within the shortest time."
+  ],
+  "ctaTitle": "Ready to shape industrial software with us?",
+  "ctaDesc": "Send your profile and role interests; we will get back to you with the most relevant position.",
+  "ctaButton": "Send Your Application",
+  "valuesTitle": "Siskon Values",
+  "valuesSubtitle": "Growing Together, Succeeding Together.",
+  "values": [
+    {
+      "title": "Pursuing Continuous<br />Growth",
+      "desc": "We view learning as a natural part of our business. We constantly improve ourselves, follow innovations, and evaluate every new experience as an opportunity to advance.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-50.svg"
+    },
+    {
+      "title": "Sincerity is Our<br />Golden Rule",
+      "desc": "We believe trust, open communication, and mutual respect form the foundation of strong teams. We share our ideas freely, listen to each other, and grow together.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-51.svg"
+    },
+    {
+      "title": "We Love Collaborative<br />Work & Support",
+      "desc": "We know the best results come from working together. We share our knowledge, support one another, and achieve common goals with true team spirit.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-52.svg"
+    },
+    {
+      "title": "Creating Great Memories<br />Together",
+      "desc": "Beside successful projects, we collect unforgettable memories. We celebrate together, have fun together, and transform colleagueship into strong friendships.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-53.svg"
+    },
+    {
+      "title": "People Are Our Most<br />Valuable Asset",
+      "desc": "We believe our greatest strength is our people. We build a working environment where everyone feels valued, heard, and supported in their growth.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-54.svg"
+    },
+    {
+      "title": "Caring for Employee<br />Comfort & Well-being",
+      "desc": "We believe people who feel good are happier and more productive. That is why we continuously work to enhance our work environment and employee experience.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-55.svg"
+    }
+  ],
+  "cultureTitle": "We Love Technology at Siskon.",
+  "cultureSubtitle": "But not only technology...",
+  "cultureImg": "/assets/new/kurumsal/Kariyer/asset-42-100.jpg",
+  "cultureP1": "We also love learning together, creating together, supporting one another, coming up with new ideas during coffee breaks, and celebrating our achievements as a team.",
+  "cultureP2": "Every day, we work on different projects, learn new things, and continue to grow. While doing so, we strive to maintain a sincere and friendly environment.",
+  "cultureP3": "If you are someone who enjoys what you do, stays curious, loves learning, and wants to be part of a great team, we would be delighted to get to know you.",
+  "cultureCallout1": "If you would like to work with us, you can follow the steps below.",
+  "cultureCallout2": "We look forward to welcoming you to our team.",
+  "processTitle": "Our Recruitment Process",
+  "processList": [
+    {
+      "title": "CV Analysis",
+      "desc": "We review your CV. If we find it a good match for the role, we initiate our evaluation process to get to know you better.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-43.svg"
+    },
+    {
+      "title": "Telephone Interview with Human Resources",
+      "desc": "We share our candidate evaluation form and general aptitude, English, and technical assessments relevant to the position.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-44.svg"
+    },
+    {
+      "title": "Online Assessment",
+      "desc": "In our ~30-minute online meeting, we get to know you and chat about your technical competencies.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-45.svg"
+    },
+    {
+      "title": "Interview with HR Management",
+      "desc": "Through a realistic practical project, we get to know each other closer, allowing you to experience the work while we evaluate your skills.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-46.svg"
+    },
+    {
+      "title": "Technical Interview",
+      "desc": "In a meeting with department managers and our General Manager, we discuss our mutual expectations.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-47.svg"
+    },
+    {
+      "title": "Formal Proposal and Related Documentation",
+      "desc": "If we believe it is an exciting mutual match, we extend our offer and look forward to welcoming you as a Siskon team member.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-48.svg"
+    }
+  ],
+  "jobProcessTitle": "OUR JOB APPLICATION PROCESS",
+  "jobProcessList": [
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/01-cv-analizi.svg",
+      "title": "CV Review"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/02-aday-formu.svg",
+      "title": "Candidate Evaluation Form"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/03-test-paylasimi.svg",
+      "title": "Tests (General Aptitude, Technical, Personality Inventory)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/04-ilk-gorusme.svg",
+      "title": "First Interview"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/05-uygulama-calismasi.svg",
+      "title": "Practical Assignment (Position-Specific)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/06-uygulama-degerlendirme.svg",
+      "title": "Assignment Evaluation"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/07-ikinci-gorusme.svg",
+      "title": "Second Interview"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/08-referans-kontrolu.svg",
+      "title": "Reference Check"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/09-is-teklifi.svg",
+      "title": "Job Offer"
+    }
+  ],
+  "internProcessTitle": "OUR INTERNSHIP APPLICATION PROCESS",
+  "internProcessList": [
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/01-cv-analizi.svg",
+      "title": "CV Review"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/02-degerlendirme-formu.svg",
+      "title": "Candidate Evaluation Form"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/03-test-paylasimi.svg",
+      "title": "Tests (General Aptitude, Technical, Personality Inventory)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/04-ilk-gorusme.svg",
+      "title": "First Interview"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/05-ikinci-gorusme.svg",
+      "title": "Second Interview"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/06-staj-teklifi.svg",
+      "title": "Internship Offer"
+    }
+  ],
+  "lifeTitle": "Life at Siskon",
+  "lifeCards": [
+    {
+      "title": "Comfortable Working Environment",
+      "items": [
+        "🌲 Modern office surrounded by nature",
+        "🚌 Shuttle service",
+        "☕ Unlimited filter coffee and tea",
+        "🍲 Lunch & delicious refreshment perks",
+        "💺 Massage chair",
+        "📚 Library where you can borrow books"
+      ]
+    },
+    {
+      "title": "Strong Team Culture",
+      "items": [
+        "🤗 A work environment where sincerity and respect coexist",
+        "🚪 Our General Manager's door is always open",
+        "🎂 Birthdays and special days celebrated together",
+        "🎉 New Year raffles, events, and workshops",
+        "🥳 Teammates who produce and have fun together"
+      ]
+    },
+    {
+      "title": "For Your Growth",
+      "items": [
+        "🎓 Personal education budget",
+        "🧗 Mentorship program",
+        "🎨 Technical trainings and workshops",
+        "💥 Regular performance & career development reviews",
+        "🏆 Reward system where you can share your ideas"
+      ]
+    },
+    {
+      "title": "Perks Awaiting You",
+      "items": [
+        "🏥 Private health insurance",
+        "⚖️ Corporate physician support",
+        "🎂 Additional birthday leave",
+        "🎁 First-day welcome package",
+        "☝️ Unit-specific onboarding process"
+      ]
+    }
+  ],
+  "detailsTitle": "Small Details That Make<br />Siskon, Siskon",
+  "detailsList": [
+    {
+      "title": "Siskon means \"sister\" in Finnish and its name is derived from the words System and Control, meaning,",
+      "icon": "/assets/strapi/01_kiz_kardes_7617be03fd.svg"
+    },
+    {
+      "title": "The names of our meeting rooms come from the history of our company,",
+      "icon": "/assets/strapi/02_toplanti_odalari_16a3f38d28.svg"
+    },
+    {
+      "title": "We reduce waste by using our own cups on Mondays,",
+      "icon": "/assets/strapi/05_kupa_atik_azaltma_87d1efddba.svg"
+    },
+    {
+      "title": "We share our leftover food with our animal friends,",
+      "icon": "/assets/strapi/06_hayvan_dostlar_2cce4dd5a3.svg"
+    },
+    {
+      "title": "Filter coffee is never absent from the kitchen,",
+      "icon": "/assets/strapi/03_filtre_kahve_89a67c0f0c.svg"
+    },
+    {
+      "title": "There's always a regular occupant of the front seat in the service,",
+      "icon": "/assets/strapi/07_on_koltuk_7358e68887.svg"
+    },
+    {
+      "title": "Dieting can be a little difficult here,",
+      "icon": "/assets/strapi/04_diyet_zor_e9cb7dd458.svg"
+    },
+    {
+      "title": "You will soon find out why everyone calls it the \"Siskon dance\" once you encounter the door to the new meeting room.",
+      "icon": "/assets/strapi/08_siskon_dansi_b50eb6ed9f.svg"
+    }
+  ],
+  "finalCtaLine1": "Perhaps you are reading this with a smile today;",
+  "finalCtaLine2": "soon, you too will become part of these stories,",
+  "finalCtaLine3": "and together we will write new ones.",
+  "finalCtaDesc": "A great workplace is remembered not only by the work done; but also by memories created, shared values, and small details experienced every day. Such a work culture awaits you at Siskon.",
+  "finalCtaSubtitle": "Join our team!",
+  "finalCtaButton": "Submit CV",
+  "heroBgSvg": "/assets/strapi/asset_49_64fb6f1a12.svg",
+  "heroTitle": "Career",
+  "heroSubtitle": "Build the future of industrial software with our engineering teams",
+  "heroCtaLabel": "Send CV",
+  "heroBreadcrumbs": [
+    "Home",
+    "Corporate",
+    "Career"
+  ]
+}

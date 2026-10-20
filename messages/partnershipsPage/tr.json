@@ -1,0 +1,120 @@
+{
+  "pageTitle": "İş Birliklerimiz",
+  "pageSubtitle": "Dünya teknoloji devleri ile güçlü iş birlikleri kurarak, sektör lideri partnerlerimizle en iyi çözümleri sunuyoruz.",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbPartnerships": "İş Birlikleri",
+  "ecosystemEyebrow": "Ekosistemimiz",
+  "ecosystemTitle": "İş Birlikleri",
+  "workingArea": "Çalışma Alanı:",
+  "technologyArea": "Teknoloji Alanı:",
+  "ctaSectionTitle": "Doğru iş birliği modelini birlikte kuralım",
+  "ctaSectionDesc": "Hedeflediğiniz iş birliği kapsamını bizimle paylaşın, uygun teknoloji ortaklarıyla uygulanabilir bir yol haritası oluşturalım.",
+  "ctaSectionButton": "Bize Ulaşın",
+  "partners": [
+    {
+      "year": "2002",
+      "name": "Beckhoff",
+      "role": "Teknoloji Çözüm Ortağı",
+      "workArea": "Ürün Satışı, Proje Geliştirme",
+      "techArea": "PC Tabanlı Endüstriyel Otomasyon Ekipmanları",
+      "logo": "/assets/Logos/Beckhoff_white.svg"
+    },
+    {
+      "year": "2003",
+      "name": "Microsoft",
+      "role": "Stratejik Platform Partneri",
+      "workArea": "Lisans Satışı, Proje Geliştirme",
+      "techArea": "Yazılım ve Bulut Hizmetleri",
+      "logo": "/assets/Logos/microsoft.svg"
+    },
+    {
+      "year": "2017",
+      "name": "SICK",
+      "role": "AppSpace Çözüm Ortağı",
+      "workArea": "Proje Geliştirme",
+      "techArea": "Endüstriyel Sensörler",
+      "logo": "/assets/Logos/sick.svg"
+    },
+    {
+      "year": "2018",
+      "name": "Markem Imaje Projet",
+      "role": "Proje Bazlı Teknoloji Sağlayıcısı",
+      "workArea": "Proje Geliştirme",
+      "techArea": "Markalama ve Kodlama Sistemleri",
+      "logo": "/assets/Logos/project_markem.svg"
+    },
+    {
+      "year": "2019",
+      "name": "Universal Robots",
+      "role": "Proje Bazlı Teknoloji Sağlayıcısı",
+      "workArea": "Proje Geliştirme",
+      "techArea": "Kolaboratif Robotlar",
+      "logo": "/assets/Logos/universal_robots.svg"
+    },
+    {
+      "year": "2020",
+      "name": "Interroll",
+      "role": "Proje Bazlı Teknoloji Sağlayıcısı",
+      "workArea": "Ürün Satışı, Proje Geliştirme",
+      "techArea": "Endüstriyel Modüler Taşıma Sistemleri",
+      "logo": "/assets/Logos/Interroll.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Sewio",
+      "role": "Teknoloji Çözüm Ortağı",
+      "workArea": "Ürün Satışı, Proje Geliştirme",
+      "techArea": "Endüstriyel RTLS Sistemleri",
+      "logo": "/assets/Logos/Sewio-Logo-Color-RGB.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Ignition",
+      "role": "Teknoloji Çözüm Ortağı",
+      "workArea": "Lisans Satışı, Platform Geliştirme",
+      "techArea": "Endüstriyel Web Tabanlı SCADA Platformu",
+      "logo": "/assets/Logos/ignition-by-inductive-automation-logo-vector.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Efeso",
+      "role": "Stratejik Dijital Dönüşüm Ortağı",
+      "workArea": "Ortak Proje Geliştirme",
+      "techArea": "Endüstriyel Dijital Dönüşüm Danışmanlığı",
+      "logo": "/assets/Logos/efeso_logo.svg"
+    },
+    {
+      "year": "2024",
+      "name": "Velotic",
+      "role": "Çözüm Sağlayıcısı",
+      "workArea": "Proje Geliştirme",
+      "techArea": "Endüstriyel Entegre MES Platformu",
+      "logo": "/assets/Logos/velotic.svg"
+    },
+    {
+      "year": "2024",
+      "name": "Kuika",
+      "role": "Proje Bazlı Teknoloji Sağlayıcısı",
+      "workArea": "Proje Geliştirme",
+      "techArea": "Low Code Platformu",
+      "logo": "/assets/Logos/kuika.svg"
+    },
+    {
+      "year": "2024",
+      "name": "IAS",
+      "role": "Proje Bazlı Teknoloji Sağlayıcısı",
+      "workArea": "Proje Geliştirme",
+      "techArea": "ERP"
+    },
+    {
+      "year": "2025",
+      "name": "Faradai",
+      "role": "Proje Bazlı Teknoloji Sağlayıcısı",
+      "workArea": "Ürün Satışı",
+      "techArea": "IoT Tabanlı Enerji Yönetim Sistemleri",
+      "logo": "/assets/Logos/Faradai.svg"
+    }
+  ],
+  "heroTitle": "İş Birliklerimiz",
+  "heroSubtitle": "Dünya teknoloji devleri ile güçlü iş birlikleri kurarak, sektör lideri partnerlerimizle en iyi çözümleri sunuyoruz."
+}

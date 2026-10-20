@@ -1,0 +1,52 @@
+{
+  "title": "Tobacco Industry",
+  "metrics": "9 Countries · 300 Machines · 28 OEMs",
+  "pack": "OnSuite TMC",
+  "sectorLabel": "Sector 01",
+  "industryTitle": "Tobacco Industry",
+  "summary": "Tobacco production requires simultaneous control of OPC UA machinery, GSCA event workflows, and TPD track-and-trace obligations. OnSuite TMC provides a vendor-neutral, standards-based data layer for this environment.",
+  "detail": "Running live in 9 countries with 300 connected machines across 28 OEM brands.",
+  "kpis": [
+    { "value": "9", "title": "Countries", "note": "with active OPC UA TMC deployment" },
+    { "value": "300+", "title": "Connected Machines", "note": "with live data flow" },
+    { "value": "13", "title": "Conformance Units", "note": "covered by OPC UA TMC scope" },
+    { "value": "28", "title": "OEM Brands", "note": "including Hauni, Decoufle, GD, and Comas" }
+  ],
+  "needs": [
+    { "title": "Multi-brand machine landscape", "description": "Hauni, Decoufle, Comas, GD, and more, each with different communication behavior." },
+    { "title": "GSCA event governance", "description": "End-to-end handling of quality and safety incidents with audit readiness." },
+    { "title": "TPD and unit-level traceability", "description": "Mandatory serialization under EU Tobacco Products Directive requirements." },
+    { "title": "MES/SCADA/historian integration", "description": "Plug-and-play interoperability with existing enterprise systems." },
+    { "title": "Fast commissioning", "description": "Reduced engineering and startup effort for new lines and sites." }
+  ],
+  "solutions": [
+    { "title": "OnSuite TMC - Vendor-Neutral", "description": "OPC UA Tobacco Machine Communication standard with no vendor lock-in." },
+    { "title": "Support for 13 Conformance Units", "description": "Coverage for machine classes including cigarette makers, filter makers, and packers." },
+    { "title": "Secure OPC UA architecture", "description": "Encryption, certificate-based authentication, and field-proven reliability." },
+    { "title": "Standardized data and alarm model", "description": "Consistent tag structures across lines for global comparability." },
+    { "title": "OnSuite Trace + Live + Optima", "description": "Production genealogy, OEE tracking, and bottleneck/downtime analytics." },
+    { "title": "GSCA Kanban and dashboard", "description": "Incident management, root-cause analysis, and compliance evidence." }
+  ],
+  "results": [
+    { "title": "Vendor lock-in is eliminated", "description": "Switching machine brands requires no repeated integration engineering." },
+    { "title": "Commissioning time is shortened", "description": "Plug-and-play OPC UA TMC reduces rollout time from weeks to days." },
+    { "title": "Consistent KPIs across all lines", "description": "OEE for the same SKU can be compared across plants using a shared metric model." },
+    { "title": "Faster audit preparation", "description": "GSCA records are available instantly through the system." },
+    { "title": "Targeted recall capability", "description": "Only affected units are isolated instead of recalling entire batches." }
+  ],
+  "featured": {
+    "mark": "T",
+    "label": "Featured Product - Dedicated Site",
+    "title": "OnSuite TMC - Standardized Data Communication for Tobacco",
+    "description": "A vendor-neutral, secure, and scalable OPC UA TMC solution with a live dedicated product site and demo flow.",
+    "linkText": "opcuatmc.com",
+    "linkUrl": "https://www.opcuatmc.com"
+  },
+  "highlights": ["Vendor-neutral connectivity", "GSCA/TPD alignment", "Fast MES/SCADA integration"],
+  "references": [
+    { "name": "JTI", "logo": "/assets/Logos/JTI_Logo.svg" },
+    { "name": "Philip Morris International", "logo": "/assets/Logos/philip_morris_sa.svg" },
+    { "name": "Philsa", "logo": "/assets/Logos/philip_morris_sa.svg" },
+    { "name": "Turkish Tobacco", "logo": "/assets/Logos/G.D_tobacco.svg" }
+  ]
+}

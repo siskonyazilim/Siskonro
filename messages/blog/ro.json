@@ -1,0 +1,16 @@
+{
+  "prevPage": "Pagina anterioară",
+  "nextPage": "Pagina următoare",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbBlog": "Știri / Blog",
+  "pageTitle": "Știri / Blog",
+  "pageDescription": "Știri, investiții, evenimente și anunțuri axate pe tehnologie de la Siskon.",
+  "defaultCategory": "Știrile Noastre",
+  "emptyState": "Nu au fost adăugate încă articole de blog.",
+  "allNews": "Toate Știrile / Blog",
+  "backToBlog": "Înapoi la Blog",
+  "notFoundTitle": "Articolul nu a fost găsit",
+  "notFoundDesc": "Articolul de blog pe care îl căutați nu există.",
+  "heroTitle": "Știri / Blog",
+  "heroSubtitle": "Știri, investiții, evenimente și anunțuri axate pe tehnologie de la Siskon."
+}

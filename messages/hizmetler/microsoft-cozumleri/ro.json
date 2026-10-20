@@ -1,0 +1,78 @@
+{
+  "subtitle": "Accelerați transformarea digitală și dezvoltați strategii inovatoare!",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbServices": "Servicii",
+  "service": "SERVICIU",
+  "title": "Soluții Microsoft și Licențiere",
+  "description": "Digitalizați procesele de afaceri cu soluțiile Microsoft 365, Power Platform și Azure. Oferim servicii de licențiere, instalare și consultanță adaptate nevoilor afacerii dvs. Furnizați analiză de date cu Power BI, dezvoltare de aplicații cu Power Apps și automatizare flux de lucru cu Power Automate.",
+  "requestProposal": "Solicitați o Propunere",
+  "benefits": [
+    "Creșterea productivității",
+    "Optimizarea proceselor de afaceri",
+    "Soluții rapide și ușor de implementat",
+    "Analiza datelor și business intelligence",
+    "Automatizarea fluxului de lucru",
+    "Securitate ridicată",
+    "Acces global și scalabilitate",
+    "Integrare fără întreruperi"
+  ],
+  "benefitsEyebrow": "Beneficii",
+  "benefitsTitle": "Ce Vă Oferă Soluțiile Microsoft Siskon?",
+  "powerPlatformTitle": "Microsoft Power Platforms",
+  "powerPlatformSubtitle": "Accelerați transformarea digitală cu Microsoft Power Platforms!",
+  "powerPlatformDescription": "Aplicațiile Microsoft Power Platform reunesc analiza datelor, automatizarea fluxurilor de lucru și dezvoltarea aplicațiilor sub un singur acoperiș. Optimizați procesele cu Power BI, Power Apps și Power Automate și creați impact măsurabil în transformarea digitală.",
+  "solutionsTitle": "Soluțiile Noastre Power Platform",
+  "licenses": [
+    "Licențe Microsoft 365",
+    "Licențe Windows",
+    "Licențe Office",
+    "Licențe Azure",
+    "Licențe Microsoft Power Platform"
+  ],
+  "licensesTitle": "Soluții de Licențiere Microsoft",
+  "licensesSubtitle": "Licențe de Produse Microsoft",
+  "ctaTitle": "Începeți Transformarea cu Soluții Microsoft",
+  "ctaDescription": "Contactați-ne pentru cele mai potrivite soluții Microsoft și opțiuni de licențiere pentru afacerea dvs.",
+  "ctaButton": "Contactați-ne",
+  "showMore": "Apasă pentru mai multe",
+  "showLess": "Arată mai puțin",
+  "imageAlt": "Soluții Siskon Microsoft - Instrumente de Transformare Digitală",
+  "serviceSectionTitle": "Soluții Microsoft",
+  "serviceSectionDesc": "Soluțiile puternice oferite de Microsoft precum Azure, Power BI, Power Apps și Power Automate sprijină afacerea dumneavoastră să realizeze transformarea digitală rapid și ușor. Prin serviciile noastre de vânzare de licențe, instruire și integrare, accelerăm procesul de transformare digitală și ducem afacerea dumneavoastră cu un pas înainte.",
+  "powerPlatform": {
+    "title": "Microsoft Power Platforms",
+    "subtitle": "Accelerați transformarea digitală cu Microsoft Power Platforms!",
+    "description": "Aplicațiile Microsoft Power Platform aduc împreună analiza datelor, automatizarea fluxului de lucru și dezvoltarea de aplicații sub același acoperiș. Optimizați-vă procesele cu Power BI, Power Apps și Power Automate și creați un impact măsurabil în transformarea digitală."
+  },
+  "heroTitle": "Soluții Microsoft și Licențiere",
+  "heroSubtitle": "Accelerați transformarea digitală și dezvoltați strategii inovatoare!",
+  "heroDescription": "Digitalizați procesele de afaceri cu soluțiile Microsoft 365, Power Platform și Azure. Oferim servicii de licențiere, instalare și consultanță adaptate nevoilor afacerii dvs. Furnizați analiză de date cu Power BI, dezvoltare de aplicații cu Power Apps și automatizare flux de lucru cu Power Automate.",
+  "heroImage": "/assets/strapi/ms_solutions_1_camera_2_aa750b2234.webp",
+  "serviceLabel": "SERVICIU",
+  "ctaDesc": "Contactați-ne pentru cele mai potrivite soluții Microsoft și opțiuni de licențiere pentru afacerea dvs.",
+  "powerPlatformEyebrow": "Microsoft Power Platforms",
+  "powerPlatformSpot": "Accelerați transformarea digitală cu Microsoft Power Platforms!",
+  "powerPlatformDesc": "Aplicațiile Microsoft Power Platform aduc împreună analiza datelor, automatizarea fluxului de lucru și dezvoltarea de aplicații sub același acoperiș. Optimizați-vă procesele cu Power BI, Power Apps și Power Automate și creați un impact măsurabil în transformarea digitală.",
+  "powerPlatformImage": "/assets/strapi/ms_solutions_2_zeminli_camera_080f63f309.webp",
+  "powerPlatformSecondaryImage": "/assets/strapi/ms_solutions_3_zeminli_camera_d063902605.webp",
+  "platformLogos": [
+    {
+      "title": "Power BI",
+      "icon": "/assets/strapi/power_bi_icon_seeklogo_c5baab45af.svg",
+      "image": "",
+      "imageAlt": "Microsoft Power BI Platforms"
+    },
+    {
+      "title": "Power Apps",
+      "icon": "/assets/strapi/microsoft_power_apps_2020_e26543638f.svg",
+      "image": "",
+      "imageAlt": "Microsoft Power Apps Platform"
+    },
+    {
+      "title": "Power Automate",
+      "icon": "/assets/strapi/microsoft_power_automate_2020_8a1ed0cfdb.svg",
+      "image": "",
+      "imageAlt": "Microsoft  Power Automate Platforms"
+    }
+  ]
+}

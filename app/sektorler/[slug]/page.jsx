@@ -6,7 +6,8 @@ import Image from 'next/image';
 import { useParams, usePathname } from 'next/navigation';
 import PageHero from '../../components/PageHero';
 import { useLanguage } from '../../_context/LanguageContext';
-import { COMMON_CHALLENGES, getSectorBySlug, REFERENCE_LOGO_MAP } from '../../lib/content/sectorsContent';
+import SECTORS_DATA from '../../../messages/sectorsPage/sectors.json';
+import REFERENCE_LOGO_MAP from '../../../messages/sectorsPage/referenceLogoMap.json';
 
 const EN_TO_TR_SECTOR_SLUG = {
   tobacco: 'tutun',
@@ -45,19 +46,17 @@ function NotFoundContent({ isEn, isRo, localizePath }) {
   );
 }
 
-function ChallengeGrid({ isEn, isRo }) {
+function ChallengeGrid({ challenges }) {
+  const items = Array.isArray(challenges) ? challenges : [];
   return (
     <div className="mt-8 divide-y divide-slate-200 border-y border-slate-200">
-      {COMMON_CHALLENGES.map((challenge) => {
-        const challengeContent = isRo ? challenge.ro : isEn ? challenge.en : challenge.tr;
-        return (
-          <article key={challenge.code} className="py-5">
-            <p className="text-sky-600 font-extrabold text-sm">{challenge.code}</p>
-            <h3 className="mt-1 text-xl font-bold text-slate-900">{challengeContent.title}</h3>
-            <p className="mt-2 text-slate-600 leading-relaxed">{challengeContent.description}</p>
-          </article>
-        );
-      })}
+      {items.map((challenge) => (
+        <article key={challenge.code} className="py-5">
+          <p className="text-sky-600 font-extrabold text-sm">{challenge.code}</p>
+          <h3 className="mt-1 text-xl font-bold text-slate-900">{challenge.title}</h3>
+          <p className="mt-2 text-slate-600 leading-relaxed">{challenge.description}</p>
+        </article>
+      ))}
     </div>
   );
 }
@@ -108,8 +107,11 @@ NotFoundContent.propTypes = {
 };
 
 ChallengeGrid.propTypes = {
-  isEn: PropTypes.bool.isRequired,
-  isRo: PropTypes.bool,
+  challenges: PropTypes.arrayOf(PropTypes.shape({
+    code: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+  })).isRequired,
 };
 
 ReferenceLogos.propTypes = {
@@ -128,7 +130,7 @@ export default function SectorDetailPage() {
   const slugFromPathname = pathnameParts.at(-1) || '';
   const slug = normalizeSectorSlug(slugFromParams || slugFromPathname);
 
-  const sector = getSectorBySlug(slug);
+  const sector = SECTORS_DATA.find((s) => s.slug === slug);
 
   if (!sector) {
     return <NotFoundContent isEn={isEn} isRo={isRo} localizePath={localizePath} />;
@@ -185,7 +187,7 @@ export default function SectorDetailPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             {isRo ? 'Probleme comune rezolvate de aceeași bază' : isEn ? 'Shared problems solved by the same backbone' : 'Aynı omurga ile çözülen ortak problemler'}
           </h2>
-          <ChallengeGrid isEn={isEn} isRo={isRo} />
+          <ChallengeGrid challenges={t('sectorsPage.commonChallenges')} />
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Link

@@ -1,0 +1,161 @@
+{
+  "heroTaglineLine1": "Profunzime în Inginerie,",
+  "heroTaglineLine2": "Impact Global",
+  "heroTitle": "Soluții Rapide și Inteligente",
+  "heroDescription": "De la automatizarea proceselor la sistemele de date bazate pe inteligență artificială, facem producția mai eficientă, trasabilă și inteligentă. Din 1997, am condus transformarea digitală în industriile auto, electrocasnice, alimentare, textile, tutun și mașini.",
+  "heroCta": "Explorați Serviciile Noastre",
+  "servicesEyebrow": "Serviciile Noastre",
+  "servicesTitle": "Atingeți Excelența Operațională cu Soluții Software și Automatizare Specifice Industriei",
+  "servicesDescription": "Măsurați eficiența, optimizați procesele, adăugați valoare producției dvs. Soluțiile noastre fac toate procesele de la producție la management vizibile, măsurabile și eficiente.",
+  "allServicesEyebrow": "Toate Serviciile",
+  "allServicesTitle": "Să Proiectăm Împreună Cea Mai Potrivită Soluție pentru Dvs.",
+  "allServicesDescription": "Oferim suport de inginerie de la un capăt la altul în călătoria dvs. de transformare digitală.",
+  "allServicesButton": "Vezi Toate Serviciile",
+  "productsEyebrow": "Produsele Noastre",
+  "productsTitle": "Transformați Producția în Putere Digitală cu Produse Flexibile, Inteligente și Ușor de Implementat",
+  "productsDescription": "Portofoliul nostru de produse transformă datele din fabrică în informații semnificative cu infrastructura IIoT și algoritmii noștri proprietari. Mută liniile dvs. de producție către o structură mai transparentă, controlabilă și bazată pe date.",
+  "allProductsButton": "Explorați Detaliile",
+  "globalEyebrow": "Proiecte Globale",
+  "globalTitle": "Semnătura Siskon în 40+ de Țări și 60+ Fabrici",
+  "globalDescription": "Cu sediul central în Turcia și birourile din România și Estonia, soluțiile noastre continuă să funcționeze în zeci de țări, în multe sectoare, în sute de sisteme din întreaga lume.",
+  "referencesEyebrow": "Referințele Noastre",
+  "referencesTitle": "Referințele Noastre",
+  "referencesButton": "Referințele Noastre",
+  "ctaTitle": "Să Modelăm Împreună Viitorul Industrial",
+  "ctaDescription": "Suntem hotărâți să depășim granițele industriale și să modelăm viitorul împreună cu dvs. Împărtășiți nevoile dvs., explorați soluțiile noastre.",
+  "ctaButton": "Contactați-ne",
+  "exploreDetails": "Explorați Detaliile",
+  "imageUnavailable": "Imagine indisponibilă",
+  "continents": {
+    "europe": "Avrupa",
+    "africa": "Afrika",
+    "asia": "Asya",
+    "northAmerica": "Kuzey Amerika",
+    "southAmerica": "Güney Amerika"
+  },
+  "stats": [
+    {
+      "num": "1997",
+      "label": "Fondat"
+    },
+    {
+      "num": "40+",
+      "label": "Țări"
+    },
+    {
+      "num": "500+",
+      "label": "Proiecte"
+    },
+    {
+      "num": "60+",
+      "label": "Fabrici Inteligente"
+    }
+  ],
+  "exploreDetailsLabel": "Explorați detaliile",
+  "defaultMapAlt": "Harta globală a proiectelor",
+  "aboutUsButton": "Despre Noi",
+  "onSuiteSectionTitle": "OnSuite — Platformă Inteligentă de Producție",
+  "onSuiteSectionDesc1": "OnSuite reunește producția, calitatea și inteligența operațională pe o singură structură digitală. Prin combinarea conectivității mașinilor, monitorizării continue, trasabilității și analizelor de performanță în aceeași arhitectură, permite echipelor să ia decizii mai rapide și mai precise.",
+  "onSuiteSectionDesc2": "Datorită abordării sale modulare de implementare și capacităților de integrare la nivel de întreprindere, vă puteți scala de la o singură linie de producție la operațiuni cu mai multe facilități, fără a reconstrui infrastructura de sistem de bază.",
+  "discoverOnSuiteButton": "Descoperiți OnSuite",
+  "globalProjectsEyebrow": "Proiectele Noastre Globale",
+  "countriesLabel": "Țări",
+  "factoriesLabel": "Fabrici",
+  "legendAlt": "Legenda proiectelor globale",
+  "services": [
+    {
+      "num": "01",
+      "desc": "Opțiuni de soluții care includ cele mai potrivite produse software și hardware, concepute pentru a funcționa împreună.",
+      "img": "/assets/strapi/musteriye_ozel_yazilim_cozumleri_banner_1_1_zeminsiz_2_417c445b23.webp",
+      "href": "/hizmetler/musteriye-ozel-yazilim"
+    },
+    {
+      "num": "02",
+      "desc": "Modalitatea inteligentă de a gestiona datele industriale și procesele de afaceri în era transformării digitale.",
+      "img": "/assets/strapi/iiot_hizmet_gorsel_2_2d195ecb1d.webp",
+      "href": "/hizmetler/iiot"
+    },
+    {
+      "num": "03",
+      "desc": "Modelați viitorul producției cu soluțiile noastre de automatizare.",
+      "img": "/assets/strapi/siskon_1_4_makine_ve_proses_otomasyonu_16_9_dikey_3_camera_zeminsiz_2_ee1925aa7f.webp",
+      "href": "/hizmetler/makine-proses-otomasyonu"
+    },
+    {
+      "num": "04",
+      "desc": "Obțineți excelență în producție prin tehnologii avansate de procesare și analiză a imaginilor.",
+      "img": "/assets/strapi/Goruntu_Izleme_Watch_33e2d645e2.webp",
+      "href": "/hizmetler/goruntu-isleme"
+    },
+    {
+      "num": "05",
+      "desc": "Transformați datele în decizii puternice și inteligente.",
+      "img": "/assets/strapi/aivemakineogrenmesi_f11eac3906.webp",
+      "href": "/hizmetler/ai-makine-ogrenmesi"
+    }
+  ],
+  "products": [],
+  "references": [
+    {
+      "name": "BORGWARNER",
+      "logo": "/assets/strapi/borgwarner_seeklogo_0eba93e703.svg"
+    },
+    {
+      "name": "BOSCH",
+      "logo": "/assets/strapi/Bosch_logo_167b5c5e42.svg"
+    },
+    {
+      "name": "BSH",
+      "logo": "/assets/strapi/Haier_logo_c6a21cc05b.svg"
+    },
+    {
+      "name": "HAIER EUROPE",
+      "logo": "/assets/strapi/JTI_Logo_5d5b73b2ab.svg"
+    },
+    {
+      "name": "JTI",
+      "logo": "/assets/strapi/maxion_inci_0176ce523d.svg"
+    },
+    {
+      "name": "MAXION",
+      "logo": "/assets/strapi/mey_diageo_4ac7b1cf31.svg"
+    },
+    {
+      "name": "MEY · DIAGEO",
+      "logo": "/assets/strapi/philip_morris_international_pmi_seeklogo_3775da7228.png"
+    },
+    {
+      "name": "PMI",
+      "logo": "/assets/strapi/Unilever_334eaf1355.svg"
+    },
+    {
+      "name": "UNILEVER",
+      "logo": "/assets/Logos/Unilever.svg"
+    }
+  ],
+  "onSuiteImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
+  "continentMaps": {
+    "europe": {
+      "label": "Avrupa",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_avrupa_67a5e16b5d.svg"
+    },
+    "africa": {
+      "label": "Afrika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_afrika_54d71c120b.svg"
+    },
+    "asia": {
+      "label": "Asya",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_asya_ef128e81c6.svg"
+    },
+    "northAmerica": {
+      "label": "Kuzey Amerika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_k_amerika_78010c63c2.svg"
+    },
+    "southAmerica": {
+      "label": "Güney Amerika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_g_amerika_cde8998b25.svg"
+    }
+  },
+  "defaultMapSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fworld2_c3758b5125.svg",
+  "legendImageSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Frenk_kartela_white_687d02e3db.svg"
+}

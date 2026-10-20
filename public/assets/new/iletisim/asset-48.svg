@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.64 56.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #0f4d9a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.96px;
+      }
+
+      .cls-2 {
+        fill: #0f4d9a;
+        font-family: Lufga-Medium, Lufga;
+        font-size: 25px;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <g id="_1200x30_Layout" data-name="1200x30 Layout">
+    <g>
+      <g>
+        <path class="cls-1" d="M39.66,12.11v40.54c0,1.56-1.26,2.82-2.82,2.82H3.8c-1.56,0-2.82-1.26-2.82-2.82v-5.88,4.02V.98h27.21"/>
+        <polygon class="cls-1" points="28.05 12.24 39.66 12.11 28.19 .98 28.05 12.24"/>
+      </g>
+      <text class="cls-2" transform="translate(11.29 38.93)"><tspan x="0" y="0">H</tspan></text>
+    </g>
+  </g>
+</svg>

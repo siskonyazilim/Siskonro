@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import AnimatedButton from '../components/AnimatedButton';
+import { AnimatedCTALink } from '../components/AnimatedCTALink';
 import PageHero from '../components/PageHero';
 import SmartImage from '../components/SmartImage';
 import { getServicesPageContent } from '../lib/content/servicesPageContent';
@@ -56,21 +58,10 @@ export default function HizmetlerPage() { // NOSONAR
             {/* Left — golden ratio major (≈61.8%) */}
             <div className="w-full lg:w-[62%] space-y-5 md:space-y-8">
               <span className="text-sky-600 font-bold text-xs uppercase tracking-widest">{t('servicesPage.solutionPartnerEyebrow')}</span>
-              <h2 className="text-3xl md:text-[46px] font-bold text-slate-900 mt-1 leading-[1.15]">
-                {isRo ? (
-                  <>
-                    Conducem Transformarea Digitală <br /> <span className="text-sky-600">cu Inginerie.</span>
-                  </>
-                ) : isEn ? (
-                  <>
-                    We Lead Digital Transformation <br /> <span className="text-sky-600">with Engineering.</span>
-                  </>
-                ) : (
-                  <>
-                    Dijital Dönüşümü <br /> <span className="text-sky-600">Mühendislikle Yönetiyoruz.</span>
-                  </>
-                )}
-              </h2>
+              <h2
+                className="text-3xl md:text-[46px] font-bold text-slate-900 mt-1 leading-[1.15]"
+                dangerouslySetInnerHTML={{ __html: t('servicesPage.solutionPartnerTitle') }}
+              />
               <p className="text-slate-500 text-base md:text-lg leading-relaxed">
                 {t('servicesPage.solutionPartnerDesc')}
               </p>
@@ -99,7 +90,7 @@ export default function HizmetlerPage() { // NOSONAR
                 href={localizePath(service.href)}
                 className={`group flex flex-col h-full bg-white rounded-[32px] md:rounded-[48px] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-700 overflow-hidden reveal focus-ring-card ${(service.mobileNarrow || service.href === '/hizmetler/egitim-danismanlik') ? 'max-w-[396px] md:max-w-none mx-auto md:mx-0 min-h-[760px] md:min-h-0' : ''}`}
                 data-tilt
-                aria-label={`${service.title} - ${isRo ? 'Explorați serviciul' : isEn ? 'Explore service' : 'Hizmeti inceleyin'}`}
+                aria-label={`${service.title} - ${t('servicesPage.exploreService')}`}
               >
                 <div className={`relative aspect-[4/3] overflow-hidden bg-slate-50 ${service.imageFit === 'cover' ? 'p-0' : 'p-3 md:p-4'}`}>
                   <SmartImage
@@ -152,13 +143,13 @@ export default function HizmetlerPage() { // NOSONAR
                 <p className="text-slate-100 text-base md:text-lg leading-relaxed mb-8 md:mb-10 flex-1 max-w-[36ch]">
                   {t('servicesPage.strategicPlanningDesc')}
                 </p>
-                <Link 
-                  href={`${localizePath('/iletisim')}#contact-form`} 
-                  className="btn-primary btn-primary-mobile-wrap w-full justify-center py-4 md:py-5 rounded-2xl bg-sky-600 hover:bg-sky-500 transition-all shadow-xl shadow-sky-600/20 text-sm md:text-lg font-bold"
+                <AnimatedButton
+                  href={`${localizePath('/iletisim')}#contact-form`}
+                  className="w-full justify-center py-4 md:py-5 rounded-2xl bg-sky-600 text-sm md:text-lg font-bold shadow-xl"
                   suppressHydrationWarning={true}
                 >
                   {t('servicesPage.strategicPlanningCta')}
-                </Link>
+                </AnimatedButton>
               </div>
             </div>
           </div>
@@ -187,9 +178,9 @@ export default function HizmetlerPage() { // NOSONAR
             <p className="text-slate-600 text-lg leading-relaxed mb-10">
             {t('servicesPage.ctaDesc')}
           </p>
-          <Link href={`${localizePath('/iletisim')}#contact-form`} className="btn-cta bg-white text-sky-600 hover:bg-sky-50 px-10 py-4 font-bold rounded-xl shadow-xl transition-all">
+          <AnimatedCTALink href={`${localizePath('/iletisim')}#contact-form`}>
             {t('servicesPage.ctaCta')}
-          </Link>
+          </AnimatedCTALink>
         </div>
       </section>
     </div>

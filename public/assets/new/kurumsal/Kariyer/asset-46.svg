@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.58 116.94">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #03499a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="_1200x30_Layout" data-name="1200x30 Layout">
+    <g>
+      <g>
+        <path class="cls-2" d="M1.5,99.44v12.01c0,2.21,1.79,4,4,4h63.12c2.21,0,4-1.79,4-4V19.26c0-2.21-1.79-4-4-4H5.5c-2.21,0-4,1.79-4,4v87.57"/>
+        <g>
+          <g>
+            <line class="cls-1" x1="16.28" y1="59.19" x2="45.23" y2="59.19"/>
+            <line class="cls-1" x1="16.28" y1="70.95" x2="58.48" y2="70.95"/>
+            <line class="cls-1" x1="16.28" y1="82.7" x2="45.23" y2="82.7"/>
+            <line class="cls-1" x1="16.28" y1="94.46" x2="58.48" y2="94.46"/>
+          </g>
+          <line class="cls-1" x1="16.28" y1="47.44" x2="58.48" y2="47.44"/>
+        </g>
+      </g>
+      <polygon class="cls-2" points="87.23 56.59 99.25 88.44 103.9 73.27 119.08 68.61 87.23 56.59"/>
+      <path class="cls-2" d="M44.72,9.16c0-4.23-3.43-7.66-7.66-7.66s-7.66,3.43-7.66,7.66h-9.01v12.21h33.33v-12.21h-9.01Z"/>
+    </g>
+  </g>
+</svg>

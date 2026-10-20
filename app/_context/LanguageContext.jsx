@@ -4,9 +4,7 @@ import React, { createContext, useCallback, useContext, useMemo, useState, useEf
 import PropTypes from 'prop-types';
 import { usePathname, useRouter } from 'next/navigation';
 import { detectLocale, toLocalizedPath } from '../lib/i18n/routes';
-import trMessages from '../../messages/tr.json';
-import enMessages from '../../messages/en.json';
-import roMessages from '../../messages/ro.json';
+import { trMessages, enMessages, roMessages } from '../../messages';
 
 const LanguageContext = createContext();
 
@@ -78,7 +76,7 @@ export function LanguageProvider(props) {
   const localizePath = useCallback((path, targetLocale = locale) => toLocalizedPath(path, targetLocale), [locale]);
   const t = useCallback((key) => {
     const value = key.split('.').reduce((acc, part) => acc?.[part], messages);
-    return typeof value === 'string' ? value : key;
+    return value !== undefined ? value : key;
   }, [messages]);
 
   const value = useMemo(

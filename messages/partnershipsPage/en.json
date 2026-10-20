@@ -1,0 +1,120 @@
+{
+  "pageTitle": "Our Partnerships",
+  "pageSubtitle": "By building strong collaborations with global technology giants, we deliver the best solutions with our industry-leading partners.",
+  "breadcrumbHome": "Home",
+  "breadcrumbPartnerships": "Partnerships",
+  "ecosystemEyebrow": "Our Ecosystem",
+  "ecosystemTitle": "Partnerships",
+  "workingArea": "Working Area:",
+  "technologyArea": "Technology Area:",
+  "ctaSectionTitle": "Let's establish the right partnership model together",
+  "ctaSectionDesc": "Share the partnership scope you aim for with us, let's create an actionable roadmap with suitable technology partners.",
+  "ctaSectionButton": "Contact us",
+  "partners": [
+    {
+      "year": "2002",
+      "name": "Beckhoff",
+      "role": "Technology Solution Partner",
+      "workArea": "Product Sales, Project Development",
+      "techArea": "PC-Based Industrial Automation Equipment",
+      "logo": "/assets/Logos/Beckhoff_white.svg"
+    },
+    {
+      "year": "2003",
+      "name": "Microsoft",
+      "role": "Strategic Platform Partner",
+      "workArea": "License Sales, Project Development",
+      "techArea": "Software and Cloud Services",
+      "logo": "/assets/Logos/microsoft.svg"
+    },
+    {
+      "year": "2017",
+      "name": "SICK",
+      "role": "AppSpace Solution Partner",
+      "workArea": "Project Development",
+      "techArea": "Industrial Sensors",
+      "logo": "/assets/Logos/sick.svg"
+    },
+    {
+      "year": "2018",
+      "name": "Markem Imaje",
+      "role": "Project-Based Technology Provider",
+      "workArea": "Project Development",
+      "techArea": "Marking and Coding Systems",
+      "logo": "/assets/Logos/project_markem.svg"
+    },
+    {
+      "year": "2019",
+      "name": "Universal Robots",
+      "role": "Project-Based Technology Provider",
+      "workArea": "Project Development",
+      "techArea": "Collaborative Robots",
+      "logo": "/assets/Logos/universal_robots.svg"
+    },
+    {
+      "year": "2020",
+      "name": "Interroll",
+      "role": "Project-Based Technology Provider",
+      "workArea": "Product Sales, Project Development",
+      "techArea": "Industrial Modular Conveying Systems",
+      "logo": "/assets/Logos/Interroll.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Sewio",
+      "role": "Technology Solution Partner",
+      "workArea": "Product Sales, Project Development",
+      "techArea": "Industrial RTLS Systems",
+      "logo": "/assets/Logos/Sewio-Logo-Color-RGB.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Ignition",
+      "role": "Technology Solution Partner",
+      "workArea": "License Sales, Platform Development",
+      "techArea": "Industrial Web-Based SCADA Platform",
+      "logo": "/assets/Logos/ignition-by-inductive-automation-logo-vector.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Efeso",
+      "role": "Strategic Digital Transformation Partner",
+      "workArea": "Joint Project Development",
+      "techArea": "Industrial Digital Transformation Consulting",
+      "logo": "/assets/Logos/efeso_logo.svg"
+    },
+    {
+      "year": "2024",
+      "name": "Velotic",
+      "role": "Solution Provider",
+      "workArea": "Project Development",
+      "techArea": "Integrated Industrial MES Platform",
+      "logo": "/assets/Logos/velotic.svg"
+    },
+    {
+      "year": "2024",
+      "name": "Kuika",
+      "role": "Project-Based Technology Provider",
+      "workArea": "Project Development",
+      "techArea": "Low-Code Platform",
+      "logo": "/assets/Logos/kuika.svg"
+    },
+    {
+      "year": "2024",
+      "name": "IAS",
+      "role": "Project-Based Technology Provider",
+      "workArea": "Project Development",
+      "techArea": "ERP"
+    },
+    {
+      "year": "2025",
+      "name": "Faradai",
+      "role": "Project-Based Technology Provider",
+      "workArea": "Product Sales",
+      "techArea": "IoT-Based Energy Management Systems",
+      "logo": "/assets/Logos/Faradai.svg"
+    }
+  ],
+  "heroTitle": "Our Partnerships",
+  "heroSubtitle": "By building strong collaborations with global technology giants, we deliver the best solutions with our industry-leading partners."
+}

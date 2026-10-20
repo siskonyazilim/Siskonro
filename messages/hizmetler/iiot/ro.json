@@ -1,0 +1,61 @@
+{
+  "subtitle": "Modalitatea inteligentă de a gestiona datele industriale și procesele de afaceri în era transformării digitale.",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbServices": "Servicii",
+  "service": "Serviciu",
+  "title": "Soluții IIoT",
+  "description": "Sistemul de Colectare a Datelor Siskon, care este un sistem modular de management; colectează, raportează și notifică datele de producție, calitate, proces și energie din procesele dvs. de afaceri în timp real, cu acuratețe și automat. Oferă fluxul de date necesar sistemelor de suport pentru decizii.",
+  "getInfo": "Obțineți Informații",
+  "benefits": "Beneficii",
+  "benefitsTitle": "Care Sunt Caracteristicile Sistemelor?",
+  "subSystems": [
+    {
+      "title": "Sistem de Colectare Date de Producție",
+      "icon": "/assets/new/hizmetler/iiot/asset-45-1.svg",
+      "spot": "Garantați succesul cu urmărirea eficienței în timp real!",
+      "desc": "Colectează cantități de producție, rebuturi, timpi morți și cauze fundamentale în timp real pentru a permite analize de eficiență, OEE, KPI, timp de ciclu și blocaje."
+    },
+    {
+      "title": "Sistem de Colectare Date de Calitate",
+      "icon": "/assets/new/hizmetler/iiot/asset-46-1.svg",
+      "spot": "Asigurați calitatea cu date precise!",
+      "desc": "Adună automat date de calitate și de laborator din mediile de producție, ajutând la standardizarea proceselor de calitate și la îmbunătățirea calității produselor."
+    },
+    {
+      "title": "Sistem de Colectare Date de Proces",
+      "icon": "/assets/new/hizmetler/iiot/asset-49.svg",
+      "spot": "Gestionați datele de proces și creșteți-vă puterea operațională!",
+      "desc": "Colectează parametrii de proces precum presiune, temperatură, viteză, debit, pH pe bază de eveniment/timp pentru analize în timp real și istorice."
+    },
+    {
+      "title": "Sistem de Colectare Date de Energie",
+      "icon": "/assets/new/hizmetler/iiot/asset-47-1.svg",
+      "spot": "Reduceți costurile cu managementul energiei bazat pe date!",
+      "desc": "Captează date despre consum, tensiune, curent și frecvență pentru a monitoriza, analiza și optimiza utilizarea energiei, sprijinind în același timp procesele ISO 50001."
+    }
+  ],
+  "subSystemsEyebrow": "Subsisteme",
+  "subSystemsTitle": "Sisteme de Colectare a Datelor IIoT",
+  "ctaTitle": "Să Modelăm Împreună Viitorul Industrial",
+  "ctaDescription": "Împărtășiți nevoile dvs., să explorăm împreună soluțiile noastre.",
+  "ctaButton": "Contactați-ne",
+  "imageAlt": "Soluții Siskon IIoT - Colectare Date Industrial Internet of Things",
+  "whySiskon": "De ce Siskon?",
+  "showMore": "Apasă pentru mai multe",
+  "showLess": "Arată mai puțin",
+  "features": [
+    "Colectare date în timp real",
+    "Achiziție de date pe bază de timp",
+    "Achiziție de date bazată pe evenimente",
+    "Configurare bazată pe web",
+    "Motoare de formulare și filtrare",
+    "Management de alarme și notificări",
+    "Integrare ERP",
+    "Raportare și analize avansate",
+    "Urmărire a performanței în timp real",
+    "Suport larg pentru protocoale de comunicare",
+    "Control Statistic al Procesului",
+    "Managementul mentenanței și calibrării",
+    "Compatibilitate cu toate soluțiile Siskon"
+  ]
+}

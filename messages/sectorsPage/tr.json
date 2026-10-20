@@ -1,0 +1,52 @@
+{
+  "pageTitle": "Sektörler",
+  "pageSubtitle": "Sekiz Sektör, Tek Mühendislik Disiplini.",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbSectors": "Sektörler",
+  "overviewTitle": "Bir Bakışta",
+  "overviewHeadline": "Sekiz Sektör, Tek Mühendislik Disiplini.",
+  "overviewIntro": "Her sektör için ayrı modülleri zorlamak yerine, ortak bir OnSuite çekirdeği üzerine sektöre özel katmanları inşa ediyoruz. Aşağıdaki kartlar sektörel özetlerdir; bir sonraki bölümde bu sekiz sektörün ortak omurgasını ve ardından her sektörün detayını bulacaksınız.",
+  "ctaDetail": "Detaya Git",
+  "painTitle": "Sektörler Farklı, Sorun Aynı",
+  "painHeadline": "Her Üretim Hattının Aynı Altı Sorunu Var.",
+  "painLead": "Tütün makinesi, beyaz eşya hattı, CNC parkuru veya gıda dolum hattı yüzeyde tamamen farklı görünse de, hepsi aynı altı temel problemle boğuşur. Bu yüzden 8 sektörü 8 ayrı yazılımla değil, ortak bir OnSuite omurgası ve sektöre özel katmanlarla çözüyoruz.",
+  "backboneTitle": "OnSuite Omurgası",
+  "backboneHeadline": "Tek Omurga · 11 Modül · Daha Fazla Veri, Daha Fazla İçgörü, Daha Fazla İyileştirme",
+  "backboneLead": "OnSuite - Sektör Bağımsız Çekirdek, Sektöre Özel Katmanlar. Aşağıdaki modüller her sektör projesinde aynı çekirdekten beslenir. Sektörel paketlerimiz (Hybrid, Organic, A+++, Capsule Track and Trace) bu modüllerin sektöre göre yapılandırılmış birleşimleridir; sıfırdan yazılım değil, omurganın sektör katmanıdır.",
+  "ctaContact": "Proje Konuşalım",
+  "ctaFinal": "Sonraki adımı birlikte planlayalım.",
+  "ctaSuffix": "Önceliklerinizi paylaşın, odaklı bir dönüşüm planı hazırlayalım.",
+  "contactUs": "Bize Ulaşın",
+  "commonChallenges": [
+    {
+      "code": "01",
+      "title": "Veri Parçalanması",
+      "description": "Her makine kendi protokolünde konuşur, KPI'lar birleşmez, raporlar manuel kalır."
+    },
+    {
+      "code": "02",
+      "title": "Görünmez Verimlilik Kaybı",
+      "description": "OEE düşüktür ama kaybın yeri belirsizdir; darboğazlar veri yerine sezgiyle yönetilir."
+    },
+    {
+      "code": "03",
+      "title": "İzlenebilirlik Boşlukları",
+      "description": "Geri çağırma anında parti zinciri eksik kalır; BOM doğrulaması ve garanti süreçleri kağıtla yürür."
+    },
+    {
+      "code": "04",
+      "title": "Denetim ve Garanti Riski",
+      "description": "ISO, IATF, GMP, GSCA denetimi öncesinde haftalarca veri derlenir; audit riski yükselir."
+    },
+    {
+      "code": "05",
+      "title": "Enerji ve Karbon Görünmezliği",
+      "description": "Tüketim fatura seviyesinde görünür; hat, vardiya ve ürün kırılımında karar üretilemez. CBAM baskısı artar."
+    },
+    {
+      "code": "06",
+      "title": "Sistem Entegrasyon Açıkları",
+      "description": "MES, ERP, kalite, planlama ve depo sistemleri farklı dillerde akar; veri kopuk ve geç kalır."
+    }
+  ]
+}

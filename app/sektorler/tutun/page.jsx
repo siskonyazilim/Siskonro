@@ -102,7 +102,7 @@ const CONTENT = {
     references: [
       { name: 'JTI', logo: '/assets/Logos/JTI_Logo.svg' },
       { name: 'Philip Morris International', logo: '/assets/Logos/philip_morris_sa.svg' },
-      { name: 'Philsa', logo: '/assets/Logos/philsa.svg' },
+      { name: 'Philsa', logo: '/assets/Logos/philip_morris_sa.svg' },
       { name: 'Türk Tütün', logo: '/assets/Logos/G.D_tobacco.svg' },
     ],
   },
@@ -202,7 +202,7 @@ const CONTENT = {
     references: [
       { name: 'JTI', logo: '/assets/Logos/JTI_Logo.svg' },
       { name: 'Philip Morris International', logo: '/assets/Logos/philip_morris_sa.svg' },
-      { name: 'Philsa', logo: '/assets/Logos/philsa.svg' },
+      { name: 'Philsa', logo: '/assets/Logos/philip_morris_sa.svg' },
       { name: 'Turkish Tobacco', logo: '/assets/Logos/G.D_tobacco.svg' },
     ],
   },

@@ -1,0 +1,60 @@
+{
+  "title": "AI ve Makine Öğrenmesi Çözümleri",
+  "subtitle": "Verilerinizi güçlü kararlara dönüştürün!",
+  "description": "AI ve Makine Öğrenmesi Çözümleri, verilerinizden elde edilen içgörülerle işletmenizi geleceğe hazırlar. İleri analitik ve makine öğrenmesi algoritmaları sayesinde, sahadan topladığınız veri setlerindeki gizli potansiyeli açığa çıkarır, süreçlerinizi optimize eder ve daha doğru iş kararları almanızı sağlar. Makine Öğrenmesi çözümlerimizle sizde verinizi stratejik fırsatlara dönüştürün.",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "serviceLabel": "Hizmet",
+  "heroImageAlt": "Siskon AI ve Makine Öğrenmesi çözümleri görseli",
+  "benefitsEyebrow": "Kazanımlar",
+  "benefitsTitle": "Siskon AI ve Makine Öğrenmesi Çözümleri Size Ne Sağlar?",
+  "capabilitiesEyebrow": "Nitelikler",
+  "applicationsEyebrow": "Uygulamalar",
+  "solutionsVisualAlt": "Makine öğrenmesi çözümleri görseli",
+  "diagramAlt": "Derin öğrenme ilişki diyagramı",
+  "etlVisualAlt": "ETL mimari görseli",
+  "ctaTitle": "Veriye Dayalı Kararlar Alın",
+  "ctaDesc": "Makine öğrenmesi çözümlerimizle işletmenizi akıllı sistemlere dönüştürün.",
+  "ctaButton": "Bize Ulaşın",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "benefits": [
+    "Geniş endüstri tecrübesi ile sektöre özel çözümler",
+    "Geniş endüstri tecrübesi ile sektöre özel çözümler",
+    "Mevcut sistemlerle entegre edilebilen esnek altyapı",
+    "Gerçek zamanlı veri işleme ile hızlandırılmış karar süreçleri",
+    "Veriye dayalı optimizasyon ile operasyonel maliyet tasarrufu",
+    "Güvenilir, dayanıklı ve endüstriyel koşullara uygun sistemler"
+  ],
+  "solutionsEyebrow": "Çözümler",
+  "solutionsTitle": "Ne Tür Makine Öğrenmesi Çözümleri Sunuyoruz?",
+  "solutions": [
+    "Veri analitiği ve raporlama çözümleri",
+    "Anomali tespiti",
+    "Otomatik karar verme sistemleri",
+    "Optimizasyon çözümleri",
+    "IoT entegrasyonu",
+    "Kestirimci bakım uygulamaları",
+    "Kestirimci kalite uygulamaları",
+    "Özel yazılım geliştirme",
+    "Stok optimizasyonu",
+    "Tedarik zinciri ve lojistik optimizasyonu"
+  ],
+  "deepLearning": {
+    "title": "Derin Öğrenme Uygulamaları",
+    "spot": "Yüksek performanslı çözümler için derin öğrenmenin gücünü kullanın!",
+    "desc": "Derin öğrenme teknolojileri; görüntü tanıma, doğal dil işleme ve tahmine dayalı analizler gibi alanlarda uygulama sunarak iş süreçlerinizi daha akıllı ve hızlı hale getirir. Bu sistemler, iş gücünüzü optimize eder ve işletmenizdeki fırsatları keşfetmenizi sağlar."
+  },
+  "etlApp": {
+    "title": "ETL Uygulamaları",
+    "spot": "ETL Uygulamaları ile verilerinizden güç alın, işinizi geleceğe taşıyın!",
+    "desc": "ETL Uygulamaları; veri entegrasyonu ve analiz süreçlerinizi hızlandırır, veri kalitesini artırır, büyük veri platformlarıyla uyumlu çalışır ve maliyet tasarrufu sağlar."
+  },
+  "heroTitle": "AI ve Makine Öğrenmesi Çözümleri",
+  "heroSubtitle": "Verilerinizi güçlü kararlara dönüştürün!",
+  "heroDescription": "AI ve Makine Öğrenmesi Çözümleri, verilerinizden elde edilen içgörülerle işletmenizi geleceğe hazırlar. İleri analitik ve makine öğrenmesi algoritmaları sayesinde, sahadan topladığınız veri setlerindeki gizli potansiyeli açığa çıkarır, süreçlerinizi optimize eder ve daha doğru iş kararları almanızı sağlar. Makine Öğrenmesi çözümlerimizle sizde verinizi stratejik fırsatlara dönüştürün.",
+  "heroImage": "/assets/strapi/aivemakineogrenmesi_477c412326.webp",
+  "solutionsImage": "/assets/strapi/aivemakineogrenmesi2_7f2eecf3bc.webp",
+  "deepLearningImage": "/assets/strapi/AI_Makine_Ogrenmesi_Iliski_9013d65cd3.svg",
+  "etlAppImage": "/assets/strapi/AI_Makine_Ogrenmesi_Baglanti_0457dbd79f.svg"
+}

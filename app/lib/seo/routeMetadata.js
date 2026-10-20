@@ -1,6 +1,17 @@
 import { detectLocale, toInternalPath, toLocalizedPath } from '../i18n/routes';
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.siskon.com.tr';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
+const IS_DEV = process.env.NODE_ENV !== 'production';
+// Canlı alan adı henüz belirlenmedi: güvenilir hostlar SITE_TRUSTED_HOSTS (virgülle ayrılmış) ile verilir.
+// Tanımlı değilse üretimde canonical/OG/JSON-LD NEXT_PUBLIC_SITE_URL'den üretilir.
+const TRUSTED_HOSTS = (process.env.SITE_TRUSTED_HOSTS || '')
+  .split(',')
+  .map((host) => host.trim().toLowerCase())
+  .filter(Boolean);
+const TRUSTED_HOST = {
+  test: (host) => TRUSTED_HOSTS.includes(String(host).toLowerCase()),
+};
 
 export function getSiteUrlFromHeaders(headerStore) {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
@@ -16,7 +27,10 @@ export function getSiteUrlFromHeaders(headerStore) {
     headerStore.get('x-forwarded-proto'),
   ]) || 'https';
 
-  if (host && host !== '/') {
+  // Host başlığı istemci tarafından sahtelenebilir: canonical/OG/JSON-LD URL'leri zehirlenmesin diye
+  // üretimde yalnızca bilinen hostlar kabul edilir; diğerleri için SITE_URL kullanılır.
+  // (Kalıcı çözüm: NEXT_PUBLIC_SITE_URL ortam değişkenini tanımlamak.)
+  if (host && host !== '/' && (IS_DEV || TRUSTED_HOST.test(host)) && /^https?$/.test(proto)) {
     return `${proto}://${host}`;
   }
 
@@ -25,479 +39,507 @@ export function getSiteUrlFromHeaders(headerStore) {
 
 export const ROUTE_META = {
   '/': {
-    tr: {
-      title: 'Siskon | Endüstriyel Yazılım, Otomasyon ve Veri Çözümleri',
-      description: '1997’den bu yana endüstriyel yazılım, otomasyon ve veri analitiği alanında bağımsız mühendislik çözümleriyle üretimde ölçülebilir verimlilik sağlıyoruz.',
+    ro: {
+      title: 'Siskon România',
+      description: 'Digitalizare industrială și automatizare pentru fabricile din România: software la comandă, IIoT, trasabilitate, viziune artificială și OnSuite.',
     },
     en: {
-      title: 'Siskon | Industrial Software, Automation and Data Solutions',
-      description: 'Since 1997, Siskon has delivered independent engineering solutions in industrial software, automation and data analytics for measurable operational impact.',
+      title: 'Siskon Romania',
+      description: 'Industrial digitalization and automation for Romanian factories: custom software, IIoT, traceability, machine vision and the OnSuite platform.',
     },
-    ro: {
-      title: 'Siskon | Software Industrial, Automatizare și Soluții de Date',
-      description: 'Din 1997, Siskon a furnizat soluții independente de inginerie în software industrial, automatizare și analiza datelor pentru un impact operațional măsurabil.',
+    tr: {
+      title: 'Siskon Romanya',
+      description: 'Romanya fabrikaları için endüstriyel dijitalleşme ve otomasyon: özel yazılım, IIoT, izlenebilirlik, görüntü işleme ve OnSuite platformu; Brașov ofisimizden.',
     },
   },
   '/hizmetler': {
-    tr: {
-      title: 'Hizmetlerimiz | Siskon — Endüstriyel Yazılım ve Otomasyon',
-      description: 'Müşteriye özel yazılım, IIoT, otomasyon, görüntü işleme ve endüstriyel yapay zeka hizmetlerimizle üretimde verimliliği, izlenebilirliği ve kaliteyi bir arada güçlendiriyoruz.',
+    ro: {
+      title: 'Servicii de automatizare și software industrial',
+      description: 'Servicii Siskon pentru producție: software personalizat, IIoT, trasabilitate, automatizare, robotică, viziune artificială, AI și instruire în România.',
     },
     en: {
-      title: 'Services | Siskon — Industrial Software and Automation',
-      description: 'Improve end-to-end production performance with custom software, IIoT, automation, machine vision and industrial AI services.',
+      title: 'Industrial automation and software services',
+      description: 'Explore Siskon services for manufacturers: custom software, IIoT, traceability, automation, robotics, machine vision, AI and training for teams in Romania.',
     },
-    ro: {
-      title: 'Servicii | Siskon — Software Industrial și Automatizare',
-      description: 'Îmbunătățiți performanța producției end-to-end cu software personalizat, IIoT, automatizare, viziune artificială și servicii industriale AI.',
+    tr: {
+      title: 'Endüstriyel otomasyon ve yazılım hizmetleri',
+      description: 'Üreticiler için Siskon hizmetleri: özel yazılım, IIoT, izlenebilirlik, otomasyon, robotik, görüntü işleme, yapay zeka ve Romanya ekipleri için eğitim.',
     },
   },
   '/hizmetler/musteriye-ozel-yazilim': {
-    tr: {
-      title: 'Müşteriye Özel Yazılım Çözümleri | Siskon',
-      description: 'İş modelinize özel geliştirilen ölçeklenebilir yazılım ve entegrasyon mimarileriyle süreçlerinizi hızlandırıyor, veri odaklı operasyonel kontrol sunuyoruz.',
+    ro: {
+      title: 'Dezvoltare software la comandă pentru industrie',
+      description: 'Aplicații industriale create pe măsura procesului dumneavoastră: integrare PLC, ERP și MES, arhitecturi scalabile, livrare etapizată și suport local.',
     },
     en: {
-      title: 'Custom Software Solutions | Siskon',
-      description: 'Deploy enterprise-grade custom software and integration architecture tailored to your operating model and long-term growth roadmap.',
+      title: 'Custom industrial software development',
+      description: 'Industrial applications built around your process: PLC, ERP and MES integration, scalable architectures, phased delivery and local support from Romania.',
     },
-    ro: {
-      title: 'Soluții Software Personalizate | Siskon',
-      description: 'Implementați software personalizat și arhitectură de integrare de nivel enterprise, adaptate modelului dumneavoastră de operare și foii de parcurs pentru creștere pe termen lung.',
+    tr: {
+      title: 'Endüstriye özel yazılım geliştirme',
+      description: 'Sürecinize göre geliştirilen endüstriyel uygulamalar: PLC, ERP ve MES entegrasyonu, ölçeklenebilir mimariler, aşamalı teslimat ve Romanya\'dan yerel destek.',
     },
   },
   '/hizmetler/iiot': {
-    tr: {
-      title: 'IIoT Çözümleri | Siskon',
-      description: 'Sahadan gelen veriyi güvenli biçimde toplayan IIoT mimarileriyle gerçek zamanlı görünürlük, hızlı karar alma ve kesintisiz sistem entegrasyonu sağlıyoruz.',
+    ro: {
+      title: 'IIoT: conectați utilajele și datele de producție',
+      description: 'Colectați date de la mașini prin protocoale industriale standard, urmăriți OEE și stări în timp real și decideți pe baza datelor, fără a schimba echipamentele.',
     },
     en: {
-      title: 'Industrial IoT Solutions | Siskon',
-      description: 'Capture, contextualize and integrate factory data across edge, cloud and enterprise systems for real-time industrial visibility.',
+      title: 'IIoT: connect machines and production data',
+      description: 'Collect machine and line data over standard industrial protocols, see OEE and status in real time and decide with data, without replacing existing equipment.',
     },
-    ro: {
-      title: 'Soluții Industriale IoT | Siskon',
-      description: 'Capturați, contextualizați și integrați datele din fabrică în sistemele edge, cloud și enterprise pentru o vizibilitate industrială în timp real.',
+    tr: {
+      title: 'IIoT: makineleri ve üretim verisini bağlayın',
+      description: 'Standart endüstriyel protokollerle makine ve hat verisini toplayın, OEE ve durumu anlık izleyin; mevcut ekipmanı değiştirmeden veriyle karar verin.',
     },
   },
   '/hizmetler/izlenebilirlik-cozumleri': {
-    tr: {
-      title: 'İzlenebilirlik Çözümleri | Siskon',
-      description: 'Hammadde girişinden sevkiyata kadar tüm üretim adımlarını dijital olarak izleyerek kalite güvencesi, mevzuat uyumu ve geriye dönük analiz imkanı sunuyoruz.',
+    ro: {
+      title: 'Trasabilitate de la materie primă la livrare',
+      description: 'Urmăriți fiecare lot, componentă și operațiune cu fluxuri digitale auditabile, necesare pentru calitate, rechemări controlate și conformitate în producție.',
     },
     en: {
-      title: 'Traceability Solutions | Siskon',
-      description: 'Enable full traceability from raw material intake to shipment with auditable digital workflows that support quality and compliance.',
+      title: 'Traceability from raw material to shipment',
+      description: 'Track every batch, component and operation with auditable digital workflows that support quality, controlled recalls and compliance on the shop floor.',
     },
-    ro: {
-      title: 'Soluții de Trasabilitate | Siskon',
-      description: 'Permiteți trasabilitatea completă de la preluarea materiei prime până la expediere, cu fluxuri de lucru digitale auditabile care susțin calitatea și conformitatea.',
+    tr: {
+      title: 'Hammaddeden sevkiyata izlenebilirlik',
+      description: 'Her parti, bileşen ve operasyonu denetlenebilir dijital akışlarla izleyin; kalite, kontrollü geri çağırma ve uyumluluğu üretim sahasında destekleyin.',
     },
   },
   '/hizmetler/makine-proses-otomasyonu': {
-    tr: {
-      title: 'Makine ve Proses Otomasyonu | Siskon',
-      description: 'Makine ve proses otomasyonu projelerinde tasarım, devreye alma ve optimizasyon süreçlerini uçtan uca yöneterek daha güvenli, kararlı ve verimli üretim sağlıyoruz.',
+    ro: {
+      title: 'Automatizare de mașini și procese industriale',
+      description: 'Programare PLC și HMI, control de proces și integrare SCADA pentru linii noi sau modernizate, cu documentație clară și punere în funcțiune asistată.',
     },
     en: {
-      title: 'Machine and Process Automation | Siskon',
-      description: 'Increase throughput, process consistency and workplace safety with robust machine and process automation engineering.',
+      title: 'Machine and industrial process automation',
+      description: 'PLC and HMI programming, process control and SCADA integration for new or retrofitted lines, with clear documentation and assisted commissioning.',
     },
-    ro: {
-      title: 'Automatizarea Mașinilor și Proceselor | Siskon',
-      description: 'Creșteți capacitatea, consistența proceselor și siguranța la locul de muncă cu o inginerie robustă de automatizare a mașinilor și proceselor.',
+    tr: {
+      title: 'Makine ve endüstriyel proses otomasyonu',
+      description: 'Yeni veya yenilenen hatlar için PLC ve HMI programlama, proses kontrol ve SCADA entegrasyonu; net dokümantasyon ve devreye alma desteği.',
     },
   },
   '/hizmetler/robot-cozumleri': {
-    tr: {
-      title: 'Robot Çözümleri | Siskon',
-      description: 'Kolaboratif ve endüstriyel robot çözümlerimizle üretim hatlarında hız, kalite ve iş güvenliğini artırıyor, tekrarlayan operasyonlarda verimliliği yükseltiyoruz.',
+    ro: {
+      title: 'Celule robotizate și soluții de robotică',
+      description: 'Proiectăm, programăm și integrăm roboți industriali pentru manipulare, paletizare și asamblare, cu siguranță, vedere și monitorizare incluse.',
     },
     en: {
-      title: 'Robotic Solutions | Siskon',
-      description: 'Advance shopfloor agility with collaborative and industrial robotics engineered for safe, repeatable human-machine operations.',
+      title: 'Robotic cells and robot integration',
+      description: 'We design, program and integrate industrial robots for handling, palletizing and assembly, with safety, vision and monitoring built in.',
     },
-    ro: {
-      title: 'Soluții Robotice | Siskon',
-      description: 'Dezvoltați agilitatea atelierelor cu robotică colaborativă și industrială proiectată pentru operațiuni om-mașină sigure și repetabile.',
+    tr: {
+      title: 'Robot hücreleri ve robot entegrasyonu',
+      description: 'Taşıma, paletleme ve montaj için endüstriyel robotları tasarlar, programlar ve entegre ederiz; güvenlik, görüntü ve izleme dahildir.',
     },
   },
   '/hizmetler/goruntu-isleme': {
-    tr: {
-      title: 'Görüntü İşleme Çözümleri | Siskon',
-      description: 'Yapay zeka destekli görüntü işleme sistemlerimizle kalite hatalarını erken tespit ediyor, fireyi azaltıyor ve standartlara uygun üretimi güvence altına alıyoruz.',
+    ro: {
+      title: 'Viziune artificială pentru controlul calității',
+      description: 'Inspecție vizuală automată, citire coduri și verificare de prezență pe linie, cu camere industriale și algoritmi adaptați produsului dumneavoastră.',
     },
     en: {
-      title: 'Machine Vision Solutions | Siskon',
-      description: 'Strengthen quality assurance with AI-assisted machine vision and real-time inspection systems for high-precision production lines.',
+      title: 'Machine vision for quality inspection',
+      description: 'Automated visual inspection, code reading and presence checks on the line, using industrial cameras and algorithms tuned to your product.',
     },
-    ro: {
-      title: 'Soluții de Viziune Artificială | Siskon',
-      description: 'Consolidați asigurarea calității cu viziune artificială asistată de AI și sisteme de inspecție în timp real pentru liniile de producție de înaltă precizie.',
+    tr: {
+      title: 'Kalite kontrolü için görüntü işleme',
+      description: 'Hatta otomatik görsel muayene, kod okuma ve varlık kontrolü; endüstriyel kameralar ve ürününüze göre ayarlanmış algoritmalar.',
     },
   },
   '/hizmetler/ai-makine-ogrenmesi': {
-    tr: {
-      title: 'AI ve Makine Öğrenmesi | Siskon',
-      description: 'Büyük veri analitiği ve makine öğrenmesi uygulamalarıyla üretim verisini aksiyona dönüştürüyor, kestirimci karar desteğiyle performans artışı sağlıyoruz.',
+    ro: {
+      title: 'AI și machine learning pentru producție',
+      description: 'Modele de predicție a defectelor, mentenanță predictivă și optimizare de proces, antrenate pe datele fabricii dumneavoastră și integrate în fluxul existent.',
     },
     en: {
-      title: 'AI and Machine Learning | Siskon',
-      description: 'Accelerate decision intelligence with industrial-scale machine learning and advanced analytics tailored to production operations.',
+      title: 'AI and machine learning for manufacturing',
+      description: 'Defect prediction, predictive maintenance and process optimization models trained on your plant data and integrated into the existing workflow.',
     },
-    ro: {
-      title: 'AI și Machine Learning | Siskon',
-      description: 'Accelerați inteligența decizională cu machine learning la scară industrială și analize avansate adaptate operațiunilor de producție.',
+    tr: {
+      title: 'Üretim için yapay zeka ve makine öğrenmesi',
+      description: 'Kendi fabrika verinizle eğitilen hata tahmini, kestirimci bakım ve proses optimizasyonu modelleri; mevcut akışa entegre edilir.',
     },
   },
   '/hizmetler/microsoft-cozumleri': {
-    tr: {
-      title: 'Microsoft Çözümleri | Siskon',
-      description: 'Microsoft ekosisteminde lisanslama, Power Platform ve Azure entegrasyonlarıyla dijital dönüşüm projelerinizi güvenli, ölçeklenebilir ve yönetilebilir hale getiriyoruz.',
+    ro: {
+      title: 'Soluții Microsoft pentru mediul industrial',
+      description: 'Implementare și integrare Azure, Power Platform și Microsoft 365 pentru raportare de producție, automatizarea fluxurilor și colaborare între fabrică și birou.',
     },
     en: {
-      title: 'Microsoft Solutions | Siskon',
-      description: 'Drive enterprise transformation with Microsoft licensing, Power Platform and Azure integration services aligned to governance and scalability goals.',
+      title: 'Microsoft solutions for industry',
+      description: 'Azure, Power Platform and Microsoft 365 implementation and integration for production reporting, workflow automation and plant-to-office collaboration.',
     },
-    ro: {
-      title: 'Soluții Microsoft | Siskon',
-      description: 'Stimulați transformarea companiei cu licențierea Microsoft, Power Platform și servicii de integrare Azure, aliniate la obiectivele de guvernanță și scalabilitate.',
+    tr: {
+      title: 'Endüstri için Microsoft çözümleri',
+      description: 'Üretim raporlama, iş akışı otomasyonu ve fabrika-ofis iş birliği için Azure, Power Platform ve Microsoft 365 uygulama ve entegrasyonu.',
     },
   },
-  '/hizmetler/ge-vernova': {
-    tr: {
-      title: 'GE Vernova (Proficy) Çözümleri | Siskon',
-      description: 'GE Vernova Proficy tabanlı çözümlerle üretim operasyonlarını dijitalleştiriyor, performans göstergelerini görünür kılıyor ve sürekli iyileştirmeyi hızlandırıyoruz.',
+  '/hizmetler/velotic': {
+    ro: {
+      title: 'Velotic: monitorizare și analiză pentru energie',
+      description: 'Platforma Velotic aduce monitorizare, alarmare și analiză de performanță pentru active energetice și industriale, cu implementare și suport de la echipa Siskon.',
     },
     en: {
-      title: 'GE Vernova (Proficy) Solutions | Siskon',
-      description: 'Digitize production operations with GE Vernova Proficy-based platforms to improve visibility, control and continuous process improvement.',
+      title: 'Velotic: monitoring and analytics for energy',
+      description: 'The Velotic platform brings monitoring, alarming and performance analytics to energy and industrial assets, with deployment and support from the Siskon team.',
     },
-    ro: {
-      title: 'Soluții GE Vernova (Proficy) | Siskon',
-      description: 'Digitalizați operațiunile de producție cu platformele bazate pe GE Vernova Proficy pentru a îmbunătăți vizibilitatea, controlul și îmbunătățirea continuă a proceselor.',
+    tr: {
+      title: 'Velotic: enerji için izleme ve analiz',
+      description: 'Velotic platformu enerji ve endüstriyel varlıklar için izleme, alarm ve performans analizi sunar; kurulum ve destek Siskon ekibinden.',
     },
   },
   '/hizmetler/egitim-danismanlik': {
-    tr: {
-      title: 'Eğitim ve Danışmanlık | Siskon',
-      description: 'Endüstriyel dönüşüm hedeflerinize uygun eğitim ve danışmanlık programlarıyla ekiplerinizin teknik yetkinliğini geliştiriyor, uygulamada ölçülebilir sonuçlar sağlıyoruz.',
+    ro: {
+      title: 'Instruire și consultanță pentru echipe tehnice',
+      description: 'Programe de instruire pentru automatizare, MES și analiza datelor, plus consultanță de digitalizare pentru conducerea și inginerii din fabrică.',
     },
     en: {
-      title: 'Training and Consulting | Siskon',
-      description: 'Build internal capability with structured training and consulting programs designed for practical industrial transformation outcomes.',
+      title: 'Training and consulting for technical teams',
+      description: 'Training programs for automation, MES and data analysis, plus digitalization consulting for plant management and engineers.',
     },
-    ro: {
-      title: 'Instruire și Consultanță | Siskon',
-      description: 'Construiți capacitatea internă cu programe structurate de instruire și consultanță concepute pentru rezultate practice de transformare industrială.',
+    tr: {
+      title: 'Teknik ekipler için eğitim ve danışmanlık',
+      description: 'Otomasyon, MES ve veri analizi eğitim programları; fabrika yönetimi ve mühendisler için dijitalleşme danışmanlığı.',
     },
   },
   '/onsuite': {
-    tr: {
-      title: 'OnSuite | Siskon Akıllı Üretim Platformu',
-      description: 'OnSuite, 11 entegre modülüyle üretim planlama, izleme, izlenebilirlik ve performans yönetimini tek çatı altında birleştiren akıllı üretim platformudur.',
+    ro: {
+      title: 'OnSuite: platformă MES cu 11 module',
+      description: 'OnSuite reunește OEE, calitate, trasabilitate, energie și mentenanță într-o singură platformă MES, folosită în peste 60 de fabrici inteligente din lume.',
     },
     en: {
-      title: 'OnSuite | Siskon Smart Manufacturing Platform',
-      description: 'OnSuite is a smart manufacturing platform that unifies 11 integrated modules for planning, monitoring, traceability and performance management.',
+      title: 'OnSuite: an 11-module MES platform',
+      description: 'OnSuite brings OEE, quality, traceability, energy and maintenance into one MES platform, used in more than 60 smart factories worldwide.',
     },
-    ro: {
-      title: 'OnSuite | Siskon Platformă Inteligentă de Producție',
-      description: 'OnSuite este o platformă inteligentă de producție care reunește 11 module integrate pentru planificare, monitorizare, trasabilitate și managementul performanței.',
+    tr: {
+      title: 'OnSuite: 11 modüllü MES platformu',
+      description: 'OnSuite; OEE, kalite, izlenebilirlik, enerji ve bakımı tek MES platformunda toplar ve dünya genelinde 60\'tan fazla akıllı fabrikada kullanılır.',
     },
   },
   '/arge': {
-    tr: {
-      title: 'Ar-Ge | Siskon',
-      description: 'Siskon Ar-Ge ekibi, endüstriyel ihtiyaçlara odaklı inovasyon yaklaşımıyla yeni ürün ve teknolojiler geliştirerek ölçeklenebilir, sürdürülebilir çözümler üretir.',
+    ro: {
+      title: 'Cercetare-dezvoltare și inovare industrială',
+      description: 'Echipa C&D Siskon transformă idei în produse software industriale: prototipare rapidă, proiecte cu universități și tehnologii noi pentru fabrica viitorului.',
     },
     en: {
-      title: 'R&D | Siskon',
-      description: 'Discover Siskon’s R&D framework focused on innovation-led product development, engineering excellence and scalable industrial technologies.',
+      title: 'Industrial R&D and innovation',
+      description: 'The Siskon R&D team turns ideas into industrial software products: rapid prototyping, university projects and new technologies for the factory of the future.',
     },
-    ro: {
-      title: 'Cercetare și Dezvoltare | Siskon',
-      description: 'Descoperiți cadrul C&D al Siskon axat pe dezvoltarea de produse orientate spre inovație, excelență în inginerie și tehnologii industriale scalabile.',
+    tr: {
+      title: 'Endüstriyel Ar-Ge ve inovasyon',
+      description: 'Siskon Ar-Ge ekibi fikirleri endüstriyel yazılım ürünlerine dönüştürür: hızlı prototipleme, üniversite projeleri ve geleceğin fabrikası için yeni teknolojiler.',
     },
   },
   '/sektorler': {
-    tr: {
-      title: 'Sektörler | Siskon',
-      description: 'Tütün, otomotiv, beyaz eşya, gıda, ilaç, makine, tekstil ve enerji sektörlerinde ortak OnSuite omurgasıyla uçtan uca dijital dönüşüm sağlıyoruz.',
+    ro: {
+      title: 'Industrii deservite de Siskon',
+      description: 'Experiență în tutun, auto, electrocasnice, alimentar, farmaceutic, textile, energie și mașini: soluții adaptate cerințelor fiecărui sector de producție.',
     },
     en: {
-      title: 'Industries | Siskon',
-      description: 'Deliver end-to-end digital transformation for tobacco, automotive, white goods, food, pharma, machinery, textile and energy on a shared OnSuite backbone.',
+      title: 'Industries served by Siskon',
+      description: 'Experience in tobacco, automotive, white goods, food, pharma, textile, energy and machinery: solutions tailored to each manufacturing sector.',
     },
-    ro: {
-      title: 'Industrii | Siskon',
-      description: 'Oferim transformare digitală de la un capăt la altul pentru industriile de tutun, auto, electrocasnice, alimentară, farmaceutică, utilaje, textile și energie.',
+    tr: {
+      title: 'Siskon\'un hizmet verdiği sektörler',
+      description: 'Tütün, otomotiv, beyaz eşya, gıda, ilaç, tekstil, enerji ve makine sektörlerinde deneyim; her üretim sektörüne uyarlanmış çözümler.',
     },
   },
   '/sektorler/tutun': {
-    tr: {
-      title: 'Tütün Sektörü Çözümleri | Siskon',
-      description: 'OnSuite TMC ile OPC UA tabanlı tütün makinesi entegrasyonu, GSCA ve TPD uyumlu izlenebilirlik ve üretim görünürlüğü sağlıyoruz.',
+    ro: {
+      title: 'Digitalizare pentru fabricile de tutun',
+      description: 'Trasabilitate de tip track-and-trace, serializare și management al producției, aliniate cerințelor TPD, pentru linii de procesare și ambalare.',
     },
     en: {
-      title: 'Tobacco Industry Solutions | Siskon',
-      description: 'Enable OPC UA-based tobacco machine integration and GSCA/TPD-aligned traceability with OnSuite TMC for regulated production environments.',
+      title: 'Digitalization for tobacco factories',
+      description: 'Track-and-trace traceability, serialization and production management aligned with TPD requirements for processing and packaging lines.',
     },
-    ro: {
-      title: 'Soluții pentru Industria Tutunului | Siskon',
-      description: 'Permiteți integrarea mașinilor de tutun bazată pe OPC UA și trasabilitatea aliniată la GSCA/TPD cu OnSuite TMC pentru medii de producție reglementate.',
+    tr: {
+      title: 'Tütün fabrikaları için dijitalleşme',
+      description: 'TPD gereklerine uyumlu track-and-trace izlenebilirlik, serileştirme ve üretim yönetimi; işleme ve paketleme hatları için.',
     },
   },
   '/sektorler/otomotiv': {
-    tr: {
-      title: 'Otomotiv Sektörü Çözümleri | Siskon',
-      description: 'IATF 16949 odaklı otomotiv izlenebilirliği, kritik komponent doğrulama ve Hybrid Track and Trace entegrasyonuyla kalite güvencesini güçlendiriyoruz.',
+    ro: {
+      title: 'Soluții pentru furnizorii din industria auto',
+      description: 'Trasabilitate pe componente, automatizarea liniilor, robotică și control al calității pentru producători auto și furnizori de nivel 1 și 2.',
     },
     en: {
-      title: 'Automotive Industry Solutions | Siskon',
-      description: 'Support IATF 16949-focused traceability, critical component verification and Hybrid Track and Trace integration for automotive quality programs.',
+      title: 'Solutions for automotive suppliers',
+      description: 'Component traceability, line automation, robotics and quality control for automotive manufacturers and Tier 1 and Tier 2 suppliers.',
     },
-    ro: {
-      title: 'Soluții pentru Industria Auto | Siskon',
-      description: 'Susținem trasabilitatea concentrată pe IATF 16949, verificarea componentelor critice și integrarea Track and Trace hibridă pentru programele de calitate auto.',
+    tr: {
+      title: 'Otomotiv tedarikçileri için çözümler',
+      description: 'Otomotiv üreticileri ve 1. ile 2. kademe tedarikçiler için bileşen izlenebilirliği, hat otomasyonu, robotik ve kalite kontrol.',
     },
   },
   '/sektorler/beyaz-esya': {
-    tr: {
-      title: 'Beyaz Eşya Sektörü Çözümleri | Siskon',
-      description: 'Yüksek hacimli montaj hatlarında A+++ Track and Trace, OEE analitiği ve enerji izleme çözümleriyle operasyonel verimi artırıyoruz.',
+    ro: {
+      title: 'Fabrică inteligentă pentru electrocasnice',
+      description: 'IIoT, viziune artificială și monitorizarea liniilor de asamblare pentru producători de electrocasnice, cu raportare de eficiență în timp real.',
     },
     en: {
-      title: 'White Goods Industry Solutions | Siskon',
-      description: 'Implement A+++ Track and Trace, OEE analytics and energy monitoring to improve quality and efficiency in high-volume assembly lines.',
+      title: 'Smart factory for white goods',
+      description: 'IIoT, machine vision and assembly line monitoring for appliance manufacturers, with real-time efficiency reporting.',
     },
-    ro: {
-      title: 'Soluții pentru Industria Electrocasnicelor | Siskon',
-      description: 'Implementăm trasabilitatea Track and Trace A+++, analize OEE și monitorizarea energiei pentru a îmbunătăți calitatea și eficiența în liniile de asamblare de volum mare.',
+    tr: {
+      title: 'Beyaz eşya için akıllı fabrika',
+      description: 'Beyaz eşya üreticileri için IIoT, görüntü işleme ve montaj hattı izleme; anlık verimlilik raporlaması.',
     },
   },
   '/sektorler/gida-icecek': {
-    tr: {
-      title: 'Gıda ve İçecek Sektörü Çözümleri | Siskon',
-      description: 'ISO 22005:2007 ve HACCP uyumlu çözümlerle hammaddeden rafa kadar tam parti-lot izlenebilirliği ve gıda güvenliği yönetimi sağlıyoruz.',
+    ro: {
+      title: 'Trasabilitate și automatizare în industria alimentară',
+      description: 'Urmărire pe loturi, conformitate de igienă și automatizarea proceselor pentru producători de alimente și băuturi.',
     },
     en: {
-      title: 'Food and Beverage Industry Solutions | Siskon',
-      description: 'Deliver ISO 22005:2007 and HACCP-aligned lot traceability from raw material intake to shelf for stronger food safety governance.',
+      title: 'Traceability and automation for food and beverage',
+      description: 'Batch tracking, hygiene compliance and process automation for food and beverage producers.',
     },
-    ro: {
-      title: 'Soluții pentru Industria Alimentară | Siskon',
-      description: 'Oferim trasabilitatea lotului, aliniată la ISO 22005:2007 și HACCP, de la recepția materiei prime până la raft pentru o mai bună guvernanță a siguranței alimentare.',
+    tr: {
+      title: 'Gıda ve içecekte izlenebilirlik ve otomasyon',
+      description: 'Gıda ve içecek üreticileri için parti takibi, hijyen uyumu ve proses otomasyonu.',
     },
   },
   '/sektorler/ilac': {
-    tr: {
-      title: 'İlaç Sektörü Çözümleri | Siskon',
-      description: 'GMP uyumlu serileştirme, parti ve son kullanma takibi ile soğuk zincir doğrulama süreçlerini birleştirerek regülasyon uyumunu destekliyoruz.',
+    ro: {
+      title: 'Serializare și calitate pentru industria farmaceutică',
+      description: 'Serializare, conformitate GMP și management al calității pentru producția farmaceutică, cu istoric complet și rapoarte pregătite pentru audit.',
     },
     en: {
-      title: 'Pharmaceutical Industry Solutions | Siskon',
-      description: 'Support pharmaceutical compliance with GMP-aligned serialization, batch and expiry traceability, and validated cold-chain verification workflows.',
+      title: 'Serialization and quality for pharma',
+      description: 'Serialization, GMP compliance and quality management for pharmaceutical production, with full history and audit-ready reports.',
     },
-    ro: {
-      title: 'Soluții pentru Industria Farmaceutică | Siskon',
-      description: 'Susținem conformitatea farmaceutică cu procese de serializare, trasabilitate a loturilor și scadențelor, precum și validarea fluxurilor lanțului frigorific.',
+    tr: {
+      title: 'İlaçta serileştirme ve kalite yönetimi',
+      description: 'İlaç üretimi için serileştirme, GMP uyumu ve kalite yönetimi; tam geçmiş kaydı ve denetime hazır raporlar.',
     },
   },
   '/sektorler/makine-otomasyon': {
-    tr: {
-      title: 'Makine ve Otomasyon Sektörü Çözümleri | Siskon',
-      description: 'PLC, SCADA, servo, pano ve çok markalı CNC hatları için uçtan uca otomasyon mühendisliği sunarak devreye alma süreçlerini hızlandırıyoruz.',
+    ro: {
+      title: 'Software OEM pentru constructori de mașini',
+      description: 'Software de control, HMI și integrare PLC pentru constructori de mașini care vor să livreze utilaje conectate și ușor de întreținut.',
     },
     en: {
-      title: 'Machinery and Automation Industry Solutions | Siskon',
-      description: 'Provide end-to-end automation engineering for PLC, SCADA, servo systems, electrical panels and multi-brand CNC production lines.',
+      title: 'OEM software for machine builders',
+      description: 'Control software, HMI and PLC integration for machine builders who want to ship connected, easy-to-service machines.',
     },
-    ro: {
-      title: 'Soluții pentru Industria Mașinilor și Automatizării | Siskon',
-      description: 'Oferim inginerie de automatizare cap-la-cap pentru PLC, SCADA, servo-sisteme, panouri electrice și linii de producție CNC multi-brand.',
+    tr: {
+      title: 'Makine üreticileri için OEM yazılım',
+      description: 'Bağlantılı ve kolay servis edilen makineler üretmek isteyen makine üreticileri için kontrol yazılımı, HMI ve PLC entegrasyonu.',
     },
   },
   '/sektorler/tekstil': {
-    tr: {
-      title: 'Tekstil Sektörü Çözümleri | Siskon',
-      description: 'Dokuma, örme ve boyahane hatlarında reçete yönetimi, üretim veri toplama ve OEE odaklı dijitalleşme ile sürdürülebilir verimlilik sağlıyoruz.',
+    ro: {
+      title: 'Calitate și trasabilitate în industria textilă',
+      description: 'Control al calității, urmărirea loturilor și automatizarea proceselor pentru fabrici de textile și confecții.',
     },
     en: {
-      title: 'Textile Industry Solutions | Siskon',
-      description: 'Enable textile operations with recipe management, production data capture and OEE-driven digitalization for consistent process performance.',
+      title: 'Quality and traceability for textiles',
+      description: 'Quality control, batch tracking and process automation for textile and apparel plants.',
     },
-    ro: {
-      title: 'Soluții pentru Industria Textilă | Siskon',
-      description: 'Digitalizăm operațiunile textile prin managementul rețetelor, colectarea datelor de producție și analize OEE pentru o performanță constantă.',
+    tr: {
+      title: 'Tekstilde kalite ve izlenebilirlik',
+      description: 'Tekstil ve konfeksiyon tesisleri için kalite kontrol, parti takibi ve proses otomasyonu.',
     },
   },
   '/sektorler/enerji-kimya': {
-    tr: {
-      title: 'Enerji ve Kimya Sektörü Çözümleri | Siskon',
-      description: 'OnSuite Green ile enerji izleme, karbon ayak izi raporlama ve CBAM hazırlığı için entegre, denetlenebilir sürdürülebilirlik çözümleri sunuyoruz.',
+    ro: {
+      title: 'Automatizare pentru energie și industria chimică',
+      description: 'Automatizarea proceselor, monitorizare continuă și analiză de date pentru instalații energetice și chimice, cu accent pe siguranță și disponibilitate.',
     },
     en: {
-      title: 'Energy and Chemicals Industry Solutions | Siskon',
-      description: 'Deliver integrated energy monitoring, carbon reporting and CBAM readiness programs powered by OnSuite Green for regulated industries.',
+      title: 'Automation for energy and chemicals',
+      description: 'Process automation, continuous monitoring and data analytics for energy and chemical plants, with a focus on safety and availability.',
     },
-    ro: {
-      title: 'Soluții pentru Energie și Industria Chimică | Siskon',
-      description: 'Livram programe integrate de monitorizare a energiei, raportare a emisiilor de carbon și pregătire CBAM, susținute de OnSuite Green.',
+    tr: {
+      title: 'Enerji ve kimya için otomasyon',
+      description: 'Enerji ve kimya tesisleri için proses otomasyonu, sürekli izleme ve veri analitiği; güvenlik ve erişilebilirlik odaklı.',
     },
   },
   '/is-birlikleri': {
-    tr: {
-      title: 'İş Birlikleri | Siskon',
-      description: 'Dünya teknoloji liderleriyle kurduğumuz stratejik iş birlikleri sayesinde müşterilerimize güçlü entegrasyon kabiliyeti, güncel platformlar ve teknik güvence sunuyoruz.',
+    ro: {
+      title: 'Parteneri tehnologici ai Siskon',
+      description: 'Colaborăm cu lideri globali din automatizare, viziune și cloud pentru a oferi clienților soluții integrate, certificate și susținute pe termen lung.',
     },
     en: {
-      title: 'Partnerships | Siskon',
-      description: 'Explore Siskon’s strategic partnerships with global technology leaders that strengthen delivery capability and long-term technical assurance.',
+      title: 'Siskon technology partners',
+      description: 'We work with global leaders in automation, vision and cloud to give customers integrated, certified and long-term supported solutions.',
     },
-    ro: {
-      title: 'Parteneriate | Siskon',
-      description: 'Descoperiți parteneriatele strategice Siskon cu liderii mondiali din tehnologie, care consolidează capacitatea de implementare și oferă asigurare tehnică pe termen lung.',
+    tr: {
+      title: 'Siskon teknoloji iş ortakları',
+      description: 'Otomasyon, görüntü işleme ve bulutta küresel liderlerle çalışarak müşterilere entegre, sertifikalı ve uzun vadeli desteklenen çözümler sunarız.',
     },
   },
   '/referanslar': {
-    tr: {
-      title: 'Referanslarımız | Siskon',
-      description: 'Farklı sektörlerde tamamladığımız projelerden oluşan referans portföyümüz, mühendislik kalitemizi, teslimat disiplinimizi ve uzun vadeli iş ortaklıklarımızı yansıtır.',
+    ro: {
+      title: 'Referințe și proiecte livrate',
+      description: 'Peste 500 de proiecte în 44 de țări: aflați cum au folosit producătorii din tutun, auto, farmaceutic și alimentar soluțiile Siskon.',
     },
     en: {
-      title: 'References | Siskon',
-      description: 'Review selected customer references and implementation success stories that demonstrate measurable results across multiple industries.',
+      title: 'References and delivered projects',
+      description: 'More than 500 projects in 44 countries: see how manufacturers in tobacco, automotive, pharma and food use Siskon solutions.',
     },
-    ro: {
-      title: 'Referințe | Siskon',
-      description: 'Parcurgeți referințele clienților noștri și poveștile de succes în implementare, care demonstrează rezultate măsurabile în mai multe industrii.',
+    tr: {
+      title: 'Referanslar ve tamamlanan projeler',
+      description: '44 ülkede 500\'den fazla proje: tütün, otomotiv, ilaç ve gıda üreticilerinin Siskon çözümlerini nasıl kullandığını görün.',
     },
   },
   '/kurumsal': {
-    tr: {
-      title: 'Kurumsal | Siskon',
-      description: 'Siskon kurumsal sayfasında bizi tanıyın, kariyer fırsatlarını inceleyin ve kilometre taşlarımızla mühendislik yolculuğumuzu keşfedin.',
+    ro: {
+      title: 'Despre compania Siskon',
+      description: 'Din 1997, Siskon construiește software industrial și soluții de automatizare cu ingineri proprii, în Turcia și în România.',
     },
     en: {
-      title: 'Corporate | Siskon',
-      description: 'Explore Siskon corporate content including about, careers and milestones to understand our engineering journey and culture.',
+      title: 'About Siskon',
+      description: 'Since 1997, Siskon has built industrial software and automation solutions with in-house engineers, in Turkey and in Romania.',
     },
-    ro: {
-      title: 'Compania | Siskon',
-      description: 'Explorați secțiunea despre companie a Siskon, inclusiv informații despre noi, cariere și momente de referință, pentru a ne înțelege călătoria inginerească și cultura.',
+    tr: {
+      title: 'Siskon hakkında',
+      description: '1997\'den beri Siskon, Türkiye ve Romanya\'da kendi mühendisleriyle endüstriyel yazılım ve otomasyon çözümleri geliştirmektedir.',
     },
   },
   '/kurumsal/bizi-taniyin': {
-    tr: {
-      title: 'Bizi Tanıyın | Siskon',
-      description: 'Siskon’un kurumsal yapısını, mühendislik yaklaşımını ve değer odaklı çalışma kültürünü tanıyın; 1997’den bu yana gelişen uzmanlığımızı keşfedin.',
+    ro: {
+      title: 'Povestea și echipa Siskon',
+      description: 'Aflați cum a crescut Siskon din 1997 până la prezența în 44 de țări: valori, abordare de inginerie și biroul din Brașov care deservește clienții din România.',
     },
     en: {
-      title: 'About Us | Siskon',
-      description: 'Learn about Siskon’s corporate structure, engineering culture and operating principles that guide reliable industrial project delivery.',
+      title: 'The Siskon story and team',
+      description: 'See how Siskon grew from 1997 to a presence in 44 countries: values, engineering approach and the Brașov office serving customers in Romania.',
     },
-    ro: {
-      title: 'Despre Noi | Siskon',
-      description: 'Aflați mai multe despre structura corporativă, cultura de inginerie și principiile operaționale ale Siskon care guvernează o execuție de încredere a proiectelor industriale.',
+    tr: {
+      title: 'Siskon\'un hikâyesi ve ekibi',
+      description: 'Siskon\'un 1997\'den 44 ülkeye uzanan yolculuğu: değerler, mühendislik yaklaşımı ve Romanya müşterilerine hizmet veren Brașov ofisi.',
     },
   },
   '/kurumsal/kariyer': {
-    tr: {
-      title: 'Kariyer | Siskon',
-      description: 'Siskon kariyer sayfasında açık pozisyonları, başvuru süreçlerini ve teknoloji odaklı çalışma kültürümüzü inceleyerek gelişim fırsatlarını keşfedin.',
+    ro: {
+      title: 'Cariere la Siskon: joburi și internship-uri',
+      description: 'Alăturați-vă echipei Siskon: posturi deschise, internship-uri și un proces de angajare clar, într-o cultură axată pe învățare și inginerie.',
     },
     en: {
-      title: 'Careers | Siskon',
-      description: 'Explore open roles, hiring steps and growth opportunities at Siskon for professionals who build the future of industrial technology.',
+      title: 'Careers at Siskon: jobs and internships',
+      description: 'Join the Siskon team: open roles, internships and a clear hiring process in a culture built around learning and engineering.',
     },
+    tr: {
+      title: 'Siskon\'da kariyer: iş ve staj fırsatları',
+      description: 'Siskon ekibine katılın: açık pozisyonlar, staj imkânları ve öğrenme ile mühendisliğe odaklı bir kültürde net bir işe alım süreci.',
+    },
+  },
+  '/kurumsal/surdurulebilirlik': {
     ro: {
-      title: 'Cariere | Siskon',
-      description: 'Explorați rolurile deschise, procesele de angajare și oportunitățile de dezvoltare la Siskon, pentru profesioniștii care construiesc viitorul tehnologiei industriale.',
+      title: 'Sustenabilitate și responsabilitate de mediu',
+      description: 'Cum reducem amprenta de carbon, sprijinim producția eficientă energetic și investim în proiecte de împădurire și în comunitate.',
+    },
+    en: {
+      title: 'Sustainability and environmental responsibility',
+      description: 'How we reduce our carbon footprint, support energy-efficient manufacturing and invest in forestation projects and the community.',
+    },
+    tr: {
+      title: 'Sürdürülebilirlik ve çevre sorumluluğu',
+      description: 'Karbon ayak izimizi nasıl azalttığımız, enerji verimli üretimi nasıl desteklediğimiz ve ağaçlandırma ile topluma yaptığımız yatırımlar.',
+    },
+  },
+  '/blog': {
+    ro: {
+      title: 'Blog Siskon: articole despre producție digitală',
+      description: 'Articole și noutăți despre automatizare industrială, IIoT, trasabilitate, inteligență artificială și tehnologii pentru fabrica viitorului.',
+    },
+    en: {
+      title: 'Siskon blog: digital manufacturing articles',
+      description: 'Articles and news on industrial automation, IIoT, traceability, artificial intelligence and technologies for the factory of the future.',
+    },
+    tr: {
+      title: 'Siskon blog: dijital üretim yazıları',
+      description: 'Endüstriyel otomasyon, IIoT, izlenebilirlik, yapay zeka ve geleceğin fabrikası teknolojileri hakkında yazılar ve haberler.',
     },
   },
   '/kurumsal/kilometre-taslari': {
-    tr: {
-      title: 'Kilometre Taşları | Siskon',
-      description: 'Kuruluşumuzdan bugüne uzanan kilometre taşları, Siskon’un büyüme yolculuğunu, teknoloji yatırımlarını ve global proje deneyimini kronolojik olarak özetler.',
+    ro: {
+      title: 'Momente de referință în istoria Siskon',
+      description: 'Cronologia Siskon din 1997: lansări de produse, extinderi internaționale și proiecte care au format compania.',
     },
     en: {
-      title: 'Milestones | Siskon',
-      description: 'Track key milestones in Siskon’s journey from foundation to global delivery scale across technology investments and international projects.',
+      title: 'Siskon milestones through the years',
+      description: 'The Siskon timeline since 1997: product launches, international expansion and the projects that shaped the company.',
     },
-    ro: {
-      title: 'Momente de Referință | Siskon',
-      description: 'Urmăriți momentele cheie din călătoria Siskon, de la înființare la acoperirea globală, vizând investițiile în tehnologie și proiectele internaționale.',
+    tr: {
+      title: 'Siskon\'un yıllar içindeki kilometre taşları',
+      description: '1997\'den bugüne Siskon zaman çizelgesi: ürün lansmanları, uluslararası büyüme ve şirketi şekillendiren projeler.',
     },
   },
   '/iletisim': {
-    tr: {
-      title: 'İletişim | Siskon',
-      description: 'Proje, teklif, teknik danışmanlık veya iş birliği talepleriniz için bizimle iletişime geçin; uzman ekibimiz ihtiyaçlarınıza uygun çözüm yol haritası oluştursun.',
+    ro: {
+      title: 'Contactați Siskon România',
+      description: 'Solicitați o ofertă sau o discuție tehnică: formular de contact, date de contact și adresa biroului din Brașov, plus birourile din Izmir.',
     },
     en: {
-      title: 'Contact | Siskon',
-      description: 'Contact Siskon for project consultations, technical assessments, proposal requests and strategic partnership opportunities.',
+      title: 'Contact Siskon Romania',
+      description: 'Request a quote or a technical conversation: contact form, contact details and the Brașov office address, plus our Izmir offices.',
     },
-    ro: {
-      title: 'Contact | Siskon',
-      description: 'Contactați Siskon pentru consultanță de proiect, evaluări tehnice, cereri de oferte și oportunități de parteneriate strategice.',
+    tr: {
+      title: 'Siskon Romanya ile iletişime geçin',
+      description: 'Teklif veya teknik görüşme talep edin: iletişim formu, iletişim bilgileri ve Brașov ofisi adresi ile İzmir ofislerimiz.',
     },
   },
   '/search': {
-    tr: {
-      title: 'Arama | Siskon',
-      description: 'Siskon web sitesinde hizmet, ürün, sektör ve kurumsal içerikleri anahtar kelimeyle hızlıca bulun; ilgili sayfalara tek tıkla erişin.',
+    ro: {
+      title: 'Căutare pe site',
+      description: 'Căutați servicii, industrii, articole și pagini pe site-ul Siskon România.',
     },
     en: {
-      title: 'Search | Siskon',
-      description: 'Quickly find services, products, industries and corporate content across the Siskon website with focused keyword-based search.',
+      title: 'Site search',
+      description: 'Search services, industries, articles and pages on the Siskon Romania website.',
     },
-    ro: {
-      title: 'Căutare | Siskon',
-      description: 'Găsiți rapid servicii, produse, industrii și conținut corporativ pe site-ul Siskon, folosind căutarea pe bază de cuvinte cheie.',
+    tr: {
+      title: 'Site içi arama',
+      description: 'Siskon Romanya sitesinde hizmet, sektör, makale ve sayfalarda arama yapın.',
     },
   },
   '/yasal/kvkk': {
-    tr: {
-      title: 'KVKK Aydınlatma Metni | Siskon',
-      description: 'KVKK kapsamında kişisel verilerin işlenme amaçlarını, saklama sürelerini, veri güvenliği uygulamalarını ve ilgili kişi başvuru haklarınızı inceleyin.',
+    ro: {
+      title: 'Notificare de prelucrare a datelor (GDPR)',
+      description: 'Informații despre cum prelucrăm datele cu caracter personal, temeiurile legale, perioadele de păstrare și drepturile persoanelor vizate.',
     },
     en: {
-      title: 'PDPL Notice | Siskon',
-      description: 'Review our PDPL notice covering personal data processing principles, retention periods, security measures and data subject rights.',
+      title: 'Personal data processing notice (GDPR)',
+      description: 'How we process personal data, the legal bases, retention periods and the rights of data subjects.',
     },
-    ro: {
-      title: 'Notificare GDPR | Siskon',
-      description: 'Revizuiți notificarea noastră cu privire la procesarea datelor cu caracter personal, perioadele de retenție, măsurile de securitate și drepturile utilizatorilor.',
+    tr: {
+      title: 'Kişisel veri işleme aydınlatma metni',
+      description: 'Kişisel verileri nasıl işlediğimiz, hukuki sebepler, saklama süreleri ve ilgili kişilerin hakları.',
     },
   },
   '/yasal/gizlilik-politikasi': {
-    tr: {
-      title: 'Gizlilik Politikası | Siskon',
-      description: 'Gizlilik politikamız, kişisel verilerin toplanması, işlenmesi, korunması ve kullanıcı haklarının yönetimine ilişkin temel ilkeleri şeffaf biçimde açıklar.',
+    ro: {
+      title: 'Politica de confidențialitate Siskon',
+      description: 'Cum colectăm, folosim și protejăm datele vizitatorilor și clienților, inclusiv formularele de contact și măsurile de securitate aplicate.',
     },
     en: {
-      title: 'Privacy Policy | Siskon',
-      description: 'Read Siskon’s privacy policy for transparent information on data collection, processing, protection practices and user rights management.',
+      title: 'Siskon privacy policy',
+      description: 'How we collect, use and protect visitor and customer data, including contact forms and the security measures we apply.',
     },
-    ro: {
-      title: 'Politica de Confidențialitate | Siskon',
-      description: 'Citiți politica de confidențialitate Siskon pentru informații transparente despre colectarea, procesarea datelor, protecția lor și drepturile dumneavoastră.',
+    tr: {
+      title: 'Siskon gizlilik politikası',
+      description: 'Ziyaretçi ve müşteri verilerini nasıl topladığımız, kullandığımız ve koruduğumuz; iletişim formları ve uyguladığımız güvenlik önlemleri.',
     },
   },
   '/yasal/cerez-politikasi': {
-    tr: {
-      title: 'Çerez Politikası | Siskon',
-      description: 'Çerez politikamızda kullanılan çerez türlerini, kullanım amaçlarını, saklama sürelerini ve tercihlerinizi nasıl yönetebileceğinize ilişkin detayları inceleyebilirsiniz.',
+    ro: {
+      title: 'Politica de utilizare a cookie-urilor',
+      description: 'Ce cookie-uri folosim pe acest site, în ce scop, cât timp sunt păstrate și cum vă puteți modifica oricând preferințele.',
     },
     en: {
-      title: 'Cookie Policy | Siskon',
-      description: 'Learn about cookie categories used on our website, their purposes, retention periods and how to manage your consent preferences.',
+      title: 'Cookie usage policy',
+      description: 'Which cookies we use on this site, for what purpose, how long they are kept and how you can change your preferences at any time.',
     },
-    ro: {
-      title: 'Politica de Cookie-uri | Siskon',
-      description: 'Aflați informații despre categoriile de cookie-uri folosite pe site-ul nostru, scopurile lor, perioadele de păstrare și cum să vă gestionați preferințele.',
+    tr: {
+      title: 'Çerez kullanım politikası',
+      description: 'Bu sitede hangi çerezleri, hangi amaçla ve ne kadar süre kullandığımız ve tercihlerinizi istediğiniz zaman nasıl değiştirebileceğiniz.',
     },
   },
 };
@@ -513,10 +555,10 @@ function normalizePath(pathname) {
 function normalizeTitle(title, locale, minLength = 30, maxLength = 70) {
   const clean = String(title || '').replaceAll(/\s+/g, ' ').trim();
   const brandSuffix = locale === 'en'
-    ? 'Siskon — Industrial Software and Automation'
+    ? 'Siskon Romania — Industrial Digitalization and Automation'
     : locale === 'ro'
-    ? 'Siskon — Software Industrial și Automatizare'
-    : 'Siskon — Endüstriyel Yazılım ve Otomasyon';
+    ? 'Siskon România — Digitalizare și Automatizare Industrială'
+    : 'Siskon Romanya — Endüstriyel Dijitalleşme ve Otomasyon';
 
   const parts = clean.split('|').map((part) => part.trim());
   const firstPart = parts.find((part) => part.length > 0) || '';
@@ -534,13 +576,20 @@ function normalizeTitle(title, locale, minLength = 30, maxLength = 70) {
     return brandSuffix.slice(0, maxLength).trim();
   }
 
-  const labelMaxLength = Math.max(12, maxLength - (` | ${brandSuffix}`).length);
+  // Uzun marka eki sayfa başlığını kesmesin: önce kısa marka ekiyle dene
+  // ("Endüstriyel Nesnelerin İnterneti (IIoT) Çözümleri | Siskon").
+  const shortBrand = locale === 'en' ? 'Siskon Romania' : locale === 'ro' ? 'Siskon România' : 'Siskon Romanya';
+  const shortResult = `${pageLabel} | ${shortBrand}`;
+  if (shortResult.length <= maxLength) return shortResult;
+
+  // Hâlâ uzunsa sayfa etiketini kelime sınırında kısalt.
+  const labelMaxLength = maxLength - (` | ${shortBrand}`).length;
   const labelCandidate = pageLabel.slice(0, labelMaxLength + 1);
   const lastSpace = labelCandidate.lastIndexOf(' ');
   const cutoff = lastSpace > 8 ? lastSpace : labelMaxLength;
   const shortLabel = labelCandidate.slice(0, cutoff).trim();
 
-  return `${shortLabel} | ${brandSuffix}`;
+  return `${shortLabel} | ${shortBrand}`;
 }
 
 function ensureSentenceEnding(text) {
@@ -626,8 +675,8 @@ export function buildLocalizedMetadata({ pathname, siteUrl = SITE_URL }) {
   const internalPath = normalizePath(toInternalPath(pathname, locale));
   const routeMeta = ROUTE_META[internalPath] || ROUTE_META['/'];
   const selected = locale === 'en' ? routeMeta.en : locale === 'ro' ? routeMeta.ro : routeMeta.tr;
-  const title = normalizeTitle(selected?.title || routeMeta.tr?.title || routeMeta.en?.title || '', locale);
-  const description = normalizeDescription(selected?.description || routeMeta.tr?.description || routeMeta.en?.description || '', locale);
+  const title = normalizeTitle(selected?.title || routeMeta.ro?.title || routeMeta.en?.title || '', locale);
+  const description = normalizeDescription(selected?.description || routeMeta.ro?.description || routeMeta.en?.description || '', locale);
   const canonicalPath = toLocalizedPath(internalPath, locale);
   const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
   const ogImage = '/og/siskon-default.webp';
@@ -660,9 +709,9 @@ export function buildLocalizedMetadata({ pathname, siteUrl = SITE_URL }) {
     alternates: {
       canonical: canonicalPath,
       languages: {
-        tr: toLocalizedPath(internalPath, 'tr'),
-        en: toLocalizedPath(internalPath, 'en'),
         ro: toLocalizedPath(internalPath, 'ro'),
+        en: toLocalizedPath(internalPath, 'en'),
+        tr: toLocalizedPath(internalPath, 'tr'),
         'x-default': toLocalizedPath(internalPath, 'ro'),
       },
     },
@@ -677,8 +726,8 @@ export function getMetadataForPathname(pathname) {
   const internalPath = normalizePath(toInternalPath(pathname, locale));
   const routeMeta = ROUTE_META[internalPath] || ROUTE_META['/'];
   const selected = locale === 'en' ? routeMeta.en : locale === 'ro' ? routeMeta.ro : routeMeta.tr;
-  const title = normalizeTitle(selected?.title || routeMeta.tr?.title || routeMeta.en?.title || '', locale);
-  const description = normalizeDescription(selected?.description || routeMeta.tr?.description || routeMeta.en?.description || '', locale);
+  const title = normalizeTitle(selected?.title || routeMeta.ro?.title || routeMeta.en?.title || '', locale);
+  const description = normalizeDescription(selected?.description || routeMeta.ro?.description || routeMeta.en?.description || '', locale);
 
   return {
     locale,
@@ -686,10 +735,10 @@ export function getMetadataForPathname(pathname) {
     title,
     description,
     alternates: {
-      tr: internalPath,
-      en: toLocalizedPath(internalPath, 'en'),
       ro: toLocalizedPath(internalPath, 'ro'),
-      xDefault: internalPath,
+      en: toLocalizedPath(internalPath, 'en'),
+      tr: toLocalizedPath(internalPath, 'tr'),
+      xDefault: toLocalizedPath(internalPath, 'ro'),
     },
   };
 }

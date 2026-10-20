@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Kariyer",
+  "pageSubtitle": "Mühendislik ekiplerimizle endüstriyel yazılımın geleceğini birlikte inşa edin",
+  "heroHeading": "Hedeflerini paylaşabileceğin, birlikte büyüyüp birlikte başarabileceğin bir ekip arıyorsan, doğru yerdesin.",
+  "heroLine1": "Hedeflerinizi paylaşabileceğiniz,",
+  "heroLine2": "birlikte büyüyüp birlikte başarabileceğiniz ",
+  "heroLine3": "bir ekip arıyorsanız, doğru adrestesiniz.",
+  "statYears": "Yıllık Deneyim",
+  "statOpenRoles": "Açık Pozisyon",
+  "statTeam": "Uzman Ekip",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbCorporate": "Kurumsal",
+  "breadcrumbCareer": "Kariyer",
+  "openPositionsTitle": "Açık Pozisyonlar",
+  "openPositionsSubtitle": "Ölçülebilir üretim mükemmelliği için yazılım ve otomasyon çözümleri geliştiren ekiplerimize katılın.",
+  "openings": [
+    "Full Stack Yazılım Geliştirici (React / .NET)",
+    "Endüstriyel Otomasyon Mühendisi",
+    "Veri ve Yapay Zeka Mühendisi",
+    "Saha Servis Mühendisi"
+  ],
+  "applyNow": "Hemen Başvur",
+  "sendCv": "CV Gönder",
+  "roleHighlights": [
+    {
+      "title": "Derin Mühendislik Kültürü",
+      "text": "Global üretim tesislerinde kullanılan kritik yazılımlar, endüstriyel protokoller ve gerçek üretim süreçleri üzerinde çalışın."
+    },
+    {
+      "title": "Çapraz Ekip İş Birliği",
+      "text": "Otomasyon, yazılım ve saha ekipleriyle birlikte uçtan uca çözüm geliştirerek projeleri canlıya alın."
+    },
+    {
+      "title": "Sürekli Gelişim",
+      "text": "AI, IIoT, MES ve yüksek erişilebilirlik gerektiren kurumsal sistemlerde uygulamalı deneyim kazanın."
+    }
+  ],
+  "applicationProcessTitle": "Başvuru Süreci",
+  "processSteps": [
+    "CVnizi ve kısa motivasyon notunuzu iletişim formu veya e-posta ile paylaşın.",
+    "Teknik ön değerlendirme ve rol uyumu incelemesi gerçekleştirilir.",
+    "Mühendislik liderleri ile proje odaklı mülakat gerçekleştirilir.",
+    "En kısa sürede geri bildirim ve işe başlangıç planı iletilir."
+  ],
+  "ctaTitle": "Endüstriyel yazılımın geleceğini bizimle şekillendirmeye hazır mısınız?",
+  "ctaDesc": "Profilinizi ve ilgilendiğiniz rolü paylaşın, size en uygun pozisyon için en kısa sürede geri dönüş yapalım.",
+  "ctaButton": "Başvurunuzu Gönderin",
+  "valuesTitle": "Siskon Değerleri",
+  "valuesSubtitle": "Birlikte büyüyoruz, birlikte başarıyoruz.",
+  "values": [
+    {
+      "title": "Gelişimin Peşinden Hızla<br />Koşarız",
+      "desc": "Öğrenmeyi işimizin doğal bir parçası olarak görürüz. Kendimizi sürekli geliştirir, yenilikleri takip eder ve her yeni deneyimi daha ileriye gitmek için bir fırsat olarak değerlendiririz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-50.svg"
+    },
+    {
+      "title": "Samimiyet, Altın<br />Kuralımızdır",
+      "desc": "Güvenin, açık iletişimin ve karşılıklı saygının güçlü ekiplerin temelini oluşturduğuna inanırız. Fikirlerimizi çekinmeden paylaşır, birbirimizi dinler ve birlikte gelişiriz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-51.svg"
+    },
+    {
+      "title": "İş Birliği İçinde Yardımlaşarak<br />Çalışmayı Severiz",
+      "desc": "En iyi sonuçların birlikte çalışmaktan doğduğunu biliriz. Bilgimizi paylaşır, birbirimize destek olur ve ortak hedeflerimize ekip ruhuyla ulaşırız.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-52.svg"
+    },
+    {
+      "title": "Güzel Anılar Biriktirmekte<br />Üstümüze Yoktur",
+      "desc": "Başarılı projelerin yanında unutulmaz anılar da biriktiririz. Birlikte kutlar, birlikte eğlenir ve çalışma arkadaşlığını güçlü dostluklara dönüştürürüz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-53.svg"
+    },
+    {
+      "title": "İnsanı En Değerli Sermaye<br />Kabul Ederiz",
+      "desc": "En büyük gücümüzün çalışanlarımız olduğuna inanırız. Herkesin kendini değerli hissettiği, fikirlerinin önemsendiği ve gelişiminin desteklendiği bir çalışma ortamı oluştururuz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-54.svg"
+    },
+    {
+      "title": "Çalışanlarımızın<br />Konfor Seviyelerini Önemseriz",
+      "desc": "Kendini iyi hisseden insanların daha mutlu ve daha üretken olduğuna inanırız. Bu yüzden çalışma ortamımızı ve çalışan deneyimini sürekli iyileştirmek için çalışırız.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-55.svg"
+    }
+  ],
+  "cultureTitle": "Biz Siskon'da teknolojiyi seviyoruz.",
+  "cultureSubtitle": "Ama sadece teknolojiyi değil...",
+  "cultureImg": "/assets/new/kurumsal/Kariyer/asset-42-100.jpg",
+  "cultureP1": "Birlikte öğrenmeyi, birlikte üretmeyi, birbirimize destek olmayı, kahve molalarında yeni fikirler bulmayı ve başarılarımızı birlikte kutlamayı da seviyoruz.",
+  "cultureP2": "Her gün farklı projeler üzerinde çalışıyor, yeni şeyler öğreniyor ve gelişiyoruz. Bunu yaparken de samimiyeti hiç kaybetmemeye çalışıyoruz.",
+  "cultureP3": "Eğer sen de işini severek yapan, merak eden, öğrenmekten heyecan duyan ve güzel bir ekibin parçası olmayı isteyen biriysen seni tanımaktan mutluluk duyarız.",
+  "cultureCallout1": "Bizimle çalışmak istersen aşağıdaki adımları takip edebilirsin.",
+  "cultureCallout2": "Ekibimize katılmanı bekliyoruz.",
+  "processTitle": "İşe Alım Sürecimiz",
+  "processList": [
+    {
+      "title": "CV Analizi",
+      "desc": "CV'ni inceliyoruz. Pozisyonla uyumlu olduğunu düşünürsek seni daha yakından tanımak için değerlendirme sürecimizi başlatıyoruz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-43.svg"
+    },
+    {
+      "title": "İnsan Kaynakları ile Telefonla Mülakat",
+      "desc": "Aday değerlendirme formumuzu ve pozisyona göre genel yetenek, İngilizce ve teknik testlerimizi paylaşıyoruz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-44.svg"
+    },
+    {
+      "title": "Online Değerlendirme",
+      "desc": "Yaklaşık 30 dakikalık online görüşmemizde hem seni tanıyor hem de teknik yetkinliklerin hakkında sohbet ediyoruz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-45.svg"
+    },
+    {
+      "title": "İK Yönetimi ile Mülakat",
+      "desc": "Gerçek iş hayatına yakın bir çalışma ile birbirimizi daha yakından tanıyoruz. Böylece hem sen işi deneyimliyorsun hem de biz yetkinliklerini daha iyi değerlendirebiliyoruz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-46.svg"
+    },
+    {
+      "title": "Teknik Mülakat",
+      "desc": "Departman yöneticileri ve genel müdürümüzün katıldığı görüşmede karşılıklı beklentilerimizi konuşuyoruz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-47.svg"
+    },
+    {
+      "title": "Resmi Teklif ve İlgili Evrak İşleri",
+      "desc": "Her iki taraf için de heyecan verici bir eşleşme olduğuna inanırsak teklifimizi iletiyoruz. Sonrasında ise seni Siskonlu olarak aramızda görmekten mutluluk duyuyoruz.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-48.svg"
+    }
+  ],
+  "jobProcessTitle": "İŞ BAŞVURU SÜRECİMİZ",
+  "jobProcessList": [
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/01-cv-analizi.svg",
+      "title": "CV Analizi"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/02-aday-formu.svg",
+      "title": "Aday Değerlendirme Formu Gönderilmesi"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/03-test-paylasimi.svg",
+      "title": "Test Paylaşımı (Genel Yetenek, Teknik Test, Kişilik Envanter Testi)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/04-ilk-gorusme.svg",
+      "title": "İlk Görüşme"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/05-uygulama-calismasi.svg",
+      "title": "Uygulama Çalışması (Pozisyon Özelinde)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/06-uygulama-degerlendirme.svg",
+      "title": "Uygulama Değerlendirme Aşaması"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/07-ikinci-gorusme.svg",
+      "title": "İkinci Görüşme"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/08-referans-kontrolu.svg",
+      "title": "Referans Kontrolü"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/09-is-teklifi.svg",
+      "title": "İş Teklifi"
+    }
+  ],
+  "internProcessTitle": "STAJ BAŞVURU SÜRECİMİZ",
+  "internProcessList": [
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/01-cv-analizi.svg",
+      "title": "CV Analizi"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/02-degerlendirme-formu.svg",
+      "title": "Aday Değerlendirme Formu Gönderilmesi"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/03-test-paylasimi.svg",
+      "title": "Test Paylaşımı (Genel Yetenek, Teknik Test, Kişilik Envanter Testi)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/04-ilk-gorusme.svg",
+      "title": "İlk Görüşme"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/05-ikinci-gorusme.svg",
+      "title": "İkinci Görüşme"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/06-staj-teklifi.svg",
+      "title": "Staj Teklifi"
+    }
+  ],
+  "lifeTitle": "Siskon'da Hayat",
+  "lifeCards": [
+    {
+      "title": "Konforlu Bir Çalışma Ortamı",
+      "items": [
+        "🌲 Orman içinde modern bir ofis",
+        "🚌 Servis imkânı",
+        "☕ Sınırsız filtre kahve ve çay",
+        "🍲 Öğle yemeği ve lezzetli ulaşım imkânı",
+        "💺 Masaj koltuğu",
+        "📚 Ödünç kitap alabileceğin bir kütüphane"
+      ]
+    },
+    {
+      "title": "Güçlü Bir Takım Kültürü",
+      "items": [
+        "🤗 Samimiyet ve saygının birlikte yaşadığı bir çalışma ortamı",
+        "🚪 Genel Müdürümüzün her zaman açık olan kapısı",
+        "🎂 Birlikte kutlanan doğum günleri ve özel günler",
+        "🎉 Yılbaşı çekilişleri, etkinlikler ve workshop'lar",
+        "🥳 Birlikte üreten, birlikte eğlenen ekip arkadaşları"
+      ]
+    },
+    {
+      "title": "Gelişimin İçin",
+      "items": [
+        "🎓 Kişisel eğitim bütçesi",
+        "🧗 Mentorluk programı",
+        "🎨 Teknik eğitimler ve atölyeler",
+        "💥 Düzenli performans ve gelişim görüşmeleri",
+        "🏆 Fikirlerini paylaşabileceğin ödül sistemi"
+      ]
+    },
+    {
+      "title": "Seni Bekleyen Ayrıcalıklar",
+      "items": [
+        "🏥 Özel sağlık sigortası",
+        "⚖️ Kurum hekimi desteği",
+        "🎂 Doğum gününe özel ek izin",
+        "🎁 İlk gün hoş geldin paketi",
+        "☝️ Birimine özel oryantasyon süreci"
+      ]
+    }
+  ],
+  "detailsTitle": "Siskon'u Siskon Yapan<br />Küçük Detaylar",
+  "detailsList": [
+    {
+      "title": " Siskon'un Fince de \"kız kardeş\" ve adını Sistem ile Kontrol sözcüklerinden aldığını, anlamına geldiğini,",
+      "icon": "/assets/strapi/01_kiz_kardes_7617be03fd.svg"
+    },
+    {
+      "title": "Pazartesileri kendi kupalarımızı kullanarak atıkları azalttığımızı,",
+      "icon": "/assets/strapi/05_kupa_atik_azaltma_87d1efddba.svg"
+    },
+    {
+      "title": "Filtre kahvenin mutfaktan hiç eksik olmadığını,",
+      "icon": "/assets/strapi/03_filtre_kahve_89a67c0f0c.svg"
+    },
+    {
+      "title": "Diyet yapmanın burada biraz zor olabileceğini,",
+      "icon": "/assets/strapi/04_diyet_zor_e9cb7dd458.svg"
+    },
+    {
+      "title": "Toplantı odalarımızın isimlerinin şirketimizin geçmişinden geldiğini,",
+      "icon": "/assets/strapi/02_toplanti_odalari_16a3f38d28.svg"
+    },
+    {
+      "title": "Artan yemeklerimizi hayvan dostlarımızla paylaştığımızı,",
+      "icon": "/assets/strapi/06_hayvan_dostlar_2cce4dd5a3.svg"
+    },
+    {
+      "title": "Serviste ön koltuğun her zaman bir müdavimi olduğunu,",
+      "icon": "/assets/strapi/07_on_koltuk_7358e68887.svg"
+    },
+    {
+      "title": "Yeni toplantı odasının kapısıyla tanışınca neden herkesin \"Siskon dansı\" dediğini çok geçmeden öğrenmiş olacaksın.",
+      "icon": "/assets/strapi/08_siskon_dansi_b50eb6ed9f.svg"
+    }
+  ],
+  "finalCtaLine1": "Güçlü bir ekip ruhuyla birlikte çalışmak,",
+  "finalCtaLine2": "öğrenmek ve gelişmek istiyorsanız",
+  "finalCtaLine3": "sizi aramızda görmekten mutluluk duyarız.",
+  "finalCtaDesc": "İyi bir iş yeri, sadece yapılan işle değil; birlikte üretilen anılar, paylaşılan değerler ve her gün yaşanan küçük detaylarla da hatırlanır. Siskon'da seni tam da böyle bir çalışma kültürü bekliyor.",
+  "finalCtaSubtitle": "Ekibimize katılın!",
+  "finalCtaButton": "CV Gönder",
+  "heroBgSvg": "/assets/strapi/asset_49_64fb6f1a12.svg",
+  "heroTitle": "Kariyer",
+  "heroSubtitle": "Mühendislik ekiplerimizle endüstriyel yazılımın geleceğini birlikte inşa edin",
+  "heroCtaLabel": "CV Gönder",
+  "heroBreadcrumbs": [
+    "Ana Sayfa",
+    "Kurumsal",
+    "Kariyer"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "subtitle": "Industrial digital transformation with Velotic technologies",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "serviceLabel": "SERVICE",
+  "title": "Velotic Solutions",
+  "description": "We are a strong solution partner in your industrial automation and digital transformation projects with the Velotic product family. Siskon helps your business increase production efficiency, accelerate digitalization processes and build sustainable infrastructure using Velotic technologies.",
+  "contactGE": "Get Information About Velotic",
+  "benefits": [
+    "Improved efficiency in production processes",
+    "Accelerated digitalization initiatives",
+    "Sustainable industrial infrastructure development",
+    "Operational excellence"
+  ],
+  "benefitsEyebrow": "Benefits",
+  "benefitsTitle": "What Does Siskon Provide You with Velotic Solutions?",
+  "solutions": [
+    " Industrial automation and software integration",
+    " Expertise in the Velotic product family",
+    "Digital transformation consulting for manufacturing industries",
+    "Development of data-driven decision support systems"
+  ],
+  "solutionsTitle": "What Types of Solutions Do We Offer?",
+  "ctaTitle": "Accelerate Your Digital Transformation with Velotic",
+  "ctaDescription": "Contact us for detailed information about Velotic solutions and our integration services.",
+  "ctaButton": "Contact Us",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "imageAlt": "Siskon Velotic solutions overview",
+  "serviceSectionTitle": "Smarter Manufacturing with Velotic Solutions!",
+  "serviceSectionDesc": "As an authorized system integrator of Velotic, we combine our expertise in industrial automation and software with Velotic solutions to enable faster digitalization and improved efficiency of production facilities. We work to create a more efficient, faster, and more sustainable industrial infrastructure.",
+  "solutionsEyebrow": "Competencies",
+  "heroTitle": "Velotic Solutions",
+  "heroSubtitle": "Industrial digital transformation with Velotic technologies",
+  "heroDescription": "We are a strong solution partner in your industrial automation and digital transformation projects with the Velotic product family. Siskon helps your business increase production efficiency, accelerate digitalization processes and build sustainable infrastructure using Velotic technologies.",
+  "heroImage": "/assets/strapi/Siskon_Velotic_5d5040fcc2.webp",
+  "ctaDesc": "Contact us for detailed information about Velotic solutions and our integration services.",
+  "solutionsImage": "/assets/strapi/Siskon_Velotic_Camera_888e9cc1bd.webp"
+}

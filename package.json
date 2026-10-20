@@ -1,17 +1,17 @@
 {
-  "name": "siskon-web",
+  "name": "siskon-ro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "node .next/standalone/server.js",
-    "lint": "eslint",
-    "optimize-images": "node scripts/optimize-images.js",
-    "qa:en-routes": "node scripts/validate-en-routes.js"
+    "lint": "eslint"
   },
   "dependencies": {
     "autoprefixer": "^10.5.0",
+    "formdata-node": "^6.0.3",
+    "isomorphic-dompurify": "^3.19.0",
     "next": "^16.2.6",
     "nodemailer": "^8.0.7",
     "prop-types": "^15.8.1",

@@ -1,0 +1,33 @@
+{
+  "services": "Services",
+  "products": "Products",
+  "corporate": "Corporate",
+  "more": "More",
+  "tagline": "Since 1997, independent engineering in industrial software, automation and data analytics.",
+  "insights": "Insights",
+  "stayConnected": "Stay Connected",
+  "allRights": "All rights reserved.",
+  "rAndD": "R&D",
+  "partnerships": "Partnerships",
+  "references": "References",
+  "about": "About Us",
+  "career": "Career",
+  "milestones": "Milestones",
+  "kvkk": "PDPL Notice",
+  "privacy": "Privacy Policy",
+  "cookie": "Cookie Policy",
+  "logo": "https://siskonwebdb.domainmanager.com.tr//uploads/siskon_logo_7664c291e7.svg",
+  "socialLinks": {
+    "linkedinUrl": "https://tr.linkedin.com/company/siskonyazilimveotomasyon",
+    "linkedinLabel": "LinkedIn",
+    "youtubeUrl": "https://www.youtube.com/@SiskonYazilimveOtomasyon",
+    "youtubeLabel": "YouTube",
+    "instagramUrl": "https://www.instagram.com/siskonyazilimveotomasyon",
+    "instagramLabel": "Instagram",
+    "twitterUrl": "https://x.com/siskonyazilim",
+    "twitterLabel": "Twitter"
+  },
+  "email": "info@siskon.com.tr",
+  "phone": "+90 (232) 245 00 76",
+  "slogan": "Makes Your Factory Smarter"
+}

@@ -1,0 +1,107 @@
+{
+  "subtitle": "Shape the future of manufacturing with our automation solutions",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "service": "SERVICE",
+  "title": "Machine and Process Automation",
+  "description": "Siskon automation solutions ensure that your machines and processes are controlled with secure software infrastructures. While making your production processes faster, flexible and efficient, it reduces costs and minimizes human errors. Boost your business competitiveness with our innovative automation solutions.",
+  "getInfo": "Get Information",
+  "benefits": "BENEFITS",
+  "benefitsTitle": "What Do Siskon Automation Solutions Provide You?",
+  "roadmap": "PROCESS ROADMAP",
+  "roadmapTitle": "How Do We Implement Automation Steps?",
+  "capabilities": [
+    "Machine automation (assembly, packaging, filling)",
+    " Process automation",
+    " Servo (motion applications)",
+    "Safety automation",
+    "SCADA applications",
+    " Industrial vision systems",
+    "Coating plant automation",
+    " Smart building automation",
+    "Lighting automation",
+    "Technical service and support"
+  ],
+  "capabilitiesTitle": "What Kind of Automation Solutions Do We Offer?",
+  "plcHmi": "PLC and HMI Software Development",
+  "plcHmiSpot": "Optimize your production processes with our PLC and HMI software!",
+  "plcHmiDesc": "Our PLC and HMI software solutions help you automate your processes and manage operations seamlessly. With software integrated with leading brands such as Beckhoff and Siemens, you can increase operational efficiency.",
+  "scada": "SCADA Software Development",
+  "scadaSpot": "Monitor and control your operations from a single center with our SCADA solutions!",
+  "scadaDesc": "SCADA (Supervisory Control and Data Acquisition) systems make your production and control operations more efficient with monitoring and control capabilities as well as data collection, recording, and storage functions. With our flexible and manageable SCADA solutions, you can closely monitor operations and optimize your processes.",
+  "ctaTitle": "Start Your Automation Project",
+  "ctaDescription": "Contact us for detailed information about factory automation and industrial control systems.",
+  "ctaButton": "Contact Us",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "features": [
+    "Machine and process modernization",
+    "Process standardization",
+    "Reduced operator dependency",
+    "Increased production capacity",
+    "Reduced operating costs",
+    "Time savings",
+    "Reduced error rate",
+    "Increased safety"
+  ],
+  "steps": [
+    {
+      "titleLine1": "Needs Analysis and",
+      "titleLine2": "Project Planning",
+      "title": "Needs Analysis and Project Planning"
+    },
+    {
+      "titleLine1": "Mechanical",
+      "titleLine2": "Improvements",
+      "title": "Mechanical Improvements"
+    },
+    {
+      "titleLine1": "Hardware",
+      "titleLine2": "Selection",
+      "title": "Hardware Selection"
+    },
+    {
+      "titleLine1": "Automation Panel",
+      "titleLine2": "Design",
+      "title": "Automation Panel Design"
+    },
+    {
+      "titleLine1": "PLC, HMI and",
+      "titleLine2": "SCADA Software Development",
+      "title": "PLC, HMI and SCADA Software Development"
+    },
+    {
+      "titleLine1": "Installation and",
+      "titleLine2": "Commissioning",
+      "title": "Installation and Commissioning"
+    },
+    {
+      "titleLine1": "User Acceptance",
+      "titleLine2": "Test",
+      "title": "User Acceptance Test"
+    },
+    {
+      "titleLine1": "Training and",
+      "titleLine2": "Documentation",
+      "title": "Training and Documentation"
+    },
+    {
+      "titleLine1": "System Optimization and",
+      "titleLine2": "Continuous Improvement",
+      "title": "System Optimization and Continuous Improvement"
+    }
+  ],
+  "heroTitle": "Machine and Process Automation",
+  "heroSubtitle": "Shape the future of manufacturing with our automation solutions",
+  "heroDescription": "Siskon automation solutions ensure that your machines and processes are controlled with secure software infrastructures. While making your production processes faster, flexible and efficient, it reduces costs and minimizes human errors. Boost your business competitiveness with our innovative automation solutions.",
+  "heroImage": "/assets/strapi/siskon_1_4_makine_ve_proses_otomasyonu_16_9_dikey_3_camera_zeminsiz_2_ee1925aa7f.webp",
+  "serviceLabel": "SERVICE",
+  "ctaDesc": "Contact us for detailed information about factory automation and industrial control systems.",
+  "capabilitiesEyebrow": "BENEFITS",
+  "capabilitiesListTitle": "Solutions We Offer",
+  "capabilitiesImage": "/assets/strapi/Makine_Ve_Proses_Settings_4fbc58f8a6.webp",
+  "plcHmiEyebrow": "BENEFİTS",
+  "plcHmiImage": "/assets/strapi/Bilgisayar_Mockup_2a582724db.webp",
+  "scadaEyebrow": "BENEFITS",
+  "scadaImage": "/assets/strapi/Telefon_Mocku2_96c3f735a5.webp"
+}

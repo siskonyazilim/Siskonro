@@ -1,0 +1,34 @@
+{
+  "automotiveSector": {
+    "title": "Automotive Main & Supplier Industry",
+    "sectorLabel": "Sector 02"
+  },
+  "appliancesSector": {
+    "title": "Home Appliances & Household Appliances",
+    "sectorLabel": "Sector 03"
+  },
+  "foodBeverageSector": {
+    "title": "Food & Beverage",
+    "sectorLabel": "Sector 04"
+  },
+  "textileSector": {
+    "title": "Textile & Apparel",
+    "sectorLabel": "Sector 07"
+  },
+  "tobaccoSector": {
+    "title": "Tobacco Industry",
+    "sectorLabel": "Sector 01"
+  },
+  "pharmaSector": {
+    "title": "Pharmaceutical & Healthcare Products",
+    "sectorLabel": "Sector 05"
+  },
+  "energyChemSector": {
+    "title": "Energy, Chemistry & Sustainability",
+    "sectorLabel": "Sector 08"
+  },
+  "machineAutomationSector": {
+    "title": "Machinery, Process & CNC Automation",
+    "sectorLabel": "Sector 06"
+  }
+}

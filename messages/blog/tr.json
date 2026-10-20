@@ -1,0 +1,16 @@
+{
+  "prevPage": "Önceki sayfa",
+  "nextPage": "Sonraki sayfa",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbBlog": "Haber / Blog",
+  "pageTitle": "Haber / Blog",
+  "pageDescription": "Siskon'dan haberler, yatırımlar, etkinlikler ve teknoloji odaklı duyurular.",
+  "defaultCategory": "Bizden Haberler",
+  "emptyState": "Henüz blog yazısı eklenmemiş.",
+  "allNews": "Tüm Haber/Blog",
+  "backToBlog": "Blog'a Dön",
+  "notFoundTitle": "Makale bulunamadı",
+  "notFoundDesc": "Aradığınız blog yazısı mevcut değil.",
+  "heroTitle": "Haber / Blog",
+  "heroSubtitle": "Siskon'dan haberler, yatırımlar, etkinlikler ve teknoloji odaklı duyurular."
+}

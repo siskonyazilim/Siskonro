@@ -1,0 +1,13 @@
+{
+  "breadcrumbHome": "Home",
+  "breadcrumbSectors": "Sectors",
+  "needs": "Needs",
+  "solutions": "Our solutions",
+  "results": "Results",
+  "references": "References",
+  "techStack": "Technology Stack",
+  "contactUs": "Contact Us",
+  "ctaTitleSuffix": ": let us define your roadmap together",
+  "ctaLeadSuffix": "Share your priorities and discover the right solution set for your line.",
+  "ctaLeadFallback": "We tailor architecture and execution to your production goals."
+}

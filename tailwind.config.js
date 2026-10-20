@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["'Lufga'", "'Belfast Grotesk'", "sans-serif"],
+        archivo: ["'Archivo'", "'Archivo Hero'", "'Lufga'", "sans-serif"],
       },
+
       colors: {
         sky: {
           50: '#f0f9ff',
@@ -60,7 +62,7 @@ module.exports = {
         },
       },
       maxWidth: {
-        '6xl': '1200px',
+        '6xl': '1080px',
       },
     },
   },

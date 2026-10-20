@@ -1,0 +1,110 @@
+{
+  "subtitle": "Monitor your processes, ensure quality, and gain a competitive advantage",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "service": "SERVICE",
+  "title": "Traceability Software Solutions",
+  "description": "Traceability enables monitoring of all processes from raw material sourcing to the final product, helping identify issues on time and improve production quality. It also strengthens customer trust by increasing transparency throughout the supply chain.",
+  "getInfo": "Get Information",
+  "benefits": "BENEFITS",
+  "benefitsTitle": "What Traceability Solutions Do We Offer?",
+  "benefitsDescription": "Our traceability systems provide complete control and visibility throughout all processes from production to shipment.",
+  "qualifications": "QUALIFICATIONS",
+  "qualificationsTitle": "What Do Siskon Traceability Solutions Provide for You?",
+  "sectorDetails": "SOLUTION COMPONENTS",
+  "components": "Components of Traceability Systems",
+  "ctaTitle": "Strengthen Your Traceability Systems",
+  "ctaDescription": "Discover our solutions for complete traceability in your production processes.",
+  "ctaButton": "Contact Us",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "features": [
+    "Single Item",
+    "Batch / Lot",
+    "RTLS",
+    "Pick to Light / Put to Light",
+    "Warehouse Management Systems",
+    "Integration"
+  ],
+  "technicalFeatures": [
+    "Traceability from Raw Material Input to Finished Product",
+    "Individual Product Traceability",
+    "Batch / Lot Tracking",
+    "Access to Real-Time Inventory Information",
+    "Monitor Production Performance Indicators",
+    "Bill of Materials (BOM) Control",
+    "Automatic Expiration Date Monitoring",
+    "Integration",
+    "Serial Number-Based Reporting",
+    "Eliminate Errors",
+    "Accurate and Efficient Inventory Utilization",
+    "Verify Material Consumption Against the Bill of Materials",
+    "Reduce Audit Risks",
+    "Warranty Process Management",
+    "Recall Cost Reduction",
+    "ISO 9001, ISO 22000, ISO/TS 16949 Compliance and Certification Support"
+  ],
+  "sectorDetailCards": [
+    {
+      "title": "Single Item Tracking",
+      "titleSub": "",
+      "spot": "Gain full visibility in production with real-time product tracking by serial number.",
+      "desc": "In traceability processes, tracking each product with a unique number provides full visibility and control. This approach improves traceability for every item and creates a strong advantage in quality management and competitiveness.",
+      "icon": "/assets/strapi/izlenebilirlikicon3_67ad2b4e53.webp",
+      "image": "",
+      "imageAlt": "Single item tracking icon"
+    },
+    {
+      "title": "Batch / Lot Tracking",
+      "titleSub": "",
+      "spot": "Achieve full control from production to delivery with batch / lot tracking.",
+      "desc": "In situations where product tracking is difficult, tracing each batch/lot ensures complete transparency and quality control throughout production. This makes it easy to follow where products are at every stage.",
+      "icon": "/assets/strapi/izlenebilirlikicon3_67ad2b4e53.webp",
+      "image": "",
+      "imageAlt": "Batch lot tracking icon"
+    },
+    {
+      "title": "P2L",
+      "titleSub": "(Pick to Light / Put to Light)",
+      "spot": "Make your operations flexible and error-free by following the light with P2L solutions.",
+      "desc": "P2L solutions provide visual and/or audible guidance to operators in labor-intensive industrial manufacturing and assembly processes from production to logistics and from warehouse to delivery.",
+      "icon": "/assets/strapi/izlenebilirlikicon5_99313fc106.webp",
+      "image": "",
+      "imageAlt": "P2L icon"
+    },
+    {
+      "title": "RTLS",
+      "titleSub": "(Real-Time Location Systems)",
+      "spot": "Track your equipment and employees instantly with RTLS and use resources at maximum efficiency.",
+      "desc": "With RTLS, you can easily monitor the real-time location of every equipment and employee in your facility. This technology helps use resources effectively, increases production efficiency, improves safety, and minimizes potential risks.",
+      "icon": "/assets/strapi/izlenebilirlikicon_1108a700ce.webp",
+      "image": "",
+      "imageAlt": "RTLS icon"
+    },
+    {
+      "title": "Warehouse Management Systems",
+      "titleSub": "",
+      "spot": "Optimize your operations and gain competitive advantage with warehouse management systems.",
+      "desc": "Warehouse Management Systems provide process control and management. By working with real-time data, they enable effective management of operations carried out across the organization.",
+      "icon": "/assets/strapi/izlenebilirlikicon2_86ced8c0dc.webp",
+      "image": "",
+      "imageAlt": "Warehouse management systems icon"
+    },
+    {
+      "title": "Integration",
+      "titleSub": "",
+      "spot": "Ensure uninterrupted traceability in production with third-party system integrations.",
+      "desc": "Software integration enables different applications to exchange data and work in sync, eliminating difficulties from data entry to reporting for businesses using multiple systems. Integration can be provided with MES, ERP, WMS, CRM, industrial instruments, and third-party software.",
+      "icon": "/assets/strapi/izlenebilirlikicon4_a9206dd8d8.webp",
+      "image": "",
+      "imageAlt": "Integration icon"
+    }
+  ],
+  "heroTitle": "Traceability Software Solutions",
+  "heroSubtitle": "Monitor your processes, ensure quality, and gain a competitive advantage",
+  "heroDescription": "Traceability enables monitoring of all processes from raw material sourcing to the final product, helping identify issues on time and improve production quality. It also strengthens customer trust by increasing transparency throughout the supply chain.",
+  "heroImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_16_9_yatay_beyaz_illustrasyon_camera_2_e4744660ab.webp",
+  "serviceLabel": "SERVICE",
+  "ctaDesc": "Discover our solutions for complete traceability in your production processes.",
+  "qualificationsImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_1_1_kare_camera_135x145x_150_2_31ee4078e1.webp"
+}

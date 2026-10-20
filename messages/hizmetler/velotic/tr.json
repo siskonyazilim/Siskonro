@@ -1,0 +1,39 @@
+{
+  "subtitle": "Velotic teknolojileri ile endüstriyel dijital dönüşüm",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "serviceLabel": "HİZMET",
+  "title": "Velotic Çözümleri",
+  "description": "Velotic ürün ailesi ile endüstriyel otomasyon ve dijital dönüşüm projelerinizde güçlü bir çözüm ortağıyız. Siskon, Velotic teknolojilerini kullanarak işletmenizin üretim verimliliğini artırmaya, dijitalleşme süreçlerini hızlandırmaya ve sürdürülebilir altyapı oluşturmaya yardımcı olur.",
+  "contactGE": "Velotic Hakkında Bilgi Alın",
+  "benefits": [
+    "Üretim süreçlerinde verimlilik artışı",
+    "Dijitalleşme süreçlerinin hızlandırılması",
+    "Sürdürülebilir endüstriyel altyapı oluşturma",
+    "Operasyonel mükemmeliyet"
+  ],
+  "benefitsEyebrow": "Kazanımlar",
+  "benefitsTitle": "Velotic Çözümleri ile Siskon Size Ne Sağlar?",
+  "solutions": [
+    "Endüstriyel otomasyon ve yazılım entegrasyonu",
+    " Velotic ürün ailesi konusunda uzmanlık",
+    " Üretim sektörlerinde dijital dönüşüm danışmanlığı",
+    " Veriye dayalı karar destek sistemleri oluşturma"
+  ],
+  "solutionsTitle": "Ne Tür Çözümler Sunuyoruz?",
+  "ctaTitle": "Velotic ile Dijital Dönüşümünüzü Hızlandırın",
+  "ctaDescription": "Velotic çözümleri ve entegrasyon hizmetlerimiz hakkında detaylı bilgi için bizimle iletişime geçin.",
+  "ctaButton": "Bize Ulaşın",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "imageAlt": "Siskon Velotic çözümleri genel bakış",
+  "serviceSectionTitle": "Velotic Çözümleriyle Daha Akıllı Üretim!",
+  "serviceSectionDesc": "Velotic'in yetkili sistem entegratörü olarak, endüstriyel otomasyon ve yazılım alanındaki uzmanlığımızı Velotic çözümleriyle birleştirerek, üretim tesislerinin daha hızlı dijitalleşmesini ve verimliliğini artırmasını sağlıyoruz. Daha etkin, daha hızlı ve daha sürdürülebilir bir endüstriyel altyapı oluşturmak için çalışıyoruz.",
+  "solutionsEyebrow": "Yetkinlikler",
+  "heroTitle": "Velotic Çözümleri",
+  "heroSubtitle": "Velotic teknolojileri ile endüstriyel dijital dönüşüm",
+  "heroDescription": "Velotic ürün ailesi ile endüstriyel otomasyon ve dijital dönüşüm projelerinizde güçlü bir çözüm ortağıyız. Siskon, Velotic teknolojilerini kullanarak işletmenizin üretim verimliliğini artırmaya, dijitalleşme süreçlerini hızlandırmaya ve sürdürülebilir altyapı oluşturmaya yardımcı olur.",
+  "heroImage": "/assets/strapi/Siskon_Velotic_5d5040fcc2.webp",
+  "ctaDesc": "Velotic çözümleri ve entegrasyon hizmetlerimiz hakkında detaylı bilgi için bizimle iletişime geçin.",
+  "solutionsImage": "/assets/strapi/Siskon_Velotic_Camera_888e9cc1bd.webp"
+}

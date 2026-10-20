@@ -3,9 +3,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-export default function PageHero({ title, subtitle, breadcrumbs }) {
+export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
   const pathname = usePathname() || '/';
   const pathSegments = pathname.split('/').filter(Boolean);
   const hasLocalePrefix = pathSegments[0] === 'en';
@@ -30,13 +31,12 @@ export default function PageHero({ title, subtitle, breadcrumbs }) {
   };
 
   return (
-    <section className="page-hero-section relative overflow-hidden bg-[#0A192F] min-h-[clamp(20rem,56vw,28rem)] md:min-h-[clamp(22rem,46vw,30rem)] lg:min-h-[clamp(18rem,42vw,26rem)] flex items-center pt-[clamp(7rem,14vw,8.5rem)] md:pt-[clamp(8rem,12vw,9.5rem)] lg:pt-[clamp(5.5rem,10vw,7rem)] pb-[clamp(2.75rem,8vw,4.5rem)] md:pb-[clamp(3rem,7vw,4.75rem)] lg:pb-[clamp(2.5rem,7vw,4rem)]">
-      {/* Dynamic Background with improved gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-600 via-sky-950 to-[#030B1A] opacity-100" />
-
-      {/* Animated Glow Elements */}
-      <div className="absolute top-[-16%] left-[-12%] w-[72%] h-[72%] md:w-[46%] md:h-[46%] bg-sky-500/12 md:bg-sky-500/16 rounded-full blur-[56px] md:blur-[84px]" />
-      <div className="absolute bottom-[-16%] right-[-12%] w-[64%] h-[64%] md:w-[36%] md:h-[36%] bg-blue-600/6 md:bg-blue-600/8 rounded-full blur-[56px] md:blur-[80px]" />
+    <section className="page-hero-section relative overflow-hidden min-h-[clamp(20rem,56vw,28rem)] md:min-h-[clamp(22rem,46vw,30rem)] lg:min-h-[clamp(18rem,42vw,26rem)] flex items-center pt-[clamp(7rem,14vw,8.5rem)] md:pt-[clamp(8rem,12vw,9.5rem)] lg:pt-[clamp(5.5rem,10vw,7rem)] pb-[clamp(2.75rem,8vw,4.5rem)] md:pb-[clamp(3rem,7vw,4.75rem)] lg:pb-[clamp(2.5rem,7vw,4rem)]">
+      {/* Subtle blend overlay matching Home Hero */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A192F]/40"
+        aria-hidden="true"
+      />
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 opacity-[0.02] md:opacity-[0.03] pointer-events-none bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M60 60H0V0h60v60zM30 0v60M0 30h60%22 fill=%22none%22 stroke=%22white%22 stroke-width=%221%22/%3E%3C/svg%3E')]" />
@@ -74,14 +74,27 @@ export default function PageHero({ title, subtitle, breadcrumbs }) {
             )}
           </div>
 
-          {/* 2. Title - Inside a Box (Glassmorphism) */}
+          {/* 2. Title / Logo - Inside a Box (Glassmorphism) */}
           <div className="min-h-[80px] md:min-h-[104px] lg:min-h-[128px] flex items-center">
             <div className="inline-block relative max-w-full md:max-w-3xl">
               {/* Box Background */}
               <div className="absolute -inset-x-3 md:-inset-x-6 -inset-y-2 md:-inset-y-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl -z-10 shadow-xl" />
-              <h1 className="text-[clamp(1.35rem,4.2vw,2.7rem)] font-bold text-white tracking-tight leading-[1.18] md:leading-[1.22] break-words">
-                {title}
-              </h1>
+              {logoSrc ? (
+                // Logo başlık yerine geçiyorsa da sayfada bir <h1> olmalı (alt metni başlık sayılır)
+                <h1 className="relative block w-[220px] sm:w-[280px] md:w-[340px] h-[52px] sm:h-[64px] md:h-[76px]">
+                  <Image
+                    src={logoSrc}
+                    alt={title || 'Logo'}
+                    fill
+                    className="object-contain object-left"
+                    priority
+                  />
+                </h1>
+              ) : (
+                <h1 className="text-[clamp(1.35rem,4.2vw,2.7rem)] font-bold text-white tracking-tight leading-[1.18] md:leading-[1.22] break-words">
+                  {title}
+                </h1>
+              )}
             </div>
           </div>
 
@@ -111,4 +124,5 @@ PageHero.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   breadcrumbs: PropTypes.arrayOf(PropTypes.string),
+  logoSrc: PropTypes.string,
 };

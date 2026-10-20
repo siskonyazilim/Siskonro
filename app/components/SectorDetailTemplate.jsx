@@ -3,9 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import AnimatedCTALink from './AnimatedCTALink';
 import PropTypes from 'prop-types';
 import PageHero from './PageHero';
 import { useLanguage } from '../_context/LanguageContext';
+import { usePageLocale } from '../lib/i18n/usePageLocale';
+import trLocale from '../../messages/components/sectorTemplate/tr.json';
+import enLocale from '../../messages/components/sectorTemplate/en.json';
+import roLocale from '../../messages/components/sectorTemplate/ro.json';
 
 const PLACEHOLDER_LOGO = '/assets/Logos/reference-placeholder.svg';
 
@@ -23,9 +28,9 @@ const SECTOR_PALETTES = [
 const DEFAULT_PALETTE = { accent: '#0EA5E9', soft: 'rgba(14,165,233,0.12)' };
 
 const SECTOR_IMAGE_RULES = [
-  { test: /beyaz|white goods|ev alet/i, image: '/assets/sektor/Beyaz-Eşya.webp' },
+  { test: /beyaz|white goods|ev alet/i, image: '/assets/sektor/beyaz-esya.webp' },
   { test: /enerji|energy|kimya|chemical/i, image: '/assets/sektor/enerji-kimya.webp' },
-  { test: /g[iı]da|food|beverage/i, image: '/assets/sektor/Gıda.webp' },
+  { test: /g[iı]da|food|beverage/i, image: '/assets/sektor/gida.webp' },
   { test: /(?:ila[cç]|ıla[cç]|pharma|pharmaceutical|health)/i, image: '/assets/sektor/ilac.webp' },
   { test: /makine|machinery|otomasyon|automation|cnc/i, image: '/assets/sektor/makine.webp' },
   { test: /otomotiv|automotive/i, image: '/assets/sektor/otomotiv.webp' },
@@ -418,12 +423,12 @@ function TechStackSection({ title, items }) {
   );
 }
 
-function ReferencesSection({ isEn, isRo, references }) {
+function ReferencesSection({ pt, references }) {
   return (
     <section className="py-20 md:py-24 px-6 bg-white">
       <div className="container">
         <div className="section-head reveal text-center max-w-3xl mx-auto mb-10 md:mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{isEn ? 'References' : isRo ? 'Referințele Noastre' : 'Referanslarımız'}</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{pt('references')}</h3>
         </div>
         <ReferenceLogos references={references} />
       </div>
@@ -433,9 +438,10 @@ function ReferencesSection({ isEn, isRo, references }) {
 
 export default function SectorDetailTemplate({ content }) { // NOSONAR
   const { locale, localizePath } = useLanguage();
-  const isEn = locale === 'en';
+  const pt = usePageLocale(trLocale, enLocale, roLocale);
   const isRo = locale === 'ro';
-  const view = isEn ? content.en : isRo ? content.ro : content.tr;
+  const isEn = locale === 'en';
+  const view = isEn ? content.en : isRo ? (content.ro || content.en) : content.tr;
   const palette = getSectorPalette(view.title);
   const sectorImage = getSectorImage(view.title);
   const templateRef = useRef(null);
@@ -443,16 +449,8 @@ export default function SectorDetailTemplate({ content }) { // NOSONAR
   const summarySnippet = summarySource
     ? summarySource.split(/[.!?]/).find((part) => part.trim())?.trim() || summarySource.slice(0, 170)
     : '';
-  const ctaTitle = isEn
-    ? `${view.title}: let us define your roadmap together`
-    : isRo
-    ? `${view.title}: să clarificăm împreună foaia de parcurs`
-    : `${view.title} için yol haritasını birlikte netleştirelim`;
-  const ctaLead = isEn
-    ? `${summarySnippet || 'We tailor architecture and execution to your production goals.'} Share your priorities and discover the right solution set for your line.`
-    : isRo
-    ? `${summarySnippet || 'Adaptăm arhitectura și execuția la obiectivele dvs. de producție.'} Împărtășiți-vă prioritățile și descoperiți setul de soluții potrivit pentru linia dvs.`
-    : `${summarySnippet || 'Üretim hedeflerinize uygun mimari ve uygulama adımlarını birlikte planlıyoruz.'} Önceliklerinizi paylaşın, hattınıza en uygun çözüm setini birlikte belirleyelim.`;
+  const ctaTitle = `${view.title}${pt('ctaTitleSuffix')}`;
+  const ctaLead = `${summarySnippet || pt('ctaLeadFallback')} ${pt('ctaLeadSuffix')}`;
 
   useEffect(() => {
     const root = templateRef.current;
@@ -489,7 +487,7 @@ export default function SectorDetailTemplate({ content }) { // NOSONAR
     <div ref={templateRef} className="bg-white min-h-screen" style={{ '--sector-accent': palette.accent, '--sector-soft': palette.soft }}>
       <PageHero
         title={view.title}
-        breadcrumbs={isEn ? ['Home', 'Sectors', view.title] : isRo ? ['Pagina Principală', 'Sectoare', view.title] : ['Ana Sayfa', 'Sektörler', view.title]}
+        breadcrumbs={[pt('breadcrumbHome'), pt('breadcrumbSectors'), view.title]}
       />
 
       <section className="py-20 md:py-24 px-6 bg-gradient-to-b from-white to-slate-50">
@@ -520,16 +518,16 @@ export default function SectorDetailTemplate({ content }) { // NOSONAR
         </div>
       </section>
 
-      <ListSection title={isEn ? 'Needs' : isRo ? 'Nevoi' : 'İhtiyaçlar'} items={view.needs} background="muted" accent={palette.accent} />
-      <ListSection title={isEn ? 'Our solutions' : isRo ? 'Soluțiile noastre' : 'Çözümlerimiz'} items={view.solutions} accent={palette.accent} />
-      <ListSection title={isEn ? 'Results' : isRo ? 'Rezultate' : 'Sonuç'} items={view.results} background="muted" accent={palette.accent} />
+      <ListSection title={pt('needs')} items={view.needs} background="muted" accent={palette.accent} />
+      <ListSection title={pt('solutions')} items={view.solutions} accent={palette.accent} />
+      <ListSection title={pt('results')} items={view.results} background="muted" accent={palette.accent} />
 
       <FeaturedSection featured={view.featured} accent={palette.accent} />
       <CaseStudySection caseStudy={view.caseStudy} accent={palette.accent} />
-      <TechStackSection title={isEn ? 'Technology Stack' : isRo ? 'Stiva de tehnologii' : 'Teknoloji Yığını'} items={view.techStack} />
+      <TechStackSection title={pt('techStack')} items={view.techStack} />
 
       {view.references?.length ? (
-        <ReferencesSection isEn={isEn} isRo={isRo} references={view.references} />
+        <ReferencesSection pt={pt} references={view.references} />
       ) : null}
 
       <section className="cta-section">
@@ -540,12 +538,11 @@ export default function SectorDetailTemplate({ content }) { // NOSONAR
           <p>
             {ctaLead}
           </p>
-          <Link
-            href={localizePath('/iletisim#contact-form')}
-            className="btn-cta"
-          >
-            {isEn ? 'Contact Us' : isRo ? 'Contactați-ne' : 'Bize Ulaşın'}
-          </Link>
+            <AnimatedCTALink
+              href={localizePath('/iletisim#contact-form')}
+            >
+              {pt('contactUs')}
+            </AnimatedCTALink>
         </div>
       </section>
     </div>
@@ -610,7 +607,7 @@ TechStackSection.propTypes = {
 };
 
 ReferencesSection.propTypes = {
-  isEn: PropTypes.bool.isRequired,
+  pt: PropTypes.func.isRequired,
   references: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,

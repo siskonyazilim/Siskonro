@@ -1,0 +1,52 @@
+{
+  "subtitle": "Obțineți excelență în producție prin tehnologii avansate de procesare și analiză a imaginilor.",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbServices": "Servicii",
+  "service": "SERVICIU",
+  "title": "Soluții de procesare a imaginilor",
+  "description": "Automatizați procese critice precum controlul calității, măsurarea dimensională, citirea etichetelor și detectarea defectelor de suprafață pe liniile dvs. de producție cu soluțiile noastre industriale de viziune. Minimizați ratele de eroare și creșteți eficiența cu analiza imaginilor bazată pe AI.",
+  "requestQuote": "Solicitați o Ofertă",
+  "benefits": [
+    "Utilizarea tehnologiei corecte cu expertiză în procese specifice sectorului",
+    "Soluții optime de iluminare",
+    "Integrare cu sistemele de automatizare și SCADA",
+    "Integrare cu sistemele ERP",
+    "Analiza datelor în timp real",
+    "Monitorizare de la distanță, suport pentru întreținere și instruire"
+  ],
+  "benefitsEyebrow": "Beneficii",
+  "benefitsTitle": "De Ce Siskon Pentru Soluțiile de Inspecție Vizuală?",
+  "capabilities": [
+    "Detecția prezenței/absenței",
+    "Inspecția defectelor de suprafață",
+    "Măsurare dimensională și numărare",
+    "Verificarea poziției",
+    "Verificări ale etichetelor și datei de expirare",
+    "Potrivirea și validarea modelelor",
+    "Recunoașterea optică a caracterelor (OCR)",
+    "Clasificare",
+    "Soluții de profilare 3D"
+  ],
+  "capabilitiesEyebrow": "Capabilități",
+  "capabilitiesTitle": "Ce Tipuri de Soluții de Procesare Imagine Oferim?",
+  "ctaTitle": "Automatizați Controlul Calității",
+  "ctaDescription": "Contactați-ne pentru informații detaliate despre soluțiile noastre de viziune.",
+  "ctaButton": "Contactați-ne",
+  "imageAlt": "Soluții Siskon de Procesare a Imaginii - Control Automat al Calității",
+  "imageAlt2": "Scenariu de cameră pentru verificarea etichetelor",
+  "imageAlt3": "Scenariu de cameră pentru detecția prezenței și absenței",
+  "imageAlt4": "Scenariu de cameră pentru citirea codurilor de bare",
+  "showMore": "Apasă pentru mai multe",
+  "showLess": "Arată mai puțin",
+  "heroTitle": "Soluții de procesare a imaginilor",
+  "heroSubtitle": "Obțineți excelență în producție prin tehnologii avansate de procesare și analiză a imaginilor.",
+  "heroDescription": "Automatizați procese critice precum controlul calității, măsurarea dimensională, citirea etichetelor și detectarea defectelor de suprafață pe liniile dvs. de producție cu soluțiile noastre industriale de viziune. Minimizați ratele de eroare și creșteți eficiența cu analiza imaginilor bazată pe AI.",
+  "heroImage": "/assets/strapi/Goruntu_Izleme_Watch_33e2d645e2.webp",
+  "serviceLabel": "SERVICIU",
+  "ctaDesc": "Contactați-ne pentru informații detaliate despre soluțiile noastre de viziune.",
+  "moreImages": [
+    "/assets/strapi/Alt_Menu_6_6c125b7fad.svg",
+    "/assets/strapi/Alt_Menu_3_e9a7733e9c.svg",
+    "/assets/strapi/Alt_Menu_2_c55bd05d50.svg"
+  ]
+}

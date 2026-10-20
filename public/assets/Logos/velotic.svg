@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <defs>
+    <linearGradient id="veloticGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02529f" />
+      <stop offset="100%" stop-color="#00a8b5" />
+    </linearGradient>
+  </defs>
+  <!-- V icon symbol -->
+  <g transform="translate(10, 15)">
+    <path d="M15,10 L38,62 L48,62 L72,10 L58,10 L43,47 L29,10 Z" fill="url(#veloticGrad)" />
+    <circle cx="43" cy="22" r="5" fill="#00a8b5" />
+  </g>
+  <!-- VELOTIC typography -->
+  <text x="95" y="62" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="800" letter-spacing="4" fill="#0e192f">VELOTIC</text>
+</svg>

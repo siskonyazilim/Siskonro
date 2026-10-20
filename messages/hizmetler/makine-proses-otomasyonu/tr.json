@@ -1,0 +1,107 @@
+{
+  "subtitle": "Otomasyon çözümlerimiz ile üretimin geleceğini şekillendirin",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "service": "HİZMET",
+  "title": "Makine ve Proses Otomasyon",
+  "description": "Siskon otomasyon çözümleri, makinelerinizin ve proseslerinizin güvenli yazılım altyapıları ile kontrol edilmesini sağlar. Üretim süreçlerinizi daha hızlı, esnek ve verimli hale getirirken, maliyetleri düşürür ve insan hatalarını minimize eder. Yenilikçi otomasyon çözümlerimizle işletmenizin rekabet gücünü artırın.",
+  "getInfo": "Bilgi Alın",
+  "benefits": "AVANTAJLAR",
+  "benefitsTitle": "Siskon Otomasyon Çözümleri Size Ne Sağlar?",
+  "roadmap": "SÜREÇ YOL HARİTASI",
+  "roadmapTitle": "Otomasyon Adımlarını Nasıl Uyguluyoruz?",
+  "capabilities": [
+    "Makine otomasyonu (montaj, paketleme, dolum)",
+    " Proses otomasyonu",
+    " Servo (motion uygulamaları)",
+    " Güvenlik otomasyonu",
+    " SCADA uygulamaları",
+    " Endüstriyel görüntü sistemleri",
+    " Kaplama tesis otomasyonu",
+    "Akıllı bina otomasyonu",
+    "Aydınlatma otomasyonu",
+    "Teknik servis ve destek"
+  ],
+  "capabilitiesTitle": "Ne Tür Otomasyon Çözümleri Sunuyoruz?",
+  "plcHmi": "PLC ve HMI Yazılım Geliştirme",
+  "plcHmiSpot": "PLC ve HMI yazılımlarımızla üretim süreçlerinizi optimize edin!",
+  "plcHmiDesc": "Endüstriyel otomasyon çözümlerimizde sunduğumuz PLC ve HMI yazılımları, süreçlerinizi otomatikleştirmenize ve operasyonlarınızı sorunsuz bir şekilde yönetmenize yardımcı olur. Beckhoff ve Siemens gibi alanında lider markaların ürünleriyle entegre çalışan yazılımlarımızla verimliliğinizi artırın.",
+  "scada": "SCADA Yazılım Geliştirme",
+  "scadaSpot": "SCADA çözümlerimizle operasyonlarınızı tek bir merkezden izleyin ve kontrol edin!",
+  "scadaDesc": "SCADA (Supervisory Control And Data Acquisition) sistemleri, izleme ve kontrol işlevlerine ek olarak veri toplama, kaydetme ve saklama özellikleriyle işletmenizdeki üretim ve kontrol süreçlerini verimli hale getirir. Sunduğumuz esnek ve yönetilebilir SCADA çözümlerimiz ile operasyonlarınızı yakından izleyin ve süreçlerinizi optimize edin.",
+  "ctaTitle": "Otomasyon Projenizi Başlatın",
+  "ctaDescription": "Fabrika otomasyonu ve endüstriyel kontrol sistemleri hakkında detaylı bilgi için bizimle iletişime geçin.",
+  "ctaButton": "Bize Ulaşın",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "features": [
+    "Makine ve proses modernizasyonu",
+    "Proses standardizasyonu",
+    "Operatör bağımlılığının azaltılması",
+    "Üretim kapasite artışı",
+    "İşletme maliyetlerinin azaltılması",
+    "Zaman tasarrufu",
+    "Hata oranının azaltılması",
+    "Güvenlik artışı"
+  ],
+  "steps": [
+    {
+      "titleLine1": "İhtiyaç Analizi ve",
+      "titleLine2": "Proje Planlama",
+      "title": "İhtiyaç Analizi ve Proje Planlama"
+    },
+    {
+      "titleLine1": "Mekanik",
+      "titleLine2": "İyileştirmeler",
+      "title": "Mekanik İyileştirmeler"
+    },
+    {
+      "titleLine1": "Donanım",
+      "titleLine2": "Seçimi",
+      "title": "Donanım Seçimi"
+    },
+    {
+      "titleLine1": " Otomasyon",
+      "titleLine2": "Pano Tasarımı",
+      "title": " Otomasyon Pano Tasarımı"
+    },
+    {
+      "titleLine1": "PLC, HMI ve",
+      "titleLine2": "SCADA Yazılım Geliştirme",
+      "title": "PLC, HMI ve SCADA Yazılım Geliştirme"
+    },
+    {
+      "titleLine1": "Kurulum ve",
+      "titleLine2": "Devreye Alma",
+      "title": "Kurulum ve Devreye Alma"
+    },
+    {
+      "titleLine1": "Kullanıcı Kabul",
+      "titleLine2": "Testi",
+      "title": "Kullanıcı Kabul Testi"
+    },
+    {
+      "titleLine1": "Eğitim ve",
+      "titleLine2": "Dokümantasyon",
+      "title": "Eğitim ve Dokümantasyon"
+    },
+    {
+      "titleLine1": "Sistem Optimizasyonu ve",
+      "titleLine2": "Sürekli İyileştirme",
+      "title": "Sistem Optimizasyonu ve Sürekli İyileştirme"
+    }
+  ],
+  "heroTitle": "Makine ve Proses Otomasyon",
+  "heroSubtitle": "Otomasyon çözümlerimiz ile üretimin geleceğini şekillendirin",
+  "heroDescription": "Siskon otomasyon çözümleri, makinelerinizin ve proseslerinizin güvenli yazılım altyapıları ile kontrol edilmesini sağlar. Üretim süreçlerinizi daha hızlı, esnek ve verimli hale getirirken, maliyetleri düşürür ve insan hatalarını minimize eder. Yenilikçi otomasyon çözümlerimizle işletmenizin rekabet gücünü artırın.",
+  "heroImage": "/assets/strapi/siskon_1_4_makine_ve_proses_otomasyonu_16_9_dikey_3_camera_zeminsiz_2_ee1925aa7f.webp",
+  "serviceLabel": "HİZMET",
+  "ctaDesc": "Fabrika otomasyonu ve endüstriyel kontrol sistemleri hakkında detaylı bilgi için bizimle iletişime geçin.",
+  "capabilitiesEyebrow": "AVANTAJLAR",
+  "capabilitiesListTitle": "Sunduğumuz Çözümler",
+  "capabilitiesImage": "/assets/strapi/Makine_Ve_Proses_Settings_4fbc58f8a6.webp",
+  "plcHmiEyebrow": "AVANTAJLAR",
+  "plcHmiImage": "/assets/strapi/Bilgisayar_Mockup_2a582724db.webp",
+  "scadaEyebrow": "AVANTAJLAR",
+  "scadaImage": "/assets/strapi/Telefon_Mocku2_96c3f735a5.webp"
+}

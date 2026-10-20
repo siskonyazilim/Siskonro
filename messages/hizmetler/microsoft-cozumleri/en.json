@@ -1,0 +1,78 @@
+{
+  "subtitle": "Accelerate your digital transformation and develop innovative strategies!",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "service": "SERVICE",
+  "title": "Microsoft Solutions and Licensing",
+  "description": "Digitalize your business processes with Microsoft 365, Power Platform and Azure solutions. We offer licensing, installation and consulting services tailored to your business needs. Provide data analysis with Power BI, application development with Power Apps, and workflow automation with Power Automate.",
+  "requestProposal": "Request a Proposal",
+  "benefits": [
+    "Increased productivity",
+    "Optimized business processes",
+    "Fast and easy-to-implement solutions",
+    "Data analytics and business intelligence",
+    "Workflow automation",
+    "High security",
+    "Global access and scalability",
+    "Seamless integration"
+  ],
+  "benefitsEyebrow": "Benefits",
+  "benefitsTitle": "What Do Siskon Microsoft Solutions Provide You?",
+  "powerPlatformTitle": "Microsoft Power Platforms",
+  "powerPlatformSubtitle": "Accelerate your digital transformation with Microsoft Power Platforms!",
+  "powerPlatformDescription": "Microsoft Power Platform applications bring data analytics, workflow automation, and app development together under one roof. Optimize your processes with Power BI, Power Apps, and Power Automate, and create measurable impact in your digital transformation.",
+  "solutionsTitle": "Soluțiile Noastre Power Platform",
+  "licenses": [
+    "Microsoft 365 licenses",
+    "Windows licenses",
+    "Office licenses",
+    "Azure licenses",
+    "Microsoft Power Platform licenses"
+  ],
+  "licensesTitle": "Microsoft License Solutions",
+  "licensesSubtitle": "Microsoft Product Licenses",
+  "ctaTitle": "Start Transformation with Microsoft Solutions",
+  "ctaDescription": "Contact us for the most suitable Microsoft solutions and licensing options for your business.",
+  "ctaButton": "Contact Us",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "imageAlt": "Siskon Microsoft Solutions - Digital Transformation Tools",
+  "serviceSectionTitle": "Microsoft Solutions",
+  "serviceSectionDesc": "Microsoft's powerful solutions such as Azure, Power BI, Power Apps and Power Automate help your business achieve digital transformation quickly and easily. We accelerate your digital transformation process with our license sales, training and integration services.",
+  "powerPlatform": {
+    "title": "Microsoft Power Platforms",
+    "subtitle": "Accelerate your digital transformation with Microsoft Power Platforms!",
+    "description": "Microsoft Power Platform applications bring data analytics, workflow automation, and app development together under one roof. Optimize your processes with Power BI, Power Apps, and Power Automate, and create measurable impact in your digital transformation."
+  },
+  "heroTitle": "Microsoft Solutions and Licensing",
+  "heroSubtitle": "Accelerate your digital transformation and develop innovative strategies!",
+  "heroDescription": "Digitalize your business processes with Microsoft 365, Power Platform and Azure solutions. We offer licensing, installation and consulting services tailored to your business needs. Provide data analysis with Power BI, application development with Power Apps, and workflow automation with Power Automate.",
+  "heroImage": "/assets/strapi/ms_solutions_1_camera_2_aa750b2234.webp",
+  "serviceLabel": "SERVICE",
+  "ctaDesc": "Contact us for the most suitable Microsoft solutions and licensing options for your business.",
+  "powerPlatformEyebrow": "Microsoft Power Platforms",
+  "powerPlatformSpot": "Accelerate your digital transformation with Microsoft Power Platforms!",
+  "powerPlatformDesc": "Aplicațiile Microsoft Power Platform aduc împreună analiza datelor, automatizarea fluxului de lucru și dezvoltarea de aplicații sub același acoperiș. Optimizați-vă procesele cu Power BI, Power Apps și Power Automate și creați un impact măsurabil în transformarea digitală.",
+  "powerPlatformImage": "/assets/strapi/ms_solutions_3_zeminli_camera_d063902605.webp",
+  "powerPlatformSecondaryImage": "/assets/strapi/ms_solutions_2_zeminli_camera_080f63f309.webp",
+  "platformLogos": [
+    {
+      "title": " Power BI",
+      "icon": "/assets/strapi/power_bi_icon_seeklogo_c5baab45af.svg",
+      "image": "",
+      "imageAlt": "Microsoft Power BI Platforms"
+    },
+    {
+      "title": "Power Apps",
+      "icon": "/assets/strapi/microsoft_power_apps_2020_e26543638f.svg",
+      "image": "",
+      "imageAlt": "Microsoft Power Apps Platforms"
+    },
+    {
+      "title": " Power Automate",
+      "icon": "/assets/strapi/microsoft_power_automate_2020_8a1ed0cfdb.svg",
+      "image": "",
+      "imageAlt": "Microsoft  Power Automate Platforms"
+    }
+  ]
+}

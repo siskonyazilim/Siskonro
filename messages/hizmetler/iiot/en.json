@@ -1,0 +1,60 @@
+{
+  "subtitle": "The smart way to manage industrial data and business processes in the era of digital transformation.",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "service": "Service",
+  "title": "IIoT Solutions",
+  "description": "Siskon Data Collection System, which is a modular management system; collects, reports and notifies production, quality, process and energy data from your business processes in real-time, accurately and automatically. It provides the necessary data flow to decision support systems.",
+  "getInfo": "Get Information",
+  "benefits": "Benefits",
+  "benefitsTitle": "What Are the Features of the Systems?",
+  "subSystems": [
+    {
+      "title": "Production Data Collection System",
+      "icon": "/assets/new/hizmetler/iiot/asset-45-1.svg",
+      "spot": "Guarantee success with real-time efficiency tracking!",
+      "desc": "Collects production counts, scrap, downtime and root causes in real time to enable efficiency, OEE, KPI, cycle-time and bottleneck analytics."
+    },
+    {
+      "title": "Quality Data Collection System",
+      "icon": "/assets/new/hizmetler/iiot/asset-46-1.svg",
+      "spot": "Secure quality with accurate data!",
+      "desc": "Automatically gathers quality and laboratory data from production environments, helping standardize quality processes and improve product quality."
+    },
+    {
+      "title": "Process Data Collection System",
+      "icon": "/assets/new/hizmetler/iiot/asset-49.svg",
+      "spot": "Manage process data and increase your operational power!",
+      "desc": "Collects pressure, temperature, speed, flow, pH and similar process parameters on event/time basis for real-time and historical analysis."
+    },
+    {
+      "title": "Energy Data Collection System",
+      "icon": "/assets/new/hizmetler/iiot/asset-47-1.svg",
+      "spot": "Reduce costs with data-driven energy management!",
+      "desc": "Captures consumption, voltage, current and frequency data to monitor, analyze and optimize energy usage while supporting ISO 50001 processes."
+    }
+  ],
+  "subSystemsEyebrow": "Sub-Systems",
+  "subSystemsTitle": "IIoT Data Collection Systems",
+  "ctaTitle": "Let's Shape the Industrial Future Together",
+  "ctaDescription": "Share your needs, let's explore our solutions together.",
+  "ctaButton": "Contact Us",
+  "imageAlt": "Siskon IIoT Solutions - Industrial Internet of Things Data Collection",
+  "whySiskon": "Why Siskon?",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "features": [
+    "Real-time data collection",
+    "Time-based data acquisition",
+    "Event-based data acquisition",
+    "Web-based configuration",
+    "Formula and filtering engines",
+    "Alarm and notification management",
+    "ERP integration",
+    "Advanced reporting and analytics",
+    "Real-time performance tracking",
+    "Broad communication protocol support",
+    "Statistical Process Control",
+    "Maintenance and calibration management"
+  ]
+}

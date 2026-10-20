@@ -56,6 +56,37 @@
   font-display: swap;
 }
 
+/* ── Archivo Font Ailesi: Normal, İtalik ve Hero (public/fonts/Archivo) ── */
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  size-adjust: 104%; /* açıklama metinleri bir tık büyük */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  size-adjust: 104%; /* açıklama metinleri bir tık büyük */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Hero';
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -124,6 +155,8 @@
   /* Heading system (Belfast Grotesk-first) */
   --font-heading-primary: "Belfast Grotesk", "BelfastGrotesk", sans-serif;
   --font-body-primary: "Lufga", "Lufga Regular", sans-serif;
+  /* Açıklama / alt başlık metinleri (Archivo) */
+  --font-desc-primary: "Archivo", "Archivo Hero", "Lufga", sans-serif;
 
   /* Lufga text system */
   --text-lg-size: 1.125rem;  /* 18px */
@@ -170,7 +203,6 @@ body {
   font-family: var(--font-body-primary);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
 }
 
 h1,
@@ -183,7 +215,7 @@ h4 {
 }
 
 p {
-  font-family: var(--font-body-primary);
+  font-family: var(--font-desc-primary);
   font-size: var(--text-md-size);
   line-height: var(--text-md-line);
   font-weight: 400;
@@ -206,18 +238,17 @@ p {
   color: #1e293b;
 }
 
-/* Keep descriptive copy in boxed sections visually aligned and symmetric. */
+/* Keep descriptive copy in boxed sections visually aligned and natural. */
 :where(
   div[class*="rounded"][class*="border"],
   article[class*="rounded"][class*="border"],
   section[class*="rounded"][class*="border"],
   aside[class*="rounded"][class*="border"]
 ) p {
-  text-align: justify;
-  text-align-last: left;
+  text-align: left;
   text-wrap: pretty;
-  hyphens: auto;
 }
+
 
 @layer utilities {
   .text-body-muted {
@@ -270,6 +301,9 @@ p {
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-x: clip; /* clip destekleyen tarayıcılar bunu kullanır */
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
   }
 
   body {
@@ -280,6 +314,9 @@ p {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    overflow-x: clip;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Responsive Images & Media */
@@ -344,7 +381,7 @@ p {
   }
 
   p {
-    font-family: var(--font-body-primary);
+    font-family: var(--font-desc-primary);
     font-size: var(--text-md-size);
     line-height: var(--text-md-line);
     color: var(--color-text-muted);
@@ -394,7 +431,7 @@ p {
 
 @layer components {
   .container {
-    @apply max-w-[1480px] mx-auto;
+    @apply max-w-[1440px] mx-auto;
     padding-left: var(--space-inline);
     padding-right: var(--space-inline);
   }
@@ -499,14 +536,51 @@ p {
   }
 
 
-  /* Page Hero Section (without background image) */
+  /* Page Hero Section (matches Home Hero radial gradient) */
   .page-hero-section {
-    background: linear-gradient(135deg, #F8FAFC 0%, #E0F2FE 100%);
+    background: radial-gradient(circle at 0% 0%, rgba(14, 165, 233, 0.9) 0%, transparent 60%),
+      radial-gradient(circle at 100% 0%, #0A192F 0%, transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(14, 165, 233, 0.8) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, #0A192F 0%, transparent 50%),
+      #0A192F;
+    background-blend-mode: normal;
     position: relative;
     overflow: hidden;
     min-height: auto;
     margin-top: 0;
-    border-bottom: 1px solid rgba(10, 25, 47, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .page-hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  /* Site Footer (matches Home Hero radial gradient) */
+  .site-footer {
+    background: radial-gradient(circle at 0% 0%, rgba(14, 165, 233, 0.9) 0%, transparent 60%),
+      radial-gradient(circle at 100% 0%, #0A192F 0%, transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(14, 165, 233, 0.8) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, #0A192F 0%, transparent 50%),
+      #0A192F;
+    background-blend-mode: normal;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .site-footer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    pointer-events: none;
   }
 
   .page-hero-section .hero-crumb {
@@ -919,19 +993,19 @@ p {
 
 @media (min-width: 1024px) {
   :root {
-    --space-inline: clamp(1.5rem, 2vw, 2.4rem);
+    --space-inline: 1rem;
   }
 }
 
 @media (min-width: 1280px) {
   :root {
-    --space-inline: clamp(1.8rem, 1.8vw, 2.7rem);
+    --space-inline: 1rem;
   }
 }
 
 @media (min-width: 1440px) {
   :root {
-    --space-inline: clamp(2rem, 1.6vw, 3rem);
+    --space-inline: 1rem;
   }
 }
 
@@ -1370,6 +1444,55 @@ p {
   content: none !important;
 }
 
+/* Hover animasyonlu CTA butonu (AnimatedCTALink bileşeni) */
+.btn-cta-animated {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 4px !important;
+  min-height: 40px !important;
+  min-width: 152px;
+  padding: 0.625rem 1.2rem !important;
+  background-color: #0369a1;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.25);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-cta-animated:hover,
+.btn-cta-animated:focus,
+.btn-cta-animated:visited {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.btn-cta-animated:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(14, 165, 233, 0.32);
+}
+
+.btn-cta-animated span,
+.btn-cta-animated span span {
+  color: inherit !important;
+}
+
+.btn-cta-animated:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
+
+.btn-cta-animated:active {
+  transform: translateY(-1px);
+}
+
 .btn-primary:hover {
   background-color: #075985;
   box-shadow: 0 0 18px rgba(14, 165, 233, 0.45), 0 12px 30px rgba(14, 165, 233, 0.28);
@@ -1515,6 +1638,13 @@ a:focus-visible {
   line-height: 1.5;
   letter-spacing: 0;
   color: #2f3338;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.cerezgo-consent-dialog .main * {
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .cerezgo-consent-dialog .footer {
@@ -1633,12 +1763,14 @@ button.focus-ring.rounded-xl {
 
 /* Accessible contact form states */
 .form-label {
+  font-family: var(--font-desc-primary);
   @apply text-[10px] font-bold uppercase tracking-widest ml-2;
   color: #dbeafe;
 }
 
 .form-input {
-  @apply w-full border rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 outline-none transition-all text-sm md:text-base;
+  font-family: var(--font-desc-primary);
+  @apply w-full border rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 outline-none transition-all text-base;
   background: rgba(7, 20, 44, 0.78);
   color: #ffffff;
   border-color: rgba(191, 219, 254, 0.35);
@@ -1649,6 +1781,7 @@ button.focus-ring.rounded-xl {
 }
 
 /* Select dropdown custom styling */
+select.form-input,
 .form-input select {
   cursor: pointer;
   appearance: none;
@@ -1658,6 +1791,7 @@ button.focus-ring.rounded-xl {
   padding-right: 3rem;
 }
 
+select.form-input:hover,
 .form-input select:hover {
   border-color: rgba(56, 189, 248, 0.6);
 }
@@ -1746,11 +1880,15 @@ button.focus-ring.rounded-xl {
   top: var(--hdr-bottom, 96px);
   left: 50%;
   transform: translate(-50%, 20px);
-  width: calc(100vw - 40px);
-  max-width: 1360px;
+  /* Container ile aynı genişlik: logonun solundan sağ kenara (container 1440px − 2×16px iç boşluk) */
+  width: calc(100vw - 32px);
+  max-width: 1408px;
+  /* Kısa ekranlarda menü ekranın dışına taşmasın; gerekirse içeride kaydırılır */
+  max-height: calc(100vh - var(--hdr-bottom, 96px) - 24px);
+  overflow-y: auto;
   border-radius: 26px;
   border: 1px solid rgba(0, 8, 77, 0.08);
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #ffffff;
   z-index: 101;
   opacity: 0;
@@ -1786,7 +1924,7 @@ button.focus-ring.rounded-xl {
 .onsuit-mega-sidebar {
   width: 100%;
   background: linear-gradient(180deg, #f7fbff 0%, #eef5fc 100%);
-  padding: 30px 24px;
+  padding: 22px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1796,7 +1934,7 @@ button.focus-ring.rounded-xl {
 @media (min-width: 769px) {
   .onsuit-mega-sidebar {
     width: 340px;
-    padding: 50px 40px;
+    padding: 32px 32px;
     border-bottom: none;
     border-right: 1px solid rgba(0, 8, 77, 0.05);
     flex-shrink: 0;
@@ -1809,24 +1947,24 @@ button.focus-ring.rounded-xl {
   letter-spacing: 3px;
   color: #0369a1;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .onsuit-mega-sidebar-desc {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   color: #334155;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   text-align: justify;
 }
 
 .onsuit-mega-features-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 32px 0;
+  margin: 0 0 20px 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .onsuit-mega-feature-item {
@@ -1843,7 +1981,7 @@ button.focus-ring.rounded-xl {
 }
 
 .onsuit-mega-feature-text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: #0b2e66;
 }
@@ -1870,18 +2008,18 @@ button.focus-ring.rounded-xl {
 .onsuit-mega-grid-panel {
   flex: 1;
   background-color: #ffffff;
-  padding: 30px 20px;
+  padding: 20px 16px;
 }
 
 @media (min-width: 769px) {
   .onsuit-mega-grid-panel {
-    padding: 40px 35px;
+    padding: 28px 28px;
   }
 }
 
 .onsuit-mega-grid {
   display: grid;
-  gap: 20px;
+  gap: 14px;
   grid-template-columns: 1fr;
 }
 
@@ -1893,7 +2031,56 @@ button.focus-ring.rounded-xl {
 
 @media (min-width: 1025px) {
   .onsuit-mega-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  /* Genişlik 1220 → 1408px (+%15.4) arttığı için yükseklik de orantılı: 513 → 592px (+20px ekstra: 612px).
+     min() ile kısa ekranlarda ekran dışına taşması engellenir. */
+  .mega_menu_inner {
+    min-height: min(612px, calc(100vh - var(--hdr-bottom, 96px) - 24px));
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* İç düzen menünün tüm yüksekliğini doldursun: sol panel altta boşluk bırakmadan uzanır */
+  .mega_menu_inner > .onsuit-mega-wrapper {
+    flex: 1 1 auto;
+  }
+
+  /* Masaüstünde menü daha yüksek ve ferah */
+  .onsuit-mega-grid-panel {
+    padding: 44px 40px;
+  }
+
+  .onsuit-mega-sidebar {
+    padding: 44px 36px;
+  }
+
+  /* Kartlar kareye yakın: ikon solda, yazı sağda. 3 sütun × 4 satır menünün yüksekliğine sığsın diye oran 2:1 */
+  .onsuit-mega-grid {
+    gap: 14px;
+  }
+
+  .onsuit-mega-grid-panel {
+    padding: 20px 32px;
+    min-width: 0;
+  }
+
+  /* .mega_menu_inner ile özgüllük artırıldı: temel .onsuit-mega-card kuralı bu bloktan sonra geldiği için aksi halde ezilir */
+  .mega_menu_inner .onsuit-mega-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 18px;
+    aspect-ratio: 2 / 1;
+  }
+
+  .onsuit-mega-card-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
@@ -1901,8 +2088,8 @@ button.focus-ring.rounded-xl {
 .onsuit-mega-card {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 16px;
+  gap: 14px;
+  padding: 12px;
   border-radius: 18px;
   background-color: #fbfdff;
   border: 1px solid rgba(0, 8, 77, 0.1);
@@ -1930,9 +2117,9 @@ button.focus-ring.rounded-xl {
 /* İkon Kutusu */
 .onsuit-mega-card-icon {
   position: relative;
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   background-color: #f1f5f9;
   display: flex;
   align-items: center;
@@ -1994,4 +2181,978 @@ button.focus-ring.rounded-xl {
   font-size: 14px;
   line-height: 1.5;
   color: #475569;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CAREER PAGE — Unique Hero  |  PageHero renk paleti eşdeğeri
+   ═══════════════════════════════════════════════════════════════ */
+
+.career-page-root {
+  background-color: #fff;
+}
+
+/* ── HERO ───────────────────────────────────────────────────── */
+.career-hero {
+  --font-career-hero: 'Archivo Hero', 'Lufga', sans-serif;
+  position: relative;
+  overflow: hidden;        /* bu kalmalı — hero dışına taşmayı garanti eder */
+  background-color: #0A192F;
+  height: 700px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 130px;
+  padding-bottom: 3.5rem;
+}
+
+
+@media (max-width: 767px) {
+  .career-hero {
+    height: auto;
+    min-height: 560px;
+    padding-top: 110px;
+    padding-bottom: 3rem;
+  }
+}
+
+/* ── ARK PLAN ── */
+.career-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 1. Gradient — PageHero ile birebir: from-sky-600 via-sky-950 to-[#030B1A] */
+.career-hero__bg-base {
+  position: absolute;
+  inset: 0;
+  background-color: #0A192F;
+}
+
+.career-hero__bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 0% 0%, rgba(14, 165, 233, 0.9) 0%, transparent 60%),
+    radial-gradient(circle at 100% 0%, #0A192F 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(14, 165, 233, 0.8) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, #0A192F 0%, transparent 50%),
+    #0A192F;
+  opacity: 1;
+}
+
+/* 2. Glow sol-üst — PageHero'dan: bg-sky-500/12 */
+.career-hero__bg-glow--tl {
+  position: absolute;
+  top: -16%;
+  left: -12%;
+  width: 72%;
+  height: 72%;
+  background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.12) 0%, transparent 68%);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+/* 3. Glow sağ-alt — PageHero'dan: bg-blue-600/6 */
+.career-hero__bg-glow--br {
+  position: absolute;
+  bottom: -16%;
+  right: -12%;
+  width: 64%;
+  height: 64%;
+  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.07) 0%, transparent 68%);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+/* 4. SVG — 20px genişletilmiş arka plan logosu alanı */
+
+
+
+.career-hero__svg-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-start;   /* img'i kendi margin-top'una göre konumlandırır */
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;          /* hero dışına taşma garantisi */
+  z-index: 0;
+}
+
+.career-hero__svg-img {
+  width: 90%;
+  max-width: 1500px;
+  height: auto;
+  margin-top: 90px;    /* 120px → 60px, daha da yukarı çıktı */
+  object-fit: contain;
+  display: block;
+  opacity: 0.28;
+  filter: brightness(1.5) saturate(1.3);
+}
+
+/* 5. Alt dekor çizgisi — PageHero'dan */
+.career-hero__bg-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.12) 50%, transparent);
+}
+
+/* ── İÇERİK ── */
+.career-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(1.2rem, 2.5vw, 1.6rem);
+  width: 100%;
+  max-width: 1080px;
+  padding: 0 clamp(1.25rem, 5vw, 3rem);
+}
+
+/* ── BREADCRUMB — PageHero'dan ── */
+.career-hero__breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem 0.5rem;
+}
+
+.career-hero__crumb {
+  font-family: var(--font-career-hero);
+  font-size: clamp(0.62rem, 1.8vw, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.career-hero__crumb--active {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.career-hero__crumb--link {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.career-hero__crumb--link:hover {
+  color: #ffffff;
+}
+
+.career-hero__crumb-sep {
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+/* ── ANA BAŞLIK — 3 satır tam uyum ── */
+.career-hero__title-wrap {
+  position: relative;
+  padding: clamp(0.85rem, 2vw, 1.35rem) clamp(1.25rem, 3.5vw, 2.5rem);
+  width: 100%;
+  max-width: 990px;
+}
+
+.career-hero__title-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: clamp(1rem, 2vw, 1.5rem);
+  z-index: -1;
+}
+
+.career-hero__title {
+  font-family: var(--font-career-hero);
+  font-stretch: 112%;
+  font-size: clamp(1.1rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+/* ── SUBTITLE — PageHero subtitle stiline uyumlu ── */
+.career-hero__subtitle {
+  font-family: var(--font-desc-primary);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  max-width: 600px;
+  font-weight: 400;
+  margin: 0;
+  /* PageHero'dan: border-l sol çizgi */
+  border-left: 3px solid rgba(14, 165, 233, 0.5);
+  padding-left: clamp(0.75rem, 2vw, 1.25rem);
+  text-align: left;
+  align-self: center;
+}
+
+/* ── CTA BUTONLAR ── */
+.career-hero__cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary — PageHero'daki btn-primary mantığı, sky renk */
+.career-hero__btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-career-hero);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border-radius: 0.625rem;
+  padding: 0.875rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: #0ea5e9;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.35), 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.career-hero__btn-primary:hover {
+  background: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(14, 165, 233, 0.48), 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.career-hero__btn-primary svg {
+  transition: transform 0.22s ease;
+}
+
+.career-hero__btn-primary:hover svg {
+  transform: translateX(3px);
+}
+
+/* Ghost */
+.career-hero__btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body-primary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.625rem;
+  padding: 0.875rem 1.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.career-hero__btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+/* ── İSTATİSTİKLER ── */
+.career-hero__stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  padding: 1.25rem 2rem;
+  width: 100%;
+  max-width: 540px;
+}
+
+.career-hero__stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.career-hero__stat-num {
+  font-family: var(--font-heading-primary);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #38bdf8;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.career-hero__stat-lbl {
+  font-family: var(--font-body-primary);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.career-hero__stat-sep {
+  width: 1px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  margin: 0 0.75rem;
+}
+
+/* ── MOBİL ── */
+@media (max-width: 639px) {
+  .career-hero__title {
+    font-size: clamp(1.35rem, 7vw, 1.9rem);
+  }
+  .career-hero__stats-row {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+  .career-hero__stat-sep {
+    display: none;
+  }
+  .career-hero__stat {
+    flex: 0 0 calc(33% - 0.5rem);
+  }
+  .career-hero__subtitle {
+    text-align: center;
+    border-left: none;
+    border-top: 2px solid rgba(14, 165, 233, 0.4);
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
+}
+
+@keyframes career-item-in {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+
+
+/* Arka plan katmanları */
+.career-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.career-hero__bg-base {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    #020b18 0%,
+    #061a35 28%,
+    #0a2a52 58%,
+    #0c3060 100%
+  );
+}
+
+.career-hero__bg-glow--top {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(72px);
+}
+
+.career-hero__bg-glow--bottom {
+  position: absolute;
+  bottom: -25%;
+  right: -8%;
+  width: 55%;
+  height: 65%;
+  background: radial-gradient(ellipse at center, rgba(49, 226, 255, 0.10) 0%, transparent 68%);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+/* Grid desen */
+.career-hero__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Diagonal şerit aksan */
+.career-hero__stripe {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  width: 48%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(14, 165, 233, 0.055) 40%,
+    rgba(49, 226, 255, 0.04) 60%,
+    transparent 100%
+  );
+  clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* ── İçerik wrapper ─────────────────────────────────────────── */
+.career-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: clamp(8rem, 16vw, 10.5rem) clamp(1.25rem, 5vw, 4rem) 0;
+}
+
+@media (min-width: 1024px) {
+  .career-hero__inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+    padding-top: clamp(7rem, 12vw, 9rem);
+  }
+}
+
+/* ── Sol sütun ─────────────────────────────────────────────── */
+.career-hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Üst etiket */
+.career-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.career-hero__eyebrow-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #31E2FF;
+  box-shadow: 0 0 8px rgba(49, 226, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.career-hero__eyebrow-text {
+  font-family: var(--font-body-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(49, 226, 255, 0.85);
+}
+
+/* Başlık */
+.career-hero__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  font-family: var(--font-career-hero);
+  font-stretch: 112%;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.career-hero__title-line {
+  display: block;
+  font-size: clamp(2.8rem, 7.5vw, 5.75rem);
+  color: #fff;
+}
+
+.career-hero__title-line--accent {
+  font-size: clamp(3rem, 8.5vw, 6.5rem);
+  background: linear-gradient(90deg, #31E2FF 0%, #05F2AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+/* Subtitle */
+.career-hero__subtitle {
+  font-family: var(--font-desc-primary);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  max-width: 480px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* CTA butonları */
+.career-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.career-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-body-primary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.625rem;
+  padding: 0.85rem 1.75rem;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.career-hero__btn--primary {
+  background: linear-gradient(135deg, #31E2FF 0%, #0ea5e9 100%);
+  color: #020b18;
+  box-shadow: 0 8px 28px rgba(49, 226, 255, 0.3), 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.career-hero__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(49, 226, 255, 0.42), 0 4px 12px rgba(0,0,0,0.22);
+  background: linear-gradient(135deg, #55e8ff 0%, #2bb8f4 100%);
+}
+
+.career-hero__btn--primary svg {
+  transition: transform 0.22s ease;
+}
+
+.career-hero__btn--primary:hover svg {
+  transform: translateX(3px);
+}
+
+.career-hero__btn--ghost {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+}
+
+.career-hero__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.11);
+  color: #fff;
+  border-color: rgba(49, 226, 255, 0.35);
+}
+
+/* ── Sağ sütun ─────────────────────────────────────────────── */
+.career-hero__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── İstatistikler ─────────────────────────────────────────── */
+.career-hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  padding: 1.25rem 1.5rem;
+  overflow: hidden;
+}
+
+.career-hero__stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.25rem 0;
+}
+
+.career-hero__stat-num {
+  font-family: var(--font-heading-primary);
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: #31E2FF;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.career-hero__stat-label {
+  font-family: var(--font-body-primary);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.career-hero__stat-divider {
+  width: 1px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  margin: 0 0.5rem;
+}
+
+/* ── Pozisyon kartı kutusu ──────────────────────────────────── */
+.career-hero__openings {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(14px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.career-hero__openings-label {
+  font-family: var(--font-body-primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(49, 226, 255, 0.8);
+  margin: 0;
+}
+
+.career-hero__openings-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.career-hero__opening-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  cursor: default;
+  opacity: 0;
+  animation: career-item-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes career-item-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.career-hero__opening-item:hover {
+  background: rgba(49, 226, 255, 0.07);
+  border-color: rgba(49, 226, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+.career-hero__opening-index {
+  font-family: var(--font-heading-primary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(49, 226, 255, 0.5);
+  letter-spacing: 0.05em;
+  min-width: 1.6rem;
+  flex-shrink: 0;
+}
+
+.career-hero__opening-name {
+  font-family: var(--font-body-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  flex: 1;
+  line-height: 1.35;
+}
+
+.career-hero__opening-arrow {
+  color: rgba(49, 226, 255, 0);
+  flex-shrink: 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.career-hero__opening-item:hover .career-hero__opening-arrow {
+  color: rgba(49, 226, 255, 0.6);
+  transform: translateX(2px);
+}
+
+/* Alt CTA linki */
+.career-hero__openings-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #31E2FF;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.85rem;
+  margin-top: 0.15rem;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.career-hero__openings-cta:hover {
+  opacity: 1;
+  gap: 0.7rem;
+}
+
+/* ── Alt dekor çizgisi ─────────────────────────────────────── */
+.career-hero__bottom-line {
+  position: relative;
+  z-index: 1;
+  height: 1px;
+  margin: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 5vw, 4rem) 0;
+  background: linear-gradient(90deg, transparent, rgba(49, 226, 255, 0.25) 50%, transparent);
+}
+
+/* ── Mobil uyarlamaları ─────────────────────────────────────── */
+@media (max-width: 639px) {
+  .career-hero__title-line {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+  }
+  .career-hero__title-line--accent {
+    font-size: clamp(2.4rem, 13.5vw, 3.6rem);
+  }
+  .career-hero__stats {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .career-hero__stat-divider {
+    display: none;
+  }
+  .career-hero__stat {
+    flex: 0 0 calc(33% - 0.5rem);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .career-hero__inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+}
+
+/* ── Dekoratif SVG Logo ─────────────────────────────────────── */
+.career-hero__deco-logo {
+  position: absolute;
+  /* Dikey olarak ortala, hero yüksekliğinin yarısı kadar boyut */
+  top: 50%;
+  right: -4%;
+  transform: translateY(-50%);
+  /* Hero min-height: 100vh → yarısı = 50vh */
+  width: auto;
+  height: 50vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.22;
+  /* Soldan hafif bir geçiş fade — içerikle karışmaması için */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 15%, rgba(0,0,0,1) 45%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 15%, rgba(0,0,0,1) 45%);
+}
+
+.career-hero__deco-logo-img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  /* SVG içindeki renge uyum sağlasın — zaten cyan gradient var */
+  filter: brightness(1.3) saturate(1.2);
+}
+
+@media (max-width: 1023px) {
+  .career-hero__deco-logo {
+    /* Mobil/tablette arka planda hafifçe ortala */
+    right: 50%;
+    transform: translate(50%, -50%);
+    height: 45vh;
+    opacity: 0.12;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+/* ── Görsel Ton & Overlay Utility ───────────────────────────────────────────
+   Parlak / fosforlu görünen görselleri yumuşatmak için kullanılır.
+   .img-dimmed        → doğrudan img/Image üzerine uygulanır (filtre)
+   .img-overlay-wrap  → relative container üzerine uygulanır (::after katmanı)
+   .card-media        → hizmet kartlarına otomatik overlay
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Görsel parlaklık + doygunluk azaltma */
+.img-dimmed {
+  filter: brightness(0.97) saturate(0.90) !important;
+  transition: filter 0.4s ease;
+}
+.img-dimmed:hover {
+  filter: brightness(1.0) saturate(0.95) !important;
+}
+
+/* Container üzerine ince koyu katman */
+.img-overlay-wrap {
+  position: relative;
+}
+.img-overlay-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 20, 60, 0.07);
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+.img-overlay-wrap:hover::after {
+  background: rgba(8, 20, 60, 0.03);
+}
+
+/* Hizmet kartı görselleri — otomatik overlay */
+.card-media {
+  position: relative;
+  overflow: hidden;
+}
+.card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 30, 70, 0.05);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Arge hero font denemesi: Archivo, yarı geniş (yalnızca /arge sayfasında) ── */
+.arge-page .page-hero-section h1 {
+  font-family: 'Archivo Hero', 'Lufga', sans-serif;
+  font-stretch: 112%;
+}
+
+.arge-page .page-hero-section .hero-crumb {
+  font-family: 'Archivo Hero', 'Lufga', sans-serif;
+}
+
+/* ── Kariyer sayfası alt bölümleri: hero ile aynı font ailesi (Archivo Hero) ── */
+.career-process-section h2,
+.career-process-section h3,
+.career-intern-section h2,
+.career-intern-section h3,
+.career-final-cta-section h2,
+.career-final-cta-section p,
+.career-final-cta-section a {
+  font-family: 'Archivo Hero', 'Lufga', sans-serif;
+}
+
+.career-process-section span,
+.career-intern-section span {
+  font-family: 'Archivo Hero', 'Lufga', sans-serif;
+}
+
+/* ── Sitenin Tamamı: Açıklama ve Hero Subtitle Alanlarında Archivo ── */
+/* <p> zaten --font-desc-primary kullanır; p olmayan açıklama alanları burada toplanır. */
+p,
+main li,
+main dd,
+main blockquote,
+.page-hero-section .hero-subtitle,
+.hero-subtitle,
+.page-subtitle,
+.hero-description,
+.hero-desc,
+.hero-text .description,
+.section-desc,
+.section-description,
+.section-head p,
+.cta-section p,
+.intro-desc,
+.content-desc,
+.career-hero__subtitle,
+.menu-item-desc,
+footer li,
+footer a[href^="mailto:"],
+footer a[href^="tel:"] {
+  font-family: var(--font-desc-primary);
+  font-stretch: 104%; /* bir tık daha geniş */
+}
+
+/* Hero alt başlığı: Arge'deki gibi alternatif "g" (ss02) */
+.page-hero-section .hero-subtitle,
+.hero-subtitle,
+.page-subtitle,
+.career-hero__subtitle {
+  font-feature-settings: "ss02";
+}
+
+/* Masaüstünde sayfa içeriği header logosu ve hero ile aynı sol/sağ hizada başlasın.
+   Katmansız (unlayered) yazıldığı için bölümlerdeki px-6 / px-10 utility'lerini ezer. */
+@media (min-width: 1024px) {
+  section:has(> .container, > .container-wide) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container,
+  .container-wide {
+    padding-left: var(--space-inline);
+    padding-right: var(--space-inline);
+  }
+}
+
+/* ── Arama modalı: tam ekran giriş animasyonu ── */
+@keyframes searchFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.search-overlay {
+  animation: searchFade 0.25s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-overlay {
+    animation: none;
+  }
 }

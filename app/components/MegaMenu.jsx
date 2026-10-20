@@ -8,73 +8,60 @@ import { useLanguage } from '../_context/LanguageContext';
 
 const MEGA_MENU_ICONS = {
   '/hizmetler/musteriye-ozel-yazilim': {
-    dark: '/SiteIcon/MegaMenu/MOY.svg',
-    white: '/SiteIcon/MegaMenu/white/MOYWhite.svg',
+    dark: '/SiteIcon/MegaMenu/Moy.svg',
+    white: '/SiteIcon/MegaMenu/white/MoyWhite.svg',
   },
   '/hizmetler/iiot': {
     dark: '/SiteIcon/MegaMenu/Iot.svg',
-    white: '/SiteIcon/MegaMenu/white/IotBeyaz.svg',
+    white: '/SiteIcon/MegaMenu/white/IotWhite.svg',
   },
   '/hizmetler/izlenebilirlik-cozumleri': {
     dark: '/SiteIcon/MegaMenu/Izlenebilirlik.svg',
     white: '/SiteIcon/MegaMenu/white/IzlenebilirlikWhite.svg',
   },
   '/hizmetler/makine-proses-otomasyonu': {
-    dark: '/SiteIcon/MegaMenu/MakinepROSES.svg',
-    white: '/SiteIcon/MegaMenu/white/MakinepROSESWhite.svg',
+    dark: '/SiteIcon/MegaMenu/MakineProses.svg',
+    white: '/SiteIcon/MegaMenu/white/MakineProsesWhite.svg',
   },
   '/hizmetler/robot-cozumleri': {
     dark: '/SiteIcon/MegaMenu/Robot.svg',
     white: '/SiteIcon/MegaMenu/white/RobotWhite.svg',
   },
   '/hizmetler/goruntu-isleme': {
-    dark: '/SiteIcon/MegaMenu/Goruntu.svg',
-    white: '/SiteIcon/MegaMenu/white/GoruntuWhite.svg',
+    dark: '/SiteIcon/MegaMenu/GoruntuIsleme.svg',
+    white: '/SiteIcon/MegaMenu/white/GoruntuIslemeWhite.svg',
   },
   '/hizmetler/ai-makine-ogrenmesi': {
-    dark: '/SiteIcon/MegaMenu/AıMakine.svg',
-    white: '/SiteIcon/MegaMenu/white/AıMakineWhite.svg',
+    dark: '/SiteIcon/MegaMenu/AiMakine.svg',
+    white: '/SiteIcon/MegaMenu/white/AiMakineWhite.svg',
   },
   '/hizmetler/microsoft-cozumleri': {
     dark: '/SiteIcon/MegaMenu/Microsoft.svg',
     white: '/SiteIcon/MegaMenu/white/MicrosoftWhite.svg',
   },
-  '/hizmetler/ge-vernova': {
-    dark: '/SiteIcon/MegaMenu/GeVernova.svg',
-    white: '/SiteIcon/MegaMenu/white/GeVernovaWhite.svg',
+  '/hizmetler/velotic': {
+    dark: '/SiteIcon/MegaMenu/Velotic.svg',
+    white: '/SiteIcon/MegaMenu/white/VeloticWhite.svg',
   },
   '/hizmetler/egitim-danismanlik': {
-    dark: '/SiteIcon/MegaMenu/eGİTİMdanısmanlık.svg',
-    white: '/SiteIcon/MegaMenu/white/eGitimdanısmanlıkWhite.svg',
+    dark: '/SiteIcon/MegaMenu/EgitimDanismanlik.svg',
+    white: '/SiteIcon/MegaMenu/white/EgitimDanismanlikWhite.svg',
   },
 };
 
 export default function MegaMenu({ isOpen, onClose, services, onMouseEnter, onMouseLeave }) {
-  const { lang, localizePath } = useLanguage();
+  const { localizePath, t } = useLanguage();
 
-  // Sidebar localized text
-  const sidebarData = {
-    TR: {
-      label: 'SİSKON EKOSİSTEMİ',
-      desc: 'Siskon Ekosistemi, tüm sektörlerde ortak ihtiyaçları karşılayan güçlü bir teknoloji çekirdeğini; sektöre özgü operasyonel gereksinimleri destekleyen modüler çözümlerle bir araya getirir. Böylece kurumlar, büyüyen ihtiyaçlarına uyum sağlayan, entegre ve geleceğe hazır bir dijital altyapı elde eder.',
-      features: ['Modüler Altyapı', 'Açık Protokol Desteği', 'Canlı Veri Takibi'],
-      btnText: 'Tüm Hizmetleri İncele',
-    },
-    EN: {
-      label: 'SISKON ECOSYSTEM',
-      desc: 'The Siskon Ecosystem brings together a strong technology core that meets common needs across all sectors with modular solutions supporting sector-specific operational requirements. Thus, organizations achieve an integrated and future-ready digital infrastructure that adapts to their growing needs.',
-      features: ['Modular Infrastructure', 'Open Protocol Support', 'Real-time Data Tracking'],
-      btnText: 'Explore All Services',
-    },
-    RO: {
-      label: 'ECOSISTEMUL SISKON',
-      desc: 'Ecosistemul Siskon reunește un nucleu tehnologic puternic care răspunde nevoilor comune din toate sectoarele cu soluții modulare ce susțin cerințele operaționale specifice industriei. Astfel, organizațiile obțin o infrastructură digitală integrată și pregătită pentru viitor, care se adaptează nevoilor lor în creștere.',
-      features: ['Infrastructură modulară', 'Suport protocoale deschise', 'Monitorizare date în timp real'],
-      btnText: 'Explorați toate serviciile',
-    },
+  const currentSidebar = {
+    label: t('megaMenu.label'),
+    desc: t('megaMenu.desc'),
+    features: [
+      t('megaMenu.features.0'),
+      t('megaMenu.features.1'),
+      t('megaMenu.features.2'),
+    ],
+    btnText: t('megaMenu.btnText'),
   };
-
-  const currentSidebar = sidebarData[lang] || sidebarData.TR;
 
   // Render checkmark icon for bullet points
   const renderCheckIcon = () => (
@@ -141,28 +128,27 @@ export default function MegaMenu({ isOpen, onClose, services, onMouseEnter, onMo
             {services.map((service, index) => {
               // Normalize href to find icons mapping
               const defaultPath = service.href.replace(/^\/(en|tr|ro)(?=\/|$)/i, '') || '/';
-              const iconMapping = MEGA_MENU_ICONS[defaultPath] || {
-                dark: service.icon || '/SiteIcon/MegaMenu/Iot.svg',
-                white: '/SiteIcon/MegaMenu/white/Asset 2.svg'
-              };
+              const predefined = MEGA_MENU_ICONS[defaultPath];
+              const darkIcon = service.icon || predefined?.dark || '/SiteIcon/MegaMenu/Iot.svg';
+              const whiteIcon = service.whiteIcon || predefined?.white || '/SiteIcon/MegaMenu/white/IotWhite.svg';
 
               const isLastItem = index === services.length - 1;
-              const shouldCenter = isLastItem && services.length % 3 === 1;
 
               return (
                 <Link
                   key={service.href}
                   href={service.href}
                   onClick={onClose}
-                  className={`onsuit-mega-card ${shouldCenter ? 'onsuit-mega-card-centered' : ''}`}
+                  className={`onsuit-mega-card`}
                 >
                   <div className="onsuit-mega-card-icon">
                     {/* Dark Icon (Default) */}
                     <div className="onsuit-mega-icon-dark relative w-6 h-6">
                       <Image
-                        src={iconMapping.dark}
+                        src={darkIcon}
                         alt=""
                         fill
+                        unoptimized
                         className="object-contain"
                         aria-hidden="true"
                       />
@@ -170,9 +156,10 @@ export default function MegaMenu({ isOpen, onClose, services, onMouseEnter, onMo
                     {/* White Icon (Hover) */}
                     <div className="onsuit-mega-icon-white relative w-6 h-6">
                       <Image
-                        src={iconMapping.white}
+                        src={whiteIcon}
                         alt=""
                         fill
+                        unoptimized
                         className="object-contain"
                         aria-hidden="true"
                       />

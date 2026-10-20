@@ -1,0 +1,48 @@
+{
+  "sidePanel": {
+    "tag": "SERVICII",
+    "titleLine1": "Conducem Transformarea",
+    "titleLine2": "Industrială cu Inginerie",
+    "desc": "Facem procesele de producție mai eficiente, trasabile și sustenabile cu serviciile noastre care combină software-ul industrial, automatizarea și AI-ul.",
+    "feature1": "Software Industrial și Automatizare",
+    "feature2": "Inteligență Artificială și Procesare de Imagine",
+    "feature3": "IIoT, Date și Trasabilitate"
+  },
+  "descriptions": {
+    "customSoftware": "Digitalizați operațiunile de la un capăt la altul cu arhitectură software personalizată.",
+    "iiot": "Colectați date în timp real din fabrică pentru a îmbunătăți calitatea deciziilor.",
+    "traceability": "Faceți fluxurile de produse și procese complet trasabile de la un capăt la altul.",
+    "automation": "Gestionați operațiunile mașinilor și proceselor cu automatizare sigură și scalabilă.",
+    "robotics": "Reduceți timpii de ciclu și standardizați calitatea cu celule robotice.",
+    "vision": "Automatizați și stabilizați controlul calității cu procesare de imagine.",
+    "ai": "Optimizați performanța și eficiența prin analiză bazată pe date.",
+    "microsoft": "Gestionați fluxurile de lucru enterprise cu soluții Microsoft integrate.",
+    "velotic": "Monitorizați datele de producție central cu soluții Velotic.",
+    "training": "Creșteți capabilitatea echipei sustenabil cu formare și consultanță."
+  },
+  "corporate": {
+    "about": {
+      "label": "Despre noi",
+      "desc": "Viziunea, misiunea și experiența de peste 25 de ani a Siskon."
+    },
+    "blog": {
+      "label": "Blog",
+      "desc": "Perspective despre Industria 4.0, AI și tehnologia de producție."
+    },
+    "career": {
+      "label": "Carieră",
+      "desc": "Alăturați-vă echipei Siskon și creșteți cu pasiune pentru inginerie."
+    },
+    "sustainability": {
+      "label": "Sustenabilitate",
+      "desc": "Angajamentele noastre de mediu pentru o producție responsabilă."
+    }
+  },
+  "aria": {
+    "back": "← Înapoi",
+    "closeMenu": "Închideți meniul",
+    "openMenu": "Deschideți meniul",
+    "changeLang": "Schimbați limba",
+    "closeOverlay": "Închideți suprapunerea meniului mobil"
+  }
+}

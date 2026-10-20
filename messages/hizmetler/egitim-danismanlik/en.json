@@ -1,0 +1,78 @@
+{
+  "subtitle": "Expert training in industrial automation and software technologies",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "title": "Training and Consulting Services",
+  "description": "We offer comprehensive training on PLC programming, SCADA systems, Microsoft Power Platform and industrial software technologies with our expert trainers. Increase your team's competencies and maximize the return on your technology investment.",
+  "askSchedule": "Request Training Schedule",
+  "expertiseTitle": "Our Training Topics",
+  "ctaTitle": "Increase Your Team's Competency",
+  "ctaDescription": "Contact us for detailed information about our training programs and consulting services.",
+  "ctaButton": "Contact Us",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "imageAlt": "Siskon Training and Consulting Solutions - Industrial Technology Training",
+  "heroTitleLines": [
+    "Get ready today for the technologies",
+    "of tomorrow with Siskon",
+    "training and consulting",
+    "services!"
+  ],
+  "heroDescriptionLines": [
+    "Siskon's expert training and consulting services",
+    "maximize your operational potential across industrial",
+    "automation and digital transformation initiatives.",
+    "Our experienced trainers and consultants deliver",
+    "the essential knowledge and practical skills",
+    "you need to use industrial technologies",
+    "at peak efficiency and stay ahead",
+    "in an increasingly competitive market."
+  ],
+  "trainings": [
+    {
+      "title": "PLC and HMI Training",
+      "details": [
+        "Siemens TIA Portal"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-1-camera.webp",
+      "reverse": false
+    },
+    {
+      "title": "Beckhoff Twincat 2 and 3SCADA Training",
+      "details": [
+        "Siemens WinCC"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-2-camera.webp",
+      "reverse": true
+    },
+    {
+      "title": "Microsoft Power Platform Training",
+      "details": [
+        "Power BI",
+        "Power Apps",
+        "Power Automate"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-3-camera.webp",
+      "reverse": false
+    },
+    {
+      "title": "Microsoft SQL Server",
+      "details": [],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-4-camera.webp",
+      "reverse": true
+    }
+  ],
+  "heroTitle": "Training and Consulting Services",
+  "heroSubtitle": "Expert training in industrial automation and software technologies",
+  "heroDescription": "We offer comprehensive training on PLC programming, SCADA systems, Microsoft Power Platform and industrial software technologies with our expert trainers. Increase your team's competencies and maximize the return on your technology investment.",
+  "heroImage": "/assets/strapi/1_9_egitim_ve_danismanlik_cozumlerikutu_6eb6c833b3.webp",
+  "ctaDesc": "Contact us for detailed information about our training programs and consulting services.",
+  "topicsEyebrow": "Our Training Topics",
+  "topicsTitle": "Our Training Topics",
+  "topics": [
+    "PLC and HMI Training",
+    "Beckhoff Twincat 2 and 3SCADA Training",
+    "Microsoft Power Platform Training",
+    "Microsoft SQL Server"
+  ]
+}

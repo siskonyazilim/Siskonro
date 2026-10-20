@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 217.94 189.26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #21409a;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: 5.5px;
+      }
+
+      .cls-2 {
+        fill: #05f2af;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+        stroke: #03499a;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="108.97" y1="144.09" x2="108.97" y2="49.06" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05f2af"/>
+      <stop offset=".9" stop-color="#05f2af" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="_1200x30_Layout" data-name="1200x30 Layout">
+    <g>
+      <g>
+        <path class="cls-1" d="M200.85,94.63c0,.21,0,.42,0,.63-.34,50.46-41.34,91.25-91.88,91.25-32.16,0-60.47-16.53-76.88-41.55"/>
+        <path class="cls-1" d="M17.09,93.82c.22-25.05,10.46-47.71,26.91-64.16C60.63,13.03,83.6,2.75,108.97,2.75c31.89,0,59.98,16.24,76.46,40.91"/>
+        <polygon class="cls-2" points="17.09 119.63 31.68 94.36 2.5 94.36 17.09 119.63"/>
+        <polygon class="cls-2" points="200.85 69.09 186.26 94.36 215.44 94.36 200.85 69.09"/>
+      </g>
+      <path class="cls-3" d="M128.22,49.06c17.75,7.51,30.21,25.09,30.21,45.57,0,27.32-22.14,49.46-49.46,49.46s-49.46-22.14-49.46-49.46c0-20.26,12.18-37.67,29.62-45.32"/>
+      <line class="cls-1" x1="108.97" y1="27.21" x2="108.97" y2="96.57"/>
+    </g>
+  </g>
+</svg>

@@ -83,7 +83,7 @@ const CONTENT = {
     references: [
       { name: 'BSH Hausgeräte', logo: '/assets/Logos/BSH_Bosch_und_Siemens_Hausgerate_logo.svg' },
       { name: 'Vestel', logo: '/assets/Logos/Vestel_logo.svg' },
-      { name: 'Whirlpool', logo: '/assets/Logos/Whirlpool_Corporation_Logo_(as_of_2017).svg' },
+      { name: 'Whirlpool', logo: '/assets/Logos/whirlpool_corporation_logo_-as_of_2017.svg' },
       { name: 'Haier Europe', logo: '/assets/Logos/Haier_logo.svg' },
       { name: 'Bosch', logo: '/assets/Logos/Bosch-logo.svg' },
       { name: 'Groupe Atlantic', logo: '/assets/Logos/groupe-atlantic-logo-vector.svg' },
@@ -166,7 +166,7 @@ const CONTENT = {
     references: [
       { name: 'BSH Hausgerate', logo: '/assets/Logos/BSH_Bosch_und_Siemens_Hausgerate_logo.svg' },
       { name: 'Vestel', logo: '/assets/Logos/Vestel_logo.svg' },
-      { name: 'Whirlpool', logo: '/assets/Logos/Whirlpool_Corporation_Logo_(as_of_2017).svg' },
+      { name: 'Whirlpool', logo: '/assets/Logos/whirlpool_corporation_logo_-as_of_2017.svg' },
       { name: 'Haier Europe', logo: '/assets/Logos/Haier_logo.svg' },
       { name: 'Bosch', logo: '/assets/Logos/Bosch-logo.svg' },
       { name: 'Groupe Atlantic', logo: '/assets/Logos/groupe-atlantic-logo-vector.svg' },

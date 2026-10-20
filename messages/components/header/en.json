@@ -1,0 +1,48 @@
+{
+  "sidePanel": {
+    "tag": "SERVICES",
+    "titleLine1": "Driving Industrial Transformation",
+    "titleLine2": "Through Engineering",
+    "desc": "We make production processes more efficient, traceable, and sustainable with our services combining industrial software, automation, and AI.",
+    "feature1": "Industrial Software and Automation",
+    "feature2": "AI and Machine Vision",
+    "feature3": "IIoT, Data and Traceability"
+  },
+  "descriptions": {
+    "customSoftware": "Digitize your operations end-to-end with tailored software architecture.",
+    "iiot": "Collect real-time shop-floor data to improve decision quality.",
+    "traceability": "Make product and process flows fully traceable end-to-end.",
+    "automation": "Run machine and process operations with safe, scalable automation.",
+    "robotics": "Lower cycle times and standardize quality with robotic cells.",
+    "vision": "Automate and stabilize quality control with machine vision.",
+    "ai": "Optimize performance and efficiency through data-driven analytics.",
+    "microsoft": "Manage enterprise workflows with integrated Microsoft solutions.",
+    "velotic": "Monitor production data centrally with Velotic solutions.",
+    "training": "Boost team capability sustainably with training and consulting."
+  },
+  "corporate": {
+    "about": {
+      "label": "About Us",
+      "desc": "Siskon's vision, mission, and over 25 years of engineering experience."
+    },
+    "blog": {
+      "label": "Blog",
+      "desc": "Insights on Industry 4.0, AI, and manufacturing technology."
+    },
+    "career": {
+      "label": "Careers",
+      "desc": "Join the Siskon team and grow your career with engineering passion."
+    },
+    "sustainability": {
+      "label": "Sustainability",
+      "desc": "Our environmental commitments for responsible and green manufacturing."
+    }
+  },
+  "aria": {
+    "back": "← Back",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "changeLang": "Change language",
+    "closeOverlay": "Close mobile menu overlay"
+  }
+}

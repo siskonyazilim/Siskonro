@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210.81 217.63">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #21409a;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 5px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke: #03499a;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="105.39" y1="2.5" x2="105.39" y2="81.77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05f2af"/>
+      <stop offset="1" stop-color="#05f2af" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="156.84" y1="81.05" x2="156.84" y2="183.87" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="2.5" y1="132.46" x2="105.45" y2="132.46" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="_1200x30_Layout" data-name="1200x30 Layout">
+    <g>
+      <path class="cls-3" d="M14.85,81.66C20.81,36.97,59.07,2.5,105.38,2.5s84.64,34.53,90.55,79.27"/>
+      <path class="cls-2" d="M173.29,32.76c-18.53,8.77-42.4,14.05-68.45,14.05s-49.47-5.18-67.93-13.8c-.22-.1-.45-.21-.67-.31"/>
+      <path class="cls-2" d="M195.5,77.88c-24.69,12.07-54.94,18.3-90.14,18.3s-65.5-6.42-89.97-18.04"/>
+      <path class="cls-5" d="M105.36,183.87h0s.13,0,.13,0c56.79,0,102.82-46.31,102.82-102.82h0s-.13,0-.13,0c-56.72,0-102.82,46.03-102.82,102.82Z"/>
+      <path class="cls-4" d="M105.45,183.87h0s-.13,0-.13,0c-56.79,0-102.82-46.31-102.82-102.82h0s.13,0,.13,0c56.72,0,102.82,46.03,102.82,102.82Z"/>
+      <line class="cls-1" x1="105.45" y1="183.87" x2="105.45" y2="215.13"/>
+      <path class="cls-2" d="M67.67,93.84c.07-32.87,12.62-64.98,37.69-90.05,25.15,25.15,37.72,57.36,37.72,90.32"/>
+    </g>
+  </g>
+</svg>

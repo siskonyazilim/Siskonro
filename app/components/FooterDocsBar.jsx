@@ -21,27 +21,8 @@ export default function FooterDocsBar() {
           {isRo ? 'INFORMAȚII FACTURARE' : isEn ? 'INVOICE INFORMATION' : 'FATURA BİLGİLERİMİZ'}
         </p>
         <SmartImage
-          src="/assets/new/iletisim/Asset 49.svg"
+          src="/assets/new/iletisim/asset-49.svg"
           alt={isRo ? 'Document Factură' : isEn ? 'Invoice Document' : 'Fatura Belgesi'}
-          width={40}
-          height={40}
-          className="absolute right-5 md:right-6 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 shrink-0 opacity-90 group-hover:opacity-100"
-          fallbackLabel="Icon"
-        />
-      </a>
-
-      <a
-        href="https://www.siskon.com.tr/yonetim/ckeditor/kcfinder/upload/files/Siskon_Banka_Bilgileri.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative rounded-2xl border border-sky-100 bg-white px-5 md:px-6 py-5 md:py-6 pr-16 md:pr-20 hover:border-sky-300 hover:shadow-md transition-all focus-ring-card"
-      >
-        <p className="text-[15px] md:text-base font-extrabold text-[#0F4D9A] uppercase tracking-wide leading-tight">
-          {isRo ? 'INFORMAȚII CONT' : isEn ? 'BANK ACCOUNT INFORMATION' : 'HESAP BİLGİLERİMİZ'}
-        </p>
-        <SmartImage
-          src="/assets/new/iletisim/Asset 48.svg"
-          alt={isRo ? 'Document Cont' : isEn ? 'Account Document' : 'Hesap Belgesi'}
           width={40}
           height={40}
           className="absolute right-5 md:right-6 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 shrink-0 opacity-90 group-hover:opacity-100"

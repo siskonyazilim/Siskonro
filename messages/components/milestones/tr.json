@@ -1,0 +1,103 @@
+{
+  "title": "Kilometre Taşlarımız",
+  "milestones": [
+    {
+      "year": 1997,
+      "items": [
+        "Siskon Kuruldu"
+      ]
+    },
+    {
+      "year": 2001,
+      "items": [
+        "İlk Yazılım İhracatı"
+      ]
+    },
+    {
+      "year": 2002,
+      "items": [
+        "Beckhoff Çözüm Ortaklığı"
+      ]
+    },
+    {
+      "year": 2003,
+      "items": [
+        "Microsoft Çözüm Ortaklığı"
+      ]
+    },
+    {
+      "year": 2005,
+      "items": [
+        "Teknopark Şubesi"
+      ]
+    },
+    {
+      "year": 2010,
+      "items": [
+        "Software Toolbox Çözüm Ortaklığı"
+      ]
+    },
+    {
+      "year": 2015,
+      "items": [
+        "DEPARK Teknopark Kurucu Ortaklığı"
+      ]
+    },
+    {
+      "year": 2017,
+      "items": [
+        "SICK AppSpace Ortağı"
+      ]
+    },
+    {
+      "year": 2018,
+      "items": [
+        "Markem Imaje Çözüm Ortağı",
+        "Siskon RIO IoT Gateway"
+      ]
+    },
+    {
+      "year": 2019,
+      "items": [
+        "Universal Robots Çözüm Ortağı",
+        "ESBAŞ Ege Serbest Bölge Şubesi"
+      ]
+    },
+    {
+      "year": 2020,
+      "items": [
+        "Interroll Çözüm Ortağı"
+      ]
+    },
+    {
+      "year": 2022,
+      "items": [
+        "Estonya Şubesi",
+        "Romanya Şubesi"
+      ]
+    },
+    {
+      "year": 2023,
+      "items": [
+        "Sewio Çözüm Ortağı",
+        "Ignition Çözüm Ortağı",
+        "Efeso Stratejik Dijital Dönüşüm Ortaklığı"
+      ]
+    },
+    {
+      "year": 2024,
+      "items": [
+        "Velotic Çözüm Ortağı",
+        "Kuika Teknoloji Ortaklığı",
+        "IAS Teknoloji Ortaklığı"
+      ]
+    },
+    {
+      "year": 2025,
+      "items": [
+        "Faradai Çözüm Ortağı",
+        "Time Reactor A.Ş. Yatırımı"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Carieră",
+  "pageSubtitle": "Construiți viitorul software-ului industrial cu echipele noastre de inginerie",
+  "heroHeading": "Dacă cauți o echipă cu care să-ți împarți obiectivele, să crești împreună și să reușești împreună — ești în locul potrivit.",
+  "heroLine1": "Dacă cauți o echipă cu care să-ți împarți obiectivele,",
+  "heroLine2": "să crești împreună și să reușești împreună,",
+  "heroLine3": "ești în locul potrivit.",
+  "statYears": "Ani de Experiență",
+  "statOpenRoles": "Poziții Deschise",
+  "statTeam": "Echipă de Experți",
+  "breadcrumbHome": "Acasă",
+  "breadcrumbCorporate": "Corporate",
+  "breadcrumbCareer": "Carieră",
+  "openPositionsTitle": "Poziții Deschise",
+  "openPositionsSubtitle": "Alăturați-vă echipelor care construiesc soluții software și de automatizare pentru o excelență măsurabilă în producție.",
+  "openings": [
+    "Dezvoltator Full Stack (React / .NET)",
+    "Inginer Automatizare Industrială",
+    "Inginer Date & AI",
+    "Inginer de Service pe Teren"
+  ],
+  "applyNow": "Aplicați Acum",
+  "sendCv": "Trimite CV",
+  "roleHighlights": [
+    {
+      "title": "Profunzime Inginerească",
+      "text": "Lucrați pe sisteme reale de producție, protocoale industriale și software critic utilizat în fabrici globale de producție."
+    },
+    {
+      "title": "Colaborare Interfuncțională",
+      "text": "Construiți soluții împreună cu echipele de automatizare, software și de teren, de la arhitectură la implementare."
+    },
+    {
+      "title": "Dezvoltare Continuă",
+      "text": "Dezvoltați-vă expertiza prin proiecte practice în AI, IIoT, MES și sisteme enterprise cu disponibilitate ridicată."
+    }
+  ],
+  "applicationProcessTitle": "Procesul de Aplicare",
+  "processSteps": [
+    "Distribuiți CV-ul și o scurtă scrisoare de motivație prin formularul de contact sau e-mail.",
+    "Pre-selecție tehnică și evaluare a potrivirii rolului de către echipa noastră.",
+    "Interviu concentrat pe proiecte cu liderii de inginerie.",
+    "Feedback final și plan de integrare în cel mai scurt timp."
+  ],
+  "ctaTitle": "Sunteți gata să conturați software-ul industrial alături de noi?",
+  "ctaDesc": "Trimiteți-vă profilul și rolurile de interes; vă vom contacta cu cea mai relevantă poziție.",
+  "ctaButton": "Trimiteți Aplicația",
+  "valuesTitle": "Valorile lui Siskon",
+  "valuesSubtitle": "Creștem Împreună, Reușim Împreună.",
+  "values": [
+    {
+      "title": "Urmărim Dezvoltarea<br />Continuă",
+      "desc": "Considerăm învățarea o parte naturală a activității noastre. Ne dezvoltăm continuu, urmărim inovațiile și evaluăm fiecare experiență ca o oportunitate de a avansa.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-50.svg"
+    },
+    {
+      "title": "Sinceritatea este Regula<br />Noastră de Aur",
+      "desc": "Credem că încrederea, comunicarea deschisă și respectul reciproc formează baza echipelor puternice. Ne împărtășim ideile deschis, ne ascultăm și creștem împreună.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-51.svg"
+    },
+    {
+      "title": "Iubim Colaborarea și<br />Sprijinul Reciproc",
+      "desc": "Știm că cele mai bune rezultate vin din munca în echipă. Împărtășim cunoștințele, ne sprijinim reciproc și atingem obiectivele comune.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-52.svg"
+    },
+    {
+      "title": "Adunăm Amintiri Frumoase<br />Împreună",
+      "desc": "Pe lângă proiectele de succes, adunăm amintiri de neuitat. Sărbătorim împreună și transformăm colegialitatea în prietenii puternice.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-53.svg"
+    },
+    {
+      "title": "Oamenii sunt Cel Mai<br />Valoros Capital",
+      "desc": "Credem că cea mai mare forță a noastră sunt angajații noștri. Creăm un mediu de lucru în care fiecare se simte valorizat și susținut.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-54.svg"
+    },
+    {
+      "title": "Ne Pasă de Confortul<br />Angajaților",
+      "desc": "Credem că oamenii care se simt bine sunt mai fericiți și mai productivi. De aceea îmbunătățim continuu experiența angajaților.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-55.svg"
+    }
+  ],
+  "cultureTitle": "Ne place tehnologia la Siskon.",
+  "cultureSubtitle": "Dar nu doar tehnologia...",
+  "cultureImg": "/assets/new/kurumsal/Kariyer/asset-42-100.jpg",
+  "cultureP1": "Ne place, de asemenea, să învățăm împreună, să creăm împreună, să ne susținem reciproc, să găsim idei noi în timpul pauzelor de cafea și să ne sărbătorim împreună reușitele.",
+  "cultureP2": "În fiecare zi lucrăm la proiecte diferite, învățăm lucruri noi și ne dezvoltăm continuu. În același timp, ne străduim să păstrăm mereu un mediu sincer și prietenos.",
+  "cultureP3": "Dacă îți place ceea ce faci, ești curios, entuziasmat de învățare și îți dorești să faci parte dintr-o echipă extraordinară, ne-ar face plăcere să te cunoaștem.",
+  "cultureCallout1": "Dacă dorești să lucrezi alături de noi, poți urma pașii de mai jos.",
+  "cultureCallout2": "Te așteptăm în echipa noastră.",
+  "processTitle": "Procesul Nostru de Recrutare",
+  "processList": [
+    {
+      "title": "Analiza CV-ului",
+      "desc": "Analizăm CV-ul tău. Dacă este potrivit pentru rol, inițiem procesul de evaluare pentru a te cunoaște mai bine.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-43.svg"
+    },
+    {
+      "title": "Interviu telefonic cu departamentul de Resurse Umane",
+      "desc": "Trimitem formularul de evaluare a candidatului și testele de aptitudini, engleză și tehnice specifice rolului.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-44.svg"
+    },
+    {
+      "title": "Evaluare online",
+      "desc": "În discuția online de 30 de minute ne cunoaștem și vorbim despre competențele tale tehnice.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-45.svg"
+    },
+    {
+      "title": "Interviu cu conducerea departamentului de resurse umane",
+      "desc": "Printr-o activitate practică realistă ne cunoaștem mai bine, permițându-ți să experimentezi activitatea noastră.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-46.svg"
+    },
+    {
+      "title": "Interviu tehnic",
+      "desc": "Discutăm așteptările reciproce în cadrul interviului cu managerii de departament și Directorul General.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-47.svg"
+    },
+    {
+      "title": "Propunere oficială și documentație aferentă",
+      "desc": "Dacă este o potrivire excelentă, îți trimitem oferta și te întâmpinăm cu bucurie în echipa Siskon.",
+      "icon": "/assets/new/kurumsal/Kariyer/asset-48.svg"
+    }
+  ],
+  "jobProcessTitle": "PROCESUL NOSTRU DE ANGAJARE",
+  "jobProcessList": [
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/01-cv-analizi.svg",
+      "title": "Analiza CV-ului"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/02-aday-formu.svg",
+      "title": "Trimiterea formularului de evaluare a candidatului"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/03-test-paylasimi.svg",
+      "title": "Teste (aptitudini generale, tehnic, inventar de personalitate)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/04-ilk-gorusme.svg",
+      "title": "Primul interviu"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/05-uygulama-calismasi.svg",
+      "title": "Lucrare practică (specifică postului)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/06-uygulama-degerlendirme.svg",
+      "title": "Evaluarea lucrării practice"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/07-ikinci-gorusme.svg",
+      "title": "Al doilea interviu"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/08-referans-kontrolu.svg",
+      "title": "Verificarea referințelor"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/is/09-is-teklifi.svg",
+      "title": "Oferta de angajare"
+    }
+  ],
+  "internProcessTitle": "PROCESUL NOSTRU DE ÎNSCRIERE LA STAGIU",
+  "internProcessList": [
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/01-cv-analizi.svg",
+      "title": "Analiza CV-ului"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/02-degerlendirme-formu.svg",
+      "title": "Trimiterea formularului de evaluare a candidatului"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/03-test-paylasimi.svg",
+      "title": "Teste (aptitudini generale, tehnic, inventar de personalitate)"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/04-ilk-gorusme.svg",
+      "title": "Primul interviu"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/05-ikinci-gorusme.svg",
+      "title": "Al doilea interviu"
+    },
+    {
+      "icon": "/assets/new/kurumsal/Kariyer/staj/06-staj-teklifi.svg",
+      "title": "Oferta de stagiu"
+    }
+  ],
+  "lifeTitle": "Viața la Siskon",
+  "lifeCards": [
+    {
+      "title": "Mediu de Lucru Confortabil",
+      "items": [
+        "🌲 Birou modern în mijlocul naturii",
+        "🚌 Transport asigurat / Serviciu de navetă",
+        "☕ Cafea la filtru și ceai nelimitat",
+        "🍲 Masa de prânz și facilități culinare",
+        "💺 Scaun de masaj",
+        "📚 Bibliotecă de unde poți împrumuta cărți"
+      ]
+    },
+    {
+      "title": "O Cultură Puternică de Echipă",
+      "items": [
+        "🤗 Un mediu de lucru bazat pe sinceritate și respect",
+        "🚪 Ușa Directorului General este mereu deschisă",
+        "🎂 Aniversări și zile speciale sărbătorite împreună",
+        "🎉 Tombole de Anul Nou, evenimente și workshop-uri",
+        "🥳 Colegi de echipă care creează și se distrează împreună"
+      ]
+    },
+    {
+      "title": "Pentru Dezvoltarea Ta",
+      "items": [
+        "🎓 Buget personal de formare",
+        "🧗 Program de mentorat",
+        "🎨 Instruire tehnică și ateliere",
+        "💥 Evaluări periodice de performanță și carieră",
+        "🏆 Sistem de recompense pentru idei inovatoare"
+      ]
+    },
+    {
+      "title": "Beneficii Care Te Așteaptă",
+      "items": [
+        "🏥 Asigurare privată de sănătate",
+        "⚖️ Suport din partea medicului de întreprindere",
+        "🎂 Zi liberă suplimentară de ziua ta",
+        "🎁 Pachet de bun venit în prima zi",
+        "☝️ Proces de integrare dedicat departamentului tău"
+      ]
+    }
+  ],
+  "detailsTitle": "Mici Detalii Care Fac<br />Siskon Să Fie Siskon",
+  "detailsList": [
+    {
+      "title": "„Siskon” înseamnă „soră” în limba finlandeză, iar numele său provine din cuvintele „System” și „Control”, ceea ce înseamnă,",
+      "icon": "/assets/strapi/01_kiz_kardes_7617be03fd.svg"
+    },
+    {
+      "title": "Numele sălilor noastre de ședințe provin din istoria companiei noastre,",
+      "icon": "/assets/strapi/02_toplanti_odalari_16a3f38d28.svg"
+    },
+    {
+      "title": "Reducem deșeurile folosind propriile pahare în zilele de luni,",
+      "icon": "/assets/strapi/03_filtre_kahve_89a67c0f0c.svg"
+    },
+    {
+      "title": "Împărțim resturile de mâncare cu prietenii noștri animale,",
+      "icon": "/assets/strapi/06_hayvan_dostlar_2cce4dd5a3.svg"
+    },
+    {
+      "title": "Cafeaua la filtru nu lipsește niciodată din bucătărie,",
+      "icon": "/assets/strapi/05_kupa_atik_azaltma_87d1efddba.svg"
+    },
+    {
+      "title": "Întotdeauna există un ocupant obișnuit al scaunului din față în serviciu,",
+      "icon": "/assets/strapi/07_on_koltuk_7358e68887.svg"
+    },
+    {
+      "title": "Dieta poate fi puțin dificilă aici,",
+      "icon": "/assets/strapi/06_hayvan_dostlar_2cce4dd5a3.svg"
+    },
+    {
+      "title": "Vei afla curând de ce toată lumea îi spune „dansul Siskon” odată ce vei da peste ușa noii săli de ședințe.",
+      "icon": "/assets/strapi/08_siskon_dansi_b50eb6ed9f.svg"
+    }
+  ],
+  "finalCtaLine1": "Poate că citești asta cu zâmbetul pe buze astăzi;",
+  "finalCtaLine2": "În curând vei deveni și tu parte din aceste povești,",
+  "finalCtaLine3": "și vom scrie altele noi împreună.",
+  "finalCtaDesc": "Un loc de muncă minunat este reținut nu doar prin munca depusă; ci și prin amintirile create, valorile împărtășite și micile detalii trăite în fiecare zi. O astfel de cultură te așteaptă la Siskon.",
+  "finalCtaSubtitle": "Alătură-te echipei noastre!",
+  "finalCtaButton": "Trimite CV",
+  "heroBgSvg": "/assets/strapi/asset_49_64fb6f1a12.svg",
+  "heroTitle": "Carieră",
+  "heroSubtitle": "Construiți viitorul software-ului industrial cu echipele noastre de inginerie",
+  "heroCtaLabel": "Trimite CV",
+  "heroBreadcrumbs": [
+    "Acasă",
+    "Corporate",
+    "Carieră"
+  ]
+}

@@ -49,14 +49,18 @@ export default function SmartImage({
   width,
   height,
   fallbackLabel,
+  unoptimized,
 }) {
   const [hasError, setHasError] = useState(false);
   const [nativeFallbackFailed, setNativeFallbackFailed] = useState(false);
   const [blurDataURL, setBlurDataURL] = useState(undefined);
-  const normalizedSrc = normalizeLocalImageSrc(src);
+
+  const normalizedSrc = src ? normalizeLocalImageSrc(src) : null;
 
   // Load blur data on client side
   useEffect(() => {
+    if (!src || priority) return;
+
     async function loadBlurData() {
       try {
         const response = await fetch('/blur-data.json');
@@ -79,9 +83,7 @@ export default function SmartImage({
       }
     }
 
-    if (!priority) {
-      loadBlurData();
-    }
+    loadBlurData();
   }, [src, normalizedSrc, priority]);
 
   let fallbackSizes = '(max-width: 480px) 100vw, (max-width: 768px) 96vw, 90vw';
@@ -93,6 +95,18 @@ export default function SmartImage({
 
   const resolvedSizes = sizes || fallbackSizes;
   const resolvedLoading = priority ? 'eager' : (loading || 'lazy');
+
+  // src yoksa veya hata durumunda fallback
+  if (!src || !normalizedSrc) {
+    const fallbackClasses = fill
+      ? 'absolute inset-0 image-fallback'
+      : 'w-full h-full image-fallback';
+    return (
+      <div className={fallbackClasses} role="img" aria-label={alt}>
+        <span className="image-fallback-badge">{fallbackLabel || alt}</span>
+      </div>
+    );
+  }
 
   if (hasError && !nativeFallbackFailed) {
     const fallbackSrc = safeDecode(normalizedSrc);
@@ -127,6 +141,27 @@ export default function SmartImage({
     );
   }
 
+  // Proxy URL'leri, explicit unoptimized veya external https → next/image optimize etmemeli
+  const isExternalUrl = normalizedSrc.startsWith('http://') || normalizedSrc.startsWith('https://');
+  const isUnoptimized = unoptimized || normalizedSrc?.startsWith('/api/media') || isExternalUrl;
+
+  // next/image her zaman width/height veya fill gerektirir.
+  // Boyut verilmemiş görsel (harici veya yerel) → native <img> kullan, crash önle. → native <img> kullan, crash önle.
+  const hasDimensions = fill || (width && height);
+  if (!hasDimensions) {
+    return (
+      <img
+        src={normalizedSrc}
+        alt={alt}
+        className={`img-dimmed ${className || ''}`}
+        style={style}
+        loading={resolvedLoading}
+        decoding="async"
+        onError={() => setHasError(true)}
+      />
+    );
+  }
+
   return (
     <Image
       src={normalizedSrc}
@@ -134,7 +169,7 @@ export default function SmartImage({
       fill={fill}
       width={width}
       height={height}
-      className={className}
+      className={`img-dimmed ${className || ''}`}
       style={style}
       sizes={resolvedSizes}
       quality={quality}
@@ -142,13 +177,14 @@ export default function SmartImage({
       loading={resolvedLoading}
       placeholder={blurDataURL ? 'blur' : 'empty'}
       blurDataURL={blurDataURL}
+      unoptimized={isUnoptimized}
       onError={() => setHasError(true)}
     />
   );
 }
 
 SmartImage.propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
   style: PropTypes.object,
@@ -160,6 +196,7 @@ SmartImage.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   fallbackLabel: PropTypes.string,
+  unoptimized: PropTypes.bool,
 };
 
 SmartImage.defaultProps = {

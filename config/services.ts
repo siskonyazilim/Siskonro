@@ -7,7 +7,7 @@ export const SERVICE_KEYS = {
   machineVision: 'machineVision',
   bigDataMl: 'bigDataMl',
   microsoftSolutions: 'microsoftSolutions',
-  geVernovaProficy: 'geVernovaProficy',
+  velotic: 'velotic',
   trainingConsulting: 'trainingConsulting',
 } as const;
 
@@ -38,7 +38,7 @@ export const SERVICE_CATALOG: ServiceEntry[] = [
     key: SERVICE_KEYS.iiot,
     href: '/hizmetler/iiot',
     names: {
-      tr: 'IIoT Çözümleri',
+      tr: 'Endüstriyel Nesnelerin İnterneti (IIoT) Çözümleri',
       en: 'IIoT Solutions',
       ro: 'Soluții IIoT',
     },
@@ -98,12 +98,12 @@ export const SERVICE_CATALOG: ServiceEntry[] = [
     },
   },
   {
-    key: SERVICE_KEYS.geVernovaProficy,
-    href: '/hizmetler/ge-vernova',
+    key: SERVICE_KEYS.velotic,
+    href: '/hizmetler/velotic',
     names: {
-      tr: 'GE Vernova (Proficy)',
-      en: 'GE Vernova (Proficy)',
-      ro: 'GE Vernova (Proficy)',
+      tr: 'Velotic',
+      en: 'Velotic',
+      ro: 'Velotic',
     },
   },
   {

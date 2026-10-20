@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 257.71 251.88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #03499a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="192.03" y1="32.36" x2="192.03" y2="211.51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05f2af"/>
+      <stop offset=".9" stop-color="#05f2af" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="65.68" y1="2.5" x2="65.68" y2="181.65" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="_1200x30_Layout" data-name="1200x30 Layout">
+    <g>
+      <polyline class="cls-3" points="128.86 211.51 128.86 92.07 192.03 32.36 255.21 92.07 255.21 211.51"/>
+      <g>
+        <polyline class="cls-1" points="2.5 181.65 2.5 62.22 65.68 2.5 128.86 62.22 128.86 181.65"/>
+        <polyline class="cls-2" points="128.86 151.79 65.68 92.07 2.5 151.79"/>
+        <polyline class="cls-2" points="128.86 121.93 65.68 62.22 2.5 121.93"/>
+        <polyline class="cls-2" points="128.86 92.07 65.68 32.36 2.5 92.07"/>
+        <polyline class="cls-2" points="128.86 62.22 65.68 2.5 2.5 62.22"/>
+        <polyline class="cls-2" points="128.86 181.65 65.68 121.93 2.5 181.65"/>
+        <polyline class="cls-2" points="2.5 62.22 65.68 2.5 128.86 62.22"/>
+        <line class="cls-2" x1="65.68" y1="121.93" x2="65.68" y2="249.38"/>
+      </g>
+      <g>
+        <polyline class="cls-2" points="255.21 211.51 192.03 151.79 128.86 211.51"/>
+        <polyline class="cls-2" points="255.21 181.65 192.03 121.93 128.86 181.65"/>
+        <polyline class="cls-2" points="255.21 151.79 192.03 92.07 128.86 151.79"/>
+        <polyline class="cls-2" points="255.21 121.93 192.03 62.22 128.86 121.93"/>
+        <polyline class="cls-2" points="255.21 92.07 192.03 32.36 128.86 92.07"/>
+        <line class="cls-2" x1="192.03" y1="151.79" x2="192.03" y2="249.38"/>
+      </g>
+    </g>
+  </g>
+</svg>

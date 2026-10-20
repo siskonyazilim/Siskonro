@@ -1,0 +1,52 @@
+{
+  "pageTitle": "Sectors",
+  "pageSubtitle": "Eight Sectors, One Engineering Discipline.",
+  "breadcrumbHome": "Home",
+  "breadcrumbSectors": "Sectors",
+  "overviewTitle": "At a Glance",
+  "overviewHeadline": "Eight Sectors, One Engineering Discipline.",
+  "overviewIntro": "Instead of forcing separate modules for each sector, we build sector-specific layers on a common OnSuite core. The cards below are sector summaries; in the next section you will find the common backbone of these eight sectors and then the details of each sector.",
+  "ctaDetail": "Go to Detail",
+  "painTitle": "Sectors Are Different, Problem Is the Same",
+  "painHeadline": "Every Production Line Has the Same Six Problems.",
+  "painLead": "Although a tobacco machine, home appliance line, CNC park or food filling line may appear completely different on the surface, they all struggle with the same six fundamental problems. That's why we solve 8 sectors not with 8 separate software, but with a common OnSuite backbone and sector-specific layers.",
+  "backboneTitle": "OnSuite Backbone",
+  "backboneHeadline": "One Backbone · 11 Modules · More Data, More Insight, More Improvement",
+  "backboneLead": "OnSuite - Sector-Independent Core, Sector-Specific Layers. The modules below are fed from the same core in every sector project. Our sector packages (Hybrid, Organic, A+++, Capsule Track and Trace) are sector-configured combinations of these modules; not software from scratch, but the sector layer of the backbone.",
+  "ctaContact": "Let's Talk Project",
+  "ctaFinal": "Let's plan the next step together.",
+  "ctaSuffix": "Share your priorities, let's prepare a focused transformation plan.",
+  "contactUs": "Contact Us",
+  "commonChallenges": [
+    {
+      "code": "01",
+      "title": "Data Fragmentation",
+      "description": "Each machine speaks a different protocol, KPIs do not align, and reporting remains manual."
+    },
+    {
+      "code": "02",
+      "title": "Hidden Productivity Loss",
+      "description": "OEE is low but loss points are unclear, and bottlenecks are managed by intuition rather than data."
+    },
+    {
+      "code": "03",
+      "title": "Traceability Gaps",
+      "description": "During recalls, the lot chain is incomplete, while BOM verification and warranty workflows stay paper-based."
+    },
+    {
+      "code": "04",
+      "title": "Audit and Warranty Risk",
+      "description": "Teams spend weeks preparing ISO, IATF, GMP, and GSCA evidence, with a weak proof chain for warranty claims."
+    },
+    {
+      "code": "05",
+      "title": "Energy and Carbon Blind Spots",
+      "description": "Consumption is visible at invoice level only, not by line, shift, or product, while CBAM pressure keeps growing."
+    },
+    {
+      "code": "06",
+      "title": "System Integration Gaps",
+      "description": "MES, ERP, quality, planning, and warehouse systems run in silos, causing disconnected and delayed data flow."
+    }
+  ]
+}

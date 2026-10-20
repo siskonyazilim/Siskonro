@@ -1,0 +1,323 @@
+{
+  "heroTitle": "OnSuite — Akıllı Üretim Platformu",
+  "heroSubtitle": "Siskon'un yeni nesil akıllı üretim platformu",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbProducts": "Ürünler",
+  "breadcrumbOnSuite": "OnSuite",
+  "introEyebrow": "Ürün",
+  "introDesc": "OnSuite, 11 modülden oluşan endüstriyel yazılım ailesidir. Her modül bağımsız olarak ya da entegre bir süit şeklinde, on-premise veya bulutta konuşlandırılabilir. React + C# API + MS SQL mimarisi, stored procedure odaklı yaklaşım ve tSQLt ile tam otomatik SQL testleriyle tasarlanmıştır. OPC UA, PackML, ISA-88, MTConnect, REST ve MQTT ile açık protokol desteği sunar.",
+  "modulesEyebrow": "Modüller",
+  "modulesTitle": "OnSuite Modülleri",
+  "modulesDesc": "OnSuite modüllerini tek tek devreye alın ya da üretimden yönetime kadar bağlı çalışan tek bir ekosistem olarak kurgulayın.",
+  "moduleOverview": "Modül Özeti",
+  "exploreSolution": "Çözümü İncele",
+  "architectureEyebrow": "Mimari & Teknoloji",
+  "architectureTitle": "Bütünleşik Mimari ve Teknolojik Yetkinlik",
+  "benefitsEyebrow": "Kazanımlar",
+  "benefitsTitle": "OnSuite Size Ne Sağlar?",
+  "technicalEyebrow": "Teknik Kabiliyetler",
+  "technicalTitle": "Teknik Yetenekler ve Saha Görünürlüğü",
+  "ctaTitle": "Endüstriyel Geleceği Birlikte Şekillendirelim",
+  "ctaDesc": "OnSuite ile fabrikanızı daha akıllı hale getirmek için bizimle iletişime geçin.",
+  "ctaButton": "Bize Ulaşın",
+  "title": "OnSuite - Akıllı Üretim Platformu",
+  "subtitle": "Üretim sahanızdaki veriyi tek omurgada toplayan, ölçeklenebilir ve modüler endüstriyel platform.",
+  "modulesSub": "11 Modül ile Tüm Saha Operasyonlarınız Kontrol Altında",
+  "gainsTitle": "OnSuite ile Elde Edeceğiniz Temel Kazanımlar",
+  "faqTitle": "Sıkça Sorulan Sorular",
+  "modules": [
+    {
+      "sub": "IIoT Connectivity",
+      "desc": "OPC UA, Beckhoff, Siemens, MQTT, Modbus ve REST desteğiyle sahadan buluta açık protokol tabanlı endüstriyel veri toplama katmanı.",
+      "icon": "/assets/strapi/connectivity_2c3f207de1.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/connect",
+      "name": "OnSuite Connect",
+      "features": [
+        "OPC UA & DA desteği",
+        "Siemens & Beckhoff entegrasyonu",
+        "MQTT & REST veri hattı",
+        "Edge computing altyapısı"
+      ]
+    },
+    {
+      "sub": "Gerçek Zamanlı İzleme",
+      "desc": "Üretim sahasının canlı durumu: makineler, operatörler, hatlar ve süreçler tek ekranda gerçek zamanlı izlenir.",
+      "icon": "/assets/strapi/monitora_753b00ba39.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/live",
+      "name": "OnSuite Live",
+      "features": [
+        "Canlı makine durumları",
+        "Operatör performans takibi",
+        "Hata ve duruş bildirimleri",
+        "Andon ekran yönetimi"
+      ]
+    },
+    {
+      "sub": "Performans Analitiği",
+      "desc": "OEE takibi, duruş, fire ve performans analizi; kök neden, Pareto ve darboğaz çözümleme.",
+      "icon": "/assets/strapi/oee_bd8de82488.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/optima",
+      "name": "OnSuite Optima",
+      "features": [
+        "OEE / TEEP / OMT hesaplama",
+        "Kök neden analizi (RCA)",
+        "Darboğaz tespiti",
+        "Otomatik Pareto raporları"
+      ]
+    },
+    {
+      "sub": "İzlenebilirlik",
+      "desc": "Hammaddeden mamule uçtan uca izlenebilirlik; GS1 standartları, serileştirme ve track-and-trace süreçleri.",
+      "icon": "/assets/strapi/izlenebilirlik_2c63f41105.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/trace",
+      "name": "OnSuite Trace",
+      "features": [
+        "Seri ve lot takibi",
+        "Ürün ağacı (BOM) entegrasyonu",
+        "Ters izlenebilirlik",
+        "Kalite sertifika eşleştirme"
+      ]
+    },
+    {
+      "sub": "Kağıtsız Operasyon",
+      "desc": "Dijital SmartForms, 5S, OPL ve kalite kontrol süreçleriyle kağıdın yerini alan denetlenebilir saha akışları.",
+      "icon": "/assets/strapi/dsf_248c6b59f4.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/forms",
+      "name": "OnSuite Forms",
+      "features": [
+        "Dijital form tasarımcısı",
+        "Çevrimdışı veri girişi",
+        "Onay mekanizmaları",
+        "Denetim izi"
+      ]
+    },
+    {
+      "sub": "CNC Optimizasyonu",
+      "desc": "Fanuc, Siemens, Mazak ve diğer CNC sistemlerinden protokol seviyesinde veri, takım ömrü ve performans analitiği.",
+      "icon": "/assets/strapi/cnc_7850af27b8.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/cnc",
+      "name": "OnSuite CNC",
+      "features": [
+        "G-Code analizi",
+        "Takım ömrü takibi",
+        "Eksenel yük izleme",
+        "Parça program yönetimi"
+      ]
+    },
+    {
+      "sub": "OPC UA Tool Management",
+      "desc": "Tütün endüstrisine özel gerçek dünya OPC UA TMC uygulama deneyimi.",
+      "icon": "/assets/strapi/opctmc_9311b1be59.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/tmc",
+      "name": "OnSuite TMC",
+      "features": [
+        "TMC standart uyumu",
+        "Tütün makinesi entegrasyonu",
+        "Hassas veri toplama",
+        "Global raporlama"
+      ]
+    },
+    {
+      "sub": "ERP Entegrasyonu",
+      "desc": "SAP, Canias ve diğer ERP sistemleriyle iki yönlü, gerçek zamanlı entegrasyon sağlar.",
+      "icon": "/assets/strapi/entegrasyon_bdeb37a81b.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/integra",
+      "name": "OnSuite Integra",
+      "features": [
+        "SAP BAPI / RFC entegrasyonu",
+        "Gerçek zamanlı stok senkronu",
+        "İş emri otomasyonu",
+        "Üretim teyit aktarımı"
+      ]
+    },
+    {
+      "sub": "Enerji Yönetimi",
+      "desc": "ISO 50001 uyumlu tüketim takibi ve analitiğiyle enerji maliyetlerini görünür ve yönetilebilir hale getirir.",
+      "icon": "/assets/strapi/enerji_5b3c7e115f.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/energy",
+      "name": "OnSuite Energy",
+      "features": [
+        "ISO 50001 uyumluluk",
+        "Maliyet analizi",
+        "Yük profili takibi",
+        "Verimlilik tahminleri"
+      ]
+    },
+    {
+      "sub": "ESG ve Karbon",
+      "desc": "Karbon ayak izi, sürdürülebilirlik göstergeleri ve ESG raporlaması için endüstriyel platform.",
+      "icon": "/assets/strapi/carboniq_47fee307c1.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/green",
+      "name": "OnSuite Green",
+      "features": [
+        "Karbon ayak izi ölçümü",
+        "Emisyon raporlama",
+        "Sürdürülebilirlik KPI takibi",
+        "Yasal mevzuat uyumu"
+      ]
+    },
+    {
+      "sub": "Platform Altyapısı",
+      "desc": "React + C# API + MS SQL mimarisi; stored procedure tasarımı ve tSQLt otomatik SQL test altyapısı.",
+      "icon": "/assets/strapi/core_9d7965b69c.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/core",
+      "name": "OnSuite Core",
+      "features": [
+        "C# .NET API altyapısı",
+        "Stored procedure optimizasyonu",
+        "tSQLt test framework",
+        "Yüksek erişilebilirlik"
+      ]
+    },
+    {
+      "sub": "Kriz Yönetimi",
+      "desc": "Endüstriyel tesisler için çift kanallı acil durum yoklama ve kriz yönetim sistemi. WhatsApp ve SMS ile eş zamanlı sorgu, merkezi görünürlük ve otomatik eskalasyon sağlar.",
+      "icon": "/assets/strapi/Engage_dd30aa5f64.svg",
+      "link": "https://www.onsuite.com.tr/tr/moduller/engage",
+      "name": "OnSuite Engage",
+      "features": [
+        "Hızlı Durum Teyidi",
+        "Merkezi Kriz Görünürlüğü",
+        "Çift Kanallı İletişim",
+        "Kayıtlı Olay Yönetimi"
+      ]
+    }
+  ],
+  "architectureItems": [
+    {
+      "icon": "/assets/strapi/system_3d6b0fa09f.svg",
+      "title": "React + C# API + MS SQL",
+      "description": "Stored procedure tabanlı, Entity Framework bağımsız mimari."
+    },
+    {
+      "icon": "/assets/strapi/vtopcua_f225cb5584.svg",
+      "title": "Açık Protokol Desteği",
+      "description": "OPC UA · PackML · ISA-88 · MTConnect · REST · MQTT."
+    },
+    {
+      "icon": "/assets/strapi/organization_8393429306.svg",
+      "title": "Tek Veri Kaynağı",
+      "description": "Bütünleşik mimari ile tutarlı ve güvenilir raporlama."
+    },
+    {
+      "icon": "/assets/strapi/connectivity_2c3f207de1.svg",
+      "title": "Edge-to-Cloud Pipeline",
+      "description": "Sahadan buluta açık protokol destekli veri hattı."
+    },
+    {
+      "icon": "/assets/strapi/approve_b97f357c4f.svg",
+      "title": "CI/CD & Otomasyon",
+      "description": "Azure DevOps ve tSQLt ile tam otomatik SQL testleri."
+    },
+    {
+      "icon": "/assets/strapi/security_c6193ac05b.svg",
+      "title": "Yüksek Bilgi Güvenliği",
+      "description": "ISO/IEC 27001:2022 standartlarına tam uyum."
+    }
+  ],
+  "gainItems": [
+    {
+      "icon": "/assets/strapi/monitora_753b00ba39.svg",
+      "title": "Gerçek zamanlı görünürlük"
+    },
+    {
+      "icon": "/assets/strapi/oee_bd8de82488.svg",
+      "title": "Canlı OEE ve performans analitiği"
+    },
+    {
+      "icon": "/assets/strapi/dsf_248c6b59f4.svg",
+      "title": "Kağıtsız dijital saha operasyonu"
+    },
+    {
+      "icon": "/assets/strapi/organization_8393429306.svg",
+      "title": "Çoklu tesis ölçeklenebilirliği"
+    },
+    {
+      "icon": "/assets/strapi/entegrasyon_bdeb37a81b.svg",
+      "title": "Kurumsal ERP entegrasyonu (SAP vb.)"
+    },
+    {
+      "icon": "/assets/strapi/notif_677853708f.svg",
+      "title": "Duruş ve kök-neden analizleri"
+    },
+    {
+      "icon": "/assets/strapi/enerji_5b3c7e115f.svg",
+      "title": "Enerji takibi ve ISO 50001 uyumu"
+    },
+    {
+      "icon": "/assets/strapi/notification_763964601b.svg",
+      "title": "Alarm yönetimi ve Andon ekranları"
+    }
+  ],
+  "technicalCards": [
+    {
+      "desc": "Kapsamlı sistem yapılandırma kontrolü.",
+      "image": "/assets/strapi/asset_56_400x_388f6fedab.png",
+      "title": "Yönetim Paneli"
+    },
+    {
+      "desc": "Manuel ve otomatik veri toplama seçenekleri.",
+      "image": "/assets/strapi/veri_toplama_400x_16a97e217f.png",
+      "title": "Veri Toplama ve İşleme"
+    },
+    {
+      "desc": "Özel panolarla anlık performans takibi.",
+      "image": "/assets/strapi/dashboard_400x_5c971077f0.png",
+      "title": "Dashboard"
+    },
+    {
+      "desc": "Enerji tüketimini izleme ve iyileştirme.",
+      "image": "/assets/strapi/enerji_kaynak_400x_0ce9ea4831.png",
+      "title": "Enerji ve Kaynak Yönetimi"
+    },
+    {
+      "desc": "Kritik durumlarda anında uyarı sistemi.",
+      "image": "/assets/strapi/alarm_400x_3a526b70e1.png",
+      "title": "Alarm Yönetimi"
+    },
+    {
+      "desc": "Verilerin tüm sistemlerle sorunsuz paylaşımı.",
+      "image": "/assets/strapi/erp_400x_7c5fc9a564.png",
+      "title": "ERP ve Sistem Entegrasyonu"
+    },
+    {
+      "desc": "Anlık verilerle uçtan uca üretim kontrolü.",
+      "image": "/assets/strapi/entegrasyon_400x_cd9cd03a1a.png",
+      "title": "Entegrasyon ve Raporlama"
+    },
+    {
+      "desc": "Dijital panellerle sahada tam hakimiyet.",
+      "image": "/assets/strapi/proses_400x_b9803cea02.png",
+      "title": "Proses ve Operatör Yönetimi"
+    },
+    {
+      "desc": "Kök neden analizleriyle maksimum performans.",
+      "image": "/assets/strapi/analiz_400x_663c7aed55.png",
+      "title": "Analiz ve Optimizasyon"
+    }
+  ],
+  "productBadge": "Ürün",
+  "productDetailDesc": "OnSuite, IoT tabanlı akıllı bir MES (Üretim Yönetim Sistemi) platformudur. Üretim makinelerinden gerçek zamanlı veri toplayarak OEE analizleri sunar, izlenebilirlik süreçlerini kolaylaştırır ve süreç optimizasyonunu destekler. Manuel veya otomatik veri toplama seçenekleriyle, işletmenizin üretim süreçlerini dijitalleştirir, verimliliği artırır, iş akışlarını standartlaştırır ve karar alma süreçlerini güçlendirir.",
+  "productImageAlt": "OnSuite Akıllı Üretim Yönetim Sistemi - Entegre Üretim Yönetim Platformu",
+  "viewAllModules": "Tüm Modülleri İncele",
+  "showLessModules": "Daha Az Göster",
+  "moduleOverviewLabel": "Modül Özeti",
+  "moduleIconAlt": "modül ikonu",
+  "modulePlatformAlt": "endüstriyel üretim platformu modülü",
+  "exploreSolutionButton": "Çözümü İncele",
+  "gainsEyebrow": "Kazanımlar",
+  "gainsTitleMain": "OnSuite Size Ne Sağlar?",
+  "desktopImageAlt": "OnSuite masaustu platform gorseli",
+  "viewAllGains": "Devamı için Tıklayınız",
+  "showLessGains": "Daha Az Göster",
+  "architectureTitleMain": "Sahadan Buluta Endüstriyel Kalitede",
+  "technicalTitleMain": "Teknik Yetkinlikleri Nelerdir?",
+  "ctaTitleMain": "Endüstriyel Geleceği Birlikte Şekillendirelim",
+  "ctaDescMain": "OnSuite ile fabrikanızı daha akıllı hale getirmek için bizimle iletişime geçin.",
+  "ctaButtonMain": "Bize Ulaşın",
+  "logo": "/assets/strapi/onsuite_logo_99ebb0221e.svg",
+  "productImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
+  "desktopImage": "/assets/strapi/Onsuite_Desktop_8102bc7bc2.webp",
+  "buttonText": "onsuite.com.tr",
+  "buttonUrl": "https://www.onsuite.com.tr/"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "AI and Machine Learning Solutions",
+  "subtitle": "Transform your data into powerful business decisions.",
+  "description": "AI and Machine Learning Solutions prepare your business for the future through insights derived from your data. With advanced analytics and machine learning algorithms, we uncover hidden potential within the data collected from your operations, optimize your processes, and enable more informed business decisions. Transform your data into strategic opportunities with our Machine Learning solutions.",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "serviceLabel": "Service",
+  "heroImageAlt": "Siskon AI and Machine Learning solutions visual",
+  "benefitsEyebrow": "Kazanımlar",
+  "benefitsTitle": "What Value Do Siskon AI/ML Solutions Deliver?",
+  "capabilitiesEyebrow": "Capabilities",
+  "applicationsEyebrow": "Applications",
+  "solutionsVisualAlt": "Machine learning solutions visual",
+  "diagramAlt": "Deep learning relationship diagram",
+  "etlVisualAlt": "ETL architecture visual",
+  "ctaTitle": "Make Data-Driven Decisions",
+  "ctaDesc": "Transform your operations into intelligent systems with our ML solutions.",
+  "ctaButton": "Contact Us",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "benefits": [
+    "Industry-specific solutions backed by broad domain expertise",
+    "Customized machine learning applications aligned with business workflows",
+    "Flexible infrastructure that integrates with existing systems",
+    "Faster decision cycles with real-time data processing",
+    "Operational cost savings through data-driven optimization",
+    "Reliable systems designed for demanding industrial environments"
+  ],
+  "solutionsEyebrow": "Çözümler",
+  "solutionsTitle": "What Kind of Machine Learning Solutions Do We Offer?",
+  "solutions": [
+    "Data analytics and reporting solutions",
+    "Anomaly detection",
+    "Automated decision support systems",
+    "Optimization solutions",
+    "IoT integration",
+    "Predictive maintenance applications",
+    "Predictive quality applications",
+    "Custom software development",
+    "Inventory optimization",
+    "Supply chain and logistics optimization"
+  ],
+  "deepLearning": {
+    "title": "Deep Learning Applications",
+    "spot": "Use the power of deep learning for high-performance solutions!",
+    "desc": "Deep learning technologies make your business processes smarter and faster through use cases such as image recognition, natural language processing, and predictive analytics. These systems optimize your workforce and help you discover opportunities across your operations."
+  },
+  "etlApp": {
+    "title": "ETL Applications",
+    "spot": "Leverage your data with ETL applications and move your business into the future!",
+    "desc": "ETL applications accelerate your data integration and analytics workflows, improve data quality, work seamlessly with big data platforms, and provide cost savings."
+  },
+  "heroTitle": "AI and Machine Learning Solutions",
+  "heroSubtitle": "Transform your data into powerful business decisions.",
+  "heroDescription": "AI and Machine Learning Solutions prepare your business for the future through insights derived from your data. With advanced analytics and machine learning algorithms, we uncover hidden potential within the data collected from your operations, optimize your processes, and enable more informed business decisions. Transform your data into strategic opportunities with our Machine Learning solutions.",
+  "heroImage": "/assets/strapi/aivemakineogrenmesi_477c412326.webp",
+  "solutionsImage": "/assets/strapi/aivemakineogrenmesi2_7f2eecf3bc.webp",
+  "deepLearningImage": "/assets/strapi/AI_Makine_Ogrenmesi_Iliski_9013d65cd3.svg",
+  "etlAppImage": "/assets/strapi/AI_Makine_Ogrenmesi_Baglanti_0457dbd79f.svg"
+}

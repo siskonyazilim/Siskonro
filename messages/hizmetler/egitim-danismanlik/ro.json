@@ -1,0 +1,78 @@
+{
+  "subtitle": "Formare expertă în automatizare industrială și tehnologii software",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbServices": "Servicii",
+  "title": "Servicii de Formare și Consultanță",
+  "description": "Oferim formare completă în programare PLC, sisteme SCADA, Microsoft Power Platform și tehnologii software industriale cu instructorii noștri experți. Creșteți competențele echipei dvs. și maximizați rentabilitatea investiției în tehnologie.",
+  "askSchedule": "Solicitați Program de Formare",
+  "expertiseTitle": "Subiectele Noastre de Formare",
+  "ctaTitle": "Creșteți Competența Echipei Dvs.",
+  "ctaDescription": "Contactați-ne pentru informații detaliate despre programele noastre de formare și serviciile de consultanță.",
+  "ctaButton": "Contactați-ne",
+  "showMore": "Apasă pentru mai multe",
+  "showLess": "Arată mai puțin",
+  "imageAlt": "Soluții de Instruire și Consultanță Siskon - Instruire în Tehnologie Industrială",
+  "heroTitleLines": [
+    "Pregătiți-vă de astăzi",
+    "pentru tehnologiile de mâine cu",
+    "serviciile de instruire și",
+    "consultanță Siskon!"
+  ],
+  "heroDescriptionLines": [
+    "Serviciile experte de instruire și consultanță",
+    "Siskon maximizează potențialul dumneavoastră operațional",
+    "în inițiativele de automatizare industrială și",
+    "transformare digitală.",
+    "Trainerii și consultanții noștri experimentați oferă",
+    "cunoștințele esențiale și abilitățile practice",
+    "de care aveți nevoie pentru a utiliza tehnologiile industriale",
+    "la eficiență maximă și pentru a rămâne în frunte."
+  ],
+  "trainings": [
+    {
+      "title": "Instruire PLC și HMI",
+      "details": [
+        "Siemens TIA Portal"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-1-camera.webp",
+      "reverse": false
+    },
+    {
+      "title": "Instruire Beckhoff Twincat 2 și 3SCADA",
+      "details": [
+        "Siemens WinCC"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-2-camera.webp",
+      "reverse": true
+    },
+    {
+      "title": "Instruire Microsoft Power Platform",
+      "details": [
+        "Power BI",
+        "Power Apps",
+        "Power Automate"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-3-camera.webp",
+      "reverse": false
+    },
+    {
+      "title": "Microsoft SQL Server",
+      "details": [],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-4-camera.webp",
+      "reverse": true
+    }
+  ],
+  "heroTitle": "Servicii de Formare și Consultanță",
+  "heroSubtitle": "Formare expertă în automatizare industrială și tehnologii software",
+  "heroDescription": "Oferim formare completă în programare PLC, sisteme SCADA, Microsoft Power Platform și tehnologii software industriale cu instructorii noștri experți. Creșteți competențele echipei dvs. și maximizați rentabilitatea investiției în tehnologie.",
+  "heroImage": "/assets/strapi/1_9_egitim_ve_danismanlik_cozumlerikutu_6eb6c833b3.webp",
+  "ctaDesc": "Contactați-ne pentru informații detaliate despre programele noastre de formare și serviciile de consultanță.",
+  "topicsEyebrow": "Subiectele Noastre de Formare",
+  "topicsTitle": "Subiectele Noastre de Formare",
+  "topics": [
+    "Instruire PLC și HMI",
+    "Instruire Beckhoff Twincat 2 și 3SCADA",
+    "Instruire Microsoft Power Platform",
+    "Microsoft SQL Server"
+  ]
+}

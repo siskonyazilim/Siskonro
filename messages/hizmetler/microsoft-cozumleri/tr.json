@@ -1,0 +1,79 @@
+{
+  "subtitle": "Dijital dönüşümünüzü hızlandırın ve yenilikçi stratejiler geliştirin!",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "service": "HİZMET",
+  "title": "Microsoft Çözümleri ve Lisanslama",
+  "description": "Microsoft 365, Power Platform ve Azure çözümleri ile iş süreçlerinizi dijitalleştirin. İşletmenizin ihtiyaçlarına uygun lisanslama, kurulum ve danışmanlık hizmetleri sunuyoruz. Power BI ile veri analizi, Power Apps ile uygulama geliştirme, Power Automate ile iş akış otomasyonu sağlayın.",
+  "requestProposal": "Teklif İsteyin",
+  "benefits": [
+    "Verimlilik artışı",
+    "İş süreçlerinin optimize edilmesi",
+    "Hızlı ve kolay uygulanabilir çözümler",
+    "Veri analizi ve iş zekası",
+    "İş akış otomasyonu",
+    "Yüksek güvenlik",
+    "Küresel erişim ve ölçeklenebilirlik",
+    "Kesintisiz entegrasyon"
+  ],
+  "benefitsEyebrow": "Kazanımlar",
+  "benefitsTitle": "Siskon Microsoft Çözümleri ile Size Ne Sağlar?",
+  "powerPlatformTitle": "Microsoft Power Platforms",
+  "powerPlatformSubtitle": "Microsoft Power Platforms ile dijital dönüşümünüzü hızlandırın!",
+  "powerPlatformDescription": "Microsoft Power Platform uygulamaları, işletmenizin ihtiyaç duyduğu veri analizi, iş akışı otomasyonu ve uygulama geliştirme çözümlerini tek bir çatı altında sunar. Power BI, Power Apps ve Power Automate gibi güçlü araçlarla iş süreçlerinizi optimize edin, dijital dönüşümde fark yaratın.",
+  "solutionsTitle": "Power Platform Çözümlerimiz",
+  "licenses": [
+    "Microsoft 365 lisansları",
+    "Windows lisansları",
+    "Office lisansları",
+    "Azure lisansları",
+    "Microsoft Power Platform lisansları"
+  ],
+  "licensesTitle": "Microsoft Lisans Çözümleri",
+  "licensesSubtitle": "Microsoft Ürün Lisansları",
+  "ctaTitle": "Microsoft Çözümleri ile Dönüşümü Başlatın",
+  "ctaDescription": "İşletmenize en uygun Microsoft çözümleri ve lisanslama seçenekleri için bizimle iletişime geçin.",
+  "ctaButton": "Bize Ulaşın",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "imageAlt": "Siskon Microsoft Çözümleri - Dijital Dönüşüm Araçları",
+  "serviceSectionTitle": "Microsoft Çözümleri",
+  "serviceSectionDesc": "Azure, Power BI, Power Apps ve Power Automate gibi Microsoft'un güçlü çözümleri, işletmenizin dijital dönüşümü hızlı ve kolay bir şekilde gerçekleştirmesini destekler. Lisans satışı, eğitim ve entegrasyon hizmetlerimizle dijital dönüşüm sürecinizi hızlandırıyor ve işletmenizi bir adım öne taşıyoruz.",
+  "powerPlatform": {
+    "title": "Microsoft Power Platforms",
+    "subtitle": "Dijital dönüşümünüzü hızlandırın ve yenilikçi stratejiler geliştirin!",
+    "description": "Microsoft Power Platform uygulamaları, işletmenizin ihtiyaç duyduğu veri analizi, iş akışı otomasyonu ve uygulama geliştirme çözümlerini tek bir çatı altında sunar. Power BI, Power Apps ve Power Automate gibi güçlü araçlarla iş süreçlerinizi optimize edin, dijital dönüşümde fark yaratın."
+  },
+  "heroTitle": "Microsoft Çözümleri ve Lisanslama",
+  "heroSubtitle": "Dijital dönüşümünüzü hızlandırın ve yenilikçi stratejiler geliştirin!",
+  "heroDescription": "Microsoft 365, Power Platform ve Azure çözümleri ile iş süreçlerinizi dijitalleştirin. İşletmenizin ihtiyaçlarına uygun lisanslama, kurulum ve danışmanlık hizmetleri sunuyoruz. Power BI ile veri analizi, Power Apps ile uygulama geliştirme, Power Automate ile iş akış otomasyonu sağlayın.",
+  "heroImage": "/assets/strapi/ms_solutions_1_camera_2_aa750b2234.webp",
+  "serviceLabel": "HİZMET",
+  "ctaDesc": "İşletmenize en uygun Microsoft çözümleri ve lisanslama seçenekleri için bizimle iletişime geçin.",
+  "licensesEyebrow": "Microsoft Ürün Lisansları",
+  "licensesImage": "/assets/strapi/ms_solutions_4_camera_2_65b5460707.webp",
+  "powerPlatformSpot": "Dijital dönüşümünüzü hızlandırın ve yenilikçi stratejiler geliştirin!",
+  "powerPlatformDesc": "Microsoft Power Platform uygulamaları, işletmenizin ihtiyaç duyduğu veri analizi, iş akışı otomasyonu ve uygulama geliştirme çözümlerini tek bir çatı altında sunar. Power BI, Power Apps ve Power Automate gibi güçlü araçlarla iş süreçlerinizi optimize edin, dijital dönüşümde fark yaratın.",
+  "powerPlatformImage": "/assets/strapi/ms_solutions_3_zeminli_camera_d063902605.webp",
+  "powerPlatformSecondaryImage": "/assets/strapi/ms_solutions_2_zeminli_camera_080f63f309.webp",
+  "platformLogos": [
+    {
+      "title": "Power BI",
+      "icon": "/assets/strapi/power_bi_icon_seeklogo_c5baab45af.svg",
+      "image": "",
+      "imageAlt": "Microsoft Power BI logo"
+    },
+    {
+      "title": "Power Apps",
+      "icon": "/assets/strapi/power_bi_icon_seeklogo_c5baab45af.svg",
+      "image": "",
+      "imageAlt": "Microsoft Power Apps logo"
+    },
+    {
+      "title": "Power Automate",
+      "icon": "/assets/strapi/microsoft_power_apps_2020_e26543638f.svg",
+      "image": "",
+      "imageAlt": "Microsoft Power Automate logo"
+    }
+  ]
+}

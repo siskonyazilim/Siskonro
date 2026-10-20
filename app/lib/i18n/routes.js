@@ -9,7 +9,7 @@ const EN_TO_TR_ROUTES = {
   '/services/computer-vision': '/hizmetler/goruntu-isleme',
   '/services/ai-machine-learning': '/hizmetler/ai-makine-ogrenmesi',
   '/services/microsoft-solutions': '/hizmetler/microsoft-cozumleri',
-  '/services/ge-vernova': '/hizmetler/ge-vernova',
+  '/services/velotic': '/hizmetler/velotic',
   '/services/training-consulting': '/hizmetler/egitim-danismanlik',
   '/onsuite': '/onsuite',
   '/r-and-d': '/arge',
@@ -36,7 +36,9 @@ const EN_TO_TR_ROUTES = {
   '/references': '/referanslar',
   '/about': '/kurumsal/bizi-taniyin',
   '/about/careers': '/kurumsal/kariyer',
+  '/about/sustainability': '/kurumsal/surdurulebilirlik',
   '/about/milestones': '/kurumsal/kilometre-taslari',
+  '/blog': '/blog',
   '/contact': '/iletisim',
   '/legal/kvkk': '/yasal/kvkk',
   '/legal/privacy-policy': '/yasal/gizlilik-politikasi',
@@ -59,7 +61,7 @@ const RO_TO_TR_ROUTES = {
   '/servicii/viziune-artificiala': '/hizmetler/goruntu-isleme',
   '/servicii/ai-machine-learning': '/hizmetler/ai-makine-ogrenmesi',
   '/servicii/solutii-microsoft': '/hizmetler/microsoft-cozumleri',
-  '/servicii/ge-vernova': '/hizmetler/ge-vernova',
+  '/servicii/velotic': '/hizmetler/velotic',
   '/servicii/instruire-si-consultanta': '/hizmetler/egitim-danismanlik',
   '/onsuite': '/onsuite',
   '/c-si-d': '/arge',
@@ -86,7 +88,9 @@ const RO_TO_TR_ROUTES = {
   '/referinte': '/referanslar',
   '/compania': '/kurumsal/bizi-taniyin',
   '/compania/cariere': '/kurumsal/kariyer',
+  '/compania/sustenabilitate': '/kurumsal/surdurulebilirlik',
   '/compania/etape': '/kurumsal/kilometre-taslari',
+  '/blog': '/blog',
   '/contact': '/iletisim',
   '/legal/gdpr': '/yasal/kvkk',
   '/legal/politica-de-confidentialitate': '/yasal/gizlilik-politikasi',
@@ -134,7 +138,7 @@ export function toInternalPath(pathname, locale = detectLocale(pathname)) {
   return withoutLocale;
 }
 
-export function toLocalizedPath(pathname, locale = 'tr') {
+export function toLocalizedPath(pathname, locale = 'ro') {
   const internalPath = toInternalPath(pathname, detectLocale(pathname));
   const normalizedInternal = normalizePath(internalPath);
 

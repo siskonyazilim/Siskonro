@@ -1,0 +1,48 @@
+{
+  "sidePanel": {
+    "tag": "HİZMETLER",
+    "titleLine1": "Endüstriyel Dönüşümü",
+    "titleLine2": "Mühendislikle Yönetiyoruz",
+    "desc": "Endüstriyel yazılım, otomasyon ve yapay zekayı birleştiren hizmetlerimizle üretim süreçlerini daha verimli, izlenebilir ve sürdürülebilir hale getiriyoruz.",
+    "feature1": "Endüstriyel Yazılım ve Otomasyon",
+    "feature2": "Yapay Zeka ve Görüntü İşleme",
+    "feature3": "IIoT, Veri ve İzlenebilirlik"
+  },
+  "descriptions": {
+    "customSoftware": "İhtiyaca özel yazılım mimarisiyle süreçlerinizi uçtan uca dijitalleştirin.",
+    "iiot": "Sahadan gerçek zamanlı veri toplayarak karar kalitesini artırın.",
+    "traceability": "Ürün ve süreç hareketlerini uçtan uca görünür hale getirin.",
+    "automation": "Makine ve prosesleri güvenli, ölçeklenebilir otomasyonla yönetin.",
+    "robotics": "Robotik hücrelerle çevrim sürelerini düşürüp kaliteyi standardize edin.",
+    "vision": "Görüntü işleme ile kalite kontrolü otomatik ve tutarlı hale getirin.",
+    "ai": "Veri odaklı analitik ile performans ve verimliliği optimize edin.",
+    "microsoft": "Microsoft ekosistemiyle kurum içi süreçleri entegre ve çevik yönetin.",
+    "velotic": "Velotic çözümleriyle üretim verilerini merkezi olarak izleyin.",
+    "training": "Ekip yetkinliğini eğitim ve danışmanlıkla kalıcı şekilde artırın."
+  },
+  "corporate": {
+    "about": {
+      "label": "Bizi Tanıyın",
+      "desc": "Siskon'un vizyonu, misyonu ve 25 yılı aşkın mühendislik tecrübesi."
+    },
+    "blog": {
+      "label": "Blog",
+      "desc": "Endüstri 4.0, yapay zeka ve üretim teknolojileri üzerine içgörüler."
+    },
+    "career": {
+      "label": "Kariyer",
+      "desc": "Siskon ailesine katılın, kariyerinizi mühendislik tutkusuyla büyütün."
+    },
+    "sustainability": {
+      "label": "Sürdürülebilirlik",
+      "desc": "Sorumlu üretim ve yeşil dönüşüm için çevresel taahhütlerimiz."
+    }
+  },
+  "aria": {
+    "back": "← Geri",
+    "closeMenu": "Menüyü kapat",
+    "openMenu": "Menüyü aç",
+    "changeLang": "Dil değiştir",
+    "closeOverlay": "Mobil menü örtüsünü kapat"
+  }
+}

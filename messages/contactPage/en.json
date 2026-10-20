@@ -1,0 +1,114 @@
+{
+  "heroTitle": "Contact Us",
+  "heroSubtitle": "We are ready to add value to your projects with our global engineering power. Share your needs, let's create solutions together.",
+  "heroBreadcrumbs": [
+    "Home",
+    "Contact"
+  ],
+  "sectionEyebrow": "Contact",
+  "sectionTitleTop": "Worldwide",
+  "sectionTitleAccent": "Active Access.",
+  "internshipTitle": "Internship",
+  "internshipText": "Click for Internship Application Form!",
+  "internshipCta": "Open Application Form",
+  "formTitle": "Start Your Project",
+  "formSubtitle": "Share the details, let our expert engineers offer you the most suitable strategy.",
+  "formSuccess": "Your message has been received! Our team will get back to you as soon as possible.",
+  "formSuccessTitle": "Message Sent",
+  "formErrorTitle": "Sending Failed",
+  "formValidationError": "Please check the marked fields and try again.",
+  "formSubmitError": "Your message could not be sent. Please try again shortly.",
+  "sending": "Sending...",
+  "firstName": "First Name",
+  "firstNamePlaceholder": "Your first name",
+  "lastName": "Last Name",
+  "lastNamePlaceholder": "Your last name",
+  "company": "Company",
+  "companyPlaceholder": "Company name",
+  "phone": "Phone",
+  "phonePlaceholder": "+90 5xx xxx xx xx",
+  "position": "Position",
+  "positionPlaceholder": "Select position",
+  "positionOptions": [
+    "General Inquiry",
+    "Sales",
+    "Technical Support",
+    "Career",
+    "Internship",
+    "Other"
+  ],
+  "sector": "Sector",
+  "sectorPlaceholder": "Select sector",
+  "sectorOptions": [
+    "Automotive",
+    "Home Appliances",
+    "Food & Beverage",
+    "Tobacco",
+    "Machinery",
+    "Other"
+  ],
+  "email": "Email",
+  "message": "Your Message",
+  "messagePlaceholder": "Tell us about your project...",
+  "consent": "I have read and accepted the PDPL disclosure text and privacy policy. I consent to the processing of my personal data for communication purposes.",
+  "consentKvkkLinkLabel": "PDPL Disclosure Text",
+  "consentPrivacyLinkLabel": "Privacy Policy",
+  "consentAria": "PDPL and privacy consent",
+  "recaptchaMissing": "Please verify that you are not a robot.",
+  "recaptchaConfigMissing": "reCAPTCHA site key is missing. Please define NEXT_PUBLIC_RECAPTCHA_SITE_KEY.",
+  "requiredField": "This field is required.",
+  "invalidEmail": "Please enter a valid email address.",
+  "consentRequired": "PDPL and privacy consent is required.",
+  "submit": "Send Message",
+  "officesEyebrow": "Our Global Offices",
+  "officesTitle": "Our Office Locations Worldwide",
+  "officeFooter": "Office Details",
+  "officesSummary": "Siskon engineering serves on a global scale with active installations and office operations across Turkey and Europe.",
+  "contactInfoGeneral": "General Contact",
+  "contactInfoSales": "Sales & Quote",
+  "contactInfoSupport": "Technical Support",
+  "contactInfoPhone": "Phone",
+  "contactInfo": [
+    { "val": "info@siskon.com.tr", "href": "mailto:info@siskon.com.tr" },
+    { "val": "sales@siskon.com.tr", "href": "mailto:sales@siskon.com.tr" },
+    { "val": "support@siskon.com.tr", "href": "mailto:support@siskon.com.tr" },
+    { "val": "+90 (232) 245 00 76", "href": "tel:+902322450076" }
+  ],
+  "officeCards": [
+    {
+      "title": "DEPARK Office",
+      "mapEmbed": "https://maps.google.com/maps?q=Dokuz%20Eylul%20University%20Depark%20Beta%20Building%20Izmir&z=15&output=embed",
+      "mapsUrl": "https://www.google.com/maps/search/Dokuz+Eylul+University+DEPARK+Beta+Buca+Izmir",
+      "addressLines": [
+        "Dokuz Eylul University",
+        "Tinaztepe Campus",
+        "Depark Beta Building,",
+        "Adatepe District",
+        "Dogus Street No:207/AG",
+        "Floor: 2 No: 202, 35390",
+        "Buca / Izmir"
+      ],
+      "regNo": "Address No: 1575482912"
+    },
+    {
+      "title": "Aegean Free Zone (ESBAS) Office",
+      "mapEmbed": "https://maps.google.com/maps?q=Nilufer+Sk.+No:31+D:3,+Gaziemir,+Izmir,+Turkey&z=17&output=embed",
+      "mapsUrl": "https://www.google.com/maps/search/ESBAS+Aegean+Free+Zone+Gaziemir+Izmir",
+      "addressLines": ["Zafer SB District", "Nilufer Street No:31/3", "Gaziemir / Izmir"],
+      "regNo": "Address No: 2709145623"
+    },
+    {
+      "title": "Romania Office",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.3812984624165!2d25.6221473!3d45.6632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b910e74964b%3A0xac8086acca35f96a!2sSiskon%20Software%20and%20Automation%20SRL!5e0!3m2!1sen!2str!4v1783058783861!5m2!1sen!2str",
+      "mapsUrl": "https://www.google.com/maps/place/?q=place_id:0x40b35b910e74964b:0xac8086acca35f96a",
+      "addressLines": [
+        "Punct de lucru: Str.",
+        "Turnului Nr. 5,",
+        "Cladirea M.U.M. Scara 3,",
+        "Etajul 2, Biroul 5, 500152",
+        "Brasov, Romania"
+      ],
+      "regNo": ""
+    }
+  ]
+}

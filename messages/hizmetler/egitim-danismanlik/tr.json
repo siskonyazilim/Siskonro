@@ -1,0 +1,78 @@
+{
+  "subtitle": "Endüstriyel otomasyon ve yazılım teknolojilerinde uzman eğitimler",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "title": "Eğitim-Danışmanlık Çözümleri",
+  "description": "Siskon'un uzman eğitim ve danışmanlık hizmetleri, endüstriyel otomasyon ve dijital dönüşüm yolculuğunuzda işletmenizin potansiyelini en üst düzeye çıkarır. Deneyimli eğitmenlerimiz ve danışmanlarımız, endüstriyel teknolojileri en verimli şekilde kullanmanız için gereken bilgi ve beceriyi kazandırarak rekabette sizi bir adım öne taşır.",
+  "askSchedule": "Eğitim Takvimi İsteyin",
+  "expertiseTitle": "Eğitim Konularımız",
+  "ctaTitle": "Ekibinizin Yetkinliğini Artırın",
+  "ctaDescription": "Eğitim programlarımız ve danışmanlık hizmetlerimiz hakkında detaylı bilgi için bizimle iletişime geçin.",
+  "ctaButton": "Bize Ulaşın",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "imageAlt": "Siskon Eğitim ve Danışmanlık Çözümleri - Endüstriyel Teknoloji Eğitimi",
+  "heroTitleLines": [
+    "Siskon'un eğitim ve",
+    "danışmanlık hizmetleriyle",
+    "geleceğin teknolojilerine",
+    "bugünden hazır olun!"
+  ],
+  "heroDescriptionLines": [
+    "Siskon'un uzman eğitim ve danışmanlık",
+    "hizmetleri, endüstriyel otomasyon ve dijital",
+    "dönüşüm yolculuğunuzda işletmenizin",
+    "potansiyelini en üst düzeye çıkarır. Deneyimli",
+    "eğitmenlerimiz ve danışmanlarımız, endüstriyel",
+    "teknolojileri en verimli şekilde kullanmanız için",
+    "gereken bilgi ve beceriyi kazandırarak",
+    "rekabette sizi bir adım öne taşır."
+  ],
+  "trainings": [
+    {
+      "title": "PLC ve HMI Eğitimleri",
+      "details": [
+        "Siemens TIA Portal"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-1-camera.webp",
+      "reverse": false
+    },
+    {
+      "title": "Beckhoff Twincat 2 ve 3SCADA Eğitimi",
+      "details": [
+        "Siemens Wincc"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-2-camera.webp",
+      "reverse": true
+    },
+    {
+      "title": "Microsoft Power Platform Eğitimleri",
+      "details": [
+        "Power BI",
+        "Power Apps",
+        "Power Automate"
+      ],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-3-camera.webp",
+      "reverse": false
+    },
+    {
+      "title": "Microsoft SQL Server",
+      "details": [],
+      "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-4-camera.webp",
+      "reverse": true
+    }
+  ],
+  "heroTitle": "Eğitim-Danışmanlık Çözümleri",
+  "heroSubtitle": "Endüstriyel otomasyon ve yazılım teknolojilerinde uzman eğitimler",
+  "heroDescription": "Siskon'un uzman eğitim ve danışmanlık hizmetleri, endüstriyel otomasyon ve dijital dönüşüm yolculuğunuzda işletmenizin potansiyelini en üst düzeye çıkarır. Deneyimli eğitmenlerimiz ve danışmanlarımız, endüstriyel teknolojileri en verimli şekilde kullanmanız için gereken bilgi ve beceriyi kazandırarak rekabette sizi bir adım öne taşır.",
+  "heroImage": "/assets/strapi/1_9_egitim_ve_danismanlik_cozumlerikutu_6eb6c833b3.webp",
+  "ctaDesc": "Eğitim programlarımız ve danışmanlık hizmetlerimiz hakkında detaylı bilgi için bizimle iletişime geçin.",
+  "topicsEyebrow": "Eğitim Konularımız",
+  "topicsTitle": "Eğitim Konularımız",
+  "topics": [
+    "PLC ve HMI Eğitimleri",
+    "Beckhoff Twincat 2 ve 3SCADA Eğitimi",
+    "Microsoft Power Platform Eğitimleri",
+    "Microsoft SQL Server"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "subtitle": "Monitorizați procesele, asigurați calitatea și obțineți un avantaj competitiv",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbServices": "Servicii",
+  "service": "SERVICIU",
+  "title": "Soluții Software de Trasabilitate",
+  "description": "Trasabilitatea permite monitorizarea tuturor proceselor, de la aprovizionarea cu materii prime până la produsul final, contribuind la identificarea la timp a problemelor și la îmbunătățirea calității producției. De asemenea, consolidează încrederea clienților prin creșterea transparenței pe întregul lanț de aprovizionare.",
+  "getInfo": "Obțineți Informații",
+  "benefits": "BENEFICII",
+  "benefitsTitle": "Ce Soluții de Trasabilitate Oferim?",
+  "benefitsDescription": "Sistemele noastre de trasabilitate oferă control și vizibilitate complete în toate procesele de la producție la expediere.",
+  "qualifications": "CALIFICĂRI",
+  "qualificationsTitle": "Ce Beneficii Vă Oferă Soluțiile de Trasabilitate Siskon?",
+  "sectorDetails": "COMPONENTE SOLUȚIE",
+  "components": "Componentele Sistemelor de Trasabilitate",
+  "ctaTitle": "Consolidați Sistemele de Trasabilitate",
+  "ctaDescription": "Descoperiți soluțiile noastre pentru trasabilitate completă în procesele dvs. de producție.",
+  "ctaButton": "Contactați-ne",
+  "showMore": "Apasă pentru mai multe",
+  "showLess": "Arată mai puțin",
+  "features": [
+    "Articol Unic",
+    "Lot / Șarjă",
+    "RTLS",
+    "Pick to Light / Put to Light",
+    "Sisteme de Management al Depozitului",
+    "Integrare"
+  ],
+  "technicalFeatures": [
+    "Trasabilitate de la intrarea materiei prime până la produsul finit",
+    "Trasabilitatea produsului individual",
+    "Urmărirea loturilor și a seriilor de producție",
+    "Acces la informații despre stoc în timp real",
+    "Monitorizarea indicatorilor de performanță ai producției",
+    "Controlul listei de materiale (BOM - Bill of Materials)",
+    "Verificarea automată a termenelor de valabilitate",
+    "Integrare",
+    "Raportare pe baza numărului de serie",
+    "Eliminarea erorilor",
+    "Utilizarea corectă și eficientă a stocurilor",
+    "Verificarea consumurilor conform listei de materiale (BOM)",
+    "Reducerea riscurilor de audit",
+    "Gestionarea procesului de garanție",
+    "Reducerea costurilor de rechemare a produselor",
+    "Suport pentru conformitatea și certificarea ISO 9001, ISO 22000, ISO/TS 16949"
+  ],
+  "sectorDetailCards": [
+    {
+      "title": "Urmărire Articol Unic",
+      "titleSub": "",
+      "spot": "Obțineți vizibilitate completă în producție cu urmărirea produselor în timp real după numărul de serie.",
+      "desc": "În procesele de trasabilitate, urmărirea fiecărui produs cu un număr unic oferă vizibilitate și control complet. Această abordare îmbunătățește trasabilitatea fiecărui articol și creează un avantaj puternic în managementul calității și competitivitate.",
+      "icon": "/assets/strapi/izlenebilirlikicon3_67ad2b4e53.webp",
+      "image": "",
+      "imageAlt": "Pictogramă urmărire articol unic"
+    },
+    {
+      "title": "Urmărire Lot / Șarjă",
+      "titleSub": "",
+      "spot": "Obțineți control complet de la producție la livrare cu urmărirea pe lot / șarjă.",
+      "desc": "În situațiile în care urmărirea produselor este dificilă, trasabilitatea fiecărui lot/șarjă asigură transparență completă și control al calității pe tot parcursul producției. Acest lucru face ușoară urmărirea produselor în fiecare etapă.",
+      "icon": "/assets/strapi/izlenebilirlikicon3_67ad2b4e53.webp",
+      "image": "",
+      "imageAlt": "Pictogramă urmărire lot"
+    },
+    {
+      "title": "P2L",
+      "titleSub": "(Pick to Light / Put to Light)",
+      "spot": "Faceți-vă operațiunile flexibile și fără erori urmărind lumina cu soluțiile P2L.",
+      "desc": "Soluțiile P2L oferă ghidare vizuală și/sau auditivă operatorilor în procesele industriale de fabricație și asamblare cu un consum mare de muncă, de la producție la logistică și de la depozit la livrare.",
+      "icon": "/assets/strapi/izlenebilirlikicon5_99313fc106.webp",
+      "image": "",
+      "imageAlt": "Pictogramă P2L"
+    },
+    {
+      "title": "RTLS",
+      "titleSub": "(Sisteme de Localizare în Timp Real)",
+      "spot": "Urmăriți instantaneu echipamentele și angajații cu RTLS și utilizați resursele la eficiență maximă.",
+      "desc": "Cu RTLS, puteți monitoriza cu ușurință locația în timp real a fiecărui echipament și angajat din unitatea dumneavoastră. Această tehnologie ajută la utilizarea eficientă a resurselor, crește eficiența producției, îmbunătățește siguranța și minimizează riscurile potențiale.",
+      "icon": "/assets/strapi/izlenebilirlikicon_1108a700ce.webp",
+      "image": "",
+      "imageAlt": "Pictogramă RTLS"
+    },
+    {
+      "title": "Sisteme de Management al Depozitului",
+      "titleSub": "",
+      "spot": "Optimizați-vă operațiunile și obțineți un avantaj competitiv cu sistemele de management al depozitului.",
+      "desc": "Sistemele de Management al Depozitului oferă control și management al proceselor. Lucrând cu date în timp real, ele permit managementul eficient al operațiunilor desfășurate în întreaga organizație.",
+      "icon": "/assets/strapi/izlenebilirlikicon2_86ced8c0dc.webp",
+      "image": "",
+      "imageAlt": "Pictogramă sisteme management depozit"
+    },
+    {
+      "title": "Integrare",
+      "titleSub": "",
+      "spot": "Asigurați trasabilitate neîntreruptă în producție cu integrări de sisteme terțe.",
+      "desc": "Integrarea software permite diferitelor aplicații să schimbe date și să lucreze în sincronizare, eliminând dificultățile de la introducerea datelor la raportare pentru companiile care utilizează mai multe sisteme. Integrarea poate fi realizată cu MES, ERP, WMS, CRM, instrumente industriale și software terță parte.",
+      "icon": "/assets/strapi/izlenebilirlikicon4_a9206dd8d8.webp",
+      "image": "",
+      "imageAlt": "Pictogramă integrare"
+    }
+  ],
+  "heroTitle": "Soluții Software de Trasabilitate",
+  "heroSubtitle": "Monitorizați procesele, asigurați calitatea și obțineți un avantaj competitiv",
+  "heroDescription": "Trasabilitatea permite monitorizarea tuturor proceselor, de la aprovizionarea cu materii prime până la produsul final, contribuind la identificarea la timp a problemelor și la îmbunătățirea calității producției. De asemenea, consolidează încrederea clienților prin creșterea transparenței pe întregul lanț de aprovizionare.",
+  "heroImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_16_9_yatay_beyaz_illustrasyon_camera_2_e4744660ab.webp",
+  "serviceLabel": "SERVICIU",
+  "ctaDesc": "Descoperiți soluțiile noastre pentru trasabilitate completă în procesele dvs. de producție.",
+  "qualificationsImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_1_1_kare_camera_135x145x_150_2_31ee4078e1.webp"
+}

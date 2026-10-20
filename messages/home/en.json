@@ -1,0 +1,161 @@
+{
+  "heroTaglineLine1": "Engineering Depth,",
+  "heroTaglineLine2": "Global Impact",
+  "heroTitle": "Fast and Smart Solutions",
+  "heroDescription": "From process automation to AI-powered data systems, we make production more efficient, traceable and intelligent. Since 1997, we have led digital transformation across automotive, home appliances, food, textile, tobacco and machinery industries.",
+  "heroCta": "Explore Our Services",
+  "servicesEyebrow": "Our Services",
+  "servicesTitle": "Achieve Operational Excellence with Industry-Specific Software and Automation Solutions",
+  "servicesDescription": "Measure efficiency, optimize your processes, add value to your production. Our solutions make all processes from production to management visible, measurable and efficient.",
+  "allServicesEyebrow": "All Services",
+  "allServicesTitle": "Let's Design the Most Suitable Solution for You Together",
+  "allServicesDescription": "We provide end-to-end engineering support in your digital transformation journey.",
+  "allServicesButton": "View All Services",
+  "productsEyebrow": "Our Products",
+  "productsTitle": "Transform Your Production into Digital Power with Flexible, Smart and Easy-to-Deploy Products",
+  "productsDescription": "Our product portfolio transforms shopfloor data into meaningful information with IIoT infrastructure and our proprietary algorithms. It moves your production lines to a more transparent, controllable and data-driven structure.",
+  "allProductsButton": "Explore Details",
+  "globalEyebrow": "Global Projects",
+  "globalTitle": "Siskon Signature in 40+ Countries and 60+ Factories",
+  "globalDescription": "With our headquarters in Turkey and offices in Romania and Estonia, our solutions continue to operate in dozens of countries, across many sectors, in hundreds of systems worldwide.",
+  "referencesEyebrow": "Our References",
+  "referencesTitle": "Our References",
+  "referencesButton": "Our References",
+  "ctaTitle": "Let's Shape the Industrial Future Together",
+  "ctaDescription": "We are determined to push industrial boundaries and shape the future together with you. Share your needs, explore our solutions.",
+  "ctaButton": "Contact Us",
+  "exploreDetails": "Explore Details",
+  "imageUnavailable": "Image unavailable",
+  "continents": {
+    "europe": "Avrupa",
+    "africa": "Afrika",
+    "asia": "Asya",
+    "northAmerica": "Kuzey Amerika",
+    "southAmerica": "Güney Amerika"
+  },
+  "stats": [
+    {
+      "num": "1997",
+      "label": "Founded"
+    },
+    {
+      "num": "40+",
+      "label": "Countries"
+    },
+    {
+      "num": "500+",
+      "label": "Projects"
+    },
+    {
+      "num": "60+",
+      "label": "Smart Factories"
+    }
+  ],
+  "exploreDetailsLabel": "Explore details",
+  "defaultMapAlt": "Global projects map",
+  "aboutUsButton": "About Us",
+  "onSuiteSectionTitle": "OnSuite — Smart Manufacturing Platform",
+  "onSuiteSectionDesc1": "OnSuite brings production, quality, and operational intelligence together on a single digital backbone. By combining machine connectivity, continuous monitoring, traceability, and performance analytics into the same architecture, it enables teams to make faster and more accurate decisions.",
+  "onSuiteSectionDesc2": "Thanks to its modular deployment approach and enterprise integration capabilities, you can scale from a single production line to multi-facility operations without rebuilding your underlying system infrastructure.",
+  "discoverOnSuiteButton": "Discover OnSuite",
+  "globalProjectsEyebrow": "Our Global Projects",
+  "countriesLabel": "Countries",
+  "factoriesLabel": "Factories",
+  "legendAlt": "Global projects legend",
+  "services": [
+    {
+      "num": "01",
+      "desc": "Solutions that include the most suitable software and hardware products designed to complement each other according to your needs.",
+      "img": "/assets/strapi/musteriye_ozel_yazilim_cozumleri_banner_1_1_zeminsiz_2_417c445b23.webp",
+      "href": "/hizmetler/musteriye-ozel-yazilim"
+    },
+    {
+      "num": "02",
+      "desc": "The smart way to manage industrial data and business processes in the era of digital transformation.",
+      "img": "/assets/strapi/iiot_hizmet_gorsel_2_2d195ecb1d.webp",
+      "href": "/hizmetler/iiot"
+    },
+    {
+      "num": "03",
+      "desc": "Shape the future of manufacturing with our automation solutions.",
+      "img": "/assets/strapi/siskon_1_4_makine_ve_proses_otomasyonu_16_9_dikey_3_camera_zeminsiz_2_ee1925aa7f.webp",
+      "href": "/hizmetler/makine-proses-otomasyonu"
+    },
+    {
+      "num": "04",
+      "desc": "Achieve excellence in production through advanced machine vision technologies.",
+      "img": "/assets/strapi/Goruntu_Izleme_Watch_33e2d645e2.webp",
+      "href": "/hizmetler/goruntu-isleme"
+    },
+    {
+      "num": "05",
+      "desc": "Transform your data into powerful business decisions.",
+      "img": "/assets/strapi/aivemakineogrenmesi_f11eac3906.webp",
+      "href": "/hizmetler/ai-makine-ogrenmesi"
+    }
+  ],
+  "products": [],
+  "references": [
+    {
+      "name": "BORGWARNER",
+      "logo": "/assets/strapi/borgwarner_seeklogo_0eba93e703.svg"
+    },
+    {
+      "name": "BOSCH",
+      "logo": "/assets/strapi/Bosch_logo_167b5c5e42.svg"
+    },
+    {
+      "name": "BSH",
+      "logo": "/assets/strapi/Haier_logo_c6a21cc05b.svg"
+    },
+    {
+      "name": "HAIER EUROPE",
+      "logo": "/assets/strapi/JTI_Logo_5d5b73b2ab.svg"
+    },
+    {
+      "name": "JTI",
+      "logo": "/assets/strapi/maxion_inci_0176ce523d.svg"
+    },
+    {
+      "name": "MAXION",
+      "logo": "/assets/strapi/mey_diageo_4ac7b1cf31.svg"
+    },
+    {
+      "name": "MEY · DIAGEO",
+      "logo": "/assets/strapi/philip_morris_international_pmi_seeklogo_3775da7228.png"
+    },
+    {
+      "name": "PMI",
+      "logo": "/assets/strapi/Unilever_334eaf1355.svg"
+    },
+    {
+      "name": "UNILEVER",
+      "logo": "/assets/Logos/Unilever.svg"
+    }
+  ],
+  "onSuiteImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
+  "continentMaps": {
+    "europe": {
+      "label": "Avrupa",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_avrupa_67a5e16b5d.svg"
+    },
+    "africa": {
+      "label": "Afrika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_afrika_54d71c120b.svg"
+    },
+    "asia": {
+      "label": "Asya",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_asya_ef128e81c6.svg"
+    },
+    "northAmerica": {
+      "label": "Kuzey Amerika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_k_amerika_78010c63c2.svg"
+    },
+    "southAmerica": {
+      "label": "Güney Amerika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_g_amerika_cde8998b25.svg"
+    }
+  },
+  "defaultMapSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fworld2_c3758b5125.svg",
+  "legendImageSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Frenk_kartela_white_687d02e3db.svg"
+}

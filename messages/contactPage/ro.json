@@ -1,0 +1,114 @@
+{
+  "heroTitle": "Contactați-ne",
+  "heroSubtitle": "Suntem pregătiți să adăugăm valoare proiectelor dvs. cu puterea noastră globală de inginerie. Împărtășiți nevoile dvs., să creăm soluții împreună.",
+  "heroBreadcrumbs": [
+    "Pagina Principală",
+    "Contact"
+  ],
+  "sectionEyebrow": "Contact",
+  "sectionTitleTop": "În Întreaga Lume",
+  "sectionTitleAccent": "Acces Activ.",
+  "internshipTitle": "Stagiu",
+  "internshipText": "Faceți clic pentru Formularul de Aplicare pentru Stagiu!",
+  "internshipCta": "Deschideți Formularul de Aplicare",
+  "formTitle": "Începeți Proiectul Dvs.",
+  "formSubtitle": "Împărtășiți detaliile, să vă ofere inginerii noștri experți strategia cea mai potrivită.",
+  "formSuccess": "Mesajul dvs. a fost primit! Echipa noastră vă va contacta cât mai curând posibil.",
+  "formSuccessTitle": "Mesaj Trimis",
+  "formErrorTitle": "Trimitere Eșuată",
+  "formValidationError": "Vă rugăm să verificați câmpurile marcate și să încercați din nou.",
+  "formSubmitError": "Mesajul dvs. nu a putut fi trimis. Vă rugăm să încercați din nou în scurt timp.",
+  "sending": "Se trimite...",
+  "firstName": "Prenume",
+  "firstNamePlaceholder": "Prenumele dvs.",
+  "lastName": "Nume",
+  "lastNamePlaceholder": "Numele dvs.",
+  "company": "Companie",
+  "companyPlaceholder": "Numele companiei",
+  "phone": "Telefon",
+  "phonePlaceholder": "+40 7xx xxx xxx",
+  "position": "Poziție",
+  "positionPlaceholder": "Selectați poziția",
+  "positionOptions": [
+    "Solicitare Generală",
+    "Vânzări",
+    "Suport Tehnic",
+    "Carieră",
+    "Stagiu",
+    "Altele"
+  ],
+  "sector": "Sector",
+  "sectorPlaceholder": "Selectați sectorul",
+  "sectorOptions": [
+    "Auto",
+    "Electrocasnice",
+    "Alimente și Băuturi",
+    "Tutun",
+    "Mașini",
+    "Altele"
+  ],
+  "email": "Email",
+  "message": "Mesajul Dvs.",
+  "messagePlaceholder": "Spuneți-ne despre proiectul dvs...",
+  "consent": "Am citit și am acceptat textul de informare KVKK și politica de confidențialitate. Consimț la procesarea datelor mele personale în scopuri de comunicare.",
+  "consentKvkkLinkLabel": "Text de Informare KVKK",
+  "consentPrivacyLinkLabel": "Politica de Confidențialitate",
+  "consentAria": "Consimțământ KVKK și confidențialitate",
+  "recaptchaMissing": "Vă rugăm să verificați că nu sunteți un robot.",
+  "recaptchaConfigMissing": "Cheia site-ului reCAPTCHA lipsește. Vă rugăm să definiți NEXT_PUBLIC_RECAPTCHA_SITE_KEY.",
+  "requiredField": "Acest câmp este obligatoriu.",
+  "invalidEmail": "Vă rugăm să introduceți o adresă de email validă.",
+  "consentRequired": "Consimțământul KVKK și confidențialitate este necesar.",
+  "submit": "Trimite Mesajul",
+  "officesEyebrow": "Birourile Noastre Globale",
+  "officesTitle": "Locațiile Birourilor Noastre din Întreaga Lume",
+  "officeFooter": "Detalii Birou",
+  "officesSummary": "Ingineria Siskon servește la scară globală cu instalații active și operațiuni de birou în Turcia și Europa.",
+  "contactInfoGeneral": "Contact General",
+  "contactInfoSales": "Vânzări și Ofertă",
+  "contactInfoSupport": "Suport Tehnic",
+  "contactInfoPhone": "Telefon",
+  "contactInfo": [
+    { "val": "info@siskon.com.tr", "href": "mailto:info@siskon.com.tr" },
+    { "val": "sales@siskon.com.tr", "href": "mailto:sales@siskon.com.tr" },
+    { "val": "support@siskon.com.tr", "href": "mailto:support@siskon.com.tr" },
+    { "val": "+90 (232) 245 00 76", "href": "tel:+902322450076" }
+  ],
+  "officeCards": [
+    {
+      "title": "Biroul din România",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.3812984624165!2d25.6221473!3d45.6632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b910e74964b%3A0xac8086acca35f96a!2sSiskon%20Software%20and%20Automation%20SRL!5e0!3m2!1sen!2str!4v1783058783861!5m2!1sen!2str",
+      "mapsUrl": "https://www.google.com/maps/place/?q=place_id:0x40b35b910e74964b:0xac8086acca35f96a",
+      "addressLines": [
+        "Punct de lucru: Str.",
+        "Turnului Nr. 5,",
+        "Cladirea M.U.M. Scara 3,",
+        "Etajul 2, Biroul 5, 500152",
+        "Brasov, Romania"
+      ],
+      "regNo": ""
+    },
+    {
+      "title": "Biroul DEPARK",
+      "mapEmbed": "https://maps.google.com/maps?q=Dokuz%20Eylul%20University%20Depark%20Beta%20Building%20Izmir&z=15&output=embed",
+      "mapsUrl": "https://www.google.com/maps/search/Dokuz+Eylul+University+DEPARK+Beta+Buca+Izmir",
+      "addressLines": [
+        "Universitatea Dokuz Eylul",
+        "Campusul Tinaztepe",
+        "Clădirea Depark Beta,",
+        "Cartierul Adatepe",
+        "Strada Dogus Nr:207/AG",
+        "Etaj: 2 Nr: 202, 35390",
+        "Buca / Izmir"
+      ],
+      "regNo": "Adresă Nr: 1575482912"
+    },
+    {
+      "title": "Biroul Zona Liberă Egee (ESBAS)",
+      "mapEmbed": "https://maps.google.com/maps?q=Nilufer+Sk.+No:31+D:3,+Gaziemir,+Izmir,+Turkey&z=17&output=embed",
+      "mapsUrl": "https://www.google.com/maps/search/ESBAS+Aegean+Free+Zone+Gaziemir+Izmir",
+      "addressLines": ["Cartierul Zafer SB", "Strada Nilufer Nr:31/3", "Gaziemir / Izmir"],
+      "regNo": "Adresă Nr: 2709145623"
+    }
+  ]
+}

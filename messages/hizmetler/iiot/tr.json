@@ -1,0 +1,60 @@
+{
+  "subtitle": "Dijital dönüşüm çağında endüstriyel verileri ve iş süreçlerini akıllıca yönetmenin yolu.",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "service": "Hizmet",
+  "title": "Endüstriyel Nesnelerin İnterneti (IIoT) Çözümleri",
+  "description": "Modüler birer yönetim sistemi olan Siskon Veri Toplama Sistemi; iş süreçlerinizden, üretim, kalite, proses ve enerji verilerinizi gerçek zamanlı, doğru ve otomatik olarak toplar, raporlar ve bildirimlerde bulunur. Karar destek sistemlerine gerekli veri akışını sağlar.",
+  "getInfo": "Bilgi Alın",
+  "benefits": "Kazanımlar",
+  "benefitsTitle": "Sistemlerin Özellikleri Neler?",
+  "subSystems": [
+    {
+      "title": "Üretim Veri Toplama Sistemi",
+      "icon": "/assets/new/hizmetler/iiot/asset-45-1.svg",
+      "spot": "Gerçek zamanlı verimlilik takibiyle başarıyı garantileyin!",
+      "desc": "Üretim adetleri, fire adetleri, duruş süreleri ve sebeplerini gerçek zamanlı toplayarak verimlilik, OEE, KPI, çevrim süresi, duruş, darboğaz, fire ve pareto analizleri yapmanızı sağlar."
+    },
+    {
+      "title": "Kalite Veri Toplama Sistemi",
+      "icon": "/assets/new/hizmetler/iiot/asset-46-1.svg",
+      "spot": "Kaliteyi doğru veriyle güvence altına alın!",
+      "desc": "Laboratuvar veya üretim sahasındaki kalite ve analiz cihazlarından verileri otomatik olarak toplayarak kalite süreçlerinizi standardize eder, ürün kalitenizi artırır."
+    },
+    {
+      "title": "Proses Veri Toplama Sistemi",
+      "icon": "/assets/new/hizmetler/iiot/asset-49.svg",
+      "spot": "Proses verilerinizi yönetin, operasyonel gücünüzü artırın!",
+      "desc": "Basınç, sıcaklık, hız, debi, pH, asit oranı gibi birçok farklı proses verinizi olay ve/veya zaman bazlı toplayıp gerçek zamanlı ve geçmişe dönük analizler yapmanızı sağlar."
+    },
+    {
+      "title": "Enerji Veri Toplama Sistemi",
+      "icon": "/assets/new/hizmetler/iiot/asset-47-1.svg",
+      "spot": "Veri odaklı enerji yönetimiyle maliyetlerinizi düşürün!",
+      "desc": "Tüketim, voltaj, akım, frekans gibi verileri toplayarak enerji kullanımını izlemeye, analiz etmeye ve optimize etmeye odaklanır; ISO 50001 süreçlerini destekler."
+    }
+  ],
+  "subSystemsEyebrow": "Alt Sistemler",
+  "subSystemsTitle": "IIoT Veri Toplama Sistemleri",
+  "ctaTitle": "Endüstriyel Geleceği Birlikte Şekillendirelim",
+  "ctaDescription": "İhtiyaçlarınızı paylaşın, çözümlerimizi birlikte keşfedelim.",
+  "ctaButton": "Bize Ulaşın",
+  "imageAlt": "Siskon IIoT Çözümleri - Endüstriyel Nesnelerin İnterneti Veri Toplama",
+  "whySiskon": "Neden Siskon?",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "features": [
+    "Gerçek zamanlı veri toplama",
+    "Zaman bazlı veri toplama",
+    "Olay bazlı veri toplama",
+    "Web tabanlı konfigürasyon",
+    "Formülasyon ve filtreleme",
+    "Alarm ve bildirim yönetimi",
+    "ERP sistemleri ile entegrasyon",
+    "Gelişmiş raporlama ve analiz",
+    "Gerçek zamanlı performans takibi",
+    "Geniş haberleşme protokolleri",
+    "İstatistiksel proses kontrol",
+    "Bakım ve kalibrasyon yönetimi"
+  ]
+}

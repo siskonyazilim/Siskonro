@@ -1,28 +1,58 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { strapiGet } from '@/lib/strapi/client';
+import { isRateLimited } from '@/lib/security/http';
+
+// ── Strapi'ye form kaydı gönderen yardımcı ──────────────────────────────────
+async function saveToStrapi(payload, locale) {
+  const STRAPI_URL = process.env.STRAPI_URL || process.env.STRAPI_API_URL;
+  const STRAPI_TOKEN = process.env.STRAPI_API_TOKEN;
+  if (!STRAPI_URL || !STRAPI_TOKEN) return; // yapılandırılmamışsa atla
+
+  const body = JSON.stringify({
+    data: {
+      firstName:  String(payload.firstName  || '').slice(0, 255),
+      lastName:   String(payload.lastName   || '').slice(0, 255),
+      company:    String(payload.company    || '').slice(0, 255),
+      phone:      String(payload.phone      || '').slice(0, 50),
+      position:   String(payload.position   || '').slice(0, 255),
+      sector:     String(payload.sector     || '').slice(0, 255),
+      email:      String(payload.email      || '').slice(0, 255),
+      message:    String(payload.message    || '').slice(0, 4000),
+      language:   locale,           // 'tr' | 'en' — "locale" reserved olduğundan "language" kullandık
+      consentGiven: true,
+    },
+  });
+
+  try {
+    const res = await fetch(`${STRAPI_URL}/api/contact-form-submissions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${STRAPI_TOKEN}`,
+      },
+      body,
+    });
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      console.error(`[Strapi] contact-form-submission failed [${res.status}]:`, text.slice(0, 300));
+    }
+  } catch (err) {
+    // Strapi erişilemez olsa da e-posta başarılı sayılır
+    console.error('[Strapi] contact-form-submission error:', err?.message);
+  }
+}
 
 const REQUIRED_FIELDS = ['firstName', 'lastName', 'company', 'phone', 'position', 'sector', 'email', 'message'];
 const CSRF_COOKIE_NAME = 'csrf_token';
 const MAX_FIELD_LENGTH = 2000;
 
-// --- Rate limiter (in-memory, per IP: 5 req / 60 s) ---
+// --- Rate limiter (in-memory, per IP: 5 req / 60 s) — ortak yardımcı, bellek temizliği içerir ---
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 60_000;
-const rateLimitMap = new Map();
 
-function isRateLimited(ip) {
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-
-  if (!entry || now > entry.reset) {
-    rateLimitMap.set(ip, { count: 1, reset: now + RATE_LIMIT_WINDOW_MS });
-    return false;
-  }
-
-  if (entry.count >= RATE_LIMIT_MAX) return true;
-
-  entry.count += 1;
-  return false;
+function isContactRateLimited(ip) {
+  return isRateLimited(`contact:${ip}`, { max: RATE_LIMIT_MAX, windowMs: RATE_LIMIT_WINDOW_MS });
 }
 
 // --- Structured logger ---
@@ -33,6 +63,35 @@ function log(level, event, data = {}) {
   } else {
     console.log(entry);
   }
+}
+
+// ── Gönderen / alıcı adresleri: Strapi contact-page-content (mailFrom, mailTo) → env fallback ──
+const MAIL_ADDRESS_TTL_MS = 60_000;
+let _mailAddressCache = { at: 0, value: null };
+
+async function getMailAddresses(locale) {
+  const now = Date.now();
+  if (_mailAddressCache.value && now - _mailAddressCache.at < MAIL_ADDRESS_TTL_MS) {
+    return _mailAddressCache.value;
+  }
+
+  let strapiFrom = '';
+  let strapiTo = '';
+  try {
+    const res = await strapiGet(`contact-page-content?locale=${locale}&fields[0]=mailFrom&fields[1]=mailTo`);
+    const d = res?.data?.attributes ?? res?.data ?? {};
+    strapiFrom = String(d.mailFrom || '').trim();
+    strapiTo = String(d.mailTo || '').trim();
+  } catch (err) {
+    console.error('[Strapi] mail address fetch error:', err?.message);
+  }
+
+  const value = {
+    from: strapiFrom || process.env.CONTACT_FORM_FROM || process.env.SMTP_FROM || process.env.SMTP_USER,
+    to: strapiTo || process.env.CONTACT_FORM_TO || process.env.CONTACT_TO || process.env.SMTP_USER,
+  };
+  _mailAddressCache = { at: now, value };
+  return value;
 }
 
 // --- Transporter singleton (created once per container lifetime) ---
@@ -56,13 +115,22 @@ function getTransporter() {
     secure: port === 465,
     requireTLS: port !== 465,
     auth: { user, pass },
+    // Bağlantıyı yeniden kullan (her istekte TLS + login tekrarlanmasın)
+    pool: true,
+    maxConnections: 2,
+    // SMTP'ye ulaşılamazsa dakikalarca asılı kalmasın
+    connectionTimeout: 10_000,
+    greetingTimeout: 10_000,
+    socketTimeout: 20_000,
   });
 
   return _transporter;
 }
 
 function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  // Virgül/noktalı virgül/<> yok: tek adres olmalı (Reply-To'ya birden fazla alıcı eklenemesin)
+  const value = String(email || '');
+  return value.length <= 254 && /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/.test(value);
 }
 
 function sanitize(value) {
@@ -133,7 +201,7 @@ export async function POST(request) {
 
   try {
     // Rate limiting
-    if (isRateLimited(ip)) {
+    if (isContactRateLimited(ip)) {
       log('warn', 'contact_rate_limited', { ip });
       return NextResponse.json(
         { message: 'Too many requests. Please try again later.' },
@@ -215,8 +283,7 @@ export async function POST(request) {
     }
 
     const transporter = getTransporter();
-    const to = process.env.CONTACT_FORM_TO || process.env.SMTP_USER;
-    const from = process.env.CONTACT_FORM_FROM || process.env.SMTP_USER;
+    const { from, to } = await getMailAddresses(locale);
 
     const { subject, text, html } = buildMailContent(payload, locale);
 
@@ -236,9 +303,19 @@ export async function POST(request) {
       position: sanitize(payload.position),
     });
 
+    // Strapi'ye kayıt at (fire-and-forget — başarısız olsa da kullanıcıya hata göstermez)
+    saveToStrapi(payload, locale).catch(() => {});
+
     return NextResponse.json({ success: true });
   } catch (error) {
-    log('error', 'contact_form_error', { ip, message: error.message });
+    log('error', 'contact_form_error', {
+      ip,
+      message: error.message,
+      code: error.code,
+      command: error.command,
+      responseCode: error.responseCode,
+      response: String(error.response || '').slice(0, 300),
+    });
 
     return NextResponse.json(
       { message: 'Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.' },

@@ -1,0 +1,157 @@
+{
+  "heroTaglineLine1": "Mühendislikte Derinlik,",
+  "heroTaglineLine2": "Dünyada Etki",
+  "heroTitle": "Hızlı ve Akıllı Çözümler",
+  "heroDescription": "Proses otomasyonundan yapay zeka destekli veri sistemlerine kadar üretimi daha verimli, izlenebilir ve akıllı hâle getiriyoruz. 1997'den bu yana otomotiv, beyaz eşya, gıda, tekstil, tütün ve makine sektörlerinde dijital dönüşüme liderlik ediyoruz.",
+  "heroCta": "Hizmetlerimizi Keşfedin",
+  "servicesEyebrow": "Hizmetlerimiz",
+  "servicesTitle": "Endüstriye Özel Yazılım ve Otomasyon Çözümleri ile Operasyonel Mükemmelliğe Ulaşın",
+  "servicesDescription": "Verimliliği ölçün, süreçlerinizi optimize edin, üretiminize değer katın. Çözümlerimiz; üretimden yönetime tüm süreçleri görünür, ölçülebilir ve verimli kılar.",
+  "allServicesEyebrow": "Tüm Hizmetler",
+  "allServicesTitle": "Size En Uygun Çözümü Birlikte Tasarlayalım",
+  "allServicesDescription": "Dijital dönüşüm yolculuğunuzda uçtan uca mühendislik desteği sunuyoruz.",
+  "allServicesButton": "Tüm Hizmetleri Gör",
+  "productsEyebrow": "Ürünlerimiz",
+  "productsTitle": "Esnek, Akıllı ve Kolay Uygulanabilir Ürünler ile Üretiminizi Dijital Güce Dönüştürün",
+  "productsDescription": "Ürün portföyümüz; IIoT altyapısı ve geliştirdiğimiz algoritmalarla sahadaki veriyi anlamlı bilgiye dönüştürür. Üretim hatlarınızı daha şeffaf, kontrol edilebilir ve veri odaklı bir yapıya taşır.",
+  "allProductsButton": "Detayları Keşfet",
+  "globalEyebrow": "Global Projelerimiz",
+  "globalTitle": "40+ Ülkede, 60+ Fabrikada Siskon İmzası",
+  "globalDescription": "Türkiye merkezimiz ve Romanya ile Estonya ofislerimizle dünya genelinde onlarca ülkede, birçok sektörde, yüzlerce sistemde çözümlerimiz çalışıyor.",
+  "referencesEyebrow": "Referanslarımız",
+  "referencesTitle": "Referanslarımız",
+  "referencesButton": "Referanslarımız",
+  "ctaTitle": "Endüstriyel Geleceği Birlikte Şekillendirelim",
+  "ctaDescription": "Endüstriyel sınırları zorlamaya ve geleceği sizinle birlikte şekillendirmeye kararlıyız. İhtiyaçlarınızı paylaşın, çözümlerimizi keşfedin.",
+  "ctaButton": "Bize Ulaşın",
+  "exploreDetails": "Detayları Keşfet",
+  "imageUnavailable": "Görsel yüklenemedi",
+  "continents": {
+    "europe": "Avrupa",
+    "africa": "Afrika",
+    "asia": "Asya",
+    "northAmerica": "Kuzey Amerika",
+    "southAmerica": "Güney Amerika"
+  },
+  "stats": [
+    {
+      "num": "1997",
+      "label": "Kuruluş"
+    },
+    {
+      "num": "40+",
+      "label": "Aktif Ülke"
+    },
+    {
+      "num": "500+",
+      "label": "Tamamlanan Proje"
+    },
+    {
+      "num": "60+",
+      "label": "Akıllı Fabrika"
+    }
+  ],
+  "exploreDetailsLabel": "Detayları keşfet",
+  "defaultMapAlt": "Global projeler haritası",
+  "aboutUsButton": "Bizi Tanıyın",
+  "onSuiteSectionTitle": "OnSuite — Akıllı Üretim Platformu",
+  "onSuiteSectionDesc1": "OnSuite; üretim, kalite ve operasyonel zekayı tek bir dijital omurgada birleştirir. Makine bağlantısını, canlı izlemeyi, izlenebilirliği ve performans analitiğini aynı yapıda topladığı için ekipler daha hızlı ve doğru karar alır.",
+  "onSuiteSectionDesc2": "Modüler devreye alma yaklaşımı ve kurumsal entegrasyon yetenekleri sayesinde tek bir hattan başlayıp altyapıyı yeniden kurmadan çok tesisliyönetime ölçeklenebilirsiniz.",
+  "discoverOnSuiteButton": "OnSuite'i Keşfedin",
+  "globalProjectsEyebrow": "Global Projelerimiz",
+  "countriesLabel": "Ülke",
+  "factoriesLabel": "Fabrika",
+  "legendAlt": "Global projeler lejandı",
+  "services": [
+    {
+      "num": "01",
+      "desc": "İhtiyaca en uygun, birbirini tamamlayan yazılım ve donanım ürünlerini içeren çözüm seçenekleri.",
+      "img": "/assets/strapi/musteriye_ozel_yazilim_cozumleri_banner_1_1_zeminsiz_2_417c445b23.webp",
+      "href": "/hizmetler/musteriye-ozel-yazilim"
+    },
+    {
+      "num": "02",
+      "desc": "Dijital dönüşüm çağında endüstriyel verileri ve iş süreçlerini akıllıca yönetmenin yolu.",
+      "img": "/assets/strapi/iiot_hizmet_gorsel_2_2d195ecb1d.webp",
+      "href": "/hizmetler/iiot"
+    },
+    {
+      "num": "03",
+      "desc": "Otomasyon çözümlerimiz ile üretimin geleceğini şekillendirin.",
+      "img": "/assets/strapi/siskon_1_4_makine_ve_proses_otomasyonu_16_9_dikey_3_camera_zeminsiz_2_ee1925aa7f.webp",
+      "href": "/hizmetler/makine-proses-otomasyonu"
+    },
+    {
+      "num": "04",
+      "desc": "Görüntü işleme teknolojileriyle üretimde kusursuzluğu yakalayın!",
+      "img": "/assets/strapi/Goruntu_Izleme_Watch_33e2d645e2.webp",
+      "href": "/hizmetler/goruntu-isleme"
+    },
+    {
+      "num": "05",
+      "desc": "Verilerinizi Güçlü Kararlara Dönüştürün!",
+      "img": "/assets/strapi/aivemakineogrenmesi_f11eac3906.webp",
+      "href": "/hizmetler/ai-makine-ogrenmesi"
+    }
+  ],
+  "products": [],
+  "references": [
+    {
+      "name": "BORGWARNER",
+      "logo": "/assets/strapi/borgwarner_seeklogo_0eba93e703.svg"
+    },
+    {
+      "name": "BOSCH",
+      "logo": "/assets/strapi/Bosch_logo_167b5c5e42.svg"
+    },
+    {
+      "name": "HAIER EUROPE",
+      "logo": "/assets/strapi/Haier_logo_c6a21cc05b.svg"
+    },
+    {
+      "name": "JTI",
+      "logo": "/assets/strapi/JTI_Logo_5d5b73b2ab.svg"
+    },
+    {
+      "name": "MAXION",
+      "logo": "/assets/strapi/maxion_inci_0176ce523d.svg"
+    },
+    {
+      "name": "MEY · DIAGEO",
+      "logo": "/assets/strapi/mey_diageo_4ac7b1cf31.svg"
+    },
+    {
+      "name": "PMI",
+      "logo": "/assets/strapi/philip_morris_international_pmi_seeklogo_3775da7228.png"
+    },
+    {
+      "name": "UNILEVER",
+      "logo": "/assets/strapi/Unilever_334eaf1355.svg"
+    }
+  ],
+  "onSuiteImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
+  "continentMaps": {
+    "europe": {
+      "label": "Avrupa",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_avrupa_67a5e16b5d.svg"
+    },
+    "africa": {
+      "label": "Afrika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_afrika_54d71c120b.svg"
+    },
+    "asia": {
+      "label": "Asya",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_asya_ef128e81c6.svg"
+    },
+    "northAmerica": {
+      "label": "Kuzey Amerika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_k_amerika_78010c63c2.svg"
+    },
+    "southAmerica": {
+      "label": "Güney Amerika",
+      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_g_amerika_cde8998b25.svg"
+    }
+  },
+  "defaultMapSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fworld2_c3758b5125.svg",
+  "legendImageSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Frenk_kartela_white_687d02e3db.svg"
+}

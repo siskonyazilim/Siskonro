@@ -1,0 +1,111 @@
+{
+  "subtitle": "Süreçlerinizi izleyin, kaliteyi güvence altına alarak rekabette fark yaratın",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbServices": "Hizmetler",
+  "service": "HİZMET",
+  "title": "İzlenebilirlik Yazılım Çözümleri",
+  "description": "İzlenebilirlik, hammadde tedarikinden nihai ürüne kadar tüm süreçleri izleyerek hataların zamanında tespit edilmesini ve üretim kalitesinin artmasını sağlar. Ayrıca, tedarik zinciri boyunca şeffaflığı artırarak müşteri güvenini pekiştirir.",
+  "getInfo": "Bilgi Alın",
+  "benefits": "NİTELİKLER",
+  "benefitsTitle": "Siskon İzlenebilirlik Çözümleri Size Ne Sağlar?",
+  "benefitsDescription": "İzlenebilirlik sistemlerimiz, üretimden sevkiyata kadar tüm süreçlerde tam kontrol ve görünürlük sağlar.",
+  "qualifications": "AVANTAJLAR",
+  "qualificationsTitle": "Ne Tür İzlenebilirlik Çözümleri Sunuyoruz?",
+  "sectorDetails": "ÇÖZÜM BİLEŞENLERİ",
+  "components": "İzlenebilirlik Sistemlerinin Bileşenleri",
+  "ctaTitle": "İzlenebilirlik Sistemlerinizi Güçlendirin",
+  "ctaDescription": "Üretim süreçlerinizde tam izlenebilirlik için çözümlerimizi keşfedin.",
+  "ctaButton": "Bize Ulaşın",
+  "showMore": "Devamı için Tıklayınız",
+  "showLess": "Daha Az Göster",
+  "features": [
+    "Hammadde girişinden bitmiş ürüne kadar izlenebilirlik",
+    "Tekil ürün izlenebilirliği",
+    "Parti / lot takibi",
+    "Gerçek zamanlı stok bilgisine erişim",
+    "Üretim performans göstergelerini izleme",
+    "Malzeme listesi (BOM - Bill of Material) kontrolü",
+    "Son kullanma tarihlerini otomatik denetleme",
+    "Entegrasyon",
+    "Seri numarası bazında rapor",
+    "Hataları sıfırlama",
+    "Envanterin doğru ve uygun kullanımı",
+    "Malzeme listesine göre kullanımları doğrulama",
+    "Denetim risklerini azaltma",
+    "Garanti süreci yönetimi",
+    "Geri çağırma maliyet azaltımı",
+    "ISO 9001, ISO 22000, ISO/TS 16949 belgelendirme süreçlerinde kolaylık"
+  ],
+  "technicalFeatures": [
+    "Tekil ürün",
+    "Parti / lot",
+    "RTLS",
+    "Pick to light / put to light",
+    "Depo yönetim sistemleri",
+    "Entegrasyon"
+  ],
+  "sectorDetailCards": [
+    {
+      "title": "Tekil Ürün İzleme",
+      "titleSub": "",
+      "spot": "Seri numarası bazında gerçek zamanlı ürün izleme ile üretimde tam bir görünürlük elde edin.",
+      "desc": "İzlenebilirlik süreçlerinde, her ürünün benzersiz bir numarayla takip edilmesi tam bir görünürlük ve kontrol sağlar. Bu yaklaşım, her ürünün izlenebilirliğini artırarak kalite yönetiminde ve rekabette büyük fark yaratır.",
+      "icon": "/assets/strapi/izlenebilirlikicon3_67ad2b4e53.webp",
+      "image": "",
+      "imageAlt": "Tekil ürün izleme ikonu"
+    },
+    {
+      "title": "Parti / Lot İzleme",
+      "titleSub": "",
+      "spot": "Parti / Lot takibiyle üretimden teslimata tam kontrolü sağlayın.",
+      "desc": "İzlenebilirlik süreçlerinde, ürün takibinin zor olduğu durumlarda, her parti/lotun izini sürerek, üretim sürecinde tam şeffaflık ve kalite kontrol sağlanır. Bu sayede, ürünlerin her aşamada nerede olduğunu kolayca takip edilebilir.",
+      "icon": "/assets/strapi/izlenebilirlikicon3_67ad2b4e53.webp",
+      "image": "",
+      "imageAlt": "Parti lot izleme ikonu"
+    },
+    {
+      "title": "P2L",
+      "titleSub": "(Pick to Light / Put to Light)",
+      "spot": "P2L çözümleriyle ışığın izinde operasyonlarınızı esnek ve hatasız hale getirin.",
+      "desc": "P2L çözümleri, üretimden lojistiğe, depodan teslimata el işçiliği gerektiren endüstriyel üretim ve montaj süreçlerinde operatörlere görsel ve/veya sesli yönlendirme sağlar.",
+      "icon": "/assets/strapi/izlenebilirlikicon5_99313fc106.webp",
+      "image": "",
+      "imageAlt": "P2L ikonu"
+    },
+    {
+      "title": "RTLS",
+      "titleSub": "(Gerçek Zamanlı Konum Belirleme Sistemleri)",
+      "spot": "RTLS ile ekipmanlarınızı ve çalışanlarınızı anlık takip edin, kaynaklarınızı maksimum verimle kullanın.",
+      "desc": "RTLS sayesinde fabrikanızdaki her ekipmanın ve çalışanın anlık konumunu kolayca takip edebilirsiniz. Bu teknoloji, kaynakları daha etkin kullanmanıza ve üretim süreçlerindeki verimliliği artırmanıza yardımcı olur.",
+      "icon": "/assets/strapi/izlenebilirlikicon_1108a700ce.webp",
+      "image": "",
+      "imageAlt": "RTLS ikonu"
+    },
+    {
+      "title": "Depo Yönetim Sistemleri",
+      "titleSub": "",
+      "spot": "Depo yönetim sistemi ile operasyonlarınızı optimize edin ve rekabet avantajı kazanın.",
+      "desc": "Depo Yönetim Sistemleri, süreçlerde kontrol ve yönetim sağlar. Gerçek zamanlı verilerle çalışarak organizasyon içinde gerçekleşen operasyonların etkili bir şekilde yönetilmesini mümkün kılar.",
+      "icon": "/assets/strapi/izlenebilirlikicon2_86ced8c0dc.webp",
+      "image": "",
+      "imageAlt": "Depo yönetim sistemleri ikonu"
+    },
+    {
+      "title": "Entegrasyon",
+      "titleSub": "",
+      "spot": "Üçüncü parti sistem entegrasyonları ile üretimde kesintisiz izlenebilirlik sağlayın.",
+      "desc": "Yazılım entegrasyonu, farklı uygulamaların veri alışverişi yapmasını ve senkronize çalışmasını sağlayarak iş süreçlerini optimize eder. İhtiyaçlara uygun olarak MES, ERP, WMS, CRM, Endüstriyel Enstrüman ve üçüncü parti yazılımlar ile entegrasyon sağlanabilir.",
+      "icon": "/assets/strapi/izlenebilirlikicon4_a9206dd8d8.webp",
+      "image": "",
+      "imageAlt": "Entegrasyon ikonu"
+    }
+  ],
+  "heroTitle": "İzlenebilirlik Yazılım Çözümleri",
+  "heroSubtitle": "Süreçlerinizi izleyin, kaliteyi güvence altına alarak rekabette fark yaratın",
+  "heroDescription": "İzlenebilirlik, hammadde tedarikinden nihai ürüne kadar tüm süreçleri izleyerek hataların zamanında tespit edilmesini ve üretim kalitesinin artmasını sağlar. Ayrıca, tedarik zinciri boyunca şeffaflığı artırarak müşteri güvenini pekiştirir.",
+  "heroImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_16_9_yatay_beyaz_illustrasyon_camera_2_e4744660ab.webp",
+  "serviceLabel": "HİZMET",
+  "ctaDesc": "Üretim süreçlerinizde tam izlenebilirlik için çözümlerimizi keşfedin.",
+  "benefitsImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_1_1_kare_camera_135x145x_150_2_31ee4078e1.webp",
+  "qualificationsImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_1_1_kare_camera_135x145x_150_2_31ee4078e1.webp"
+}

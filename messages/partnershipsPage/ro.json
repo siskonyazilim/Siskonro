@@ -1,0 +1,120 @@
+{
+  "pageTitle": "Parteneriatele Noastre",
+  "pageSubtitle": "Prin construirea unor colaborări puternice cu giganți tehnologici globali, oferim cele mai bune soluții alături de partenerii noștri lideri din industrie.",
+  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbPartnerships": "Parteneriate",
+  "ecosystemEyebrow": "Ecosistemul Nostru",
+  "ecosystemTitle": "Parteneriate",
+  "workingArea": "Zona de Lucru:",
+  "technologyArea": "Zona Tehnologică:",
+  "ctaSectionTitle": "Să stabilim împreună modelul de parteneriat potrivit",
+  "ctaSectionDesc": "Împărtășiți-ne sfera de parteneriat pe care o vizați, să creăm o foaie de parcurs acționabilă cu parteneri tehnologici potriviți.",
+  "ctaSectionButton": "Discutați Parteneriatul",
+  "partners": [
+    {
+      "year": "2002",
+      "name": "Beckhoff",
+      "role": "Partener Soluții Tehnologice",
+      "workArea": "Vânzări Produse, Dezvoltare Proiecte",
+      "techArea": "Echipamente de Automatizare Industrială pe bază de PC",
+      "logo": "/assets/Logos/Beckhoff_white.svg"
+    },
+    {
+      "year": "2003",
+      "name": "Microsoft",
+      "role": "Partener Platformă Strategică",
+      "workArea": "Vânzări Licențe, Dezvoltare Proiecte",
+      "techArea": "Servicii Software și Cloud",
+      "logo": "/assets/Logos/microsoft.svg"
+    },
+    {
+      "year": "2017",
+      "name": "SICK",
+      "role": "Partener Soluții AppSpace",
+      "workArea": "Dezvoltare Proiecte",
+      "techArea": "Senzori Industriali",
+      "logo": "/assets/Logos/sick.svg"
+    },
+    {
+      "year": "2018",
+      "name": "Markem Imaje",
+      "role": "Furnizor Tehnologie pe bază de Proiect",
+      "workArea": "Dezvoltare Proiecte",
+      "techArea": "Sisteme de Marcare și Codare",
+      "logo": "/assets/Logos/project_markem.svg"
+    },
+    {
+      "year": "2019",
+      "name": "Universal Robots",
+      "role": "Furnizor Tehnologie pe bază de Proiect",
+      "workArea": "Dezvoltare Proiecte",
+      "techArea": "Roboți Colaborativi",
+      "logo": "/assets/Logos/universal_robots.svg"
+    },
+    {
+      "year": "2020",
+      "name": "Interroll",
+      "role": "Furnizor Tehnologie pe bază de Proiect",
+      "workArea": "Vânzări Produse, Dezvoltare Proiecte",
+      "techArea": "Sisteme de Transport Modular Industrial",
+      "logo": "/assets/Logos/Interroll.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Sewio",
+      "role": "Partener Soluții Tehnologice",
+      "workArea": "Vânzări Produse, Dezvoltare Proiecte",
+      "techArea": "Sisteme RTLS Industriale",
+      "logo": "/assets/Logos/Sewio-Logo-Color-RGB.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Ignition",
+      "role": "Partener Soluții Tehnologice",
+      "workArea": "Vânzări Licențe, Dezvoltare Platforme",
+      "techArea": "Platformă SCADA Web-Based Industrială",
+      "logo": "/assets/Logos/ignition-by-inductive-automation-logo-vector.svg"
+    },
+    {
+      "year": "2023",
+      "name": "Efeso",
+      "role": "Partener Strategic Transformare Digitală",
+      "workArea": "Dezvoltare Proiecte Comune",
+      "techArea": "Consultanță Transformare Digitală Industrială",
+      "logo": "/assets/Logos/efeso_logo.svg"
+    },
+    {
+      "year": "2024",
+      "name": "Velotic",
+      "role": "Furnizor Soluții",
+      "workArea": "Dezvoltare Proiecte",
+      "techArea": "Platformă MES Industrială Integrată",
+      "logo": "/assets/Logos/velotic.svg"
+    },
+    {
+      "year": "2024",
+      "name": "Kuika",
+      "role": "Furnizor Tehnologie pe bază de Proiect",
+      "workArea": "Dezvoltare Proiecte",
+      "techArea": "Platformă Low-Code",
+      "logo": "/assets/Logos/kuika.svg"
+    },
+    {
+      "year": "2024",
+      "name": "IAS",
+      "role": "Furnizor Tehnologie pe bază de Proiect",
+      "workArea": "Dezvoltare Proiecte",
+      "techArea": "ERP"
+    },
+    {
+      "year": "2025",
+      "name": "Faradai",
+      "role": "Furnizor Tehnologie pe bază de Proiect",
+      "workArea": "Vânzări Produse",
+      "techArea": "Sisteme de Management Energetic IoT",
+      "logo": "/assets/Logos/Faradai.svg"
+    }
+  ],
+  "heroTitle": "Parteneriatele Noastre",
+  "heroSubtitle": "Prin construirea unor colaborări puternice cu giganți tehnologici globali, oferim cele mai bune soluții alături de partenerii noștri lideri din industrie."
+}

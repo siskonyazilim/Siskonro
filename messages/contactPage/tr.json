@@ -1,0 +1,114 @@
+{
+  "heroTitle": "Bize Ulaşın",
+  "heroSubtitle": "Global mühendislik gücümüzle projelerinize değer katmaya hazırız. İhtiyaçlarınızı paylaşın, birlikte çözüm üretelim.",
+  "heroBreadcrumbs": [
+    "Ana Sayfa",
+    "İletişim"
+  ],
+  "sectionEyebrow": "İletişim",
+  "sectionTitleTop": "Dünya Genelinde",
+  "sectionTitleAccent": "Aktif Erişim.",
+  "internshipTitle": "Staj",
+  "internshipText": "Staj Başvuru Formu için tıklayınız!",
+  "internshipCta": "Başvuru Formunu Aç",
+  "formTitle": "Projenizi Başlatın",
+  "formSubtitle": "Detayları paylaşın, uzman mühendislerimiz size en uygun stratejiyi sunsun.",
+  "formSuccess": "Mesajınız alındı! Ekibimiz en kısa sürede size dönecektir.",
+  "formSuccessTitle": "Mesajınız İletildi",
+  "formErrorTitle": "Gönderme Başarısız",
+  "formValidationError": "Lütfen işaretli alanları kontrol edip tekrar deneyin.",
+  "formSubmitError": "Mesajınız gönderilemedi. Lütfen kısa süre sonra tekrar deneyin.",
+  "sending": "Gönderiliyor...",
+  "firstName": "İsim",
+  "firstNamePlaceholder": "Adınız",
+  "lastName": "Soyisim",
+  "lastNamePlaceholder": "Soyadınız",
+  "company": "Şirket",
+  "companyPlaceholder": "Şirket adı",
+  "phone": "Telefon",
+  "phonePlaceholder": "+90 5xx xxx xx xx",
+  "position": "Pozisyon",
+  "positionPlaceholder": "Pozisyon seçin",
+  "positionOptions": [
+    "Genel Başvuru",
+    "Satış",
+    "Teknik Destek",
+    "Kariyer",
+    "Staj",
+    "Diğer"
+  ],
+  "sector": "Sektör",
+  "sectorPlaceholder": "Sektör seçin",
+  "sectorOptions": [
+    "Otomotiv",
+    "Beyaz Eşya",
+    "Gıda & İçecek",
+    "Tütün",
+    "Makine",
+    "Diğer"
+  ],
+  "email": "E-Posta",
+  "message": "Mesajınız",
+  "messagePlaceholder": "Projenizden bahsedin...",
+  "consent": "KVKK aydınlatma metnini ve gizlilik politikasını okudum, onayladım. İletişim amacıyla kişisel verilerimin işlenmesine onay veriyorum.",
+  "consentKvkkLinkLabel": "KVKK Aydınlatma Metni",
+  "consentPrivacyLinkLabel": "Gizlilik Politikası",
+  "consentAria": "KVKK ve gizlilik onayı",
+  "recaptchaMissing": "Lütfen robot olmadığınızı doğrulayın.",
+  "recaptchaConfigMissing": "reCAPTCHA site key eksik. Lütfen NEXT_PUBLIC_RECAPTCHA_SITE_KEY tanımlayın.",
+  "requiredField": "Bu alan zorunludur.",
+  "invalidEmail": "Lütfen geçerli bir e-posta adresi girin.",
+  "consentRequired": "KVKK ve gizlilik onayı gereklidir.",
+  "submit": "Mesajı Gönder",
+  "officesEyebrow": "Global Ofislerimiz",
+  "officesTitle": "Dünya Genelindeki Ofis Konumlarımız",
+  "officeFooter": "Ofis Detayları",
+  "officesSummary": "Siskon mühendisliği, Türkiye ve Avrupa genelindeki aktif kurulumları ve ofis operasyonlarıyla global ölçekte hizmet verir.",
+  "contactInfoGeneral": "Genel İletişim",
+  "contactInfoSales": "Satış & Teklif",
+  "contactInfoSupport": "Teknik Destek",
+  "contactInfoPhone": "Telefon",
+  "contactInfo": [
+    { "val": "info@siskon.com.tr", "href": "mailto:info@siskon.com.tr" },
+    { "val": "sales@siskon.com.tr", "href": "mailto:sales@siskon.com.tr" },
+    { "val": "support@siskon.com.tr", "href": "mailto:support@siskon.com.tr" },
+    { "val": "+90 (232) 245 00 76", "href": "tel:+902322450076" }
+  ],
+  "officeCards": [
+    {
+      "title": "DEPARK Ofis",
+      "mapEmbed": "https://maps.google.com/maps?q=Dokuz%20Eylul%20Universitesi%20Depark%20Beta%20Binasi%20Izmir&z=15&output=embed",
+      "mapsUrl": "https://www.google.com/maps/search/Dokuz+Eylul+Universitesi+DEPARK+Beta+Buca+Izmir",
+      "addressLines": [
+        "Dokuz Eylül Üniversitesi",
+        "Tınaztepe Yerleşkesi",
+        "DEPARK Beta Binası,",
+        "Adatepe Mahallesi",
+        "Doğuş Caddesi No:207/AG",
+        "Kat: 2 No: 202, 35390",
+        "Buca / İzmir"
+      ],
+      "regNo": "Adres No: 1575482912"
+    },
+    {
+      "title": "Ege Serbest Bölgesi (ESBAS) Ofis",
+      "mapEmbed": "https://maps.google.com/maps?q=Nil%C3%BCfer+Sk.+No:31+D:3,+Gaziemir,+%C4%B0zmir,+T%C3%BCrkiye&z=17&output=embed",
+      "mapsUrl": "https://www.google.com/maps/search/ESBAS+Ege+Serbest+Bolgesi+Gaziemir+Izmir",
+      "addressLines": ["Zafer SB Mahallesi", "Nilüfer Sok. No:31/3", "Gaziemir / İzmir"],
+      "regNo": "Adres No: 2709145623"
+    },
+    {
+      "title": "Romanya Ofis",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.3812984624165!2d25.6221473!3d45.6632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b910e74964b%3A0xac8086acca35f96a!2sSiskon%20Software%20and%20Automation%20SRL!5e0!3m2!1sen!2str!4v1783058783861!5m2!1sen!2str",
+      "mapsUrl": "https://www.google.com/maps/place/?q=place_id:0x40b35b910e74964b:0xac8086acca35f96a",
+      "addressLines": [
+        "Punct de lucru: Str.",
+        "Turnului Nr. 5,",
+        "Cladirea M.U.M. Scara 3,",
+        "Etajul 2, Biroul 5, 500152",
+        "Brasov, Romania"
+      ],
+      "regNo": ""
+    }
+  ]
+}

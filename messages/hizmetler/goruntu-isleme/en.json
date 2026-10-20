@@ -1,0 +1,52 @@
+{
+  "subtitle": "Achieve excellence in production through advanced machine vision technologies.",
+  "breadcrumbHome": "Home",
+  "breadcrumbServices": "Services",
+  "service": "SERVICE",
+  "title": "Image Processing Solutions",
+  "description": "Automate critical processes such as quality control, dimensional measurement, label reading and surface defect detection on your production lines with our industrial vision solutions. Minimize error rates and increase efficiency with AI-powered image analysis.",
+  "requestQuote": "Request a Quote",
+  "benefits": [
+    "Right technology usage with sector-specific process expertise",
+    "Optimal lighting solutions",
+    "Integration with automation and SCADA systems",
+    "Integration with ERP systems",
+    "Real-time data analysis",
+    "Remote monitoring, maintenance support and training"
+  ],
+  "benefitsEyebrow": "Benefits",
+  "benefitsTitle": "Why Siskon for Vision Inspection Solutions?",
+  "capabilities": [
+    "Presence/absence detection",
+    "Surface defect inspection",
+    "Dimensional measurement and counting",
+    "Position verification",
+    "Label and expiry-date checks",
+    "Pattern matching and validation",
+    "Optical character recognition (OCR)",
+    "Classification",
+    "3D profiling solutions"
+  ],
+  "capabilitiesEyebrow": "Capabilities",
+  "capabilitiesTitle": "What Kind of Machine Vision Solutions Do We Offer?",
+  "ctaTitle": "Automate Your Quality Control",
+  "ctaDescription": "Contact us for detailed information about our vision solutions.",
+  "ctaButton": "Contact Us",
+  "imageAlt": "Siskon Machine Vision Solutions - Automated Quality Control",
+  "imageAlt2": "Label verification camera scenario",
+  "imageAlt3": "Presence and absence detection camera scenario",
+  "imageAlt4": "Barcode reading camera scenario",
+  "showMore": "Click for More",
+  "showLess": "Show Less",
+  "heroTitle": "Image Processing Solutions",
+  "heroSubtitle": "Achieve excellence in production through advanced machine vision technologies.",
+  "heroDescription": "Automate critical processes such as quality control, dimensional measurement, label reading and surface defect detection on your production lines with our industrial vision solutions. Minimize error rates and increase efficiency with AI-powered image analysis.",
+  "heroImage": "/assets/strapi/Goruntu_Izleme_Watch_33e2d645e2.webp",
+  "serviceLabel": "SERVICE",
+  "ctaDesc": "Contact us for detailed information about our vision solutions.",
+  "moreImages": [
+    "/assets/strapi/Alt_Menu_6_6c125b7fad.svg",
+    "/assets/strapi/Alt_Menu_3_e9a7733e9c.svg",
+    "/assets/strapi/Alt_Menu_2_c55bd05d50.svg"
+  ]
+}
