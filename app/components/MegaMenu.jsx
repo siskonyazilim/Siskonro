@@ -137,7 +137,7 @@ export default function MegaMenu({ isOpen, onClose, services, onMouseEnter, onMo
               return (
                 <Link
                   key={service.href}
-                  href={service.href}
+                  href={localizePath(service.href)}
                   onClick={onClose}
                   className={`onsuit-mega-card`}
                 >

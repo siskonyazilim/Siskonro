@@ -18,8 +18,7 @@ const LOCALE_TAG = { ro: 'ro-RO', en: 'en-US', tr: 'tr-TR' };
 const HOME_LABEL = { tr: 'Ana Sayfa', en: 'Home', ro: 'Acasă' };
 
 // Arama sonuçları gibi indekslenmemesi gereken sayfalar için sayfa düğümü üretilmez.
-// ('/kurumsal/kilometre-taslari' şu an 404 veriyor.)
-const NO_PAGE_NODE = new Set(['/search', '/kurumsal/kilometre-taslari']);
+const NO_PAGE_NODE = new Set(['/search']);
 
 // ROUTE_META'da olmayan ama bilinen sayfa türleri.
 const PAGE_TYPE = {

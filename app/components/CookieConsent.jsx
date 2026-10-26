@@ -50,7 +50,8 @@ export default function CookieConsent() { // NOSONAR
 
   useEffect(() => {
     const existingConsent = globalThis.window?.localStorage.getItem(CONSENT_KEY);
-    setHasConsent(Boolean(existingConsent));
+    // effect gövdesinde senkron setState yerine mikro görev
+    queueMicrotask(() => setHasConsent(Boolean(existingConsent)));
   }, [dismissed]);
 
   const handleConsent = (value) => {

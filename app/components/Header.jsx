@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -262,11 +262,12 @@ function NavDropdown({ title, href, items, scrolled = false, isOpen = false, onO
     };
   }, [href, isOpen, onClose]);
 
-  useEffect(() => {
-    if (!isOpen) {
-      setFocusedIndex(-1);
-    }
-  }, [isOpen]);
+  // Menü kapanınca odak indeksini sıfırla (render sırasında state ayarı)
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
+  if (prevIsOpen !== isOpen) {
+    setPrevIsOpen(isOpen);
+    if (!isOpen) setFocusedIndex(-1);
+  }
 
   const isMegaLayout = Boolean(sidePanel);
   const isMegaPaletteOnly = useMegaPalette && !isMegaLayout;
@@ -933,7 +934,7 @@ function DesktopNavigation({ localizedMenuItems, scrolled, pathname, isMegaOpen,
   };
 
   return (
-    <nav className="hidden lg:flex items-center gap-1 xl:gap-3">
+    <nav className="hidden xl:flex items-center gap-1 xl:gap-3">
       {localizedMenuItems.map((item) => (
         <DesktopNavItem
           key={item.href}
@@ -952,22 +953,9 @@ function DesktopNavigation({ localizedMenuItems, scrolled, pathname, isMegaOpen,
   );
 }
 
-function renderDesktopNavigation(localizedMenuItems, scrolled, pathname, isMegaOpen, onOpenMega, onCloseMega) {
-  return (
-    <DesktopNavigation
-      localizedMenuItems={localizedMenuItems}
-      scrolled={scrolled}
-      pathname={pathname}
-      isMegaOpen={isMegaOpen}
-      onOpenMega={onOpenMega}
-      onCloseMega={onCloseMega}
-    />
-  );
-}
-
 function renderMobileActions(scrolled, t, mobileMenuOpen, setMobileMenuOpen, setSearchOpen) {
   return (
-    <div className="lg:hidden flex items-center gap-2">
+    <div className="xl:hidden flex items-center gap-2">
       <button
         type="button"
         aria-label={t('common.search')}
@@ -1048,9 +1036,12 @@ MobileNav.propTypes = {
   items: PropTypes.arrayOf(menuItemShape).isRequired,
 };
 
+// İstemcide hydration tamamlandı mı? (effect içinde setState yapmadan)
+const subscribeNoop = () => () => {};
+
 export default function Header({ initialData = null, allLocaleData = null }) {
   const { scrolled, setScrolled, mobileMenuOpen, setMobileMenuOpen, resetMenu, setSearchOpen } = useUIStore();
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(subscribeNoop, () => true, () => false);
   const { lang, locale, setLang, localizePath, t } = useLanguage();
   const pathname = usePathname();
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
@@ -1107,7 +1098,6 @@ export default function Header({ initialData = null, allLocaleData = null }) {
   const logoScrolledSrc = resolvedData?.logoScrolled ?? '/assets/new/common/siskon-logo-header.svg';
 
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -1127,10 +1117,16 @@ export default function Header({ initialData = null, allLocaleData = null }) {
     };
   }, [mobileMenuOpen]);
 
-  useEffect(() => {
-    resetMenu();
+  // Sayfa değişince açık menüleri kapat (render sırasında state ayarı)
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setIsMegaOpen(false);
     setLangDropdownOpen(false);
+  }
+
+  useEffect(() => {
+    resetMenu();
   }, [pathname, resetMenu]);
 
   useEffect(() => {
@@ -1245,9 +1241,16 @@ export default function Header({ initialData = null, allLocaleData = null }) {
             />
           </Link>
 
-          {renderDesktopNavigation(localizedMenuItems, isScrolled, pathname, isMegaOpen, handleOpenMega, handleCloseMega)}
+          <DesktopNavigation
+            localizedMenuItems={localizedMenuItems}
+            scrolled={isScrolled}
+            pathname={pathname}
+            isMegaOpen={isMegaOpen}
+            onOpenMega={handleOpenMega}
+            onCloseMega={handleCloseMega}
+          />
 
-          <div ref={rightActionsRef} className="hidden lg:flex items-center gap-6">
+          <div ref={rightActionsRef} className="hidden xl:flex items-center gap-6">
             <button
               onClick={() => setSearchOpen(true)}
               aria-label={t('common.search')}

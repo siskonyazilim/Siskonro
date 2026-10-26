@@ -14,6 +14,9 @@ import roLocale from '../../messages/components/footer/ro.json';
 
 const LOCALE_MAP = { tr: trLocale, en: enLocale, ro: roLocale };
 
+// Yapay Zeka Yönetim Sistemi Çerçeve Politikası — yeni sekmede açılan PDF
+const AI_POLICY_PDF = '/downloads/siskon-yapay-zeka-politikasi.pdf';
+
 /**
  * Footer istemci bileşeni.
  *
@@ -139,6 +142,9 @@ export default function Footer({ data }) { // NOSONAR
                   <Link href={localizePath(item.href)} className="text-white hover:text-sky-300">{item.name}</Link>
                 </li>
               ))}
+              <li>
+                <a href={AI_POLICY_PDF} target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-300">{t('aiPolicy')}</a>
+              </li>
             </ul>
           </div>
 
@@ -228,6 +234,7 @@ Footer.propTypes = {
     kvkk:          PropTypes.string,
     privacy:       PropTypes.string,
     cookie:        PropTypes.string,
+    aiPolicy:      PropTypes.string,
     socialLinks: PropTypes.shape({
       linkedinUrl:   PropTypes.string,
       youtubeUrl:    PropTypes.string,

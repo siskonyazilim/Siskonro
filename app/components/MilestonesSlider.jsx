@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useSyncExternalStore } from 'react';
 import { usePageLocale } from '../lib/i18n/usePageLocale';
 import trLocale from '../../messages/components/milestones/tr.json';
 import enLocale from '../../messages/components/milestones/en.json';
@@ -9,46 +9,37 @@ import roLocale from '../../messages/components/milestones/ro.json';
 const AUTOPLAY_DELAY = 1400; // ms - otomatik kayma hızı
 const RESUME_DELAY = 1200;   // ms - kullanıcı bıraktıktan sonra tekrar başlama süresi
 
+// İstemci/ekran genişliği için effect içinde setState yerine useSyncExternalStore kullanılır
+const subscribeNoop = () => () => {};
+const subscribeResize = (cb) => {
+  window.addEventListener('resize', cb);
+  return () => window.removeEventListener('resize', cb);
+};
+const getVisibleCount = () => (window.innerWidth < 1024 ? 2 : 4);
+
 export default function MilestonesSlider({ milestones: milestonesProp = null, sectionTitle: sectionTitleProp = null }) {
   const pt = usePageLocale(trLocale, enLocale, roLocale);
   // Strapi'den gelen veri öncelikli, yoksa JSON fallback
   const milestones = (milestonesProp && milestonesProp.length > 0) ? milestonesProp : pt('milestones');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(4);
-  const [isMounted, setIsMounted] = useState(false);
+  const visibleCount = useSyncExternalStore(subscribeResize, getVisibleCount, () => 4);
+  const isMounted = useSyncExternalStore(subscribeNoop, () => true, () => false);
 
   // Drag state
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
+  const [dragContainerWidth, setDragContainerWidth] = useState(0);
   const dragStartX = useRef(0);
   const containerRef = useRef(null);
   const autoplayTimer = useRef(null);
   const resumeTimer = useRef(null);
 
-  useEffect(() => {
-    setIsMounted(true);
-    const updateCount = () => {
-      if (window.innerWidth < 768) {
-        setVisibleCount(2);
-      } else if (window.innerWidth < 1024) {
-        setVisibleCount(2);
-      } else {
-        setVisibleCount(4);
-      }
-    };
-
-    updateCount();
-    window.addEventListener('resize', updateCount);
-    return () => window.removeEventListener('resize', updateCount);
-  }, []);
-
   const maxIndex = Math.max(0, milestones.length - visibleCount);
 
-  useEffect(() => {
-    if (currentIndex > maxIndex) {
-      setCurrentIndex(maxIndex);
-    }
-  }, [visibleCount, maxIndex, currentIndex]);
+  // Görünür adet azalınca geçerli indeksi sınırla (render sırasında state ayarı)
+  if (currentIndex > maxIndex) {
+    setCurrentIndex(maxIndex);
+  }
 
   const handleNext = useCallback(() => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -97,6 +88,7 @@ export default function MilestonesSlider({ milestones: milestonesProp = null, se
   const handleDragStart = (e) => {
     if (maxIndex === 0) return;
     setIsDragging(true);
+    setDragContainerWidth(containerRef.current?.offsetWidth || 0);
     dragStartX.current = getClientX(e);
     stopAutoplay();
     if (resumeTimer.current) clearTimeout(resumeTimer.current);
@@ -125,8 +117,8 @@ export default function MilestonesSlider({ milestones: milestonesProp = null, se
     pauseAndResume();
   };
 
-  const dragPercent = containerRef.current?.offsetWidth
-    ? (dragOffset / containerRef.current.offsetWidth) * 100
+  const dragPercent = dragContainerWidth
+    ? (dragOffset / dragContainerWidth) * 100
     : 0;
 
   const baseTranslate = currentIndex * (100 / visibleCount);

@@ -419,7 +419,8 @@ export default function ContactPageClient({ data }) {
     const params = new URLSearchParams(window.location.search);
     const paramPos = params.get('position') || params.get('pozisyon');
     if (paramPos) {
-      setFormData((prev) => ({ ...prev, position: paramPos }));
+      // URL parametresi yalnızca istemcide okunabilir; effect gövdesinde senkron setState yapma
+      queueMicrotask(() => setFormData((prev) => ({ ...prev, position: paramPos })));
     }
   }, []);
 

@@ -31,7 +31,8 @@ export function LanguageProvider(props) {
   useEffect(() => {
     const windowLocale = getWindowLocale();
     if (windowLocale && windowLocale !== clientLocale) {
-      setClientLocale(windowLocale);
+      // senkron setState yerine mikro görev (effect gövdesinde kademeli render olmasın)
+      queueMicrotask(() => setClientLocale(windowLocale));
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

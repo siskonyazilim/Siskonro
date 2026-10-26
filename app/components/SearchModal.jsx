@@ -46,12 +46,16 @@ export default function SearchModal() {
   const [query, setQuery] = useState('');
   const text = TEXT[locale] || TEXT.tr;
 
+  // Kapanınca sorguyu sıfırla (render sırasında state ayarı)
+  const [prevSearchOpen, setPrevSearchOpen] = useState(searchOpen);
+  if (prevSearchOpen !== searchOpen) {
+    setPrevSearchOpen(searchOpen);
+    if (!searchOpen) setQuery('');
+  }
+
   // Açılınca input'a odaklan, sayfa kaydırmasını kilitle, Esc ile kapat
   useEffect(() => {
-    if (!searchOpen) {
-      setQuery('');
-      return undefined;
-    }
+    if (!searchOpen) return undefined;
 
     inputRef.current?.focus();
 

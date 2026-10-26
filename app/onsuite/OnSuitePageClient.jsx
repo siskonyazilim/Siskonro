@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { toLocalizedPath } from '../lib/i18n/routes';
 import AnimatedButton from '../components/AnimatedButton';
@@ -21,6 +21,8 @@ export default function OnSuitePageClient({ data, locale }) {
   const [showAllModules, setShowAllModules] = useState(false);
   const [showAllGains, setShowAllGains] = useState(false);
   const detailBoxRef = React.useRef(null);
+  const detailCardRef = useRef(null);
+  const detailContentRef = useRef(null);
 
   const isEn = locale === 'en';
   const isRo = locale === 'ro';
@@ -29,6 +31,53 @@ export default function OnSuitePageClient({ data, locale }) {
   const localizePath = (path) => toLocalizedPath(path, locale);
 
   const modules = Array.isArray(data.modules) ? data.modules : [];
+
+  // Masaüstünde (xl+) kart sabit kalır; içindeki açıklama sayfa kaydırılırken ekranda kalacak
+  // şekilde kart sınırları içinde aşağı/yukarı kayar. (CSS sticky, body'deki overflow-y:auto
+  // yüzünden çalışmadığı için transform ile yapılır; state yazılmaz.)
+  useLayoutEffect(() => {
+    const card = detailCardRef.current;
+    const content = detailContentRef.current;
+    if (!card || !content) return undefined;
+
+    const STICKY_TOP = 128; // sabit header altında kalacak üst boşluk (px)
+    let frame = 0;
+
+    const follow = () => {
+      if (!window.matchMedia('(min-width: 1280px)').matches) {
+        content.style.transform = '';
+        return;
+      }
+      const cardStyle = getComputedStyle(card);
+      const paddingTop = parseFloat(cardStyle.paddingTop) || 0;
+      const paddingBottom = parseFloat(cardStyle.paddingBottom) || 0;
+      const room = card.clientHeight - paddingTop - paddingBottom - content.offsetHeight;
+      const wanted = STICKY_TOP - card.getBoundingClientRect().top - paddingTop;
+      const shift = Math.round(Math.min(Math.max(0, wanted), Math.max(0, room)));
+      content.style.transform = shift ? `translateY(${shift}px)` : '';
+    };
+
+    const schedule = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        follow();
+      });
+    };
+
+    follow();
+    const observer = new ResizeObserver(follow);
+    observer.observe(card);
+    observer.observe(content);
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, [showAllModules, modules.length]);
   const gainItems = Array.isArray(data.gainItems) ? data.gainItems : [];
   const architectureItems = Array.isArray(data.architectureItems) ? data.architectureItems : [];
   const technicalCards = Array.isArray(data.technicalCards) ? data.technicalCards : [];
@@ -176,10 +225,10 @@ export default function OnSuitePageClient({ data, locale }) {
 
             {modules.length > 0 && (
               <div ref={detailBoxRef} className="xl:col-span-8 w-full relative">
-                <div className="bg-white rounded-3xl p-6 md:p-10 xl:p-12 border border-slate-200 shadow-2xl shadow-slate-200/70 relative min-h-[520px] xl:h-full flex flex-col justify-start">
+                <div ref={detailCardRef} className="bg-white rounded-3xl p-6 md:p-10 xl:p-12 border border-slate-200 shadow-2xl shadow-slate-200/70 relative min-h-[520px] xl:h-full flex flex-col justify-start">
                   <div className="absolute inset-x-0 top-0 h-1 bg-sky-500 rounded-t-3xl"></div>
 
-                  <div className="relative z-10 space-y-8 xl:sticky xl:top-32">
+                  <div ref={detailContentRef} className="relative z-10 space-y-8">
                     <div className="flex items-center justify-between gap-6">
                       <div className="flex items-center gap-4">
                         <span className="h-[2px] w-10 bg-sky-500" aria-hidden="true"></span>

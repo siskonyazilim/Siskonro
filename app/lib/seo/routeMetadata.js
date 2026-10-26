@@ -458,20 +458,6 @@ export const ROUTE_META = {
       description: 'Endüstriyel otomasyon, IIoT, izlenebilirlik, yapay zeka ve geleceğin fabrikası teknolojileri hakkında yazılar ve haberler.',
     },
   },
-  '/kurumsal/kilometre-taslari': {
-    ro: {
-      title: 'Momente de referință în istoria Siskon',
-      description: 'Cronologia Siskon din 1997: lansări de produse, extinderi internaționale și proiecte care au format compania.',
-    },
-    en: {
-      title: 'Siskon milestones through the years',
-      description: 'The Siskon timeline since 1997: product launches, international expansion and the projects that shaped the company.',
-    },
-    tr: {
-      title: 'Siskon\'un yıllar içindeki kilometre taşları',
-      description: '1997\'den bugüne Siskon zaman çizelgesi: ürün lansmanları, uluslararası büyüme ve şirketi şekillendiren projeler.',
-    },
-  },
   '/iletisim': {
     ro: {
       title: 'Contactați Siskon România',

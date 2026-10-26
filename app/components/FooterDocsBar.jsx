@@ -12,7 +12,7 @@ export default function FooterDocsBar() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
       <a
-        href="https://www.siskon.com.tr/yonetim/ckeditor/kcfinder/upload/files/Fatura_Bilgileri.pdf"
+        href="/downloads/Fatura_Bilgileri.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative rounded-2xl border border-sky-100 bg-white px-5 md:px-6 py-5 md:py-6 pr-16 md:pr-20 hover:border-sky-300 hover:shadow-md transition-all focus-ring-card"

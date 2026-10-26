@@ -293,7 +293,9 @@ export default function SearchPage() {
 
   // İlk yüklemede URL'deki sorguyu ara
   useEffect(() => {
-    if (initialQ) doSearch(initialQ);
+    if (!initialQ) return undefined;
+    const timer = setTimeout(() => doSearch(initialQ), 0);
+    return () => clearTimeout(timer);
   }, [initialQ, doSearch]);
 
   useEffect(() => () => clearTimeout(debounceRef.current), []);

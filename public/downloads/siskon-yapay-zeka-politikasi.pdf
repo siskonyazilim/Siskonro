@@ -1,0 +1,161 @@
+EYS-PLC-Yapay Zekâ Yönetim
+Sistemi Çerçeve Politikası_v1.0
+Amaç, Kapsam ve Roller                                                   Kapsam
+
+Amaç                                                                     Siskon'un kendi iş süreçlerinde kullandığı YZ sistemleri ile
+                                                                         geliştirdiği yazılım ve otomasyon uygulamalarına entegre ettiği
+ISO/IEC 42001:2023 kapsamında YZ sistemlerinin kullanılmasına ve         hazır veya üçüncü taraf YZ modelleri ve hizmetleri bu politika
+iş süreçlerimize entegre edilmesine ilişkin esasları belirlemek; ilgili  kapsamındadır. Her YZ sistemi için Siskon'un rolü ve sorumlulukları
+tarafların beklentilerini karşılamak ve yapay zekâya yaklaşımımızı       kayıt altına alınır. Politika tüm çalışanlar için bağlayıcıdır; iş
+tüm paydaşlarımızla paylaşmaktır.                                        ortakları, tedarikçiler ve müşteriler için yaklaşımımızı gösteren bir
+                                                                         başvuru belgesidir.
+
+                                                                         Roller ve Sorumluluklar
+
+                                                                         İlgili roller ve görevler Görev ve Sorumluluk Dokümanı'nda, kısaltma
+                                                                         ve tanımlar ise Kısaltma ve Tanımlar Dokümanı'nda tanımlıdır.
+İlkelerimiz — Etik, Adalet ve
+Şeffaflık
+
+   Etik ve Sorumlu Kullanım
+
+    YZ'yi etik değerlerimiz ve iş ahlakımız çerçevesinde, insan haklarına ve
+    bireylerin temel hak ve özgürlüklerine saygılı şekilde kullanırız.
+
+   Ayrımcılık Yasağı ve Adalet
+
+    YZ sistemlerinin haksız önyargı ve ayrımcılık oluşturmamasını gözetiriz.
+    Kullandığımız modelleri dikkatle seçer, verileri özenle belirler ve çıktıları
+    düzenli olarak gözden geçiririz.
+
+   Şeffaflık
+
+    YZ sistemlerinin hangi amaçla kullanıldığı, hangi verileri işlediği ve
+    sonuçlarını nasıl ürettiği konusunda ilgili tarafları bilgilendiririz.
+İlkelerimiz — Güvenlik, Hesap Verebilirlik ve Teknik
+Sağlamlık
+
+İnsan Gözetimi                                                  Güvenlik ve Gizlilik
+
+YZ, insan muhakemesini tamamlayan bir destek aracıdır. YZ       YZ ile işlenen verileri bilgi güvenliği ve kişisel verilerin
+çıktıları insan onayı olmadan karara dönüşmez; kişileri         korunması ilkelerimize uygun olarak korur; yalnızca gerekli
+etkileyen süreçlerde YZ çıktısı tek başına karar dayanağı       veriyi, amacıyla sınırlı şekilde kullanırız.
+olamaz.
+
+Teknik Sağlamlık                                                Hesap Verebilirlik ve Fikri Mülkiyet
+
+YZ sistemlerinin güvenilirliğini ve dayanıklılığını yönetiriz.  Her YZ sisteminin bir sahibi vardır; sorumluluklar tanımlanır
+Geliştirdiğimiz bileşenleri test eder; üçüncü taraf YZ          ve karar süreçleri kayıt altına alınır. YZ tarafından üretilen
+hizmetlerini kullanıma almadan önce amaca uygunluk              içerikler telif ve lisans haklarını gözeterek kullanılır.
+açısından değerlendiririz.
+Taahhütlerimiz                                                           Risk ve Etki Yönetimi
+
+Stratejik Uyum ve Hedefler                                               YZ sistemlerinin risklerini yaşam döngüsü boyunca risk temelli bir
+                                                                         yaklaşımla belirler ve gerekli önlemleri alırız. Yüksek riskli
+YZ kullanımını şirket stratejimiz ve müşteri ihtiyaçlarıyla uyumlu       sistemlerin bireyler, toplum ve çevre üzerindeki olası etkilerini
+yönetiriz. YZ hedeflerimizi ölçülebilir ve izlenebilir olarak belirler;  değerlendiririz.
+verimlilik, veri güvenliği, eğitim ve olay yönetimi alanlarında
+düzenli değerlendiririz.                                                 Tedarikçiler ve Paydaş Katılımı
+
+Uygulanabilir Şartlar, Yetkinlik ve Farkındalık                          YZ hizmeti aldığımız tedarikçileri güvenlik ve etik ilkelerimiz
+                                                                         doğrultusunda değerlendiririz. Etkilenen taraflara danışır, geri
+Kişisel verilerin korunması ve fikri mülkiyet başta olmak üzere          bildirimlerini YZ sistemlerimizin yönetimine dahil ederiz.
+yürürlükteki mevzuata, müşteri sözleşmelerine, YZ tedarikçilerinin
+hizmet koşullarına ve ISO/IEC 42001 gerekliliklerine uyarız.             Sürekli İyileştirme ve Çevresel Sorumluluk
+Çalışanlara düzenli YZ eğitimi verir, farkındalık faaliyetleri yürütür
+ve etkinliği izleriz.                                                    YZ Yönetim Sistemimizi izleme, iç tetkik ve paydaş geri bildirimleri
+                                                                         doğrultusunda sürekli iyileştirir; enerji tüketimini en aza indiren
+                                                                         sürdürülebilir uygulamaları destekleriz.
+Yönetişim Yapımız
+
+Yapay zekâ yönetişimimiz Üst Yönetim liderliğinde yürütülür; YZ Yönetim Sistemi
+Çalışma Grubu koordinasyonu sağlar, riskleri değerlendirir ve etik YZ kullanımını
+gözetir.r.
+
+              İş Gerekçesi
+
+    1
+
+              Güvenlik ve Gizlilik Değerlendirmesi
+
+    2
+
+              Yönetim Onayı
+
+    3
+
+              Pilot ve Yaşam Döngüsü
+
+    4
+Kullanım Alanlarımız
+
+                      YZ'yi iş süreçlerimizde destekleyici bir araç olarak kullanırız. Başlıca
+                      kullanım alanlarımız şunlardır:
+
+                             Yazılım Geliştirme ve Test
+
+                             Teknik Destek
+
+                             Veri Analizi
+
+                             Proje Ön Analizi
+
+                             Dokümantasyon ve Raporlama
+
+                             Eğitim ve Gelişim
+
+                      İnsan kaynakları ve idari süreçlerde YZ yalnızca destek amacıyla ve kişisel veri
+                      kurallarına uygun olarak kullanılır.
+Veri ve Altyapı Yaklaşımımız
+
+Yerel Öncelikli               Onaylı Araçlar                    Veri Sınıfına Göre           Kimlik Bilgilerinin
+Yaklaşım                                                        Maskeleme                    Korunması
+                              Yalnızca kurumsal olarak
+Veri hassasiyetine göre,      onaylanmış YZ araçlarını          Gizli ve kişisel veriler YZ  Parola, API anahtarı ve
+verinin kurum dışına          kullanırız. İş verisi kişisel     sistemlerine maskelenerek    erişim belirteci gibi kimlik
+çıkmadığı yerel YZ            veya ücretsiz hesaplar            aktarılır; bulut tabanlı     doğrulama bilgileri hiçbir YZ
+çözümlerini öncelikli olarak  üzerinden YZ hizmetleriyle        hizmetlere gönderilen        aracıyla paylaşılmaz.
+kullanırız.                   paylaşılmaz.                      içerikler maskeleme
+                                                                çözümünden geçirilmeden
+                                                                gönderilmez.
+
+Müşteri Verilerinin Korunması                                   Yetkilendirme ve İzlenebilirlik
+
+Müşteri verileri yalnızca sözleşmelerin izin verdiği ölçüde ve  YZ sistemlerine erişim yetkilendirmeye tabidir; entegrasyonlara
+gizlilik yükümlülüklerine uygun olarak YZ ile işlenir.          yalnızca işin gerektirdiği en az yetki verilir. YZ kullanımı kayıt
+                                                                altına alınır ve izlenir.
+Kabul Edilemez Kullanımlar
+
+  Siskon'da Aşağıdaki YZ Kullanımları Yasaktır
+
+   Bu tür YZ hizmetleri geliştirilmez, satın alınmaz ve kullanılmaz.
+
+         Bireyleri psikolojik olarak manipüle eden veya zarara iten uygulamalar
+         Bireylerin kişilik, sadakat veya sosyal verilerine göre sosyal puanlama
+         Rızasız, gerçek zamanlı ve kitlesel biyometrik veya yüz tanıma tabanlı fişleme
+         Yasal dayanağı veya telif izni olmayan, kontrolsüz veri kazıma ile üretilmiş sistemler
+         Yüksek etkili kararların yetkili onayı olmaksızın tam otomasyona bağlanması
+         Onaysız üçüncü taraf YZ hizmetlerine gizli veya kişisel veri yüklenmesi
+         Manipülatif veya yanıltıcı içerik üretilmesi
+Bildirim ve Gözden Geçirme
+
+Bildirim                                   Gözden Geçirme
+
+YZ sistemlerimizle ilgili olumsuz bir      Bu politika, Entegre Yönetim Sistemi
+etki, etik endişe veya güvenlik sorunu     Politikamızın bir parçasıdır. En az
+fark eden tüm paydaşlarımız                yılda bir kez Yönetimin Gözden
+bildirimlerini eysai@siskon.com.tr         Geçirmesi kapsamında; ayrıca önemli
+adresine iletebilir. Bildirimler gizlilik  teknolojik gelişmeler, yeni bir YZ
+ilkesiyle ele alınır ve değerlendirme      kullanım alanının devreye alınması,
+sonucunda gerekli önlemler alınır. İyi     yasal düzenlemeler veya müşteri
+niyetle bildirimde bulunan                 sözleşmelerindeki değişiklikler
+çalışanlarımız bu nedenle olumsuz bir      doğrultusunda Üst Yönetim
+uygulamayla karşılaşmaz.                   tarafından gözden geçirilir ve
+                                           güncellenir. Politika Üst Yönetim
+                                           onayıyla yürürlüğe girer;
+                                           güncellemeler aynı şekilde
+                                           onaylanarak yayımlanır.
+
+Bu politika ISO/IEC 42001:2023 Yapay Zekâ Yönetim Sistemi standardı
+kapsamında hazırlanmış olup tüm çalışanlar için bağlayıcıdır.
+

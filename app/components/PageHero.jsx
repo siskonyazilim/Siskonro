@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
+const NON_LINKABLE_SEGMENTS = new Set(['yasal', 'legal']);
+
 export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
   const pathname = usePathname() || '/';
   const pathSegments = pathname.split('/').filter(Boolean);
@@ -25,6 +27,11 @@ export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
     const ancestorSegments = routeSegments.slice(0, idx);
     if (ancestorSegments.length === 0) {
       return localePrefix || '/';
+    }
+
+    // /yasal (ve /legal) bir indeks sayfası değil; bağlantı vermeden düz metin göster
+    if (NON_LINKABLE_SEGMENTS.has(ancestorSegments[ancestorSegments.length - 1])) {
+      return null;
     }
 
     return `${localePrefix}/${ancestorSegments.join('/')}`;

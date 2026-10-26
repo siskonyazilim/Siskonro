@@ -18,8 +18,8 @@ export default function CareerPageClient({ data, locale }) {
     const el = timelineRef.current;
     if (!el) return undefined;
     if (typeof IntersectionObserver === 'undefined') {
-      setTimelineVisible(true);
-      return undefined;
+      const raf = requestAnimationFrame(() => setTimelineVisible(true));
+      return () => cancelAnimationFrame(raf);
     }
     const io = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
