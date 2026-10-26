@@ -142,9 +142,12 @@ export default function Footer({ data }) { // NOSONAR
                   <Link href={localizePath(item.href)} className="text-white hover:text-sky-300">{item.name}</Link>
                 </li>
               ))}
-              <li>
-                <a href={AI_POLICY_PDF} target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-300">{t('aiPolicy')}</a>
-              </li>
+              {/* Politika yalnızca Türkçe hazırlandığı için sadece Türkçe sitede gösterilir */}
+              {locale === 'tr' && (
+                <li>
+                  <a href={AI_POLICY_PDF} target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-300">{t('aiPolicy')}</a>
+                </li>
+              )}
             </ul>
           </div>
 
