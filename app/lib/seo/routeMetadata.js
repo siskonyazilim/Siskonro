@@ -41,29 +41,29 @@ export const ROUTE_META = {
   '/': {
     ro: {
       title: 'Siskon România',
-      description: 'Digitalizare industrială și automatizare pentru fabricile din România: software la comandă, IIoT, trasabilitate, viziune artificială și OnSuite.',
+      description: 'Siskon este o companie de inginerie specializată în controlul proceselor, colectarea datelor, automatizare industrială și software specific clientului din 1997.',
     },
     en: {
       title: 'Siskon Romania',
-      description: 'Industrial digitalization and automation for Romanian factories: custom software, IIoT, traceability, machine vision and the OnSuite platform.',
+      description: 'Siskon is an engineering company specialized in process control, data collection, industrial automation and customer-specific software since 1997.',
     },
     tr: {
       title: 'Siskon Romanya',
-      description: 'Romanya fabrikaları için endüstriyel dijitalleşme ve otomasyon: özel yazılım, IIoT, izlenebilirlik, görüntü işleme ve OnSuite platformu; Brașov ofisimizden.',
+      description: 'Siskon, 1997\'den beri proses kontrolü, veri toplama, endüstriyel otomasyon ve müşteriye özel yazılım alanında uzmanlaşmış bir mühendislik şirketidir.',
     },
   },
   '/hizmetler': {
     ro: {
       title: 'Servicii de automatizare și software industrial',
-      description: 'Servicii Siskon pentru producție: software personalizat, IIoT, trasabilitate, automatizare, robotică, viziune artificială, AI și instruire în România.',
+      description: 'Soluții la cheie pentru industrie: colectarea datelor, automatizare industrială, software specific clientului, consultanță, instruire și suport tehnic.',
     },
     en: {
       title: 'Industrial automation and software services',
-      description: 'Explore Siskon services for manufacturers: custom software, IIoT, traceability, automation, robotics, machine vision, AI and training for teams in Romania.',
+      description: 'Turnkey solutions for industry: data collection, industrial automation, customer-specific software, consulting, commissioning, training and technical support.',
     },
     tr: {
       title: 'Endüstriyel otomasyon ve yazılım hizmetleri',
-      description: 'Üreticiler için Siskon hizmetleri: özel yazılım, IIoT, izlenebilirlik, otomasyon, robotik, görüntü işleme, yapay zeka ve Romanya ekipleri için eğitim.',
+      description: 'Endüstri için anahtar teslim çözümler: veri toplama, endüstriyel otomasyon, müşteriye özel yazılım, danışmanlık, devreye alma, eğitim ve teknik destek.',
     },
   },
   '/hizmetler/musteriye-ozel-yazilim': {
@@ -237,15 +237,15 @@ export const ROUTE_META = {
   '/sektorler': {
     ro: {
       title: 'Industrii deservite de Siskon',
-      description: 'Experiență în tutun, auto, electrocasnice, alimentar, farmaceutic, textile, energie și mașini: soluții adaptate cerințelor fiecărui sector de producție.',
+      description: 'Soluții pentru industria textilă, tutun, farmaceutică, mașini și auto: colectarea datelor, automatizare industrială și software specific clientului.',
     },
     en: {
       title: 'Industries served by Siskon',
-      description: 'Experience in tobacco, automotive, white goods, food, pharma, textile, energy and machinery: solutions tailored to each manufacturing sector.',
+      description: 'Solutions for the textile, tobacco, pharmaceutical, machinery and automotive industries: data collection, industrial automation and customer-specific software.',
     },
     tr: {
       title: 'Siskon\'un hizmet verdiği sektörler',
-      description: 'Tütün, otomotiv, beyaz eşya, gıda, ilaç, tekstil, enerji ve makine sektörlerinde deneyim; her üretim sektörüne uyarlanmış çözümler.',
+      description: 'Tekstil, tütün, ilaç, makine ve otomotiv sektörleri için veri toplama, endüstriyel otomasyon ve müşteriye özel yazılım çözümleri.',
     },
   },
   '/sektorler/tutun': {
@@ -363,57 +363,57 @@ export const ROUTE_META = {
   '/is-birlikleri': {
     ro: {
       title: 'Parteneri tehnologici ai Siskon',
-      description: 'Colaborăm cu lideri globali din automatizare, viziune și cloud pentru a oferi clienților soluții integrate, certificate și susținute pe termen lung.',
+      description: 'Parteneri tehnologici Beckhoff, SICK, Universal Robots și Velotic pentru soluții de automatizare industrială, colectarea datelor și Industria 4.0.',
     },
     en: {
       title: 'Siskon technology partners',
-      description: 'We work with global leaders in automation, vision and cloud to give customers integrated, certified and long-term supported solutions.',
+      description: 'Technology partners Beckhoff, SICK, Universal Robots and Velotic for industrial automation, data collection and Industry 4.0 solutions.',
     },
     tr: {
       title: 'Siskon teknoloji iş ortakları',
-      description: 'Otomasyon, görüntü işleme ve bulutta küresel liderlerle çalışarak müşterilere entegre, sertifikalı ve uzun vadeli desteklenen çözümler sunarız.',
+      description: 'Beckhoff, SICK, Universal Robots ve Velotic teknoloji ortaklarımızla endüstriyel otomasyon, veri toplama ve Endüstri 4.0 çözümleri.',
     },
   },
   '/referanslar': {
     ro: {
       title: 'Referințe și proiecte livrate',
-      description: 'Peste 500 de proiecte în 44 de țări: aflați cum au folosit producătorii din tutun, auto, farmaceutic și alimentar soluțiile Siskon.',
+      description: 'Referințe în industria textilă, tutun, farmaceutică, mașini și auto: proiecte de colectare a datelor, automatizare industrială și software livrate din 1997.',
     },
     en: {
       title: 'References and delivered projects',
-      description: 'More than 500 projects in 44 countries: see how manufacturers in tobacco, automotive, pharma and food use Siskon solutions.',
+      description: 'References in textile, tobacco, pharmaceutical, machinery and automotive: data collection, industrial automation and software projects since 1997.',
     },
     tr: {
       title: 'Referanslar ve tamamlanan projeler',
-      description: '44 ülkede 500\'den fazla proje: tütün, otomotiv, ilaç ve gıda üreticilerinin Siskon çözümlerini nasıl kullandığını görün.',
+      description: 'Tekstil, tütün, ilaç, makine ve otomotiv sektörlerinde 1997\'den beri teslim edilen veri toplama, endüstriyel otomasyon ve yazılım projeleri.',
     },
   },
   '/kurumsal': {
     ro: {
       title: 'Despre compania Siskon',
-      description: 'Din 1997, Siskon construiește software industrial și soluții de automatizare cu ingineri proprii, în Turcia și în România.',
+      description: 'Din 1997, Siskon oferă servicii profesionale de inginerie: controlul proceselor, colectarea datelor, automatizare industrială și Industria 4.0.',
     },
     en: {
       title: 'About Siskon',
-      description: 'Since 1997, Siskon has built industrial software and automation solutions with in-house engineers, in Turkey and in Romania.',
+      description: 'Since 1997, Siskon has provided professional engineering services: process control, data collection, industrial automation and Industry 4.0.',
     },
     tr: {
       title: 'Siskon hakkında',
-      description: '1997\'den beri Siskon, Türkiye ve Romanya\'da kendi mühendisleriyle endüstriyel yazılım ve otomasyon çözümleri geliştirmektedir.',
+      description: '1997\'den beri Siskon; proses kontrolü, veri toplama, endüstriyel otomasyon ve Endüstri 4.0 alanlarında profesyonel mühendislik hizmetleri sunar.',
     },
   },
   '/kurumsal/bizi-taniyin': {
     ro: {
       title: 'Povestea și echipa Siskon',
-      description: 'Aflați cum a crescut Siskon din 1997 până la prezența în 44 de țări: valori, abordare de inginerie și biroul din Brașov care deservește clienții din România.',
+      description: 'Companie de inginerie din 1997: consultanță, analiză de proiecte, furnizare de echipamente, aplicații software, punere în funcțiune, instruire și suport tehnic.',
     },
     en: {
       title: 'The Siskon story and team',
-      description: 'See how Siskon grew from 1997 to a presence in 44 countries: values, engineering approach and the Brașov office serving customers in Romania.',
+      description: 'Engineering company since 1997: consulting, project analysis, equipment supply, software applications, commissioning, training and technical support.',
     },
     tr: {
       title: 'Siskon\'un hikâyesi ve ekibi',
-      description: 'Siskon\'un 1997\'den 44 ülkeye uzanan yolculuğu: değerler, mühendislik yaklaşımı ve Romanya müşterilerine hizmet veren Brașov ofisi.',
+      description: '1997\'den beri mühendislik şirketi: danışmanlık, proje analizi, ekipman temini, yazılım uygulamaları, devreye alma, eğitim ve satış sonrası teknik destek.',
     },
   },
   '/kurumsal/kariyer': {
@@ -461,15 +461,15 @@ export const ROUTE_META = {
   '/iletisim': {
     ro: {
       title: 'Contactați Siskon România',
-      description: 'Solicitați o ofertă sau o discuție tehnică: formular de contact, date de contact și adresa biroului din Brașov, plus birourile din Izmir.',
+      description: 'Contactați Siskon pentru oferte și consultanță în automatizare industrială, colectarea datelor și software specific clientului: formular, telefon și birouri.',
     },
     en: {
       title: 'Contact Siskon Romania',
-      description: 'Request a quote or a technical conversation: contact form, contact details and the Brașov office address, plus our Izmir offices.',
+      description: 'Contact Siskon for quotes and consulting on industrial automation, data collection and customer-specific software: contact form, phone and office addresses.',
     },
     tr: {
       title: 'Siskon Romanya ile iletişime geçin',
-      description: 'Teklif veya teknik görüşme talep edin: iletişim formu, iletişim bilgileri ve Brașov ofisi adresi ile İzmir ofislerimiz.',
+      description: 'Endüstriyel otomasyon, veri toplama ve müşteriye özel yazılım için teklif ve danışmanlık almak üzere Siskon ile iletişime geçin: form, telefon, ofisler.',
     },
   },
   '/search': {
@@ -532,38 +532,36 @@ export const ROUTE_META = {
 
 export const ROUTE_PATHS = Object.keys(ROUTE_META);
 
+// Canlı siskon.ro sitesinin kullandığı marka adı ve anahtar kelimeler
+export const SITE_BRAND = 'Siskon Automation and Software Inc.';
+const HOME_TAGLINE = {
+  ro: 'Automatizare industrială, Colectarea datelor, Industria 4.0',
+  en: 'Industrial Automation, Data Collection, Industry 4.0',
+  tr: 'Endüstriyel Otomasyon, Veri Toplama, Endüstri 4.0',
+};
+export const SITE_KEYWORDS = [
+  'Siskon Automation', 'Automatizări industriale', 'Colectare de date', 'Industria 4.0', 'Industrial Automation',
+  'Data Collection', 'Industry 4.0', 'OEE', 'Traceability', 'Condition Monitoring', 'PLC', 'SAP MII', 'Beckhoff',
+  'SICK', 'Universal Robots', 'Microsoft', 'Azure', 'Software și automatizare',
+];
+
 function normalizePath(pathname) {
   if (!pathname) return '/';
   if (pathname === '/') return '/';
   return pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
 }
 
-function normalizeTitle(title, locale, minLength = 30, maxLength = 70) {
+function normalizeTitle(title, locale, isHome = false, maxLength = 70) {
+  // Ana sayfa: canlı siskon.ro başlığı ("Marka - anahtar konular"); kesilmez
+  if (isHome) return `${SITE_BRAND} - ${HOME_TAGLINE[locale] || HOME_TAGLINE.ro}`;
+
   const clean = String(title || '').replaceAll(/\s+/g, ' ').trim();
-  const brandSuffix = locale === 'en'
-    ? 'Siskon Romania — Industrial Digitalization and Automation'
-    : locale === 'ro'
-    ? 'Siskon România — Digitalizare și Automatizare Industrială'
-    : 'Siskon Romanya — Endüstriyel Dijitalleşme ve Otomasyon';
+  const pageLabel = clean.split('|').map((part) => part.trim()).find((part) => part.length > 0) || SITE_BRAND;
 
-  const parts = clean.split('|').map((part) => part.trim());
-  const firstPart = parts.find((part) => part.length > 0) || '';
-  const pageLabel = /siskon/i.test(firstPart) ? '' : firstPart;
+  // Başlık zaten "Siskon" içeriyorsa marka eki eklenmez (tekrar olmasın)
+  if (/siskon/i.test(pageLabel)) return pageLabel.length <= maxLength ? pageLabel : pageLabel.slice(0, maxLength).trim();
 
-  let result = pageLabel ? `${pageLabel} | ${brandSuffix}` : brandSuffix;
-  if (result.length < minLength) {
-    result = pageLabel
-      ? `${pageLabel} | ${brandSuffix}`
-      : brandSuffix;
-  }
-  if (result.length <= maxLength) return result;
-
-  if (!pageLabel) {
-    return brandSuffix.slice(0, maxLength).trim();
-  }
-
-  // Uzun marka eki sayfa başlığını kesmesin: önce kısa marka ekiyle dene
-  // ("Endüstriyel Nesnelerin İnterneti (IIoT) Çözümleri | Siskon").
+  // İç sayfalar tutarlı olsun diye kısa marka eki kullanılır ("... | Siskon România")
   const shortBrand = locale === 'en' ? 'Siskon Romania' : locale === 'ro' ? 'Siskon România' : 'Siskon Romanya';
   const shortResult = `${pageLabel} | ${shortBrand}`;
   if (shortResult.length <= maxLength) return shortResult;
@@ -573,9 +571,7 @@ function normalizeTitle(title, locale, minLength = 30, maxLength = 70) {
   const labelCandidate = pageLabel.slice(0, labelMaxLength + 1);
   const lastSpace = labelCandidate.lastIndexOf(' ');
   const cutoff = lastSpace > 8 ? lastSpace : labelMaxLength;
-  const shortLabel = labelCandidate.slice(0, cutoff).trim();
-
-  return `${shortLabel} | ${shortBrand}`;
+  return `${labelCandidate.slice(0, cutoff).trim()} | ${shortBrand}`;
 }
 
 function ensureSentenceEnding(text) {
@@ -661,7 +657,7 @@ export function buildLocalizedMetadata({ pathname, siteUrl = SITE_URL }) {
   const internalPath = normalizePath(toInternalPath(pathname, locale));
   const routeMeta = ROUTE_META[internalPath] || ROUTE_META['/'];
   const selected = locale === 'en' ? routeMeta.en : locale === 'ro' ? routeMeta.ro : routeMeta.tr;
-  const title = normalizeTitle(selected?.title || routeMeta.ro?.title || routeMeta.en?.title || '', locale);
+  const title = normalizeTitle(selected?.title || routeMeta.ro?.title || routeMeta.en?.title || '', locale, internalPath === '/');
   const description = normalizeDescription(selected?.description || routeMeta.ro?.description || routeMeta.en?.description || '', locale);
   const canonicalPath = toLocalizedPath(internalPath, locale);
   const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
@@ -670,12 +666,13 @@ export function buildLocalizedMetadata({ pathname, siteUrl = SITE_URL }) {
   return {
     title,
     description,
+    keywords: SITE_KEYWORDS,
     openGraph: {
       title,
       description,
       type: 'website',
       locale: locale === 'en' ? 'en_US' : locale === 'ro' ? 'ro_RO' : 'tr_TR',
-      siteName: 'Siskon',
+      siteName: SITE_BRAND,
       url: canonicalUrl,
       images: [
         {
@@ -712,7 +709,7 @@ export function getMetadataForPathname(pathname) {
   const internalPath = normalizePath(toInternalPath(pathname, locale));
   const routeMeta = ROUTE_META[internalPath] || ROUTE_META['/'];
   const selected = locale === 'en' ? routeMeta.en : locale === 'ro' ? routeMeta.ro : routeMeta.tr;
-  const title = normalizeTitle(selected?.title || routeMeta.ro?.title || routeMeta.en?.title || '', locale);
+  const title = normalizeTitle(selected?.title || routeMeta.ro?.title || routeMeta.en?.title || '', locale, internalPath === '/');
   const description = normalizeDescription(selected?.description || routeMeta.ro?.description || routeMeta.en?.description || '', locale);
 
   return {

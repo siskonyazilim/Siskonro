@@ -33,7 +33,7 @@ const PAGE_TYPE = {
 const ORG = {
   name: 'Siskon România',
   legalName: 'Siskon Software and Automation SRL',
-  alternateName: 'Siskon Software and Automation',
+  alternateName: ['Siskon Software and Automation', 'Siskon Automation and Software Inc.'],
   parentName: 'Siskon Yazılım ve Otomasyon',
   foundingDate: '1997',
   telephone: '+90-232-245-00-76',
