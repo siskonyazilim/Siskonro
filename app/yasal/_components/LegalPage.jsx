@@ -13,6 +13,9 @@ import PageHero from '../../components/PageHero';
 import AnimatedCTALink from '../../components/AnimatedCTALink';
 import { detectLocale, toLocalizedPath } from '../../lib/i18n/routes';
 import { strapiGet } from '@/lib/strapi/client';
+import './legal.css';
+
+const USE_STRAPI = false;
 
 async function fetchStrapiContent(endpoint, locale) {
   try {
@@ -49,7 +52,9 @@ export default async function LegalPage({ endpoint, messages, searchParams }) {
     : detectLocale(requestPath);
 
   const fallback = messages[locale] ?? messages.tr;
-  const content = await fetchStrapiContent(endpoint, locale);
+  // Geçici: içerik Strapi yerine yerel JSON'dan (messages/yasal/*) gelir.
+  // Strapi alan yapısı güncellenince USE_STRAPI true yapılacak.
+  const content = USE_STRAPI ? await fetchStrapiContent(endpoint, locale) : null;
   const d = content ?? fallback;
 
   // htmlContent: Strapi Rich Text (Blocks) ise string değil, array gelir.

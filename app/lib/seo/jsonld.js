@@ -11,7 +11,7 @@
  * (Google, FAQPage işaretlemesinin sayfada görünür içerikle eşleşmesini ister).
  */
 
-import { ROUTE_META } from './routeMetadata';
+import { ROUTE_META, getMetadataForPathname } from './routeMetadata';
 import { detectLocale, toInternalPath, toLocalizedPath } from '../i18n/routes';
 
 const LOCALE_TAG = { ro: 'ro-RO', en: 'en-US', tr: 'tr-TR' };
@@ -268,7 +268,8 @@ export function buildPageNodes({ pathname, siteUrl }) {
     '@type': type,
     '@id': `${pageUrl}#webpage`,
     url: pageUrl,
-    name: isHome ? meta.title : name,
+    // Ana sayfada şema adı, <title> ile aynı (normalize edilmiş) başlıktır
+    name: isHome ? getMetadataForPathname(pathname).title : name,
     description: meta.description,
     inLanguage: LOCALE_TAG[locale],
     isPartOf: { '@id': websiteId(siteUrl) },

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import './career.css';
 import { useLanguage } from '../../_context/LanguageContext';
 import { usePageLocale } from '../../lib/i18n/usePageLocale';
 import trLocale from '../../../messages/kurumsal/kariyer/tr.json';

@@ -40,7 +40,6 @@ const EN_TO_TR_ROUTES = {
   '/blog': '/blog',
   '/contact': '/iletisim',
   '/legal/kvkk': '/yasal/kvkk',
-  '/legal/privacy-policy': '/yasal/gizlilik-politikasi',
   '/legal/cookie-policy': '/yasal/cerez-politikasi',
 };
 
@@ -91,7 +90,6 @@ const RO_TO_TR_ROUTES = {
   '/blog': '/blog',
   '/contact': '/iletisim',
   '/legal/gdpr': '/yasal/kvkk',
-  '/legal/politica-de-confidentialitate': '/yasal/gizlilik-politikasi',
   '/legal/politica-de-cookie-uri': '/yasal/cerez-politikasi',
 };
 

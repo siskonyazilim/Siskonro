@@ -178,6 +178,7 @@ function ContactInfoPanel({ strapiContent, contactInfos, pt }) {
 
 /* ── ContactFormPanel ─────────────────────────────────────────────────────── */
 function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubmit, recaptchaSiteKey, recaptchaToken, onRecaptchaChange, recaptchaRef, formData, formErrors, onFieldChange, onConsentChange, isSubmitting }) {
+  const { localizePath } = useLanguage();
   const formTitle    = strapiContent?.formTitle    || pt('formTitle');
   const formSubtitle = strapiContent?.formSubtitle || pt('formSubtitle');
 
@@ -299,9 +300,7 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
                 aria-describedby={formErrors.consent ? fieldErrorId('consent') : undefined} />
               <span>
                 {pt('consent')}{' '}
-                <a href="/yasal/kvkk" className="underline hover:text-sky-300" target="_blank" rel="noopener noreferrer">{pt('consentKvkkLinkLabel')}</a>
-                {' / '}
-                <a href="/yasal/gizlilik-politikasi" className="underline hover:text-sky-300" target="_blank" rel="noopener noreferrer">{pt('consentPrivacyLinkLabel')}</a>
+                <a href={localizePath('/yasal/kvkk')} className="underline hover:text-sky-300" target="_blank" rel="noopener noreferrer">{pt('consentKvkkLinkLabel')}</a>
               </span>
             </label>
             {formErrors.consent ? <p id={fieldErrorId('consent')} className="form-error-text -mt-2">{formErrors.consent}</p> : null}

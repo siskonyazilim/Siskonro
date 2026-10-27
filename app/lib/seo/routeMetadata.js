@@ -488,8 +488,8 @@ export const ROUTE_META = {
   },
   '/yasal/kvkk': {
     ro: {
-      title: 'Notificare de prelucrare a datelor (GDPR)',
-      description: 'Informații despre cum prelucrăm datele cu caracter personal, temeiurile legale, perioadele de păstrare și drepturile persoanelor vizate.',
+      title: 'Politica de confidențialitate Siskon',
+      description: 'Cum colectăm, folosim și protejăm datele vizitatorilor și contactelor de afaceri: temeiuri legale, perioade de păstrare și drepturile persoanelor vizate (GDPR).',
     },
     en: {
       title: 'Personal data processing notice (GDPR)',
@@ -498,20 +498,6 @@ export const ROUTE_META = {
     tr: {
       title: 'Kişisel veri işleme aydınlatma metni',
       description: 'Kişisel verileri nasıl işlediğimiz, hukuki sebepler, saklama süreleri ve ilgili kişilerin hakları.',
-    },
-  },
-  '/yasal/gizlilik-politikasi': {
-    ro: {
-      title: 'Politica de confidențialitate Siskon',
-      description: 'Cum colectăm, folosim și protejăm datele vizitatorilor și clienților, inclusiv formularele de contact și măsurile de securitate aplicate.',
-    },
-    en: {
-      title: 'Siskon privacy policy',
-      description: 'How we collect, use and protect visitor and customer data, including contact forms and the security measures we apply.',
-    },
-    tr: {
-      title: 'Siskon gizlilik politikası',
-      description: 'Ziyaretçi ve müşteri verilerini nasıl topladığımız, kullandığımız ve koruduğumuz; iletişim formları ve uyguladığımız güvenlik önlemleri.',
     },
   },
   '/yasal/cerez-politikasi': {

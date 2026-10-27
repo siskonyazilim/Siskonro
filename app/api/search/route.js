@@ -89,7 +89,6 @@ const STATIC_PAGES = {
     { title: 'İletişim', desc: 'Teklif, proje ve iş birliği talepleri için iletişim formu. İzmir DEPARK ve ESBAS ofisleri.', href: '/iletisim#contact-form', category: 'page' },
     { title: 'Blog', desc: 'Endüstriyel otomasyon, IIoT, yapay zeka ve üretim teknolojileri hakkında makaleler.', href: '/blog', category: 'blog' },
     { title: 'KVKK Aydınlatma Metni', desc: 'Kişisel verilerin işlenmesine ilişkin KVKK kapsamında bilgilendirme.', href: '/yasal/kvkk', category: 'legal' },
-    { title: 'Gizlilik Politikası', desc: 'Veri gizliliği ilkeleri ve kişisel veri güvenliği politikası.', href: '/yasal/gizlilik-politikasi', category: 'legal' },
     { title: 'Çerez Politikası', desc: 'Web sitesi çerez kullanımı, çerez türleri ve tercih yönetimi.', href: '/yasal/cerez-politikasi', category: 'legal' },
     // Sektörler
     { title: 'Otomotiv Sektörü', desc: 'Otomotiv ve yan sanayi için otomasyon, izlenebilirlik, robot çözümleri ve kalite kontrol.', href: '/sektorler/otomotiv', category: 'sector' },
@@ -114,7 +113,6 @@ const STATIC_PAGES = {
     { title: 'Contact', desc: 'Contact form for proposals, projects and partnerships. Izmir DEPARK and ESBAS offices.', href: '/iletisim#contact-form', category: 'page' },
     { title: 'Blog', desc: 'Articles on industrial automation, IIoT, artificial intelligence and manufacturing technology.', href: '/blog', category: 'blog' },
     { title: 'PDPL Notice', desc: 'Information notice on personal data processing under Turkish PDPL.', href: '/yasal/kvkk', category: 'legal' },
-    { title: 'Privacy Policy', desc: 'Data privacy principles and personal data security policy.', href: '/yasal/gizlilik-politikasi', category: 'legal' },
     { title: 'Cookie Policy', desc: 'Website cookie usage, cookie types and preference management.', href: '/yasal/cerez-politikasi', category: 'legal' },
     { title: 'Automotive Sector', desc: 'Automation, traceability, robotics and quality solutions for automotive and Tier 1 suppliers.', href: '/sektorler/otomotiv', category: 'sector' },
     { title: 'White Goods Sector', desc: 'IIoT, machine vision and smart factory solutions for white goods manufacturing.', href: '/sektorler/beyaz-esya', category: 'sector' },

@@ -47,6 +47,13 @@ export function LanguageProvider(props) {
   }, [currentPathname]);
 
   const locale = clientLocale;
+
+  // Dil client tarafında değişince <html lang> (sunucuda bir kez yazılıyor) da güncellensin:
+  // ekran okuyucular ve tarayıcı çeviri/yazım denetimi doğru dili görsün.
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   const lang = locale === 'en' ? 'EN' : locale === 'ro' ? 'RO' : 'TR';
   const messages = locale === 'en' ? enMessages : locale === 'ro' ? roMessages : trMessages;
 

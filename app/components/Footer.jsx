@@ -20,17 +20,21 @@ const AI_POLICY_PDF = '/downloads/siskon-yapay-zeka-politikasi.pdf';
 /**
  * Footer istemci bileşeni.
  *
- * `data` prop geçilirse → Strapi / FooterServer verisini kullanır.
- * `data` prop geçilmezse → yerel JSON fallback'e döner (geriye dönük uyumluluk).
+ * `allLocaleData` geçilirse → FooterServer üç dilin verisini birden verir; aktif dil
+ *   (useLanguage) burada seçilir. Dil client tarafında değişince layout yeniden
+ *   render edilmediği için footer'ın metni bu sayede anında güncellenir.
+ * `data` prop geçilirse → tek dilli veri (eski kullanım).
+ * İkisi de yoksa → yerel JSON fallback'e döner.
  *
- * @param {{ data?: import('../../lib/strapi/services/footer').FooterData }} props
+ * @param {{ data?: import('../../lib/strapi/services/footer').FooterData, allLocaleData?: Record<'tr'|'en'|'ro', object|null> }} props
  */
-export default function Footer({ data }) { // NOSONAR
+export default function Footer({ data, allLocaleData }) { // NOSONAR
   const { locale, localizePath } = useLanguage();
   const serviceLocale = locale === 'en' ? 'en' : locale === 'ro' ? 'ro' : 'tr';
 
-  // Eğer Strapi'den data geldiyse onu kullan; yoksa JSON fallback
-  const msgs = data ?? LOCALE_MAP[locale] ?? roLocale;
+  // Aktif dilin Strapi verisi (yoksa tek dilli `data`); olmazsa JSON fallback
+  const localeData = allLocaleData?.[locale] ?? (allLocaleData ? null : data);
+  const msgs = localeData ?? LOCALE_MAP[locale] ?? roLocale;
 
   // Kısa yardımcı: Strapi veya fallback'ten string al
   const t = (key) => msgs[key] ?? LOCALE_MAP[locale]?.[key] ?? '';
@@ -55,22 +59,21 @@ export default function Footer({ data }) { // NOSONAR
     { name: t('career'),      href: '/kurumsal/kariyer' },
     { name: 'Blog',           href: '/blog' },
     { name: t('kvkk'),        href: '/yasal/kvkk' },
-    { name: t('privacy'),     href: '/yasal/gizlilik-politikasi' },
     { name: t('cookie'),      href: '/yasal/cerez-politikasi' },
   ];
 
   // Sosyal medya linkleri — Strapi gelirse ondan al, yoksa sabit değerler
-  const social = data?.socialLinks ?? {
+  const social = localeData?.socialLinks ?? {
     linkedinUrl: 'https://tr.linkedin.com/company/siskonyazilimveotomasyon',
     youtubeUrl:  'https://www.youtube.com/@SiskonYazilimveOtomasyon',
     instagramUrl:'https://www.instagram.com/siskonotomasyon/',
     twitterUrl:  locale === 'ro' ? 'https://x.com/siskonromania' : 'https://x.com/siskonyazilim',
   };
 
-  const logoSrc = data?.logo ?? '/assets/new/common/siskon-logo.svg';
-  const email   = data?.email   ?? 'info@siskon.com.tr';
-  const phone   = data?.phone   ?? '+90 (232) 245 00 76';
-  const slogan  = data?.slogan  ?? 'Makes Your Factory Smarter';
+  const logoSrc = localeData?.logo ?? '/assets/new/common/siskon-logo.svg';
+  const email   = localeData?.email   ?? 'info@siskon.com.tr';
+  const phone   = localeData?.phone   ?? '+90 (232) 245 00 76';
+  const slogan  = localeData?.slogan  ?? 'Makes Your Factory Smarter';
 
   return (
     <footer className="bg-[#0A192F] text-white pt-16 pb-7">
@@ -215,38 +218,46 @@ export default function Footer({ data }) { // NOSONAR
   );
 }
 
+const footerDataShape = PropTypes.shape({
+  logo:       PropTypes.string,
+  tagline:    PropTypes.string,
+  email:      PropTypes.string,
+  phone:      PropTypes.string,
+  slogan:     PropTypes.string,
+  allRights:  PropTypes.string,
+  services:   PropTypes.string,
+  products:   PropTypes.string,
+  insights:   PropTypes.string,
+  corporate:  PropTypes.string,
+  stayConnected: PropTypes.string,
+  rAndD:         PropTypes.string,
+  partnerships:  PropTypes.string,
+  references:    PropTypes.string,
+  about:         PropTypes.string,
+  career:        PropTypes.string,
+  kvkk:          PropTypes.string,
+  cookie:        PropTypes.string,
+  aiPolicy:      PropTypes.string,
+  socialLinks: PropTypes.shape({
+    linkedinUrl:   PropTypes.string,
+    youtubeUrl:    PropTypes.string,
+    instagramUrl:  PropTypes.string,
+    twitterUrl:    PropTypes.string,
+  }),
+});
+
 Footer.propTypes = {
-  /** Strapi'den gelen (ya da getFooterData'nın döndürdüğü fallback) footer verisi */
-  data: PropTypes.shape({
-    logo:       PropTypes.string,
-    tagline:    PropTypes.string,
-    email:      PropTypes.string,
-    phone:      PropTypes.string,
-    slogan:     PropTypes.string,
-    allRights:  PropTypes.string,
-    services:   PropTypes.string,
-    products:   PropTypes.string,
-    insights:   PropTypes.string,
-    corporate:  PropTypes.string,
-    stayConnected: PropTypes.string,
-    rAndD:         PropTypes.string,
-    partnerships:  PropTypes.string,
-    references:    PropTypes.string,
-    about:         PropTypes.string,
-    career:        PropTypes.string,
-    kvkk:          PropTypes.string,
-    privacy:       PropTypes.string,
-    cookie:        PropTypes.string,
-    aiPolicy:      PropTypes.string,
-    socialLinks: PropTypes.shape({
-      linkedinUrl:   PropTypes.string,
-      youtubeUrl:    PropTypes.string,
-      instagramUrl:  PropTypes.string,
-      twitterUrl:    PropTypes.string,
-    }),
+  /** Tek dilli footer verisi (eski kullanım) */
+  data: footerDataShape,
+  /** Üç dilin footer verisi (Strapi ya da getFooterData fallback'i); aktif dil istemcide seçilir */
+  allLocaleData: PropTypes.shape({
+    tr: footerDataShape,
+    en: footerDataShape,
+    ro: footerDataShape,
   }),
 };
 
 Footer.defaultProps = {
   data: null,
+  allLocaleData: null,
 };

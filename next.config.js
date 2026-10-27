@@ -82,8 +82,13 @@ const nextConfig = {
       { source: '/ro/compania/sustenabilitate', destination: '/compania/sustenabilitate', permanent: true },
       { source: '/ro/contact', destination: '/contact', permanent: true },
       { source: '/ro/legal/gdpr', destination: '/legal/gdpr', permanent: true },
-      { source: '/ro/legal/politica-de-confidentialitate', destination: '/legal/politica-de-confidentialitate', permanent: true },
+      { source: '/ro/legal/politica-de-confidentialitate', destination: '/legal/gdpr', permanent: true },
+      { source: '/legal/politica-de-confidentialitate', destination: '/legal/gdpr', permanent: true },
       { source: '/ro/legal/politica-de-cookie-uri', destination: '/legal/politica-de-cookie-uri', permanent: true },
+      // Gizlilik politikası sayfası kaldırıldı: içerik KVKK/GDPR sayfasında (Privacy Policy) yer alır
+      { source: '/en/legal/privacy-policy', destination: '/en/legal/kvkk', permanent: true },
+      { source: '/tr/yasal/gizlilik-politikasi', destination: '/tr/yasal/kvkk', permanent: true },
+      { source: '/yasal/gizlilik-politikasi', destination: '/tr/yasal/kvkk', permanent: true },
       // GE Vernova page removed: all legacy URLs permanently move to Velotic
       { source: '/servicii/ge-vernova', destination: '/servicii/velotic', permanent: true },
       { source: '/en/services/ge-vernova', destination: '/en/services/velotic', permanent: true },
@@ -155,7 +160,6 @@ const nextConfig = {
         { source: '/en/blog', destination: '/blog?_locale=en' },
         { source: '/en/contact', destination: '/iletisim?_locale=en' },
         { source: '/en/legal/kvkk', destination: '/yasal/kvkk?_locale=en' },
-        { source: '/en/legal/privacy-policy', destination: '/yasal/gizlilik-politikasi?_locale=en' },
         { source: '/en/legal/cookie-policy', destination: '/yasal/cerez-politikasi?_locale=en' },
         // RO routes — Romanian is the default locale, NO prefix
         { source: '/servicii', destination: '/hizmetler?_locale=ro' },
@@ -186,7 +190,6 @@ const nextConfig = {
         { source: '/compania/sustenabilitate', destination: '/kurumsal/surdurulebilirlik?_locale=ro' },
         { source: '/contact', destination: '/iletisim?_locale=ro' },
         { source: '/legal/gdpr', destination: '/yasal/kvkk?_locale=ro' },
-        { source: '/legal/politica-de-confidentialitate', destination: '/yasal/gizlilik-politikasi?_locale=ro' },
         { source: '/legal/politica-de-cookie-uri', destination: '/yasal/cerez-politikasi?_locale=ro' },
         // TR routes — /tr prefix
         { source: '/tr', destination: '/?_locale=tr' },

@@ -65,14 +65,104 @@ function log(level, event, data = {}) {
   }
 }
 
+// ── Bu proje siskon.ro'dur: tüm formlar siskon.ro olarak etiketlenir; dil yalnızca mail dilini belirler ──
+const SUPPORTED_LOCALES = ['tr', 'en', 'ro'];
+
+const SITE = { site: 'siskon.ro', timeZone: 'Europe/Bucharest' };
+const DATE_LOCALE_BY_LOCALE = { tr: 'tr-TR', en: 'en-GB', ro: 'ro-RO' };
+
+// Mail içeriğinde kullanılan etiketler (alıcı tarafı dili)
+const MAIL_LABELS = {
+  tr: {
+    title: 'İletişim Formu',
+    language: 'Dil',
+    languageName: 'Türkçe',
+    source: 'Kaynak',
+    sourceValue: (site) => `${site} web sitesi - İletişim Formu`,
+    date: 'Tarih',
+    sender: 'GÖNDEREN BİLGİLERİ',
+    name: 'Ad Soyad',
+    company: 'Şirket',
+    position: 'Pozisyon',
+    sector: 'Sektör',
+    phone: 'Telefon',
+    email: 'E-posta',
+    message: 'MESAJ',
+    footer: (site) => `Bu mesaj ${site} internet sitesi iletişim formu aracılığıyla iletilmiştir.`,
+    replyHint: 'Göndereni yanıtlamak için bu e-postayı doğrudan yanıtlayabilirsiniz.',
+  },
+  en: {
+    title: 'Contact Form',
+    language: 'Language',
+    languageName: 'English',
+    source: 'Source',
+    sourceValue: (site) => `${site} website - Contact Form`,
+    date: 'Date',
+    sender: 'SENDER DETAILS',
+    name: 'Name',
+    company: 'Company',
+    position: 'Position',
+    sector: 'Sector',
+    phone: 'Phone',
+    email: 'Email',
+    message: 'MESSAGE',
+    footer: (site) => `This message was submitted via the ${site} website contact form.`,
+    replyHint: 'You can reply directly to this email to respond to the sender.',
+  },
+  ro: {
+    title: 'Formular de contact',
+    language: 'Limbă',
+    languageName: 'Română',
+    source: 'Sursă',
+    sourceValue: (site) => `Site-ul ${site} - Formular de contact`,
+    date: 'Data',
+    sender: 'DATELE EXPEDITORULUI',
+    name: 'Nume și prenume',
+    company: 'Companie',
+    position: 'Funcție',
+    sector: 'Domeniu',
+    phone: 'Telefon',
+    email: 'E-mail',
+    message: 'MESAJ',
+    footer: (site) => `Acest mesaj a fost transmis prin formularul de contact al site-ului ${site}.`,
+    replyHint: 'Puteți răspunde direct la acest e-mail pentru a contacta expeditorul.',
+  },
+};
+
+// Kullanıcıya dönen API hata mesajları (form bunları olduğu gibi gösteriyor)
+const API_MESSAGES = {
+  tr: {
+    recaptchaMissing: 'Lütfen reCAPTCHA doğrulamasını tamamlayın.',
+    recaptchaFailed: 'reCAPTCHA doğrulaması başarısız.',
+    missingFields: 'Lütfen zorunlu alanların tamamını doldurun.',
+    invalidEmail: 'Lütfen geçerli bir e-posta adresi girin.',
+    sendFailed: 'Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.',
+  },
+  en: {
+    recaptchaMissing: 'Please complete the reCAPTCHA.',
+    recaptchaFailed: 'reCAPTCHA verification failed.',
+    missingFields: 'Please fill all required fields.',
+    invalidEmail: 'Please enter a valid email address.',
+    sendFailed: 'Your message could not be sent. Please try again later.',
+  },
+  ro: {
+    recaptchaMissing: 'Vă rugăm să completați verificarea reCAPTCHA.',
+    recaptchaFailed: 'Verificarea reCAPTCHA a eșuat.',
+    missingFields: 'Vă rugăm să completați toate câmpurile obligatorii.',
+    invalidEmail: 'Vă rugăm să introduceți o adresă de e-mail validă.',
+    sendFailed: 'Mesajul dumneavoastră nu a putut fi trimis. Vă rugăm să încercați din nou mai târziu.',
+  },
+};
+
 // ── Gönderen / alıcı adresleri: Strapi contact-page-content (mailFrom, mailTo) → env fallback ──
 const MAIL_ADDRESS_TTL_MS = 60_000;
-let _mailAddressCache = { at: 0, value: null };
+const _mailAddressCache = new Map(); // locale → { at, value }
 
 async function getMailAddresses(locale) {
   const now = Date.now();
-  if (_mailAddressCache.value && now - _mailAddressCache.at < MAIL_ADDRESS_TTL_MS) {
-    return _mailAddressCache.value;
+  const cached = _mailAddressCache.get(locale);
+  if (cached && now - cached.at < MAIL_ADDRESS_TTL_MS) {
+    return cached.value;
   }
 
   let strapiFrom = '';
@@ -86,11 +176,12 @@ async function getMailAddresses(locale) {
     console.error('[Strapi] mail address fetch error:', err?.message);
   }
 
-  const value = {
-    from: strapiFrom || process.env.CONTACT_FORM_FROM || process.env.SMTP_FROM || process.env.SMTP_USER,
-    to: strapiTo || process.env.CONTACT_FORM_TO || process.env.CONTACT_TO || process.env.SMTP_USER,
-  };
-  _mailAddressCache = { at: now, value };
+  const defaultFrom = process.env.CONTACT_FORM_FROM || process.env.SMTP_FROM || process.env.SMTP_USER;
+  const defaultTo = process.env.CONTACT_FORM_TO || process.env.CONTACT_TO || process.env.SMTP_USER;
+
+  const value = { from: strapiFrom || defaultFrom, to: strapiTo || defaultTo };
+
+  _mailAddressCache.set(locale, { at: now, value });
   return value;
 }
 
@@ -159,35 +250,93 @@ function isValidCsrfToken(value) {
   return /^[a-f0-9]{64}$/i.test(String(value || ''));
 }
 
-function buildMailContent(payload, locale) {
-  const isEn = locale === 'en';
-  const subject = isEn
-    ? `New Contact Form Message - ${sanitize(payload.firstName)} ${sanitize(payload.lastName)}`
-    : `Yeni İletişim Formu Mesajı - ${sanitize(payload.firstName)} ${sanitize(payload.lastName)}`;
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
 
-  const lines = [
-    `Name: ${sanitize(payload.firstName)} ${sanitize(payload.lastName)}`,
-    `Company: ${sanitize(payload.company)}`,
-    `Phone: ${sanitize(payload.phone)}`,
-    `Position: ${sanitize(payload.position)}`,
-    `Sector: ${sanitize(payload.sector)}`,
-    `Email: ${sanitize(payload.email)}`,
-    '',
-    'Message:',
-    sanitize(payload.message),
+// Mesaj gövdesi için: satır sonlarını korur, kontrol karakterlerini temizler
+function cleanMessage(value) {
+  return String(value || '')
+    .slice(0, MAX_FIELD_LENGTH)
+    .replace(/\r\n?/g, '\n')
+    .replace(/[^\S\n]+/g, ' ')
+    .replace(/[\u0000-\u0008\u000B-\u001F\u007F]/g, '')
+    .trim();
+}
+
+function formatSentAt(locale) {
+  const { timeZone } = SITE;
+  const formatted = new Intl.DateTimeFormat(DATE_LOCALE_BY_LOCALE[locale], {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+    timeZone,
+  }).format(new Date());
+  return `${formatted} (${timeZone})`;
+}
+
+function buildMailContent(payload, locale) {
+  const { site } = SITE;
+  const t = MAIL_LABELS[locale];
+
+  const fullName = `${sanitize(payload.firstName)} ${sanitize(payload.lastName)}`.trim();
+  const company = sanitize(payload.company);
+  const message = cleanMessage(payload.message);
+  const sentAt = formatSentAt(locale);
+
+  const subject = `[${site}] ${t.title} - ${fullName} - ${company}`;
+
+  const infoRows = [
+    [t.source, t.sourceValue(site)],
+    [t.language, t.languageName],
+    [t.date, sentAt],
+  ];
+  const senderRows = [
+    [t.name, fullName],
+    [t.company, company],
+    [t.position, sanitize(payload.position)],
+    [t.sector, sanitize(payload.sector)],
+    [t.phone, sanitize(payload.phone)],
+    [t.email, sanitize(payload.email)],
   ];
 
-  const text = lines.join('\n');
+  const pad = Math.max(...[...infoRows, ...senderRows].map(([label]) => label.length));
+  const textRow = ([label, value]) => `${label.padEnd(pad)} : ${value}`;
+
+  const text = [
+    ...infoRows.map(textRow),
+    '',
+    t.sender,
+    ...senderRows.map(textRow),
+    '',
+    t.message,
+    message,
+    '',
+    '--',
+    t.footer(site),
+    t.replyHint,
+  ].join('\n');
+
+  const htmlRow = ([label, value]) =>
+    `<tr><td style="padding:4px 16px 4px 0;color:#555;white-space:nowrap;vertical-align:top;">${escapeHtml(label)}</td>` +
+    `<td style="padding:4px 0;">${escapeHtml(value)}</td></tr>`;
+  const htmlHeading = (label) =>
+    `<p style="margin:20px 0 6px;font-weight:bold;border-bottom:1px solid #ccc;padding-bottom:4px;">${escapeHtml(label)}</p>`;
+
   const html = `
-    <h2>${isEn ? 'New Contact Form Message' : 'Yeni İletişim Formu Mesajı'}</h2>
-    <p><strong>${isEn ? 'Name' : 'Ad Soyad'}:</strong> ${sanitize(payload.firstName)} ${sanitize(payload.lastName)}</p>
-    <p><strong>${isEn ? 'Company' : 'Şirket'}:</strong> ${sanitize(payload.company)}</p>
-    <p><strong>${isEn ? 'Phone' : 'Telefon'}:</strong> ${sanitize(payload.phone)}</p>
-    <p><strong>${isEn ? 'Position' : 'Pozisyon'}:</strong> ${sanitize(payload.position)}</p>
-    <p><strong>${isEn ? 'Sector' : 'Sektör'}:</strong> ${sanitize(payload.sector)}</p>
-    <p><strong>Email:</strong> ${sanitize(payload.email)}</p>
-    <p><strong>${isEn ? 'Message' : 'Mesaj'}:</strong></p>
-    <p>${sanitize(payload.message).replaceAll('\n', '<br/>')}</p>
+    <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222;line-height:1.5;">
+      <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;">${infoRows.map(htmlRow).join('')}</table>
+      ${htmlHeading(t.sender)}
+      <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;">${senderRows.map(htmlRow).join('')}</table>
+      ${htmlHeading(t.message)}
+      <p style="margin:0;white-space:pre-wrap;">${escapeHtml(message)}</p>
+      <hr style="border:none;border-top:1px solid #ccc;margin:24px 0 8px;" />
+      <p style="margin:0;font-size:12px;color:#777;">${escapeHtml(t.footer(site))}<br/>${escapeHtml(t.replyHint)}</p>
+    </div>
   `;
 
   return { subject, text, html };
@@ -198,6 +347,8 @@ export async function POST(request) {
     request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
     request.headers.get('x-real-ip') ??
     'unknown';
+
+  let locale = 'ro';
 
   try {
     // Rate limiting
@@ -222,7 +373,7 @@ export async function POST(request) {
     }
 
     const payload = await request.json();
-    const locale = payload?.locale === 'en' ? 'en' : 'tr';
+    locale = SUPPORTED_LOCALES.includes(payload?.locale) ? payload.locale : 'ro';
 
     // reCAPTCHA server-side verification (only when secret key is configured)
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
@@ -233,7 +384,7 @@ export async function POST(request) {
       if (!recaptchaToken) {
         log('warn', 'contact_recaptcha_missing', { ip });
         return NextResponse.json(
-          { message: locale === 'en' ? 'Please complete the reCAPTCHA.' : 'Lütfen reCAPTCHA doğrulamasını tamamlayın.' },
+          { message: API_MESSAGES[locale].recaptchaMissing },
           { status: 400 }
         );
       }
@@ -251,7 +402,7 @@ export async function POST(request) {
       if (!verifyData.success) {
         log('warn', 'contact_recaptcha_failed', { ip, codes: verifyData['error-codes'] });
         return NextResponse.json(
-          { message: locale === 'en' ? 'reCAPTCHA verification failed.' : 'reCAPTCHA doğrulaması başarısız.' },
+          { message: API_MESSAGES[locale].recaptchaFailed },
           { status: 403 }
         );
       }
@@ -261,9 +412,7 @@ export async function POST(request) {
     if (missingFields.length > 0) {
       return NextResponse.json(
         {
-          message: locale === 'en'
-            ? 'Please fill all required fields.'
-            : 'Lütfen zorunlu alanların tamamını doldurun.',
+          message: API_MESSAGES[locale].missingFields,
           fields: missingFields,
         },
         { status: 400 }
@@ -273,9 +422,7 @@ export async function POST(request) {
     if (!isValidEmail(payload.email)) {
       return NextResponse.json(
         {
-          message: locale === 'en'
-            ? 'Please enter a valid email address.'
-            : 'Lütfen geçerli bir e-posta adresi girin.',
+          message: API_MESSAGES[locale].invalidEmail,
           fields: ['email'],
         },
         { status: 400 }
@@ -318,7 +465,7 @@ export async function POST(request) {
     });
 
     return NextResponse.json(
-      { message: 'Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.' },
+      { message: API_MESSAGES[locale].sendFailed },
       { status: 500 }
     );
   }
