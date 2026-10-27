@@ -14,13 +14,16 @@ export default function HeroSection({ data, locale }) {
 
   return (
     <section className="hero-section min-h-screen h-[100dvh] flex items-center relative overflow-hidden">
+      {/* Mobil / masaüstü arka plan: lazy görsel LCP'yi geciktirdiği için eager + fetchPriority="high".
+          Kaynaklar küçültüldü (≈13–22 KB); gizli olanın da inmesi önemsiz. `preload` kullanılmıyor. */}
       {/* Mobil arka plan */}
       <Image
         src="/images/homepage_back_mobile.webp"
         alt=""
         aria-hidden="true"
         fill
-        priority
+        loading="eager"
+        fetchPriority="high"
         className="object-cover opacity-20 mix-blend-luminosity pointer-events-none lg:hidden"
         style={{ objectPosition: 'center center' }}
         sizes="100vw"
@@ -32,7 +35,8 @@ export default function HeroSection({ data, locale }) {
         alt=""
         aria-hidden="true"
         fill
-        priority
+        loading="eager"
+        fetchPriority="high"
         className="hidden lg:block object-cover opacity-15 mix-blend-luminosity pointer-events-none"
         style={{ objectPosition: 'center right' }}
         sizes="100vw"

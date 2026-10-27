@@ -38,6 +38,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const nextConfig = {
   output: 'standalone',
+  experimental: { inlineCss: true },
   reactStrictMode: true,
   async headers() {
     return [
@@ -45,6 +46,13 @@ const nextConfig = {
         source: '/:path*',
         headers: SECURITY_HEADERS,
       },
+      // public/ altındaki statik dosyalar varsayılan olarak max-age=0 ile gelir (Lighthouse
+      // "efficient cache lifetimes"). Dosya adları hash'li olmadığı için immutable değil,
+      // 30 gün + stale-while-revalidate.
+      ...['images', 'assets', 'icons', 'og', 'SiteIcon'].map((dir) => ({
+        source: `/${dir}/:path*`,
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }],
+      })),
     ];
   },
   async redirects() {

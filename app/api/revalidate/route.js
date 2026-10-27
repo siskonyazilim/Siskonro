@@ -1,6 +1,7 @@
 import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
 import { getClientIp, isRateLimited, safeEqual } from '@/lib/security/http';
+import { clearStrapiCache } from '@/lib/strapi/client';
 
 const REVALIDATE_SECRET = process.env.REVALIDATE_SECRET;
 
@@ -97,6 +98,9 @@ export async function POST(request) {
     };
 
     const matched = tagMap[model];
+
+    // Strapi istemcisinin bellek içi cache'i (lib/strapi/client.js) de yenilensin
+    clearStrapiCache();
 
     if (matched) {
       // Tag-based revalidation (hassas, sadece ilgili sayfayı temizler)
