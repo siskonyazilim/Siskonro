@@ -68,13 +68,13 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
         linkedinUrl: 'https://www.linkedin.com/company/siskonromania/',
         youtubeUrl:  'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
         instagramUrl:'https://www.instagram.com/siskon_romania',
-        twitterUrl:  'https://x.com/siskonromania',
+        twitterUrl:  'https://x.com/siskonsoftware',
       }
     : {
         linkedinUrl: 'https://www.linkedin.com/company/siskonyazilimveotomasyon',
         youtubeUrl:  'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
         instagramUrl:'https://www.instagram.com/siskonyazilimveotomasyon/',
-        twitterUrl:  'https://x.com/siskonyazilim',
+        twitterUrl:  'https://x.com/siskonsoftware',
       });
 
   const logoSrc = localeData?.logo ?? '/assets/new/common/siskon-logo.svg';
