@@ -48,6 +48,7 @@
     "Other"
   ],
   "email": "Email",
+  "emailPlaceholder": "ornek@sirket.com",
   "message": "Your Message",
   "messagePlaceholder": "Tell us about your project...",
   "consent": "I have read and accepted the PDPL disclosure text and privacy policy. I consent to the processing of my personal data for communication purposes.",
@@ -72,7 +73,8 @@
     { "val": "info@siskon.com.tr", "href": "mailto:info@siskon.com.tr" },
     { "val": "sales@siskon.com.tr", "href": "mailto:sales@siskon.com.tr" },
     { "val": "support@siskon.com.tr", "href": "mailto:support@siskon.com.tr" },
-    { "val": "+90 (232) 245 00 76", "href": "tel:+902322450076" }
+    { "label": "Phone (RO)", "val": "+40 368 402 002", "href": "tel:+40368402002" },
+    { "label": "Phone (TR)", "val": "+90 232 245 00 76", "href": "tel:+902322450076" }
   ],
   "officeCards": [
     {

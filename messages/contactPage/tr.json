@@ -48,6 +48,7 @@
     "Diğer"
   ],
   "email": "E-Posta",
+  "emailPlaceholder": "ornek@sirket.com",
   "message": "Mesajınız",
   "messagePlaceholder": "Projenizden bahsedin...",
   "consent": "KVKK aydınlatma metnini ve gizlilik politikasını okudum, onayladım. İletişim amacıyla kişisel verilerimin işlenmesine onay veriyorum.",
@@ -72,7 +73,8 @@
     { "val": "info@siskon.com.tr", "href": "mailto:info@siskon.com.tr" },
     { "val": "sales@siskon.com.tr", "href": "mailto:sales@siskon.com.tr" },
     { "val": "support@siskon.com.tr", "href": "mailto:support@siskon.com.tr" },
-    { "val": "+90 (232) 245 00 76", "href": "tel:+902322450076" }
+    { "label": "Telefon (RO)", "val": "+40 368 402 002", "href": "tel:+40368402002" },
+    { "label": "Telefon (TR)", "val": "+90 232 245 00 76", "href": "tel:+902322450076" }
   ],
   "officeCards": [
     {

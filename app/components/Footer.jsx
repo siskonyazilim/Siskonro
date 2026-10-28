@@ -63,16 +63,26 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
   ];
 
   // Sosyal medya linkleri — Strapi gelirse ondan al, yoksa sabit değerler
-  const social = localeData?.socialLinks ?? {
-    linkedinUrl: 'https://tr.linkedin.com/company/siskonyazilimveotomasyon',
-    youtubeUrl:  'https://www.youtube.com/@SiskonYazilimveOtomasyon',
-    instagramUrl:'https://www.instagram.com/siskonotomasyon/',
-    twitterUrl:  locale === 'ro' ? 'https://x.com/siskonromania' : 'https://x.com/siskonyazilim',
-  };
+  const social = localeData?.socialLinks ?? (locale === 'ro'
+    ? {
+        linkedinUrl: 'https://www.linkedin.com/company/siskonromania/',
+        youtubeUrl:  'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
+        instagramUrl:'https://www.instagram.com/siskon_romania',
+        twitterUrl:  'https://x.com/siskonromania',
+      }
+    : {
+        linkedinUrl: 'https://www.linkedin.com/company/siskonyazilimveotomasyon',
+        youtubeUrl:  'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
+        instagramUrl:'https://www.instagram.com/siskonyazilimveotomasyon/',
+        twitterUrl:  'https://x.com/siskonyazilim',
+      });
 
   const logoSrc = localeData?.logo ?? '/assets/new/common/siskon-logo.svg';
-  const email   = localeData?.email   ?? 'info@siskon.com.tr';
-  const phone   = localeData?.phone   ?? '+90 (232) 245 00 76';
+  const email   = locale === 'ro' ? 'sales@siskon.ro' : (localeData?.email ?? 'info@siskon.com.tr');
+  const phones  = [
+    { label: 'Telefon (RO)', val: '+40 368 402 002', href: 'tel:+40368402002' },
+    ...(locale === 'ro' ? [] : [{ label: 'Telefon (TR)', val: '+90 232 245 00 76', href: 'tel:+902322450076' }]),
+  ].map((p) => (locale === 'en' ? { ...p, label: p.label.replace('Telefon', 'Phone') } : p));
   const slogan  = localeData?.slogan  ?? 'Makes Your Factory Smarter';
 
   return (
@@ -99,7 +109,9 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
             </p>
             <div className="pt-2 space-y-2 text-base text-slate-100 font-semibold">
               <a href={`mailto:${email}`} className="block hover:text-sky-300">{email}</a>
-              <a href={`tel:${phone.replace(/\s|\(|\)|-/g, '')}`} className="block hover:text-sky-300 break-all sm:break-normal">{phone}</a>
+              {phones.map((p) => (
+                <a key={p.href} href={p.href} className="block hover:text-sky-300 break-all sm:break-normal">{p.label}: {p.val}</a>
+              ))}
             </div>
           </div>
 

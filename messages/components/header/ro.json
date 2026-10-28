@@ -1,12 +1,12 @@
 {
   "sidePanel": {
     "tag": "SERVICII",
-    "titleLine1": "Conducem Transformarea",
-    "titleLine2": "Industrială cu Inginerie",
+    "titleLine1": "Conducem transformarea",
+    "titleLine2": "industrială cu inginerie",
     "desc": "Facem procesele de producție mai eficiente, trasabile și sustenabile cu serviciile noastre care combină software-ul industrial, automatizarea și AI-ul.",
-    "feature1": "Software Industrial și Automatizare",
-    "feature2": "Inteligență Artificială și Procesare de Imagine",
-    "feature3": "IIoT, Date și Trasabilitate"
+    "feature1": "Software industrial și automatizare",
+    "feature2": "Inteligență artificială și procesare de imagine",
+    "feature3": "IIoT, date și trasabilitate"
   },
   "descriptions": {
     "customSoftware": "Digitalizați operațiunile de la un capăt la altul cu arhitectură software personalizată.",

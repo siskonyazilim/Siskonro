@@ -1,5 +1,5 @@
 {
-  "heroTitle": "OnSuite — Platformă de Producție Inteligentă",
+  "heroTitle": "OnSuite — platformă de producție inteligentă",
   "heroSubtitle": "Platforma de producție inteligentă de nouă generație a Siskon",
   "breadcrumbHome": "Acasă",
   "breadcrumbProducts": "Produse",
@@ -9,22 +9,22 @@
   "modulesEyebrow": "Module",
   "modulesTitle": "Module OnSuite",
   "modulesDesc": "Implementați modulele OnSuite individual sau configurați-le ca un singur ecosistem conectat de la producție la management.",
-  "moduleOverview": "Prezentare Generală Modul",
-  "exploreSolution": "Explorați Soluția",
-  "architectureEyebrow": "Arhitectură și Tehnologie",
-  "architectureTitle": "Arhitectură Integrată și Competențe Tehnologice",
+  "moduleOverview": "Prezentare generală modul",
+  "exploreSolution": "Explorați soluția",
+  "architectureEyebrow": "Arhitectură și tehnologie",
+  "architectureTitle": "Arhitectură integrată și competențe tehnologice",
   "benefitsEyebrow": "Beneficii",
-  "benefitsTitle": "Ce Obțineți cu OnSuite?",
-  "technicalEyebrow": "Capabilități Tehnice",
-  "technicalTitle": "Capabilități Tehnice și Vizibilitate în Fabrică",
-  "ctaTitle": "Să Modelăm Împreună Viitorul Industrial",
+  "benefitsTitle": "Ce obțineți cu OnSuite?",
+  "technicalEyebrow": "Capabilități tehnice",
+  "technicalTitle": "Capabilități tehnice și vizibilitate în fabrică",
+  "ctaTitle": "Să modelăm împreună viitorul industrial",
   "ctaDesc": "Contactați-ne pentru a face fabrica dvs. mai inteligentă cu OnSuite.",
   "ctaButton": "Contactați-ne",
-  "title": "OnSuite - Platformă Inteligentă de Producție",
+  "title": "OnSuite - platformă inteligentă de producție",
   "subtitle": "Platformă industrială scalabilă și modulară care reunește datele din fabrică sub o singură coloană vertebrală.",
-  "modulesSub": "Toate Operațiunile din Fabrică Sub Control cu 11 Module",
-  "gainsTitle": "Beneficii Cheie Obținute cu OnSuite",
-  "faqTitle": "Întrebări Frecvente",
+  "modulesSub": "Toate operațiunile din fabrică sub control cu 11 module",
+  "gainsTitle": "Beneficii cheie obținute cu OnSuite",
+  "faqTitle": "Întrebări frecvente",
   "modules": [
     {
       "sub": "Conectivitate IIoT",
@@ -36,7 +36,7 @@
         "Suport OPC UA & DA",
         "Integrare Siemens & Beckhoff",
         "MQTT & REST Pipeline",
-        "Infrastructură Edge Computing"
+        "Infrastructură edge computing"
       ]
     },
     {
@@ -46,23 +46,23 @@
       "link": "https://www.onsuite.com.tr/ro/moduller/live",
       "name": "OnSuite Live",
       "features": [
-        "Stări Live ale Mașinilor",
-        "Urmărirea Performanței Operatorilor",
-        "Alerte de Defecțiuni și Timpi de Inactivitate",
-        "Managementul Ecranelor Andon"
+        "Stări live ale mașinilor",
+        "Urmărirea performanței operatorilor",
+        "Alerte de defecțiuni și timpi de inactivitate",
+        "Managementul ecranelor Andon"
       ]
     },
     {
-      "sub": "Analiza Performanței",
+      "sub": "Analiza performanței",
       "desc": "Monitorizare OEE cu timpi de inactivitate, deșeuri și analize de performanță, inclusiv analiză de cauză rădăcină, Pareto și blocaje.",
       "icon": "/assets/strapi/oee_bd8de82488.svg",
       "link": "https://www.onsuite.com.tr/ro/moduller/optima",
       "name": "OnSuite Optima",
       "features": [
         "Calculații OEE / TEEP / OMT",
-        "Analiza Cauzei Rădăcină (RCA)",
-        "Detectarea Blocajelor",
-        "Rapoarte Automate Pareto"
+        "Analiza cauzei rădăcină (RCA)",
+        "Detectarea blocajelor",
+        "Rapoarte automate Pareto"
       ]
     },
     {
@@ -72,23 +72,23 @@
       "link": "https://www.onsuite.com.tr/ro/moduller/trace",
       "name": "OnSuite Trace",
       "features": [
-        "Urmărire Serii și Loturi",
+        "Urmărire serii și loturi",
         "Integrare BOM",
-        "Trasabilitate Inversă",
-        "Potrivire Certificat de Calitate"
+        "Trasabilitate inversă",
+        "Potrivire certificat de calitate"
       ]
     },
     {
-      "sub": "Operațiuni Fără Hârtie",
+      "sub": "Operațiuni fără hârtie",
       "desc": "SmartForms digitale pentru 5S, OPL și controlul calității, înlocuind hârtia cu fluxuri de lucru audibile în teren.",
       "icon": "/assets/strapi/dsf_248c6b59f4.svg",
       "link": "https://www.onsuite.com.tr/ro/moduller/forms",
       "name": "OnSuite Forms",
       "features": [
-        "Designer de Formulare Digitale",
-        "Introducere Date Offline",
-        "Fluxuri de Aprobare",
-        "Traseu de Audit"
+        "Designer de formulare digitale",
+        "Introducere date offline",
+        "Fluxuri de aprobare",
+        "Traseu de audit"
       ]
     },
     {
@@ -99,22 +99,22 @@
       "name": "OnSuite CNC",
       "features": [
         "Analiză G-Code",
-        "Urmărirea Duratei de Viață a Sculelor",
-        "Monitorizarea Sarcinii Axiale",
-        "Managementul Programelor de Piese"
+        "Urmărirea duratei de viață a sculelor",
+        "Monitorizarea sarcinii axiale",
+        "Managementul programelor de piese"
       ]
     },
     {
-      "sub": "Managementul Sculelor OPC UA",
+      "sub": "Managementul sculelor OPC UA",
       "desc": "Experiență reală de implementare a OPC UA TMC adaptată operațiunilor din industria tutunului.",
       "icon": "/assets/strapi/opctmc_9311b1be59.svg",
       "link": "https://www.onsuite.com.tr/ro/moduller/tmc",
       "name": "OnSuite TMC",
       "features": [
-        "Conformitate cu Standardul TMC",
-        "Integrare Mașini de Tutun",
-        "Colectare Date de Înaltă Precizie",
-        "Raportare Globală"
+        "Conformitate cu standardul TMC",
+        "Integrare mașini de tutun",
+        "Colectare date de înaltă precizie",
+        "Raportare globală"
       ]
     },
     {
@@ -125,22 +125,22 @@
       "name": "OnSuite Integra",
       "features": [
         "Integrare SAP BAPI / RFC",
-        "Sincronizare Inventar în Timp Real",
-        "Automatizarea Ordinelor de Lucru",
-        "Transfer Confirmare Producție"
+        "Sincronizare inventar în timp real",
+        "Automatizarea ordinelor de lucru",
+        "Transfer confirmare producție"
       ]
     },
     {
-      "sub": "Managementul Energiei",
+      "sub": "Managementul energiei",
       "desc": "Monitorizare și analize ale consumului conforme cu ISO 50001 care fac costurile cu energia vizibile și gestionabile.",
       "icon": "/assets/strapi/enerji_5b3c7e115f.svg",
       "link": "https://www.onsuite.com.tr/ro/moduller/energy",
       "name": "OnSuite Energy",
       "features": [
         "Conformitate ISO 50001",
-        "Analiza Costurilor",
-        "Monitorizarea Profilului de Sarcină",
-        "Prognoze de Eficiență"
+        "Analiza costurilor",
+        "Monitorizarea profilului de sarcină",
+        "Prognoze de eficiență"
       ]
     },
     {
@@ -150,36 +150,36 @@
       "link": "https://www.onsuite.com.tr/ro/moduller/green",
       "name": "OnSuite Green",
       "features": [
-        "Măsurarea Amprentei de Carbon",
-        "Raportarea Emisiilor",
-        "KPI de Sustenabilitate",
-        "Conformitate Reglementară"
+        "Măsurarea amprentei de carbon",
+        "Raportarea emisiilor",
+        "KPI de sustenabilitate",
+        "Conformitate reglementară"
       ]
     },
     {
-      "sub": "Fundația Platformei",
+      "sub": "Fundația platformei",
       "desc": "Arhitectură React + C# API + MS SQL cu design de proceduri stocate și testare SQL automată tSQLt.",
       "icon": "/assets/strapi/core_9d7965b69c.svg",
       "link": "https://www.onsuite.com.tr/ro/moduller/core",
       "name": "OnSuite Core",
       "features": [
         "Fundație C# .NET API",
-        "Optimizarea Procedurilor Stocate",
-        "Framework de Testare tSQLt",
-        "Înaltă Disponibilitate"
+        "Optimizarea procedurilor stocate",
+        "Framework de testare tSQLt",
+        "Înaltă disponibilitate"
       ]
     },
     {
-      "sub": "Managementul Crizelor",
+      "sub": "Managementul crizelor",
       "desc": "Sistem de apel de urgență cu două canale și management al crizelor pentru facilități industriale. Oferă interogare simultană via WhatsApp și SMS, vizibilitate centralizată și escaladare automată.",
       "icon": "/SiteIcon/products/Engage.svg",
       "link": "https://www.onsuite.com.tr/ro/moduller/engage",
       "name": "OnSuite Engage",
       "features": [
-        "Confirmare Rapidă a Statusului",
-        "Vizibilitate Centralizată a Crizelor",
-        "Comunicare pe Două Canale",
-        "Managementul Incidentelor Înregistrate"
+        "Confirmare rapidă a statusului",
+        "Vizibilitate centralizată a crizelor",
+        "Comunicare pe două canale",
+        "Managementul incidentelor înregistrate"
       ]
     }
   ],
@@ -191,12 +191,12 @@
     },
     {
       "icon": "/assets/strapi/vtopcua_f225cb5584.svg",
-      "title": "Suport pentru Protocol Deschis",
+      "title": "Suport pentru protocol deschis",
       "description": "OPC UA · PackML · ISA-88 · MTConnect · REST · MQTT."
     },
     {
       "icon": "/assets/strapi/organization_8393429306.svg",
-      "title": "Sursă Unică de Date",
+      "title": "Sursă unică de date",
       "description": "Raportare consecventă și sigură printr-o arhitectură unificată."
     },
     {
@@ -206,12 +206,12 @@
     },
     {
       "icon": "/assets/strapi/approve_b97f357c4f.svg",
-      "title": "CI/CD și Automatizare",
+      "title": "CI/CD și automatizare",
       "description": "Teste SQL complet automatizate cu Azure DevOps și tSQLt."
     },
     {
       "icon": "/assets/strapi/security_c6193ac05b.svg",
-      "title": "Securitate Informațională Ridicată",
+      "title": "Securitate informațională ridicată",
       "description": "Conformitate completă cu standardele ISO/IEC 27001:2022."
     }
   ],
@@ -253,66 +253,66 @@
     {
       "desc": "Verificare cuprinzătoare a sistemului.",
       "image": "/assets/strapi/asset_56_400x_388f6fedab.png",
-      "title": "Panou de Management"
+      "title": "Panou de management"
     },
     {
       "desc": "Opțiuni de colectare manuală și automată a datelor.",
       "image": "/assets/strapi/veri_toplama_400x_16a97e217f.png",
-      "title": "Colectarea și Procesarea Datelor"
+      "title": "Colectarea și procesarea datelor"
     },
     {
       "desc": "Urmărire automată a performanței cu panouri personalizate.",
       "image": "/assets/strapi/dashboard_400x_5c971077f0.png",
-      "title": "Panou de Bord (Dashboard)"
+      "title": "Panou de bord (Dashboard)"
     },
     {
       "desc": "Urmăriți și îmbunătățiți consumul de energie.",
       "image": "/assets/strapi/enerji_kaynak_400x_0ce9ea4831.png",
-      "title": "Managementul Energiei și Resurselor"
+      "title": "Managementul energiei și resurselor"
     },
     {
       "desc": "Sistem de avertizare imediată în condiții critice.",
       "image": "/assets/strapi/alarm_400x_3a526b70e1.png",
-      "title": "Managementul Alarmelor"
+      "title": "Managementul alarmelor"
     },
     {
       "desc": "Partajare fluidă a datelor cu toate sistemele de întreprindere.",
       "image": "/assets/strapi/erp_400x_7c5fc9a564.png",
-      "title": "Integrare ERP și Sisteme"
+      "title": "Integrare ERP și sisteme"
     },
     {
       "desc": "Controlul producției end-to-end cu date în timp real.",
       "image": "/assets/strapi/entegrasyon_400x_cd9cd03a1a.png",
-      "title": "Integrare și Raportare"
+      "title": "Integrare și raportare"
     },
     {
       "desc": "Control total pe podeaua fabricii prin panouri digitale.",
       "image": "/assets/strapi/proses_400x_b9803cea02.png",
-      "title": "Managementul Proceselor și Operatorilor"
+      "title": "Managementul proceselor și operatorilor"
     },
     {
       "desc": "Performanță maximă prin analize ale cauzelor rădăcină.",
       "image": "/assets/strapi/analiz_400x_663c7aed55.png",
-      "title": "Analiză și Optimizare"
+      "title": "Analiză și optimizare"
     }
   ],
   "productBadge": "Produs",
   "productDetailDesc": "OnSuite este o familie de software industrial cu 11 module. Fiecare modul poate fi implementat independent sau ca o suită complet integrată, on-premise sau în cloud. Arhitectura React + C# API + MS SQL este concepută cu o abordare axată pe proceduri stocate și testare SQL complet automatizată cu tSQLt. Suportul pentru protocoale deschise include OPC UA, PackML, ISA-88, MTConnect, REST și MQTT.",
-  "productImageAlt": "Suita de Producție Inteligentă OnSuite - Platformă Integrată de Management al Producției",
-  "viewAllModules": "Vezi Toate Modulele",
-  "showLessModules": "Arată Mai Puțin",
-  "moduleOverviewLabel": "Prezentare Generală a Modulului",
+  "productImageAlt": "Suita de producție inteligentă OnSuite - platformă integrată de management al producției",
+  "viewAllModules": "Vezi toate modulele",
+  "showLessModules": "Arată mai puțin",
+  "moduleOverviewLabel": "Prezentare generală a modulului",
   "moduleIconAlt": "pictogramă modul",
   "modulePlatformAlt": "modulul platformei de producție industrială",
-  "exploreSolutionButton": "Explorați Soluția",
+  "exploreSolutionButton": "Explorați soluția",
   "gainsEyebrow": "Beneficii",
-  "gainsTitleMain": "Ce Obțineți cu OnSuite?",
+  "gainsTitleMain": "Ce obțineți cu OnSuite?",
   "desktopImageAlt": "Imagine vizuală a platformei desktop OnSuite",
-  "viewAllGains": "Vezi Tot",
-  "showLessGains": "Arată Mai Puțin",
-  "architectureTitleMain": "De la Fabrică la Cloud Industrial Grade",
-  "technicalTitleMain": "Care Sunt Capacitățile Tehnice?",
-  "ctaTitleMain": "Să Modelăm Viitorul Industrial Împreună",
+  "viewAllGains": "Vezi tot",
+  "showLessGains": "Arată mai puțin",
+  "architectureTitleMain": "De la fabrică la cloud industrial grade",
+  "technicalTitleMain": "Care sunt capacitățile tehnice?",
+  "ctaTitleMain": "Să modelăm viitorul industrial împreună",
   "ctaDescMain": "Contactați-ne pentru a vă face fabrica mai inteligentă cu OnSuite.",
   "ctaButtonMain": "Contactați-ne",
   "logo": "/assets/strapi/onsuite_logo_99ebb0221e.svg",

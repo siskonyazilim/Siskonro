@@ -1,51 +1,51 @@
 {
   "pageTitle": "Sectoare",
-  "pageSubtitle": "Opt Sectoare, O Singură Disciplină de Inginerie.",
-  "breadcrumbHome": "Pagina Principală",
+  "pageSubtitle": "Opt sectoare, o singură disciplină de inginerie.",
+  "breadcrumbHome": "Pagina principală",
   "breadcrumbSectors": "Sectoare",
-  "overviewTitle": "Dintr-o Privire",
-  "overviewHeadline": "Opt Sectoare, O Singură Disciplină de Inginerie.",
+  "overviewTitle": "Dintr-o privire",
+  "overviewHeadline": "Opt sectoare, o singură disciplină de inginerie.",
   "overviewIntro": "În loc să forțăm module separate pentru fiecare sector, construim straturi specifice sectorului pe un nucleu OnSuite comun. Cardurile de mai jos sunt rezumate sectoriale; în secțiunea următoare veți găsi coloana vertebrală comună a acestor opt sectoare și apoi detaliile fiecărui sector.",
-  "ctaDetail": "Mergi la Detalii",
-  "painTitle": "Sectoarele Sunt Diferite, Problema Este Aceeași",
-  "painHeadline": "Fiecare Linie de Producție Are Aceleași Șase Probleme.",
+  "ctaDetail": "Mergi la detalii",
+  "painTitle": "Sectoarele sunt diferite, problema este aceeași",
+  "painHeadline": "Fiecare linie de producție are aceleași șase probleme.",
   "painLead": "Deși o mașină de tutun, o linie de electrocasnice, un parc CNC sau o linie de umplere alimentară pot părea complet diferite la suprafață, toate se confruntă cu aceleași șase probleme fundamentale. De aceea rezolvăm 8 sectoare nu cu 8 software separate, ci cu o coloană vertebrală OnSuite comună și straturi specifice sectorului.",
-  "backboneTitle": "Coloana Vertebrală OnSuite",
-  "backboneHeadline": "O Coloană Vertebrală · 11 Module · Mai Multe Date, Mai Multe Perspective, Mai Multe Îmbunătățiri",
+  "backboneTitle": "Coloana vertebrală OnSuite",
+  "backboneHeadline": "O coloană vertebrală · 11 module · mai multe date, mai multe perspective, mai multe îmbunătățiri",
   "backboneLead": "OnSuite - Nucleu Independent de Sector, Straturi Specifice Sectorului. Modulele de mai jos sunt alimentate din același nucleu în fiecare proiect sectorial. Pachetele noastre sectoriale (Hybrid, Organic, A+++, Capsule Track and Trace) sunt combinații configurate sectorial ale acestor module; nu software de la zero, ci stratul sectorial al coloanei vertebrale.",
-  "ctaContact": "Să Discutăm Despre Proiect",
+  "ctaContact": "Să discutăm despre proiect",
   "ctaFinal": "Să planificăm împreună pasul următor.",
   "ctaSuffix": "Împărtășiți prioritățile dvs., să pregătim un plan de transformare focalizat.",
   "contactUs": "Contactați-ne",
   "commonChallenges": [
     {
       "code": "01",
-      "title": "Fragmentarea Datelor",
+      "title": "Fragmentarea datelor",
       "description": "Fiecare mașină folosește un protocol diferit, KPI-urile nu se aliniază, iar raportarea rămâne manuală."
     },
     {
       "code": "02",
-      "title": "Pierdere de Productivitate Ascunsă",
+      "title": "Pierdere de productivitate ascunsă",
       "description": "OEE este scăzut, dar punctele de pierdere sunt neclare, iar blocajele sunt gestionate prin intuiție în loc de date."
     },
     {
       "code": "03",
-      "title": "Lacune de Trasabilitate",
+      "title": "Lacune de trasabilitate",
       "description": "În timpul retragerilor, lanțul de loturi este incomplet, în timp ce verificarea BOM și fluxurile de lucru de garanție rămân pe suport de hârtie."
     },
     {
       "code": "04",
-      "title": "Risc de Audit și Garanție",
+      "title": "Risc de audit și garanție",
       "description": "Echipele petrec săptămâni pregătind dovezi ISO, IATF, GMP și GSCA, cu un lanț fragil de dovezi pentru cererile de garanție."
     },
     {
       "code": "05",
-      "title": "Puncte Oarbe de Energie și Carbon",
+      "title": "Puncte oarbe de energie și carbon",
       "description": "Consumul este vizibil doar la nivel de factură, nu per linie, tură sau produs, în timp ce presiunea CBAM continuă să crească."
     },
     {
       "code": "06",
-      "title": "Lacune de Integrare a Sistemelor",
+      "title": "Lacune de integrare a sistemelor",
       "description": "Sistemele MES, ERP, de calitate, planificare și depozitare funcționează independent, cauțând fluxuri de date deconectate și întârziate."
     }
   ]

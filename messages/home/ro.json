@@ -1,37 +1,37 @@
 {
-  "heroTaglineLine1": "Profunzime în Inginerie,",
-  "heroTaglineLine2": "Impact Global",
-  "heroTitle": "Soluții Rapide și Inteligente",
+  "heroTaglineLine1": "Profunzime în inginerie,",
+  "heroTaglineLine2": "Impact global",
+  "heroTitle": "Soluții rapide și inteligente",
   "heroDescription": "De la automatizarea proceselor la sistemele de date bazate pe inteligență artificială, facem producția mai eficientă, trasabilă și inteligentă. Din 1997, am condus transformarea digitală în industriile auto, electrocasnice, alimentare, textile, tutun și mașini.",
-  "heroCta": "Explorați Serviciile Noastre",
-  "servicesEyebrow": "Serviciile Noastre",
-  "servicesTitle": "Atingeți Excelența Operațională cu Soluții Software și Automatizare Specifice Industriei",
+  "heroCta": "Explorați serviciile noastre",
+  "servicesEyebrow": "Serviciile noastre",
+  "servicesTitle": "Atingeți excelența operațională cu soluții software și automatizare specifice industriei",
   "servicesDescription": "Măsurați eficiența, optimizați procesele, adăugați valoare producției dvs. Soluțiile noastre fac toate procesele de la producție la management vizibile, măsurabile și eficiente.",
-  "allServicesEyebrow": "Toate Serviciile",
-  "allServicesTitle": "Să Proiectăm Împreună Cea Mai Potrivită Soluție pentru Dvs.",
+  "allServicesEyebrow": "Toate serviciile",
+  "allServicesTitle": "Să proiectăm împreună cea mai potrivită soluție pentru dvs.",
   "allServicesDescription": "Oferim suport de inginerie de la un capăt la altul în călătoria dvs. de transformare digitală.",
-  "allServicesButton": "Vezi Toate Serviciile",
-  "productsEyebrow": "Produsele Noastre",
-  "productsTitle": "Transformați Producția în Putere Digitală cu Produse Flexibile, Inteligente și Ușor de Implementat",
+  "allServicesButton": "Vezi toate serviciile",
+  "productsEyebrow": "Produsele noastre",
+  "productsTitle": "Transformați producția în putere digitală cu produse flexibile, inteligente și ușor de implementat",
   "productsDescription": "Portofoliul nostru de produse transformă datele din fabrică în informații semnificative cu infrastructura IIoT și algoritmii noștri proprietari. Mută liniile dvs. de producție către o structură mai transparentă, controlabilă și bazată pe date.",
-  "allProductsButton": "Explorați Detaliile",
-  "globalEyebrow": "Proiecte Globale",
+  "allProductsButton": "Explorați detaliile",
+  "globalEyebrow": "Proiecte globale",
   "globalTitle": "Semnătura Siskon în 40+ de Țări și 60+ Fabrici",
   "globalDescription": "Cu sediul central în Turcia și birourile din România și Estonia, soluțiile noastre continuă să funcționeze în zeci de țări, în multe sectoare, în sute de sisteme din întreaga lume.",
-  "referencesEyebrow": "Referințele Noastre",
-  "referencesTitle": "Referințele Noastre",
-  "referencesButton": "Referințele Noastre",
-  "ctaTitle": "Să Modelăm Împreună Viitorul Industrial",
+  "referencesEyebrow": "Referințele noastre",
+  "referencesTitle": "Referințele noastre",
+  "referencesButton": "Referințele noastre",
+  "ctaTitle": "Să modelăm împreună viitorul industrial",
   "ctaDescription": "Suntem hotărâți să depășim granițele industriale și să modelăm viitorul împreună cu dvs. Împărtășiți nevoile dvs., explorați soluțiile noastre.",
   "ctaButton": "Contactați-ne",
-  "exploreDetails": "Explorați Detaliile",
+  "exploreDetails": "Explorați detaliile",
   "imageUnavailable": "Imagine indisponibilă",
   "continents": {
-    "europe": "Avrupa",
-    "africa": "Afrika",
-    "asia": "Asya",
-    "northAmerica": "Kuzey Amerika",
-    "southAmerica": "Güney Amerika"
+    "europe": "Europa",
+    "africa": "Africa",
+    "asia": "Asia",
+    "northAmerica": "America de Nord",
+    "southAmerica": "America de Sud"
   },
   "stats": [
     {
@@ -48,17 +48,17 @@
     },
     {
       "num": "60+",
-      "label": "Fabrici Inteligente"
+      "label": "Fabrici inteligente"
     }
   ],
   "exploreDetailsLabel": "Explorați detaliile",
   "defaultMapAlt": "Harta globală a proiectelor",
-  "aboutUsButton": "Despre Noi",
-  "onSuiteSectionTitle": "OnSuite — Platformă Inteligentă de Producție",
+  "aboutUsButton": "Despre noi",
+  "onSuiteSectionTitle": "OnSuite — platformă inteligentă de producție",
   "onSuiteSectionDesc1": "OnSuite reunește producția, calitatea și inteligența operațională pe o singură structură digitală. Prin combinarea conectivității mașinilor, monitorizării continue, trasabilității și analizelor de performanță în aceeași arhitectură, permite echipelor să ia decizii mai rapide și mai precise.",
   "onSuiteSectionDesc2": "Datorită abordării sale modulare de implementare și capacităților de integrare la nivel de întreprindere, vă puteți scala de la o singură linie de producție la operațiuni cu mai multe facilități, fără a reconstrui infrastructura de sistem de bază.",
   "discoverOnSuiteButton": "Descoperiți OnSuite",
-  "globalProjectsEyebrow": "Proiectele Noastre Globale",
+  "globalProjectsEyebrow": "Proiectele noastre globale",
   "countriesLabel": "Țări",
   "factoriesLabel": "Fabrici",
   "legendAlt": "Legenda proiectelor globale",
@@ -136,23 +136,23 @@
   "onSuiteImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
   "continentMaps": {
     "europe": {
-      "label": "Avrupa",
+      "label": "Europa",
       "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_avrupa_67a5e16b5d.svg"
     },
     "africa": {
-      "label": "Afrika",
+      "label": "Africa",
       "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_afrika_54d71c120b.svg"
     },
     "asia": {
-      "label": "Asya",
+      "label": "Asia",
       "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_asya_ef128e81c6.svg"
     },
     "northAmerica": {
-      "label": "Kuzey Amerika",
+      "label": "America de Nord",
       "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_k_amerika_78010c63c2.svg"
     },
     "southAmerica": {
-      "label": "Güney Amerika",
+      "label": "America de Sud",
       "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_g_amerika_cde8998b25.svg"
     }
   },

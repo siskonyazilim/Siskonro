@@ -177,7 +177,7 @@ async function getMailAddresses(locale) {
   }
 
   const defaultFrom = process.env.CONTACT_FORM_FROM || process.env.SMTP_FROM || process.env.SMTP_USER;
-  const defaultTo = process.env.CONTACT_FORM_TO || process.env.CONTACT_TO || process.env.SMTP_USER;
+  const defaultTo = process.env.CONTACT_FORM_TO || process.env.CONTACT_TO || 'web@siskon.com.tr';
 
   const value = { from: strapiFrom || defaultFrom, to: strapiTo || defaultTo };
 

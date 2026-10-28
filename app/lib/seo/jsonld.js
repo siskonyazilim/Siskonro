@@ -44,9 +44,9 @@ const ORG = {
   },
   sameAs: [
     'https://x.com/siskonromania',
-    'https://tr.linkedin.com/company/siskonyazilimveotomasyon',
-    'https://www.youtube.com/@SiskonYazilimveOtomasyon',
-    'https://www.instagram.com/siskonotomasyon/',
+    'https://www.linkedin.com/company/siskonromania/',
+    'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
+    'https://www.instagram.com/siskon_romania',
   ],
   logoPath: '/assets/new/common/siskon-logo.svg',
   offices: [

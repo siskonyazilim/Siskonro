@@ -1,9 +1,9 @@
 {
-  "pageTitle": "Produsele Noastre",
+  "pageTitle": "Produsele noastre",
   "pageSubtitle": "Transformați producția în putere digitală cu produse flexibile, inteligente și ușor de implementat. Soluții hardware și software care sunt lucrarea ingineriei noastre.",
-  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbHome": "Pagina principală",
   "breadcrumbProducts": "Produse",
-  "ecosystemEyebrow": "Ecosistemul de Produse",
+  "ecosystemEyebrow": "Ecosistemul de produse",
   "ecosystemTitle": "Armonia Perfectă a <br /> <span class=\"text-sky-600\">Hardware și Software.</span>",
   "ecosystemDesc": "Produsele Siskon nu sunt instrumente de sine stătătoare, ci părți ale unui ecosistem care se hrănește reciproc. Colectăm date cu RIO, le contextualizăm și le gestionăm cu OnSuite.",
   "connectivity": "Conectivitate",
@@ -16,10 +16,10 @@
   "analyticsDesc": "Transformarea datelor de producție în informații în timp real.",
   "integration": "Integrare",
   "integrationDesc": "Conectivitate fără îentreruperi cu sistemele ERP, MES, SCADA şi cloud.",
-  "viewDetails": "Vezi Detaliile",
+  "viewDetails": "Vezi detaliile",
   "pdfCatalog": "Catalog PDF",
   "ctaTitle": "Transformați Datele din Fabrică în <br /> <span class=\"text-sky-600\">Inteligență Întreprindere</span>.",
   "ctaDesc": "Produsele Siskon se scalează modular în funcție de nevoile dvs. și sunt gestionate central, indiferent de dimensiunea fabricii dvs.",
-  "requestDemo": "Solicitați o Demonstrație",
-  "successStories": "Povești de Succes"
+  "requestDemo": "Solicitați o demonstrație",
+  "successStories": "Povești de succes"
 }

@@ -1,19 +1,19 @@
 {
-  "title": "Soluții AI și Machine Learning",
+  "title": "Soluții AI și machine learning",
   "subtitle": "Transformați datele în decizii puternice și inteligente.",
   "description": "Soluțiile AI și Machine Learning vă pregătesc afacerea pentru viitor prin informațiile valoroase obținute din datele dumneavoastră. Prin analize avansate și algoritmi de ínvățare automată, descoperim potențialul ascuns din seturile de date colectate din procesele operaționale, optimizăm activitățile și vă ajutăm să luați decizii de afaceri mai eficiente. Transformați-vă datele în oportunități strategice cu soluțiile noastre de Machine Learning.",
   "breadcrumbHome": "Acasă",
   "breadcrumbServices": "Servicii",
   "serviceLabel": "Serviciu",
-  "heroImageAlt": "Vizualizare soluții AI și Machine Learning Siskon",
+  "heroImageAlt": "Vizualizare soluții AI și machine learning Siskon",
   "benefitsEyebrow": "Kazanımlar",
-  "benefitsTitle": "Ce Valoare Aduc Soluțiile Siskon AI/ML?",
+  "benefitsTitle": "Ce valoare aduc soluțiile Siskon AI/ML?",
   "capabilitiesEyebrow": "Capacități",
   "applicationsEyebrow": "Aplicații",
   "solutionsVisualAlt": "Vizualizare soluții machine learning",
   "diagramAlt": "Diagramă de relații deep learning",
   "etlVisualAlt": "Vizualizare arhitectură ETL",
-  "ctaTitle": "Luați Decizii Bazate pe Date",
+  "ctaTitle": "Luați decizii bazate pe date",
   "ctaDesc": "Transformați-vă operațiunile în sisteme inteligente cu soluțiile noastre ML.",
   "ctaButton": "Contactați-ne",
   "showMore": "Apasă pentru mai multe",
@@ -27,7 +27,7 @@
     "Sisteme fiabile, concepute pentru medii industriale exigente"
   ],
   "solutionsEyebrow": "Çözümler",
-  "solutionsTitle": "Ce Tipuri de Soluții de Învățare Automată Oferim?",
+  "solutionsTitle": "Ce tipuri de soluții de învățare automată oferim?",
   "solutions": [
     "Soluții de analiză de date și raportare",
     "Detectarea anomaliilor",
@@ -41,7 +41,7 @@
     "Optimizarea lanțului de aprovizionare și a logisticii"
   ],
   "deepLearning": {
-    "title": "Aplicații Deep Learning",
+    "title": "Aplicații deep learning",
     "spot": "Folosiți puterea deep learning pentru soluții de înaltă performanță!",
     "desc": "Tehnologiile deep learning vă fac procesele de afaceri mai inteligente și mai rapide prin cazuri de utilizare precum recunoașterea imaginilor, procesarea limbajului natural și analize predictive. Aceste sisteme vă optimizează forța de muncă și vă ajută să descoperiți oportunități în operațiunile dumneavoastră."
   },
@@ -50,7 +50,7 @@
     "spot": "Valorificați-vă datele cu aplicațiile ETL și propulsați-vă afacerea în viitor!",
     "desc": "Aplicațiile ETL vă accelerează integrarea datelor și fluxurile de lucru de analiză, îmbunătățesc calitatea datelor, funcționează perfect cu platformele de big data și oferă economii de costuri."
   },
-  "heroTitle": "Soluții AI și Machine Learning",
+  "heroTitle": "Soluții AI și machine learning",
   "heroSubtitle": "Transformați datele în decizii puternice și inteligente.",
   "heroDescription": "Soluțiile AI și Machine Learning vă pregătesc afacerea pentru viitor prin informațiile valoroase obținute din datele dumneavoastră. Prin analize avansate și algoritmi de ínvățare automată, descoperim potențialul ascuns din seturile de date colectate din procesele operaționale, optimizăm activitățile și vă ajutăm să luați decizii de afaceri mai eficiente. Transformați-vă datele în oportunități strategice cu soluțiile noastre de Machine Learning.",
   "heroImage": "/assets/strapi/aivemakineogrenmesi_477c412326.webp",

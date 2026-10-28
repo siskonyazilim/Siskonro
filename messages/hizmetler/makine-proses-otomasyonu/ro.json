@@ -1,15 +1,15 @@
 {
   "subtitle": "Modelați viitorul producției cu soluțiile noastre de automatizare",
-  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbHome": "Pagina principală",
   "breadcrumbServices": "Servicii",
   "service": "SERVICIU",
-  "title": "Automatizare Mașini și Procese",
+  "title": "Automatizare mașini și procese",
   "description": "Soluțiile de automatizare Siskon asigură controlul mașinilor și proceselor dvs. prin infrastructuri software sigure. Făcând procesele de producție mai rapide, flexibile și eficiente, reduc costurile și minimizează erorile umane. Sporiți competitivitatea afacerii dvs. cu soluțiile noastre inovatoare de automatizare.",
-  "getInfo": "Obțineți Informații",
+  "getInfo": "Obțineți informații",
   "benefits": "BENEFICII",
-  "benefitsTitle": "Ce Vă Oferă Soluțiile de Automatizare Siskon?",
+  "benefitsTitle": "Ce beneficii vă oferă soluțiile de Automatizare Siskon?",
   "roadmap": "FOAIE DE PARCURS PROCES",
-  "roadmapTitle": "Cum Implementăm Pașii de Automatizare?",
+  "roadmapTitle": "Cum implementăm pașii de automatizare?",
   "capabilities": [
     "Automatizarea mașinilor (asamblare, ambalare, umplere)",
     "Automatizarea proceselor",
@@ -22,14 +22,14 @@
     " Automatizare iluminat",
     "Servicii și suport tehnic"
   ],
-  "capabilitiesTitle": "Ce Tipuri de Soluții de Automatizare Oferim?",
-  "plcHmi": "Dezvoltare Software PLC și HMI",
+  "capabilitiesTitle": "Ce tipuri de soluții de automatizare oferim?",
+  "plcHmi": "Dezvoltare software PLC și HMI",
   "plcHmiSpot": "Optimizați procesele de producție cu software-ul nostru PLC și HMI!",
   "plcHmiDesc": "Soluțiile noastre software PLC și HMI vă ajută să automatizați procesele și să gestionați operațiunile fără probleme. Cu software integrat cu mărci de top precum Beckhoff și Siemens, puteți crește eficiența operațională.",
-  "scada": "Dezvoltare Software SCADA",
+  "scada": "Dezvoltare software SCADA",
   "scadaSpot": "Monitorizați și controlați operațiunile dintr-un singur centru cu soluțiile noastre SCADA!",
   "scadaDesc": "Sistemele SCADA (Supervisory Control and Data Acquisition) fac operațiunile dvs. de producție și control mai eficiente cu capabilități de monitorizare și control, precum și funcții de colectare, înregistrare și stocare a datelor. Cu soluțiile noastre SCADA flexibile și ușor de gestionat, puteți monitoriza îndeaproape operațiunile și optimiza procesele.",
-  "ctaTitle": "Începeți Proiectul de Automatizare",
+  "ctaTitle": "Începeți proiectul de automatizare",
   "ctaDescription": "Contactați-ne pentru informații detaliate despre automatizarea fabricii și sistemele de control industrial.",
   "ctaButton": "Contactați-ne",
   "showMore": "Apasă pentru mai multe",
@@ -46,52 +46,52 @@
   ],
   "steps": [
     {
-      "titleLine1": "Analiza Nevoilor și",
-      "titleLine2": "Planificarea Proiectului",
-      "title": "Analiza Nevoilor și Planificarea Proiectului"
+      "titleLine1": "Analiza nevoilor și",
+      "titleLine2": "Planificarea proiectului",
+      "title": "Analiza nevoilor și planificarea proiectului"
     },
     {
       "titleLine1": "Îmbunătățiri",
       "titleLine2": "Mecanice",
-      "title": "Îmbunătățiri Mecanice"
+      "title": "Îmbunătățiri mecanice"
     },
     {
       "titleLine1": "Selecția",
       "titleLine2": "Hardware",
-      "title": "Selecția Hardware"
+      "title": "Selecția hardware"
     },
     {
-      "titleLine1": "Proiectare Panou",
+      "titleLine1": "Proiectare panou",
       "titleLine2": "de Automatizare",
-      "title": "Proiectare Panou de Automatizare"
+      "title": "Proiectare panou de automatizare"
     },
     {
-      "titleLine1": "Dezvoltare Software PLC,",
+      "titleLine1": "Dezvoltare software PLC,",
       "titleLine2": "HMI și SCADA",
-      "title": "Dezvoltare Software PLC, HMI și SCADA"
+      "title": "Dezvoltare software PLC, HMI și SCADA"
     },
     {
-      "titleLine1": "Instalare și Punere",
+      "titleLine1": "Instalare și punere",
       "titleLine2": "în Funcțiune",
-      "title": "Instalare și Punere în Funcțiune"
+      "title": "Instalare și punere în funcțiune"
     },
     {
-      "titleLine1": " Test de Acceptare",
+      "titleLine1": " Test de acceptare",
       "titleLine2": "de către Utilizator",
-      "title": " Test de Acceptare de către Utilizator"
+      "title": " Test de acceptare de către utilizator"
     },
     {
       "titleLine1": "Instruire și",
       "titleLine2": "Documentație",
-      "title": "Instruire și Documentație"
+      "title": "Instruire și documentație"
     },
     {
-      "titleLine1": "Optimizarea Sistemului și",
-      "titleLine2": "Îmbunătățire Continuă",
-      "title": "Optimizarea Sistemului și Îmbunătățire Continuă"
+      "titleLine1": "Optimizarea sistemului și",
+      "titleLine2": "Îmbunătățire continuă",
+      "title": "Optimizarea sistemului și îmbunătățire continuă"
     }
   ],
-  "heroTitle": "Automatizare Mașini și Procese",
+  "heroTitle": "Automatizare mașini și procese",
   "heroSubtitle": "Modelați viitorul producției cu soluțiile noastre de automatizare",
   "heroDescription": "Soluțiile de automatizare Siskon asigură controlul mașinilor și proceselor dvs. prin infrastructuri software sigure. Făcând procesele de producție mai rapide, flexibile și eficiente, reduc costurile și minimizează erorile umane. Sporiți competitivitatea afacerii dvs. cu soluțiile noastre inovatoare de automatizare.",
   "heroImage": "/assets/strapi/siskon_1_4_makine_ve_proses_otomasyonu_16_9_dikey_3_camera_zeminsiz_2_ee1925aa7f.webp",

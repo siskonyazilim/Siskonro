@@ -1,11 +1,11 @@
 {
   "subtitle": "Accelerați transformarea digitală și dezvoltați strategii inovatoare!",
-  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbHome": "Pagina principală",
   "breadcrumbServices": "Servicii",
   "service": "SERVICIU",
-  "title": "Soluții Microsoft și Licențiere",
+  "title": "Soluții Microsoft și licențiere",
   "description": "Digitalizați procesele de afaceri cu soluțiile Microsoft 365, Power Platform și Azure. Oferim servicii de licențiere, instalare și consultanță adaptate nevoilor afacerii dvs. Furnizați analiză de date cu Power BI, dezvoltare de aplicații cu Power Apps și automatizare flux de lucru cu Power Automate.",
-  "requestProposal": "Solicitați o Propunere",
+  "requestProposal": "Solicitați o propunere",
   "benefits": [
     "Creșterea productivității",
     "Optimizarea proceselor de afaceri",
@@ -17,11 +17,11 @@
     "Integrare fără întreruperi"
   ],
   "benefitsEyebrow": "Beneficii",
-  "benefitsTitle": "Ce Vă Oferă Soluțiile Microsoft Siskon?",
+  "benefitsTitle": "Ce vă oferă soluțiile Microsoft Siskon?",
   "powerPlatformTitle": "Microsoft Power Platforms",
   "powerPlatformSubtitle": "Accelerați transformarea digitală cu Microsoft Power Platforms!",
   "powerPlatformDescription": "Aplicațiile Microsoft Power Platform reunesc analiza datelor, automatizarea fluxurilor de lucru și dezvoltarea aplicațiilor sub un singur acoperiș. Optimizați procesele cu Power BI, Power Apps și Power Automate și creați impact măsurabil în transformarea digitală.",
-  "solutionsTitle": "Soluțiile Noastre Power Platform",
+  "solutionsTitle": "Soluțiile noastre Power Platform",
   "licenses": [
     "Licențe Microsoft 365",
     "Licențe Windows",
@@ -29,14 +29,14 @@
     "Licențe Azure",
     "Licențe Microsoft Power Platform"
   ],
-  "licensesTitle": "Soluții de Licențiere Microsoft",
-  "licensesSubtitle": "Licențe de Produse Microsoft",
-  "ctaTitle": "Începeți Transformarea cu Soluții Microsoft",
+  "licensesTitle": "Soluții de licențiere Microsoft",
+  "licensesSubtitle": "Licențe de produse Microsoft",
+  "ctaTitle": "Începeți transformarea cu soluții Microsoft",
   "ctaDescription": "Contactați-ne pentru cele mai potrivite soluții Microsoft și opțiuni de licențiere pentru afacerea dvs.",
   "ctaButton": "Contactați-ne",
   "showMore": "Apasă pentru mai multe",
   "showLess": "Arată mai puțin",
-  "imageAlt": "Soluții Siskon Microsoft - Instrumente de Transformare Digitală",
+  "imageAlt": "Soluții Siskon Microsoft - instrumente de transformare digitală",
   "serviceSectionTitle": "Soluții Microsoft",
   "serviceSectionDesc": "Soluțiile puternice oferite de Microsoft precum Azure, Power BI, Power Apps și Power Automate sprijină afacerea dumneavoastră să realizeze transformarea digitală rapid și ușor. Prin serviciile noastre de vânzare de licențe, instruire și integrare, accelerăm procesul de transformare digitală și ducem afacerea dumneavoastră cu un pas înainte.",
   "powerPlatform": {
@@ -44,7 +44,7 @@
     "subtitle": "Accelerați transformarea digitală cu Microsoft Power Platforms!",
     "description": "Aplicațiile Microsoft Power Platform aduc împreună analiza datelor, automatizarea fluxului de lucru și dezvoltarea de aplicații sub același acoperiș. Optimizați-vă procesele cu Power BI, Power Apps și Power Automate și creați un impact măsurabil în transformarea digitală."
   },
-  "heroTitle": "Soluții Microsoft și Licențiere",
+  "heroTitle": "Soluții Microsoft și licențiere",
   "heroSubtitle": "Accelerați transformarea digitală și dezvoltați strategii inovatoare!",
   "heroDescription": "Digitalizați procesele de afaceri cu soluțiile Microsoft 365, Power Platform și Azure. Oferim servicii de licențiere, instalare și consultanță adaptate nevoilor afacerii dvs. Furnizați analiză de date cu Power BI, dezvoltare de aplicații cu Power Apps și automatizare flux de lucru cu Power Automate.",
   "heroImage": "/assets/strapi/ms_solutions_1_camera_2_aa750b2234.webp",

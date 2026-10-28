@@ -113,6 +113,7 @@ function validateForm(formData, pt, { requireRecaptcha, hasRecaptchaToken }) {
 
 /* ── ContactInfoPanel ─────────────────────────────────────────────────────── */
 function ContactInfoPanel({ strapiContent, contactInfos, pt }) {
+  const { locale } = useLanguage();
   const eyebrow      = strapiContent?.sectionEyebrow    || pt('sectionEyebrow');
   const titleTop     = strapiContent?.sectionTitleTop   || pt('sectionTitleTop');
   const titleAccent  = strapiContent?.sectionTitleAccent || pt('sectionTitleAccent');
@@ -154,6 +155,7 @@ function ContactInfoPanel({ strapiContent, contactInfos, pt }) {
 
       <FooterDocsBar />
 
+      {locale !== 'ro' && (
       <a href="https://intern.siskon.com.tr/" target="_blank" rel="noopener noreferrer"
         className="group relative w-full max-w-xl overflow-hidden rounded-3xl bg-gradient-to-br from-white to-sky-50 p-5 md:p-6 shadow-[0_14px_36px_rgba(2,132,199,0.12)] hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(2,132,199,0.18)] transition-all duration-300">
         <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-sky-200/50 blur-2xl" aria-hidden="true" />
@@ -172,6 +174,7 @@ function ContactInfoPanel({ strapiContent, contactInfos, pt }) {
           </div>
         </div>
       </a>
+      )}
     </div>
   );
 }
@@ -282,7 +285,7 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
                 autoComplete={AUTOCOMPLETE.email} inputMode="email"
                 aria-invalid={Boolean(formErrors.email)} aria-describedby={formErrors.email ? fieldErrorId('email') : undefined}
                 className={`form-input ${formErrors.email ? 'form-input-error' : ''}`}
-                placeholder="ornek@sirket.com" />
+                placeholder={pt('emailPlaceholder')} />
               {formErrors.email ? <p id={fieldErrorId('email')} className="form-error-text">{formErrors.email}</p> : null}
             </div>
             <div className="space-y-1.5 md:space-y-2">

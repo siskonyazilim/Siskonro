@@ -1,23 +1,23 @@
 {
-  "pageTitle": "Serviciile Noastre",
+  "pageTitle": "Serviciile noastre",
   "pageSubtitle": "Atingeți excelența operațională cu soluții software și automatizare specifice industriei. Măsurați eficiența, optimizați procesele, adăugați valoare producției dvs.",
-  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbHome": "Pagina principală",
   "breadcrumbServices": "Servicii",
-  "solutionPartnerEyebrow": "Partenerul Dvs. de Soluții",
+  "solutionPartnerEyebrow": "Partenerul dvs. de soluții",
   "solutionPartnerTitle": "Gestionăm Transformarea <br /> <span class=\"text-sky-600\">Digitală</span> <br /> prin Inginerie.",
   "solutionPartnerDesc": "Din 1997, am combinat experiența profundă de pe teren dobândită în 40+ de țări cu arhitecturi software moderne. Nu scriem doar cod, întărim infrastructura operațională a fabricii dvs.",
   "whySiskonTitle": "De ce Siskon?",
-  "strategicPlanningEyebrow": "Planificare Strategică",
-  "strategicPlanningTitle": "Foaie de Parcurs Digitală Adaptată Nevoilor Dvs.",
+  "strategicPlanningEyebrow": "Planificare strategică",
+  "strategicPlanningTitle": "Foaie de parcurs digitală adaptată nevoilor dvs.",
   "strategicPlanningDesc": "Analizăm infrastructura dvs. actuală și determinăm setul tehnologic cel mai potrivit pentru viziunea de viitor a fabricii dvs.",
   "strategicPlanningCta": "Programați o sesiune gratuită de descoperire",
-  "methodologyEyebrow": "Metodologia Noastră",
-  "methodologyTitle": "Implementare cu Disciplină de Inginerie",
+  "methodologyEyebrow": "Metodologia noastră",
+  "methodologyTitle": "Implementare cu disciplină de inginerie",
   "methodologyDesc": "Un ciclu de viață al proiectului conform standardelor, testabil și sustenabil.",
-  "ctaTitle": "Să Programăm Împreună Viitorul.",
+  "ctaTitle": "Să programăm împreună viitorul.",
   "ctaDesc": "Programați o întâlnire pentru a evalua proiectul dvs. cu inginerii noștri experți.",
-  "ctaCta": "Luați Legătura",
-  "exploreService": "Explorati Serviciul",
+  "ctaCta": "Luați legătura",
+  "exploreService": "Explorați serviciul",
   "whySiskonItems": [
     {
       "t": "Inginerie Independentă",
@@ -34,19 +34,19 @@
   ],
   "methodologySteps": [
     {
-      "t": "Analiză și Descoperire",
+      "t": "Analiză și descoperire",
       "d": "Identificăm realitățile din teren și blocajele cu date."
     },
     {
-      "t": "Design Arhitectural",
+      "t": "Design arhitectural",
       "d": "Proiectăm o arhitectură de sistem flexibilă, modulară și scalabilă."
     },
     {
-      "t": "Dezvoltare Agilă",
+      "t": "Dezvoltare agilă",
       "d": "Un proces de livrare bazat pe sprint-uri, transparent și continuu testat."
     },
     {
-      "t": "Suport Continuu",
+      "t": "Suport continuu",
       "d": "Rămânem alături de dvs. pentru a menține eficiența pe durata ciclului de viață a sistemelor."
     }
   ],

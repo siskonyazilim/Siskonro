@@ -1,12 +1,12 @@
 {
-  "customSoftware": "Soluții Software Personalizate",
-  "iiot": "Soluții Internet Industrial al Obiectelor (IIoT)",
-  "traceability": "Soluții de Trasabilitate",
-  "automation": "Automatizare Mașini și Procese",
-  "robotics": "Soluții Robotice",
-  "vision": "Soluții de Procesare Imagine",
-  "aiMl": "Big Data și Soluții Machine Learning",
+  "customSoftware": "Soluții software personalizate",
+  "iiot": "Soluții internet industrial al obiectelor (IIoT)",
+  "traceability": "Soluții de trasabilitate",
+  "automation": "Automatizare mașini și procese",
+  "robotics": "Soluții robotice",
+  "vision": "Soluții de procesare imagine",
+  "aiMl": "Big Data și soluții machine learning",
   "microsoft": "Soluții Microsoft",
   "velotic": "Velotic",
-  "training": "Formare și Consultanță"
+  "training": "Formare și consultanță"
 }

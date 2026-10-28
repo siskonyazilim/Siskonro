@@ -1,11 +1,11 @@
 {
   "subtitle": "Opțiuni de soluții care includ cele mai potrivite produse software și hardware, concepute pentru a funcționa împreună",
-  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbHome": "Pagina principală",
   "breadcrumbServices": "Servicii",
   "service": "SERVICIU",
-  "title": "Dezvoltare Software Bazată pe Nevoi",
+  "title": "Dezvoltare software bazată pe nevoi",
   "description": "Cu serviciile noastre de dezvoltare software personalizată, oferim soluții flexibile și inovatoare adaptate nevoilor dvs. Dezvoltăm software personalizat pentru a digitaliza procesele dvs. industriale, pentru a crește eficiența și pentru a obține avantaj competitiv.",
-  "startProject": "Începeți Proiectul",
+  "startProject": "Începeți proiectul",
   "benefits": [
     "Management agil al proiectelor",
     "Analiza detaliată a sistemului",
@@ -17,7 +17,7 @@
     "Management flexibil al schimbărilor"
   ],
   "benefitsEyebrow": "Beneficii",
-  "benefitsTitle": "Beneficiile Software-ului Personalizat",
+  "benefitsTitle": "Beneficiile software-ului personalizat",
   "capabilities": [
     "Management de proiect",
     "Analiza și documentarea proiectului",
@@ -31,18 +31,18 @@
     "Managementul schimbărilor și rezolvarea problemelor"
   ],
   "capabilitiesEyebrow": "Capabilități",
-  "capabilitiesTitle": "Ce Soluții Oferim?",
+  "capabilitiesTitle": "Ce soluții oferim?",
   "features": "CARACTERISTICI",
-  "featuresTitle": "Cu Ce Sisteme Putem Integra?",
-  "ctaTitle": "Să Aducem Proiectul Dvs. la Viață",
+  "featuresTitle": "Cu ce sisteme putem integra?",
+  "ctaTitle": "Să aducem proiectul dvs. la viață",
   "ctaDescription": "Contactați-ne pentru informații detaliate despre soluțiile software personalizate și pentru a discuta despre proiectele dvs.",
   "ctaButton": "Contactați-ne",
-  "imageAlt1": "Soluții Siskon Software Personalizat - Aplicații Industriale la Comandă",
+  "imageAlt1": "Soluții Siskon software personalizat - aplicații industriale la comandă",
   "imageAlt2": "Soluții software personalizat macbook mockup",
   "imageAlt3": "Ilustrație capacități soluție software personalizat",
   "imageAlt4": "Logo integrări software personalizat",
   "whySiskon": "De ce Siskon?",
-  "whatCanBeDone": "Ce se Poate Face?",
+  "whatCanBeDone": "Ce se poate face?",
   "showMore": "Apasă pentru mai multe",
   "showLess": "Arată mai puțin",
   "integrations": [
@@ -55,7 +55,7 @@
     " Aplicații Microsoft",
     "Alte dispozitive care oferă intrare de date în sistem (Cod de bare, RFID, etc.)"
   ],
-  "heroTitle": "Dezvoltare Software Bazată pe Nevoi",
+  "heroTitle": "Dezvoltare software bazată pe nevoi",
   "heroSubtitle": "Opțiuni de soluții care includ cele mai potrivite produse software și hardware, concepute pentru a funcționa împreună",
   "heroDescription": "Cu serviciile noastre de dezvoltare software personalizată, oferim soluții flexibile și inovatoare adaptate nevoilor dvs. Dezvoltăm software personalizat pentru a digitaliza procesele dvs. industriale, pentru a crește eficiența și pentru a obține avantaj competitiv.",
   "heroImage": "/assets/strapi/musteriye_ozel_yazilim_cozumleri_banner_1_1_zeminsiz_2_83e6fef40e.webp",
@@ -66,7 +66,7 @@
   "capabilitiesListTitle": "De ce Siskon?",
   "capabilitiesImage": "/assets/strapi/ne_tur_cozumler_sunuyoruz_banner_2_zeminsiz_2_1_1_e38891ae13.webp",
   "integrationsEyebrow": "CARACTERISTICI",
-  "integrationsTitle": "Cu Ce Sisteme Putem Integra?",
-  "integrationsListTitle": "Ce se Poate Face?",
+  "integrationsTitle": "Cu ce sisteme putem integra?",
+  "integrationsListTitle": "Ce se poate face?",
   "integrationsImage": "/assets/strapi/musteriye_Ozel_Logo_a6d40dfb80.svg"
 }

@@ -1,29 +1,29 @@
 {
   "subtitle": "Monitorizați procesele, asigurați calitatea și obțineți un avantaj competitiv",
-  "breadcrumbHome": "Pagina Principală",
+  "breadcrumbHome": "Pagina principală",
   "breadcrumbServices": "Servicii",
   "service": "SERVICIU",
-  "title": "Soluții Software de Trasabilitate",
+  "title": "Soluții software de trasabilitate",
   "description": "Trasabilitatea permite monitorizarea tuturor proceselor, de la aprovizionarea cu materii prime până la produsul final, contribuind la identificarea la timp a problemelor și la îmbunătățirea calității producției. De asemenea, consolidează încrederea clienților prin creșterea transparenței pe întregul lanț de aprovizionare.",
-  "getInfo": "Obțineți Informații",
+  "getInfo": "Obțineți informații",
   "benefits": "BENEFICII",
-  "benefitsTitle": "Ce Soluții de Trasabilitate Oferim?",
+  "benefitsTitle": "Ce soluții de trasabilitate oferim?",
   "benefitsDescription": "Sistemele noastre de trasabilitate oferă control și vizibilitate complete în toate procesele de la producție la expediere.",
   "qualifications": "CALIFICĂRI",
-  "qualificationsTitle": "Ce Beneficii Vă Oferă Soluțiile de Trasabilitate Siskon?",
+  "qualificationsTitle": "Ce beneficii vă oferă soluțiile de Trasabilitate Siskon?",
   "sectorDetails": "COMPONENTE SOLUȚIE",
-  "components": "Componentele Sistemelor de Trasabilitate",
-  "ctaTitle": "Consolidați Sistemele de Trasabilitate",
+  "components": "Componentele sistemelor de trasabilitate",
+  "ctaTitle": "Consolidați sistemele de trasabilitate",
   "ctaDescription": "Descoperiți soluțiile noastre pentru trasabilitate completă în procesele dvs. de producție.",
   "ctaButton": "Contactați-ne",
   "showMore": "Apasă pentru mai multe",
   "showLess": "Arată mai puțin",
   "features": [
-    "Articol Unic",
-    "Lot / Șarjă",
+    "Articol unic",
+    "Lot / șarjă",
     "RTLS",
     "Pick to Light / Put to Light",
-    "Sisteme de Management al Depozitului",
+    "Sisteme de management al depozitului",
     "Integrare"
   ],
   "technicalFeatures": [
@@ -46,7 +46,7 @@
   ],
   "sectorDetailCards": [
     {
-      "title": "Urmărire Articol Unic",
+      "title": "Urmărire articol unic",
       "titleSub": "",
       "spot": "Obțineți vizibilitate completă în producție cu urmărirea produselor în timp real după numărul de serie.",
       "desc": "În procesele de trasabilitate, urmărirea fiecărui produs cu un număr unic oferă vizibilitate și control complet. Această abordare îmbunătățește trasabilitatea fiecărui articol și creează un avantaj puternic în managementul calității și competitivitate.",
@@ -55,7 +55,7 @@
       "imageAlt": "Pictogramă urmărire articol unic"
     },
     {
-      "title": "Urmărire Lot / Șarjă",
+      "title": "Urmărire lot / șarjă",
       "titleSub": "",
       "spot": "Obțineți control complet de la producție la livrare cu urmărirea pe lot / șarjă.",
       "desc": "În situațiile în care urmărirea produselor este dificilă, trasabilitatea fiecărui lot/șarjă asigură transparență completă și control al calității pe tot parcursul producției. Acest lucru face ușoară urmărirea produselor în fiecare etapă.",
@@ -74,7 +74,7 @@
     },
     {
       "title": "RTLS",
-      "titleSub": "(Sisteme de Localizare în Timp Real)",
+      "titleSub": "(Sisteme de localizare în timp real)",
       "spot": "Urmăriți instantaneu echipamentele și angajații cu RTLS și utilizați resursele la eficiență maximă.",
       "desc": "Cu RTLS, puteți monitoriza cu ușurință locația în timp real a fiecărui echipament și angajat din unitatea dumneavoastră. Această tehnologie ajută la utilizarea eficientă a resurselor, crește eficiența producției, îmbunătățește siguranța și minimizează riscurile potențiale.",
       "icon": "/assets/strapi/izlenebilirlikicon_1108a700ce.webp",
@@ -82,7 +82,7 @@
       "imageAlt": "Pictogramă RTLS"
     },
     {
-      "title": "Sisteme de Management al Depozitului",
+      "title": "Sisteme de management al depozitului",
       "titleSub": "",
       "spot": "Optimizați-vă operațiunile și obțineți un avantaj competitiv cu sistemele de management al depozitului.",
       "desc": "Sistemele de Management al Depozitului oferă control și management al proceselor. Lucrând cu date în timp real, ele permit managementul eficient al operațiunilor desfășurate în întreaga organizație.",
@@ -100,7 +100,7 @@
       "imageAlt": "Pictogramă integrare"
     }
   ],
-  "heroTitle": "Soluții Software de Trasabilitate",
+  "heroTitle": "Soluții software de trasabilitate",
   "heroSubtitle": "Monitorizați procesele, asigurați calitatea și obțineți un avantaj competitiv",
   "heroDescription": "Trasabilitatea permite monitorizarea tuturor proceselor, de la aprovizionarea cu materii prime până la produsul final, contribuind la identificarea la timp a problemelor și la îmbunătățirea calității producției. De asemenea, consolidează încrederea clienților prin creșterea transparenței pe întregul lanț de aprovizionare.",
   "heroImage": "/assets/strapi/siskon_1_3_izlenebilirlik_cozumleri_16_9_yatay_beyaz_illustrasyon_camera_2_e4744660ab.webp",

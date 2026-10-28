@@ -9,7 +9,7 @@ Use these environment variables in Coolify for the contact form.
 | SMTP_USER | bilgi@siskon.com.tr | Yes |
 | SMTP_PASS | app password | Yes |
 | CONTACT_FORM_FROM | bilgi@siskon.com.tr | Yes |
-| CONTACT_FORM_TO | info@siskon.com.tr | Yes |
+| CONTACT_FORM_TO | web@siskon.com.tr | Yes |
 | NEXT_PUBLIC_RECAPTCHA_SITE_KEY | your-site-key | No |
 | RECAPTCHA_SECRET_KEY | your-secret-key | No |
 

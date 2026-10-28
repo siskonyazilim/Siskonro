@@ -1,34 +1,34 @@
 {
   "automotiveSector": {
-    "title": "Industria Auto Principală și Furnizori",
+    "title": "Industria auto principală și furnizori",
     "sectorLabel": "Sector 02"
   },
   "appliancesSector": {
-    "title": "Electrocasnice și Aparate Casnice",
+    "title": "Electrocasnice și aparate casnice",
     "sectorLabel": "Sector 03"
   },
   "foodBeverageSector": {
-    "title": "Alimente și Băuturi",
+    "title": "Alimente și băuturi",
     "sectorLabel": "Sector 04"
   },
   "textileSector": {
-    "title": "Textile și Confecții",
+    "title": "Textile și confecții",
     "sectorLabel": "Sector 07"
   },
   "tobaccoSector": {
-    "title": "Industria Tutunului",
+    "title": "Industria tutunului",
     "sectorLabel": "Sector 01"
   },
   "pharmaSector": {
-    "title": "Produse Farmaceutice și Sănătate",
+    "title": "Produse farmaceutice și sănătate",
     "sectorLabel": "Sector 05"
   },
   "energyChemSector": {
-    "title": "Energie, Chimie și Sustenabilitate",
+    "title": "Energie, chimie și sustenabilitate",
     "sectorLabel": "Sector 08"
   },
   "machineAutomationSector": {
-    "title": "Mașini, Proces și Automatizare CNC",
+    "title": "Mașini, proces și automatizare CNC",
     "sectorLabel": "Sector 06"
   }
 }
