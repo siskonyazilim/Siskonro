@@ -43,7 +43,7 @@ const ORG = {
     support: 'support@siskon.com.tr',
   },
   sameAs: [
-    'https://x.com/siskonsoftware',
+    'https://x.com/siskonromania',
     'https://www.linkedin.com/company/siskonromania/',
     'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
     'https://www.instagram.com/siskon_romania',

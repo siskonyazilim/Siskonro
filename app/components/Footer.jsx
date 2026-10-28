@@ -68,7 +68,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
         linkedinUrl: 'https://www.linkedin.com/company/siskonromania/',
         youtubeUrl:  'https://www.youtube.com/channel/UCpEyoqwoPBYzUcyI5lCG0Wg',
         instagramUrl:'https://www.instagram.com/siskon_romania',
-        twitterUrl:  'https://x.com/siskonsoftware',
+        twitterUrl:  'https://x.com/siskonromania',
       }
     : {
         linkedinUrl: 'https://www.linkedin.com/company/siskonyazilimveotomasyon',
