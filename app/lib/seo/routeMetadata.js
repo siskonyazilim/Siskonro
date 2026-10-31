@@ -1,6 +1,6 @@
 import { detectLocale, toInternalPath, toLocalizedPath } from '../i18n/routes';
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NODE_ENV === 'production' ? 'https://siskon.ro' : 'http://localhost:3000');
 
 const IS_DEV = process.env.NODE_ENV !== 'production';
 // Canlı alan adı henüz belirlenmedi: güvenilir hostlar SITE_TRUSTED_HOSTS (virgülle ayrılmış) ile verilir.

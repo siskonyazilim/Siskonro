@@ -105,7 +105,7 @@ export async function GET(request) {
     'Content-Disposition':    'inline',
     'Cache-Control':          'public, max-age=31536000, immutable',
     'X-Content-Type-Options': 'nosniff',
-    'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_SITE_URL || 'https://www.siskon.com.tr',
+    'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_SITE_URL || 'https://siskon.ro',
   };
 
   if (ext === 'svg') {
