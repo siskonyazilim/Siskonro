@@ -30,7 +30,7 @@
       "sub": "Conectivitate IIoT",
       "desc": "Strat de colectare a datelor industriale cu suport pentru protocol deschis de la fabrică la cloud: OPC UA, Beckhoff, Siemens, MQTT, Modbus, REST.",
       "icon": "/assets/strapi/connectivity_2c3f207de1.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/connect",
+      "link": "https://www.onsuite.ro/module/connect",
       "name": "OnSuite Connect",
       "features": [
         "Suport OPC UA & DA",
@@ -43,7 +43,7 @@
       "sub": "Monitorizare în timp real",
       "desc": "Vizibilitate în timp real a producției: mașini, operatori, linii și procese într-o singură vizualizare live.",
       "icon": "/assets/strapi/monitora_753b00ba39.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/live",
+      "link": "https://www.onsuite.ro/module/live",
       "name": "OnSuite Live",
       "features": [
         "Stări live ale mașinilor",
@@ -56,7 +56,7 @@
       "sub": "Analiza performanței",
       "desc": "Monitorizare OEE cu timpi de inactivitate, deșeuri și analize de performanță, inclusiv analiză de cauză rădăcină, Pareto și blocaje.",
       "icon": "/assets/strapi/oee_bd8de82488.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/optima",
+      "link": "https://www.onsuite.ro/module/optima",
       "name": "OnSuite Optima",
       "features": [
         "Calculații OEE / TEEP / OMT",
@@ -69,7 +69,7 @@
       "sub": "Trasabilitate",
       "desc": "Trasabilitate end-to-end de la materia primă la produsele finite cu standarde GS1, serializare și track-and-trace.",
       "icon": "/assets/strapi/izlenebilirlik_2c63f41105.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/trace",
+      "link": "https://www.onsuite.ro/module/trace",
       "name": "OnSuite Trace",
       "features": [
         "Urmărire serii și loturi",
@@ -82,7 +82,7 @@
       "sub": "Operațiuni fără hârtie",
       "desc": "SmartForms digitale pentru 5S, OPL și controlul calității, înlocuind hârtia cu fluxuri de lucru audibile în teren.",
       "icon": "/assets/strapi/dsf_248c6b59f4.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/forms",
+      "link": "https://www.onsuite.ro/module/forms",
       "name": "OnSuite Forms",
       "features": [
         "Designer de formulare digitale",
@@ -95,7 +95,7 @@
       "sub": "Optimizare CNC",
       "desc": "Date la nivel de protocol de la Fanuc, Siemens, Mazak și alte CNC-uri cu analiza duratei de viață a sculelor și a performanței.",
       "icon": "/assets/strapi/cnc_7850af27b8.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/cnc",
+      "link": "https://www.onsuite.ro/module/cnc",
       "name": "OnSuite CNC",
       "features": [
         "Analiză G-Code",
@@ -108,7 +108,7 @@
       "sub": "Managementul sculelor OPC UA",
       "desc": "Experiență reală de implementare a OPC UA TMC adaptată operațiunilor din industria tutunului.",
       "icon": "/assets/strapi/opctmc_9311b1be59.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/tmc",
+      "link": "https://www.onsuite.ro/module/tmc",
       "name": "OnSuite TMC",
       "features": [
         "Conformitate cu standardul TMC",
@@ -121,7 +121,7 @@
       "sub": "Integrare ERP",
       "desc": "Integrare bidirecțională, în timp real cu SAP, Canias și alte sisteme ERP.",
       "icon": "/assets/strapi/entegrasyon_bdeb37a81b.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/integra",
+      "link": "https://www.onsuite.ro/module/integra",
       "name": "OnSuite Integra",
       "features": [
         "Integrare SAP BAPI / RFC",
@@ -134,7 +134,7 @@
       "sub": "Managementul energiei",
       "desc": "Monitorizare și analize ale consumului conforme cu ISO 50001 care fac costurile cu energia vizibile și gestionabile.",
       "icon": "/assets/strapi/enerji_5b3c7e115f.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/energy",
+      "link": "https://www.onsuite.ro/module/energy",
       "name": "OnSuite Energy",
       "features": [
         "Conformitate ISO 50001",
@@ -147,7 +147,7 @@
       "sub": "ESG și Carbon",
       "desc": "Platformă industrială pentru urmărirea amprentei de carbon, valorile de sustenabilitate și raportarea ESG.",
       "icon": "/assets/strapi/carboniq_47fee307c1.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/green",
+      "link": "https://www.onsuite.ro/module/green",
       "name": "OnSuite Green",
       "features": [
         "Măsurarea amprentei de carbon",
@@ -160,7 +160,7 @@
       "sub": "Fundația platformei",
       "desc": "Arhitectură React + C# API + MS SQL cu design de proceduri stocate și testare SQL automată tSQLt.",
       "icon": "/assets/strapi/core_9d7965b69c.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/core",
+      "link": "https://www.onsuite.ro/module/core",
       "name": "OnSuite Core",
       "features": [
         "Fundație C# .NET API",
@@ -173,7 +173,7 @@
       "sub": "Managementul crizelor",
       "desc": "Sistem de apel de urgență cu două canale și management al crizelor pentru facilități industriale. Oferă interogare simultană via WhatsApp și SMS, vizibilitate centralizată și escaladare automată.",
       "icon": "/SiteIcon/products/Engage.svg",
-      "link": "https://www.onsuite.com.tr/ro/moduller/engage",
+      "link": "https://www.onsuite.ro/engage",
       "name": "OnSuite Engage",
       "features": [
         "Confirmare rapidă a statusului",
@@ -318,6 +318,6 @@
   "logo": "/assets/strapi/onsuite_logo_99ebb0221e.svg",
   "productImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
   "desktopImage": "/assets/strapi/Onsuite_Desktop_8102bc7bc2.webp",
-  "buttonText": "onsuite.com.tr",
-  "buttonUrl": "https://www.onsuite.com.tr/ro/main/"
+  "buttonText": "onsuite.ro",
+  "buttonUrl": "https://www.onsuite.ro/"
 }

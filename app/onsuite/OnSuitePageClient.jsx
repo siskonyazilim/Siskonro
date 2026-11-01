@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { toLocalizedPath } from '../lib/i18n/routes';
+import { onsuiteUrl } from '../lib/onsuite/links';
 import AnimatedButton from '../components/AnimatedButton';
 import { AnimatedCTALink } from '../components/AnimatedCTALink';
 import PageHero from '../components/PageHero';
@@ -137,13 +138,13 @@ export default function OnSuitePageClient({ data, locale }) {
               </div>
               <div className="pt-4 flex flex-wrap gap-4 justify-center xl:justify-start">
                 <AnimatedButton
-                  href={isRo ? 'https://www.onsuite.com.tr/ro/main/' : isEn ? 'https://www.onsuite.com.tr/main/' : 'https://www.onsuite.com.tr/'}
+                  href={onsuiteUrl('home', locale)}
                   external
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   className="!rounded-xl !px-8 !py-4"
                 >
-                  onsuite.com.tr
+                  onsuite.ro
                 </AnimatedButton>
               </div>
             </div>
@@ -265,7 +266,7 @@ export default function OnSuitePageClient({ data, locale }) {
                         href={modules[activeTab]?.link}
                         external
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener"
                         className="!rounded-2xl !px-8 !py-4"
                       >
                         {data.exploreSolutionButton}

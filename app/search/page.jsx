@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { isExternalUrl, onsuiteUrl } from '../lib/onsuite/links';
 import AnimatedCTALink from '../components/AnimatedCTALink';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -77,7 +78,7 @@ const UI = {
 const QUICK_LINKS = {
   tr: [
     { label: 'Hizmetler', href: '/hizmetler' },
-    { label: 'OnSuite', href: '/onsuite' },
+    { label: 'OnSuite', href: onsuiteUrl('home', 'tr') },
     { label: 'Referanslar', href: '/referanslar' },
     { label: 'İletişim', href: '/iletisim#contact-form' },
     { label: 'Kariyer', href: '/kurumsal/kariyer' },
@@ -85,7 +86,7 @@ const QUICK_LINKS = {
   ],
   en: [
     { label: 'Services', href: '/hizmetler' },
-    { label: 'OnSuite', href: '/onsuite' },
+    { label: 'OnSuite', href: onsuiteUrl('home', 'en') },
     { label: 'References', href: '/referanslar' },
     { label: 'Contact', href: '/iletisim#contact-form' },
     { label: 'Careers', href: '/kurumsal/kariyer' },
@@ -93,7 +94,7 @@ const QUICK_LINKS = {
   ],
   ro: [
     { label: 'Servicii', href: '/hizmetler' },
-    { label: 'OnSuite', href: '/onsuite' },
+    { label: 'OnSuite', href: onsuiteUrl('home', 'ro') },
     { label: 'Referințe', href: '/referanslar' },
     { label: 'Contact', href: '/iletisim#contact-form' },
     { label: 'Blog', href: '/blog' },
@@ -147,12 +148,20 @@ function highlight(text, query) {
   );
 }
 
+// Dış (onsuite.ro) bağlantılar yeni sekmede, iç bağlantılar locale'e göre açılır.
+function SearchLink({ href, localizePath, ...props }) {
+  if (isExternalUrl(href)) {
+    return <a href={href} target="_blank" rel="noopener" {...props} />;
+  }
+  return <Link href={localizePath(href)} {...props} />;
+}
+
 function ResultCard({ item, localizePath, query, ui, locale }) {
   const date = formatDate(item.date, locale);
 
   return (
     <article className="group h-full rounded-xl md:rounded-2xl bg-white border border-slate-200 hover:border-[#0369a1]/40 hover:shadow-lg hover:shadow-sky-100 transition-all duration-300">
-      <Link href={localizePath(item.href)} className="flex h-full flex-col justify-between gap-4 md:gap-5 p-5 md:p-8">
+      <SearchLink href={item.href} localizePath={localizePath} className="flex h-full flex-col justify-between gap-4 md:gap-5 p-5 md:p-8">
         <div className="flex flex-col gap-3 md:gap-3.5">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="px-3 py-1 rounded-full text-xs md:text-[0.8rem] font-semibold bg-sky-50 text-[#03408f] border border-sky-100">
@@ -185,7 +194,7 @@ function ResultCard({ item, localizePath, query, ui, locale }) {
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </div>
-      </Link>
+      </SearchLink>
     </article>
   );
 }
@@ -459,14 +468,15 @@ export default function SearchPage() {
               <p className="mb-6 font-archivo text-slate-600">{ui.noQuery}</p>
               <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
                 {quickLinks.map((item) => (
-                  <Link
+                  <SearchLink
                     key={item.href}
-                    href={localizePath(item.href)}
+                    href={item.href}
+                    localizePath={localizePath}
                     className="flex min-h-[48px] items-center gap-2.5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-semibold text-[#1B3A63] transition-all hover:border-[#0369a1]/50 hover:bg-white hover:text-[#0369a1]"
                   >
                     <span className="h-2 w-2 shrink-0 rounded-full bg-[#08DCFF]" />
                     {item.label}
-                  </Link>
+                  </SearchLink>
                 ))}
               </div>
             </div>

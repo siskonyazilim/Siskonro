@@ -30,7 +30,7 @@
       "sub": "IIoT Connectivity",
       "desc": "Industrial data collection layer with open protocol support from shopfloor to cloud: OPC UA, Beckhoff, Siemens, MQTT, Modbus, REST.",
       "icon": "/assets/strapi/connectivity_2c3f207de1.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/connect",
+      "link": "https://www.onsuite.ro/en/modules/connect",
       "name": "OnSuite Connect",
       "features": [
         "OPC UA & DA Support",
@@ -43,7 +43,7 @@
       "sub": "Real-time Monitoring",
       "desc": "Real-time visibility of production: machines, operators, lines, and processes in a single live view.",
       "icon": "/assets/strapi/monitora_753b00ba39.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/live",
+      "link": "https://www.onsuite.ro/en/modules/live",
       "name": "OnSuite Live",
       "features": [
         "Live Machine States",
@@ -56,7 +56,7 @@
       "sub": "Performance Analytics",
       "desc": "OEE monitoring with downtime, scrap, and performance analytics including root-cause, Pareto, and bottleneck analysis.",
       "icon": "/SiteIcon/products/optima",
-      "link": "https://www.onsuite.com.tr/en/modules/optima",
+      "link": "https://www.onsuite.ro/en/modules/optima",
       "name": "OnSuite Optima",
       "features": [
         "OEE / TEEP / OMT Calculations",
@@ -69,7 +69,7 @@
       "sub": "Traceability",
       "desc": "End-to-end traceability from raw material to finished goods with GS1 standards, serialization, and track-and-trace.",
       "icon": "/assets/strapi/izlenebilirlik_2c63f41105.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/trace",
+      "link": "https://www.onsuite.ro/en/modules/trace",
       "name": "OnSuite Trace",
       "features": [
         "Serial & Lot Tracking",
@@ -82,7 +82,7 @@
       "sub": "Paperless Operations",
       "desc": "Digital SmartForms for 5S, OPL, and quality control, replacing paper with auditable field workflows.",
       "icon": "/assets/strapi/dsf_248c6b59f4.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/forms",
+      "link": "https://www.onsuite.ro/en/modules/forms",
       "name": "OnSuite Forms",
       "features": [
         "Digital Form Designer",
@@ -95,7 +95,7 @@
       "sub": "CNC Optimization",
       "desc": "Protocol-level data from Fanuc, Siemens, Mazak, and other CNCs with tool life and performance analytics.",
       "icon": "/assets/strapi/cnc_7850af27b8.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/cnc",
+      "link": "https://www.onsuite.ro/en/modules/cnc",
       "name": "OnSuite CNC",
       "features": [
         "G-Code Analysis",
@@ -108,7 +108,7 @@
       "sub": "OPC UA Tool Management",
       "desc": "Real-world OPC UA TMC implementation experience tailored for tobacco industry operations.",
       "icon": "/assets/strapi/opctmc_9311b1be59.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/tmc",
+      "link": "https://www.onsuite.ro/en/modules/tmc",
       "name": "OnSuite TMC",
       "features": [
         "TMC Standard Compliance",
@@ -121,7 +121,7 @@
       "sub": "ERP Integration",
       "desc": "Two-way, real-time integration with SAP, Canias, and other ERP systems.",
       "icon": "/assets/strapi/entegrasyon_bdeb37a81b.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/integra",
+      "link": "https://www.onsuite.ro/en/modules/integra",
       "name": "OnSuite Integra",
       "features": [
         "SAP BAPI / RFC Integration",
@@ -134,7 +134,7 @@
       "sub": "Energy Management",
       "desc": "ISO 50001 compliant consumption monitoring and analytics that make energy costs visible and manageable.",
       "icon": "/assets/strapi/enerji_5b3c7e115f.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/energy",
+      "link": "https://www.onsuite.ro/en/modules/energy",
       "name": "OnSuite Energy",
       "features": [
         "ISO 50001 Compliance",
@@ -147,7 +147,7 @@
       "sub": "ESG & Carbon",
       "desc": "Industrial platform for carbon footprint tracking, sustainability metrics, and ESG reporting.",
       "icon": "/assets/strapi/carboniq_47fee307c1.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/green",
+      "link": "https://www.onsuite.ro/en/modules/green",
       "name": "OnSuite Green",
       "features": [
         "Carbon Footprint Measurement",
@@ -160,7 +160,7 @@
       "sub": "Platform Foundation",
       "desc": "React + C# API + MS SQL architecture with stored procedure design and tSQLt automated SQL testing.",
       "icon": "/assets/strapi/core_9d7965b69c.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/core",
+      "link": "https://www.onsuite.ro/en/modules/core",
       "name": "OnSuite Core",
       "features": [
         "C# .NET API Foundation",
@@ -173,7 +173,7 @@
       "sub": "Crisis Management",
       "desc": "Dual-channel emergency roll-call and crisis management system for industrial facilities. Provides simultaneous querying via WhatsApp and SMS, centralized visibility, and automatic escalation.",
       "icon": "/SiteIcon/products/Engage.svg",
-      "link": "https://www.onsuite.com.tr/en/modules/engage",
+      "link": "https://www.onsuite.ro/en/engage",
       "name": "OnSuite Engage",
       "features": [
         "Rapid Status Confirmation",
@@ -318,6 +318,6 @@
   "logo": "/assets/strapi/onsuite_logo_99ebb0221e.svg",
   "productImage": "/assets/strapi/Onsuite_New_dbf0cddd3b.webp",
   "desktopImage": "/assets/strapi/Onsuite_Desktop_8102bc7bc2.webp",
-  "buttonText": "onsuite.com.tr",
-  "buttonUrl": "https://www.onsuite.com.tr/main/"
+  "buttonText": "onsuite.ro",
+  "buttonUrl": "https://www.onsuite.ro/en"
 }

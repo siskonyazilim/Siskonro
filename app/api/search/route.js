@@ -19,6 +19,10 @@
 import { strapiGet } from '@/lib/strapi/client';
 import { getAllBlogPostsFromStrapi } from '@/lib/strapi/services/blog';
 import { getClientIp, isRateLimited, safeLocale } from '@/lib/security/http';
+import { isExternalUrl, onsuiteModuleUrl, onsuiteUrl } from '../../lib/onsuite/links';
+import onsuiteTr from '../../../messages/onSuitePage/tr.json';
+import onsuiteEn from '../../../messages/onSuitePage/en.json';
+import onsuiteRo from '../../../messages/onSuitePage/ro.json';
 
 // ── Statik hizmet açıklamaları (TR/EN/RO) ─────────────────────────────────
 const SERVICE_DESCRIPTIONS = {
@@ -79,7 +83,6 @@ const STATIC_PAGES = {
   tr: [
     { title: 'Ana Sayfa', desc: 'Siskon endüstriyel yazılım ve otomasyon çözümleri, IIoT, görüntü işleme, robot, OnSuite platformu.', href: '/', category: 'page' },
     { title: 'Hizmetler', desc: 'Endüstriyel yazılım, IIoT, otomasyon, görüntü işleme, robot çözümleri, yapay zeka ve danışmanlık hizmetleri.', href: '/hizmetler', category: 'service' },
-    { title: 'OnSuite Platformu', desc: '11 modüllü akıllı üretim ve MES platformu. OEE, kalite, izlenebilirlik, enerji, bakım modülleri.', href: '/onsuite', category: 'product' },
     { title: 'Ar-Ge', desc: 'Siskon inovasyon merkezi, patent çalışmaları, AR-GE projeleri, yazılım mühendisliği araştırmaları.', href: '/arge', category: 'page' },
     { title: 'İş Birlikleri', desc: 'SICK, Cognex, Microsoft, GE Vernova, Siemens gibi global teknoloji liderleriyle stratejik ortaklıklar.', href: '/is-birlikleri', category: 'page' },
     { title: 'Referanslar', desc: 'Otomotiv, beyaz eşya, gıda, ilaç, enerji sektörlerinden müşteri referansları ve başarı hikayeleri.', href: '/referanslar', category: 'page' },
@@ -103,7 +106,6 @@ const STATIC_PAGES = {
   en: [
     { title: 'Home', desc: 'Siskon industrial software and automation solutions, IIoT, vision, robotics, OnSuite platform.', href: '/', category: 'page' },
     { title: 'Services', desc: 'Industrial software, IIoT, automation, machine vision, robotics, AI and consulting services.', href: '/hizmetler', category: 'service' },
-    { title: 'OnSuite Platform', desc: '11-module smart manufacturing and MES platform. OEE, quality, traceability, energy, maintenance modules.', href: '/onsuite', category: 'product' },
     { title: 'R&D', desc: 'Siskon innovation center, patents, R&D projects, software engineering research.', href: '/arge', category: 'page' },
     { title: 'Partnerships', desc: 'Strategic partnerships with SICK, Cognex, Microsoft, GE Vernova, Siemens and other global technology leaders.', href: '/is-birlikleri', category: 'page' },
     { title: 'References', desc: 'Customer references and success stories from automotive, white goods, food, pharma and energy sectors.', href: '/referanslar', category: 'page' },
@@ -126,7 +128,6 @@ const STATIC_PAGES = {
   ro: [
     { title: 'Acasă', desc: 'Soluții software industrial și automatizare Siskon, IIoT, viziune, robotică, platforma OnSuite.', href: '/', category: 'page' },
     { title: 'Servicii', desc: 'Software industrial, IIoT, automatizare, viziune industrială, robotică, AI și consultanță.', href: '/hizmetler', category: 'service' },
-    { title: 'Platforma OnSuite', desc: 'Platformă MES cu 11 module. OEE, calitate, trasabilitate, energie, mentenanță.', href: '/onsuite', category: 'product' },
     { title: 'Cercetare & Dezvoltare', desc: 'Centrul de inovare Siskon, brevete, proiecte C&D, cercetare software.', href: '/arge', category: 'page' },
     { title: 'Parteneriate', desc: 'Parteneriate strategice cu SICK, Cognex, Microsoft, GE Vernova, Siemens și alți lideri.', href: '/is-birlikleri', category: 'page' },
     { title: 'Referințe', desc: 'Referințe clienți și povești de succes din sectoarele auto, electrocasnice, alimentar, farma.', href: '/referanslar', category: 'page' },
@@ -137,6 +138,54 @@ const STATIC_PAGES = {
     { title: 'Blog', desc: 'Articole despre automatizare industrială, IIoT, inteligență artificială și tehnologie de producție.', href: '/blog', category: 'blog' },
   ],
 };
+
+// ── OnSuite: siskon.ro içinde değil, onsuite.ro'daki ilgili sayfalara gider ──
+// Modül adı/açıklaması messages/onSuitePage/*.json'dan, URL'ler app/lib/onsuite/links.js'den gelir.
+const ONSUITE_COPY = {
+  tr: {
+    data: onsuiteTr,
+    home: ['OnSuite Platformu', 'Modüler IoT tabanlı akıllı MES platformu. OEE, izlenebilirlik, enerji, kalite ve ERP entegrasyonu. onsuite.ro'],
+    modules: ['OnSuite Modülleri', 'Connect, Live, Optima, Trace, Forms, CNC, TMC, Integra, Energy, Green, Core ve Engage modüllerinin tamamı.'],
+    references: ['OnSuite Referansları', 'OnSuite kullanan fabrikalar ve projeler.'],
+    about: ['OnSuite Hakkında', 'OnSuite platformu ve geliştiricisi Siskon hakkında bilgi.'],
+    contact: ['OnSuite Demo ve İletişim', 'OnSuite için demo talebi ve iletişim.'],
+  },
+  en: {
+    data: onsuiteEn,
+    home: ['OnSuite Platform', 'Modular IoT-based smart MES platform. OEE, traceability, energy, quality and ERP integration. onsuite.ro'],
+    modules: ['OnSuite Modules', 'All modules: Connect, Live, Optima, Trace, Forms, CNC, TMC, Integra, Energy, Green, Core and Engage.'],
+    references: ['OnSuite References', 'Factories and projects using OnSuite.'],
+    about: ['About OnSuite', 'About the OnSuite platform and its developer Siskon.'],
+    contact: ['OnSuite Demo and Contact', 'Request an OnSuite demo and contact the team.'],
+  },
+  ro: {
+    data: onsuiteRo,
+    home: ['Platforma OnSuite', 'Platformă MES inteligentă, modulară, bazată pe IoT. OEE, trasabilitate, energie, calitate și integrare ERP. onsuite.ro'],
+    modules: ['Modulele OnSuite', 'Toate modulele: Connect, Live, Optima, Trace, Forms, CNC, TMC, Integra, Energy, Green, Core și Engage.'],
+    references: ['Referințe OnSuite', 'Fabrici și proiecte care folosesc OnSuite.'],
+    about: ['Despre OnSuite', 'Despre platforma OnSuite și dezvoltatorul ei, Siskon.'],
+    contact: ['Demo și contact OnSuite', 'Solicitați o demonstrație OnSuite și contactați echipa.'],
+  },
+};
+
+function getOnsuitePages(locale) {
+  const copy = ONSUITE_COPY[locale] ?? ONSUITE_COPY.ro;
+  const page = (key, [title, desc]) => ({ title, desc, href: onsuiteUrl(key, locale), category: 'product' });
+  const modules = (Array.isArray(copy.data.modules) ? copy.data.modules : []).map((m) => ({
+    title: m.name,
+    desc: [m.sub, m.desc].filter(Boolean).join('. '),
+    href: onsuiteModuleUrl(String(m.name).split(' ').pop(), locale),
+    category: 'product',
+  }));
+  return [
+    page('home', copy.home),
+    page('modules', copy.modules),
+    ...modules,
+    page('references', copy.references),
+    page('about', copy.about),
+    page('contact', copy.contact),
+  ];
+}
 
 // ── Hizmet kataloğu (SERVICE_CATALOG eşdeğeri) ────────────────────────────
 const SERVICES = [
@@ -304,7 +353,7 @@ export async function GET(request) {
   }
 
   // ── 5. Statik sayfalar (fallback — search-config yoksa kullanılır) ────────
-  const staticPages = STATIC_PAGES[l] ?? STATIC_PAGES.tr;
+  const staticPages = [...(STATIC_PAGES[l] ?? STATIC_PAGES.tr), ...getOnsuitePages(l)];
   for (const page of staticPages) {
     const haystack = `${page.title} ${page.desc}`;
     if (matches(haystack, q)) {
@@ -317,6 +366,7 @@ export async function GET(request) {
         badge:       meta.badge,
         color:       meta.color,
         meta:        '',
+        external:    isExternalUrl(page.href),
         score:       score({ title: page.title, description: page.desc, tags: page.category }, q),
         source:      'static',
       });
@@ -339,6 +389,7 @@ export async function GET(request) {
           title:       item.title ?? '',
           description: item.description ?? '',
           href:        item.href ?? '/',
+          external:    isExternalUrl(item.href),
           category:    'page',
           badge:       locale === 'en' ? 'Page' : locale === 'ro' ? 'Pagină' : 'Sayfa',
           color:       'slate',

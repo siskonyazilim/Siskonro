@@ -7,11 +7,13 @@
  *
  * Kural: Yalnızca sitede görünen / kayıtlı gerçek bilgiler kullanılır
  * (iletişim sayfası, mesaj dosyaları, ROUTE_META). Uydurma alan eklenmez.
- * Örn. FAQPage bilerek YOK: sitede görünür bir SSS içeriği bulunmuyor
- * (Google, FAQPage işaretlemesinin sayfada görünür içerikle eşleşmesini ister).
+ * FAQPage yalnızca /onsuite için ve yalnızca işaretleme olarak üretilir (onsuiteFaq.js);
+ * arayüzde görünür SSS yoktur.
  */
 
 import { ROUTE_META, getMetadataForPathname } from './routeMetadata';
+import { ONSUITE_FAQ } from './onsuiteFaq';
+import { onsuiteUrl } from '../onsuite/links';
 import { detectLocale, toInternalPath, toLocalizedPath } from '../i18n/routes';
 
 const LOCALE_TAG = { ro: 'ro-RO', en: 'en-US', tr: 'tr-TR' };
@@ -28,6 +30,13 @@ const PAGE_TYPE = {
   '/sektorler': 'CollectionPage',
   '/blog': 'CollectionPage',
 };
+
+// OnSuite ürün sitesi ve modülleri (kaynak: messages/onSuitePage/*.json)
+const ONSUITE_MODULES = [
+  'OnSuite Connect', 'OnSuite Live', 'OnSuite Optima', 'OnSuite Trace', 'OnSuite Forms',
+  'OnSuite CNC', 'OnSuite TMC', 'OnSuite Integra', 'OnSuite Energy', 'OnSuite Green',
+  'OnSuite Core', 'OnSuite Engage',
+];
 
 // ── Şirket bilgileri (kaynak: messages/contactPage/*.json + layout'taki mevcut şema) ──
 const ORG = {
@@ -312,15 +321,34 @@ export function buildPageNodes({ pathname, siteUrl }) {
       '@type': 'SoftwareApplication',
       '@id': `${pageUrl}#software`,
       name: 'OnSuite',
+      alternateName: 'Siskon OnSuite',
       applicationCategory: 'BusinessApplication',
+      applicationSubCategory: 'Manufacturing Execution System (MES)',
       description: meta.description,
       url: pageUrl,
-      publisher: { '@id': orgId(siteUrl) },
+      sameAs: onsuiteUrl('home', locale),
+      featureList: ONSUITE_MODULES,      publisher: { '@id': orgId(siteUrl) },
       creator: { '@id': orgId(siteUrl) },
       inLanguage: LOCALE_TAG[locale],
     };
     nodes.push(app);
     webPage.mainEntity = { '@id': app['@id'] };
+
+    // SSS: yalnızca işaretleme olarak (arayüzde görünmez) — bkz. onsuiteFaq.js
+    const faq = ONSUITE_FAQ[locale] || ONSUITE_FAQ.ro;
+    nodes.push({
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      url: pageUrl,
+      inLanguage: LOCALE_TAG[locale],
+      isPartOf: { '@id': `${pageUrl}#webpage` },
+      about: { '@id': app['@id'] },
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    });
   }
 
   // Listeleme sayfaları → ItemList (hizmetler, sektörler)

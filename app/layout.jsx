@@ -1,16 +1,22 @@
 import './globals.css';
 import { headers } from 'next/headers';
 import PropTypes from 'prop-types';
+import Script from 'next/script';
 import HeaderServer from './components/HeaderServer';
 import FooterServer from './components/FooterServer';
 import Interactions from './components/Interactions';
 import SearchModal from './components/SearchModal';
 import ClientMetadataSync from './components/ClientMetadataSync';
+import CerezgoUnlock from './components/CerezgoUnlock';
 import { LanguageProvider } from './_context/LanguageContext';
 import JsonLd from './components/JsonLd';
 import { detectLocale, toInternalPath } from './lib/i18n/routes';
 import { buildLocalizedMetadata, getRequestPathFromHeaders, getSiteUrlFromHeaders } from './lib/seo/routeMetadata';
 import { buildSiteGraph } from './lib/seo/jsonld';
+
+// Üçüncü taraf anahtarları (tarayıcıya zaten açık, gizli değil). Env ile değiştirilebilir.
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-5MMBST5Z';
+const CEREZGO_KEY = process.env.NEXT_PUBLIC_CEREZGO_KEY || 'tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU+GneQaD/xmpM1X/fORQP2jmE8WYvYMwoiD/jTIksSvtqEyscnc81j77JcBwACNnaA=';
 
 // Dahili arama sonuç sayfası: değer katmayan, sorguya göre değişen içerik → indekslenmesin.
 // (robots.txt ile engellenmez: Google'ın noindex'i görebilmesi için taranabilir kalmalı.)
@@ -63,18 +69,35 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={htmlLang} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="antialiased min-h-screen flex flex-col">
-        {/* CerezGo geçici olarak devre dışı — mobil scroll testi için
+        {/* CerezGo (çerez onayı) GTM'den ÖNCE yüklenmeli: onay durumu etiketlerden önce hazır olsun */}
         <Script
           id="cerezgo-sdk"
           src="https://cdn.cerezgo.com/file/cerezgo-v3.min.js"
-          data-key="tcb1SjODUgMGizndx+ZcTrEzjNZqRVI1gNt/hILmvU/4wo7xt1aj0tG91BrxrtNTC/3LwXsFxqjtqprlKlcN6Tf8tP4jiLxG7JcBwACNnaA="
+          data-key={CEREZGO_KEY}
           data-id="nt"
+          strategy="beforeInteractive"
+        />
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
+        </Script>
+        <Script
+          id="gtm-sdk"
+          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
           strategy="afterInteractive"
         />
-        */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <JsonLd data={structuredData} />
         <LanguageProvider initialLocale={locale}>
-          {/* <CerezgoUnlock /> — CerezGo devre dışı olduğu için gerek yok */}
+          <CerezgoUnlock />
           <ClientMetadataSync />
           <HeaderServer />
           <main className="w-full flex-1 flex flex-col">{children}</main>
