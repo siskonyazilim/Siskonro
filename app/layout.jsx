@@ -7,7 +7,6 @@ import FooterServer from './components/FooterServer';
 import Interactions from './components/Interactions';
 import SearchModal from './components/SearchModal';
 import ClientMetadataSync from './components/ClientMetadataSync';
-import CerezgoUnlock from './components/CerezgoUnlock';
 import { LanguageProvider } from './_context/LanguageContext';
 import JsonLd from './components/JsonLd';
 import { detectLocale, toInternalPath } from './lib/i18n/routes';
@@ -68,7 +67,22 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang={htmlLang} data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className="antialiased min-h-screen flex flex-col">
+      <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
+        {/* Google Consent Mode v2: onay verilene kadar analitik/reklam depolaması kapalı.
+            CerezGo onayı alınca GTM'e günceller. GTM ve CerezGo'dan ÖNCE çalışmalı. */}
+        <Script id="google-consent-mode" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'functionality_storage': 'granted',
+  'security_storage': 'granted',
+  'wait_for_update': 500
+});`}
+        </Script>
         {/* CerezGo (çerez onayı) GTM'den ÖNCE yüklenmeli: onay durumu etiketlerden önce hazır olsun */}
         <Script
           id="cerezgo-sdk"
@@ -77,6 +91,7 @@ export default async function RootLayout({ children }) {
           data-id="nt"
           strategy="beforeInteractive"
         />
+        <Script id="cerezgo-unlock" src="/cerezgo-unlock.js" strategy="beforeInteractive" />
         <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
@@ -97,7 +112,6 @@ window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
         </noscript>
         <JsonLd data={structuredData} />
         <LanguageProvider initialLocale={locale}>
-          <CerezgoUnlock />
           <ClientMetadataSync />
           <HeaderServer />
           <main className="w-full flex-1 flex flex-col">{children}</main>
