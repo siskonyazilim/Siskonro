@@ -1596,6 +1596,14 @@ a:focus-visible {
   }
 }
 
+/* CerezGo scroll kilidi: html/body'ye inline overflow:hidden yazılsa bile sayfa kayabilsin */
+html[style*="overflow: hidden"],
+body[style*="overflow: hidden"],
+html[style*="overflow-y: hidden"],
+body[style*="overflow-y: hidden"] {
+  overflow-y: auto !important;
+}
+
 /* Cookie Consent (Cerez Go style) */
 .cerezgo-dialog.cerezgo-consent-dialog {
   position: fixed !important;

@@ -30,31 +30,33 @@ export default function CerezgoUnlock() {
   useEffect(() => {
     let rootObserver = null;
     let shadowObserver = null;
+    let attrObserver = null;
     let rafId = null;
     let safetyInterval = null;
 
-    // Body scroll'u her zaman serbest tut — CerezGo veya başka 3rd-party script kilitlemesin
-    function unlockBodyScroll() {
-      if (document.body.style.overflow === 'hidden') {
-        document.body.style.overflow = '';
-      }
-      if (document.body.style.overflowY === 'hidden') {
-        document.body.style.overflowY = '';
-      }
-      if (document.body.style.overflowX === 'hidden') {
-        document.body.style.overflowX = '';
-      }
-      // position: fixed trick'ini de temizle (bazı modal kütüphaneleri kullanır)
-      if (document.body.style.position === 'fixed') {
-        const scrollY = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        if (scrollY) {
-          window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+    // Scroll'u her zaman serbest tut — CerezGo (modal/UI blocker) html ve body'yi kilitleyebilir.
+    // Mobilde modal <dialog> arka planı inert yapıp dokunmatik kaydırmayı da engeller.
+    function unlockScroll() {
+      [document.documentElement, document.body].forEach((el) => {
+        if (!el) return;
+        ['overflow', 'overflowY', 'overflowX'].forEach((prop) => {
+          if (el.style[prop] === 'hidden') el.style[prop] = '';
+        });
+        if (el.style.touchAction === 'none') el.style.touchAction = '';
+        if (el.style.position === 'fixed') {
+          const scrollY = el.style.top;
+          el.style.position = '';
+          el.style.top = '';
+          el.style.width = '';
+          if (scrollY) window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
         }
-      }
+      });
+      // Modal dialog arka plan öğelerine inert verir; CerezGo'nun kendisi hariç hepsini aç
+      document.querySelectorAll('[inert]').forEach((el) => {
+        if (el.tagName.toLowerCase() !== 'cerezgo-app') el.removeAttribute('inert');
+      });
     }
+    const unlockBodyScroll = unlockScroll;
 
     const patchCerezgo = () => {
       const host = document.querySelector('cerezgo-app');
@@ -70,6 +72,14 @@ export default function CerezgoUnlock() {
           .cerezgo-dialog .main * {
             user-select: text !important;
             -webkit-user-select: text !important;
+          }
+          dialog::backdrop { display: none !important; background: transparent !important; }
+          @media (max-width: 640px) {
+            dialog.cerezgo-dialog {
+              max-height: 70dvh !important;
+              overflow-y: auto !important;
+              overscroll-behavior: contain;
+            }
           }
         `;
         host.shadowRoot.appendChild(style);
@@ -111,6 +121,12 @@ export default function CerezgoUnlock() {
       childList: true,
     });
 
+    // CerezGo html/body stilini sonradan değiştirir: attribute değişince hemen aç
+    attrObserver = new MutationObserver(unlockScroll);
+    [document.documentElement, document.body].forEach((el) => {
+      if (el) attrObserver.observe(el, { attributes: true, attributeFilter: ['style', 'class', 'inert'] });
+    });
+
     patchCerezgo();
 
     // Güvenlik ağı: 3rd-party scriptler gecikmeli yüklenip body'yi kilitleyebilir
@@ -130,6 +146,9 @@ export default function CerezgoUnlock() {
       }
       if (shadowObserver) {
         shadowObserver.disconnect();
+      }
+      if (attrObserver) {
+        attrObserver.disconnect();
       }
       cancelAnimationFrame(rafId);
       if (safetyInterval) {
