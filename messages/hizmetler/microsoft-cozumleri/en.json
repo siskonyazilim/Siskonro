@@ -18,8 +18,8 @@
   ],
   "benefitsEyebrow": "Benefits",
   "benefitsTitle": "What Do Siskon Microsoft Solutions Provide You?",
-  "powerPlatformTitle": "Microsoft Power Platforms",
-  "powerPlatformSubtitle": "Accelerate your digital transformation with Microsoft Power Platforms!",
+  "powerPlatformTitle": "Microsoft Power Platform",
+  "powerPlatformSubtitle": "Accelerate your digital transformation with Microsoft Power Platform!",
   "powerPlatformDescription": "Microsoft Power Platform applications bring data analytics, workflow automation, and app development together under one roof. Optimize your processes with Power BI, Power Apps, and Power Automate, and create measurable impact in your digital transformation.",
   "solutionsTitle": "Soluțiile Noastre Power Platform",
   "licenses": [
@@ -40,8 +40,8 @@
   "serviceSectionTitle": "Microsoft Solutions",
   "serviceSectionDesc": "Microsoft's powerful solutions such as Azure, Power BI, Power Apps and Power Automate help your business achieve digital transformation quickly and easily. We accelerate your digital transformation process with our license sales, training and integration services.",
   "powerPlatform": {
-    "title": "Microsoft Power Platforms",
-    "subtitle": "Accelerate your digital transformation with Microsoft Power Platforms!",
+    "title": "Microsoft Power Platform",
+    "subtitle": "Accelerate your digital transformation with Microsoft Power Platform!",
     "description": "Microsoft Power Platform applications bring data analytics, workflow automation, and app development together under one roof. Optimize your processes with Power BI, Power Apps, and Power Automate, and create measurable impact in your digital transformation."
   },
   "heroTitle": "Microsoft Solutions and Licensing",
@@ -50,8 +50,8 @@
   "heroImage": "/assets/strapi/ms_solutions_1_camera_2_aa750b2234.webp",
   "serviceLabel": "SERVICE",
   "ctaDesc": "Contact us for the most suitable Microsoft solutions and licensing options for your business.",
-  "powerPlatformEyebrow": "Microsoft Power Platforms",
-  "powerPlatformSpot": "Accelerate your digital transformation with Microsoft Power Platforms!",
+  "powerPlatformEyebrow": "Microsoft Power Platform",
+  "powerPlatformSpot": "Accelerate your digital transformation with Microsoft Power Platform!",
   "powerPlatformDesc": "Aplicațiile Microsoft Power Platform aduc împreună analiza datelor, automatizarea fluxului de lucru și dezvoltarea de aplicații sub același acoperiș. Optimizați-vă procesele cu Power BI, Power Apps și Power Automate și creați un impact măsurabil în transformarea digitală.",
   "powerPlatformImage": "/assets/strapi/ms_solutions_3_zeminli_camera_d063902605.webp",
   "powerPlatformSecondaryImage": "/assets/strapi/ms_solutions_2_zeminli_camera_080f63f309.webp",

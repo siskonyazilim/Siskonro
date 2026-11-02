@@ -80,7 +80,7 @@ export default function PartnershipsPageClient({ pageData, partners }) {
                     aria-expanded={isExpanded}
                   >
                     <div className="flex-1 min-w-0 pr-3">
-                      <p className="inline-block bg-sky-500 text-white text-xs font-bold px-2 py-0.5 rounded mb-1.5">{p.year}</p>
+                      <p className="inline-block bg-sky-700 text-white text-xs font-bold px-2 py-0.5 rounded mb-1.5">{p.year}</p>
                       <p className="text-[#0a4da0] text-sm md:text-base font-bold leading-snug text-left tracking-normal">{p.role}</p>
                     </div>
                     <span
@@ -100,11 +100,11 @@ export default function PartnershipsPageClient({ pageData, partners }) {
                   >
                     <div className="px-5 md:px-6 pb-5 md:pb-6 space-y-2.5 text-xs md:text-sm text-left">
                       <p className="text-slate-700 leading-snug text-left tracking-normal">
-                        <span className="font-bold text-sky-600">{pt('workingArea')}</span>{' '}
+                        <span className="font-bold text-sky-700">{pt('workingArea')}</span>{' '}
                         <span>{p.workArea}</span>
                       </p>
                       <p className="text-slate-700 leading-snug text-left tracking-normal">
-                        <span className="font-bold text-sky-600">{pt('technologyArea')}</span>{' '}
+                        <span className="font-bold text-sky-700">{pt('technologyArea')}</span>{' '}
                         <span>{p.techArea}</span>
                       </p>
                     </div>

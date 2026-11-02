@@ -38,7 +38,7 @@
       "reverse": false
     },
     {
-      "title": "Beckhoff Twincat 2 and 3SCADA Training",
+      "title": "Beckhoff TwinCAT 2 and 3SCADA Training",
       "details": [
         "Siemens WinCC"
       ],
@@ -71,7 +71,7 @@
   "topicsTitle": "Our Training Topics",
   "topics": [
     "PLC and HMI Training",
-    "Beckhoff Twincat 2 and 3SCADA Training",
+    "Beckhoff TwinCAT 2 and 3SCADA Training",
     "Microsoft Power Platform Training",
     "Microsoft SQL Server"
   ]

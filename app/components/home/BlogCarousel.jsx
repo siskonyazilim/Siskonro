@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedButton from '../AnimatedButton';
 import { toLocalizedPath } from '../../lib/i18n/routes';
-import { formatBlogDate } from '@/lib/strapi/services/blog';
+import { formatBlogDate } from '@/lib/blogDate';
 
 /**
  * Blog kartları carousel — Client Component

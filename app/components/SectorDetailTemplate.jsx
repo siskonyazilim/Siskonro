@@ -14,18 +14,19 @@ import roLocale from '../../messages/components/sectorTemplate/ro.json';
 
 const PLACEHOLDER_LOGO = '/assets/Logos/reference-placeholder.svg';
 
+// Vurgu renkleri açık zeminde metin (ve üstünde beyaz metin) olarak da kullanıldığından WCAG AA (4.5:1) için koyulaştırıldı.
 const SECTOR_PALETTES = [
-  { match: /t[uü]t[uü]n|tobacco/i, accent: '#D97706', soft: 'rgba(217,119,6,0.12)' },
+  { match: /t[uü]t[uü]n|tobacco/i, accent: '#B45309', soft: 'rgba(180,83,9,0.12)' },
   { match: /otomotiv|automotive/i, accent: '#DC2626', soft: 'rgba(220,38,38,0.12)' },
-  { match: /beyaz|white goods|ev alet/i, accent: '#0EA5E9', soft: 'rgba(14,165,233,0.12)' },
-  { match: /g[iı]da|food|beverage/i, accent: '#16A34A', soft: 'rgba(22,163,74,0.12)' },
+  { match: /beyaz|white goods|ev alet/i, accent: '#0369A1', soft: 'rgba(3,105,161,0.12)' },
+  { match: /g[iı]da|food|beverage/i, accent: '#15803D', soft: 'rgba(21,128,61,0.12)' },
   { match: /(?:ila[cç]|ıla[cç]|pharma|pharmaceutical|health)/i, accent: '#7C3AED', soft: 'rgba(124,58,237,0.12)' },
-  { match: /makine|machinery|cnc|otomasyon|automation/i, accent: '#0891B2', soft: 'rgba(8,145,178,0.12)' },
-  { match: /tekstil|textile|konfeksiyon|apparel/i, accent: '#DB2777', soft: 'rgba(219,39,119,0.12)' },
-  { match: /enerji|energy|kimya|chemical|s[uü]rd[uü]r/i, accent: '#059669', soft: 'rgba(5,150,105,0.12)' },
+  { match: /makine|machinery|cnc|otomasyon|automation/i, accent: '#0E7490', soft: 'rgba(14,116,144,0.12)' },
+  { match: /tekstil|textile|konfeksiyon|apparel/i, accent: '#BE185D', soft: 'rgba(190,24,93,0.12)' },
+  { match: /enerji|energy|kimya|chemical|s[uü]rd[uü]r/i, accent: '#047857', soft: 'rgba(4,120,87,0.12)' },
 ];
 
-const DEFAULT_PALETTE = { accent: '#0EA5E9', soft: 'rgba(14,165,233,0.12)' };
+const DEFAULT_PALETTE = { accent: '#0369A1', soft: 'rgba(3,105,161,0.12)' };
 
 const SECTOR_IMAGE_RULES = [
   { test: /beyaz|white goods|ev alet/i, image: '/assets/sektor/beyaz-esya.webp' },
@@ -253,7 +254,7 @@ function ListSection({ title, items, background = 'white', accent }) {
     <section className={`py-20 md:py-24 px-6 ${bgClass}`}>
       <div className="container">
         <div className="section-head reveal text-center max-w-3xl mx-auto mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{title}</h3>
+          <h2 className="tracking-tight text-3xl md:text-4xl font-bold text-slate-900">{title}</h2>
         </div>
         {sectionType === 'needs' ? (
           <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -266,9 +267,9 @@ function ListSection({ title, items, background = 'white', accent }) {
                 <div className="absolute left-0 top-4 bottom-4 w-[2px] bg-[#2C6E9E]" />
                 <div className="ml-3">
                   <div className="flex items-start justify-between gap-3">
-                    <h4 className="text-[15px] md:text-[16px] font-normal text-[#1A1E24] leading-snug break-words">
+                    <h3 className="text-[15px] md:text-[16px] font-normal text-[#1A1E24] leading-snug break-words">
                       {item.title}
-                    </h4>
+                    </h3>
                     <Image
                       src={getItemIcon(item, sectionType)}
                       alt=""
@@ -327,7 +328,7 @@ function ListSection({ title, items, background = 'white', accent }) {
                 className="reveal animated-card rounded-xl border border-slate-200 bg-white p-5 md:p-6 min-h-[150px] md:min-h-[170px] flex flex-col justify-between transition-shadow"
               >
                 <div>
-                  <h4 className="text-lg font-semibold text-slate-900 leading-snug">{item.title}</h4>
+                  <h3 className="text-lg font-semibold text-slate-900 leading-snug">{item.title}</h3>
                   <p className="text-sm text-body-muted mt-2 leading-relaxed">{item.description}</p>
                 </div>
                 <div className="mt-4 h-[3px] w-10 rounded-full" style={{ backgroundColor: accent }} />
@@ -402,7 +403,7 @@ function TechStackSection({ title, items }) {
     <section className="py-20 md:py-24 px-6 bg-slate-50">
       <div className="container">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-bold text-slate-900">{title}</h3>
+          <h2 className="tracking-tight text-2xl font-bold text-slate-900">{title}</h2>
           <div className="mt-6 rounded-2xl border border-slate-200 bg-white overflow-hidden">
             <ul className="grid grid-cols-1 md:grid-cols-2">
               {items.map((item) => (
@@ -428,7 +429,7 @@ function ReferencesSection({ pt, references }) {
     <section className="py-20 md:py-24 px-6 bg-white">
       <div className="container">
         <div className="section-head reveal text-center max-w-3xl mx-auto mb-10 md:mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{pt('references')}</h3>
+          <h2 className="tracking-tight text-3xl md:text-4xl font-bold text-slate-900">{pt('references')}</h2>
         </div>
         <ReferenceLogos references={references} />
       </div>
@@ -446,10 +447,14 @@ export default function SectorDetailTemplate({ content }) { // NOSONAR
   const sectorImage = getSectorImage(view.title);
   const templateRef = useRef(null);
   const summarySource = String(view.summary || '').trim();
+  // İlk cümleyi tamamen al (kapanış tırnağı dahil); cümle ortasında kesme
   const summarySnippet = summarySource
-    ? summarySource.split(/[.!?]/).find((part) => part.trim())?.trim() || summarySource.slice(0, 170)
+    ? summarySource.match(/^[\s\S]*?[.!?]["”']?(?=\s|$)/)?.[0].trim() || summarySource
     : '';
-  const ctaTitle = `${view.title}${pt('ctaTitleSuffix')}`;
+  // RO sayfalarda gövde içeriği EN'e düşebilir; CTA başlığında Romence sektör adı kullanılır
+  const ctaSectorName = (isRo && pt('ctaSectorNames')?.[content.tr.title]) || view.title;
+  const ctaSuffix = String(pt('ctaTitleSuffix') ?? '');
+  const ctaTitle = `${ctaSectorName}${/^[\s:,;.]/.test(ctaSuffix) ? '' : ' '}${ctaSuffix}`;
   const ctaLead = `${summarySnippet || pt('ctaLeadFallback')} ${pt('ctaLeadSuffix')}`;
 
   useEffect(() => {

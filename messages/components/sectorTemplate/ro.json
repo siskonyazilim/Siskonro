@@ -9,5 +9,15 @@
   "contactUs": "Contactați-ne",
   "ctaTitleSuffix": ": să clarificăm împreună foaia de parcurs",
   "ctaLeadSuffix": "Împărtășiți-vă prioritățile și descoperiți setul de soluții potrivit pentru linia dvs.",
-  "ctaLeadFallback": "Adaptăm arhitectura și execuția la obiectivele dvs. de producție."
+  "ctaLeadFallback": "Adaptăm arhitectura și execuția la obiectivele dvs. de producție.",
+  "ctaSectorNames": {
+    "Tütün Endüstrisi": "Industria Tutunului",
+    "Otomotiv Ana & Yan Sanayi": "Industria Auto (OEM și Furnizori)",
+    "Beyaz Eşya & Ev Aletleri": "Electrocasnice și Aparate de Uz Casnic",
+    "Gıda & İçecek": "Alimente și Băuturi",
+    "İlaç & Sağlık Ürünleri": "Produse Farmaceutice și de Sănătate",
+    "Makine, Proses & CNC Otomasyonu": "Automatizare pentru Mașini, Procese și CNC",
+    "Tekstil & Konfeksiyon": "Textile și Confecții",
+    "Enerji, Kimya & Sürdürülebilirlik": "Energie, Chimie și Sustenabilitate"
+  }
 }

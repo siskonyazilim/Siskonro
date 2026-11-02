@@ -15,7 +15,7 @@ function WhySiskonList({ items }) {
         <svg className="w-2.5 md:w-3 h-2.5 md:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
       </div>
       <div>
-        <h5 className="font-bold text-slate-900 mb-0.5 text-sm md:text-base">{item.t}</h5>
+        <h4 className="font-bold text-slate-900 mb-0.5 text-sm md:text-base">{item.t}</h4>
         <p className="text-xs md:text-sm text-slate-500">{item.d}</p>
       </div>
     </li>
@@ -27,7 +27,7 @@ function MethodologyGrid({ steps }) {
     <div key={step.t} className="relative p-6 md:p-10 bg-slate-50 rounded-[28px] md:rounded-[40px] border border-slate-100 reveal group" data-tilt>
       <div className="text-6xl md:text-8xl font-black text-slate-200/50 absolute top-2 md:top-4 right-4 md:right-8 group-hover:text-sky-500/10 transition-colors pointer-events-none">0{i + 1}</div>
       <div className="relative z-10 space-y-4 md:space-y-6">
-        <h4 className="text-base md:text-xl font-bold text-slate-900">{step.t}</h4>
+        <h3 className="text-base md:text-xl font-bold text-slate-900">{step.t}</h3>
         <p className="text-slate-600 text-lg leading-relaxed">{step.d}</p>
       </div>
     </div>
@@ -57,7 +57,7 @@ export default function HizmetlerPage() { // NOSONAR
           <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16 lg:gap-20 reveal">
             {/* Left — golden ratio major (≈61.8%) */}
             <div className="w-full lg:w-[62%] space-y-5 md:space-y-8">
-              <span className="text-sky-600 font-bold text-xs uppercase tracking-widest">{t('servicesPage.solutionPartnerEyebrow')}</span>
+              <span className="text-sky-700 font-bold text-xs uppercase tracking-widest">{t('servicesPage.solutionPartnerEyebrow')}</span>
               <h2
                 className="text-3xl md:text-[46px] font-bold text-slate-900 mt-1 leading-[1.15]"
                 dangerouslySetInnerHTML={{ __html: t('servicesPage.solutionPartnerTitle') }}
@@ -70,7 +70,7 @@ export default function HizmetlerPage() { // NOSONAR
             <div className="w-full lg:w-[38%] bg-slate-50 rounded-[32px] md:rounded-[40px] p-7 md:p-10 border border-slate-100 relative overflow-hidden" data-tilt>
               <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 rounded-full blur-3xl -mr-20 -mt-20" />
               <div className="relative z-10 space-y-5 md:space-y-7">
-                <h4 className="text-base md:text-xl font-bold text-slate-900">{t('servicesPage.whySiskonTitle')}</h4>
+                <h3 className="text-base md:text-xl font-bold text-slate-900">{t('servicesPage.whySiskonTitle')}</h3>
                 <ul className="space-y-4 md:space-y-5">
                   <WhySiskonList items={whySiskonItems} />
                 </ul>
@@ -160,7 +160,7 @@ export default function HizmetlerPage() { // NOSONAR
       <section className="py-16 md:py-48 bg-white relative overflow-hidden">
         <div className="container-wide relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-24 reveal">
-            <span className="text-sky-600 font-bold text-xs uppercase tracking-widest mb-3 md:mb-4 block">{t('servicesPage.methodologyEyebrow')}</span>
+            <span className="text-sky-700 font-bold text-xs uppercase tracking-widest mb-3 md:mb-4 block">{t('servicesPage.methodologyEyebrow')}</span>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-6 md:mb-8">{t('servicesPage.methodologyTitle')}</h2>
             <p className="text-slate-600 text-lg">{t('servicesPage.methodologyDesc')}</p>
           </div>

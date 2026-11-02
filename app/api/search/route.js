@@ -214,6 +214,18 @@ const CATEGORY_META = {
   page:      { badge: 'Sayfa',         color: 'slate' },
 };
 
+// Rozet metinleri dile göre (TR varsayılan CATEGORY_META.badge)
+const CATEGORY_BADGES = {
+  en: {
+    blog: 'Blog', reference: 'Reference', partner: 'Partnership', service: 'Service', product: 'Product',
+    sector: 'Industry', corporate: 'Corporate', legal: 'Legal', page: 'Page',
+  },
+  ro: {
+    blog: 'Blog', reference: 'Referință', partner: 'Parteneriat', service: 'Serviciu', product: 'Produs',
+    sector: 'Industrie', corporate: 'Corporativ', legal: 'Legal', page: 'Pagină',
+  },
+};
+
 // ── Text normalizer ────────────────────────────────────────────────────────
 function normalize(text) {
   return String(text ?? '')
@@ -363,7 +375,7 @@ export async function GET(request) {
         description: page.desc,
         href:        page.href,
         category:    page.category,
-        badge:       meta.badge,
+        badge:       CATEGORY_BADGES[l]?.[page.category] ?? meta.badge,
         color:       meta.color,
         meta:        '',
         external:    isExternalUrl(page.href),

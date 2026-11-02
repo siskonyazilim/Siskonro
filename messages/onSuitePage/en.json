@@ -55,7 +55,7 @@
     {
       "sub": "Performance Analytics",
       "desc": "OEE monitoring with downtime, scrap, and performance analytics including root-cause, Pareto, and bottleneck analysis.",
-      "icon": "/SiteIcon/products/optima",
+      "icon": "/assets/strapi/oee_bd8de82488.svg",
       "link": "https://www.onsuite.ro/en/modules/optima",
       "name": "OnSuite Optima",
       "features": [

@@ -45,9 +45,9 @@ function BlogCard({ post, defaultCategory, locale }) {
 
       {/* Kart Üst Başlık İçeriği */}
       <div className="relative z-10 flex-1 pt-1">
-        <h3 className="font-archivo font-bold text-white group-hover:text-white text-[1.2rem] sm:text-[1.28rem] md:text-[1.35rem] leading-[1.36] tracking-tight transition-colors line-clamp-5 drop-shadow-sm">
+        <h2 className="font-archivo font-bold text-white group-hover:text-white text-[1.2rem] sm:text-[1.28rem] md:text-[1.35rem] leading-[1.36] tracking-tight transition-colors line-clamp-5 drop-shadow-sm">
           {post.title}
-        </h3>
+        </h2>
       </div>
 
       {/* Kart Alt Bilgi (Çizgisiz, ferah) */}

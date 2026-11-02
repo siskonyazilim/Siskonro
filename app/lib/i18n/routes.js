@@ -137,20 +137,22 @@ export function toInternalPath(pathname, locale = detectLocale(pathname)) {
 }
 
 export function toLocalizedPath(pathname, locale = 'ro') {
-  const internalPath = toInternalPath(pathname, detectLocale(pathname));
+  // '/iletisim#contact-form' gibi yollarda #/? eki çeviri tablosunu şaşırtmasın: yol çevrilir, ek sona eklenir.
+  const [, basePath, suffix] = String(pathname).match(/^([^?#]*)(.*)$/);
+  const internalPath = toInternalPath(basePath || '/', detectLocale(basePath));
   const normalizedInternal = normalizePath(internalPath);
 
   if (locale === 'en') {
     const englishPath = TR_TO_EN_ROUTES[normalizedInternal] || normalizedInternal;
-    return englishPath === '/' ? '/en' : `/en${englishPath}`;
+    return (englishPath === '/' ? '/en' : `/en${englishPath}`) + suffix;
   }
 
   if (locale === 'ro') {
     const romanianPath = TR_TO_RO_ROUTES[normalizedInternal] || normalizedInternal;
     // Romanian is the default locale — no /ro prefix, just the slug.
-    return romanianPath === '/' ? '/' : romanianPath;
+    return (romanianPath === '/' ? '/' : romanianPath) + suffix;
   }
 
   // Turkish — use /tr prefix for clean locale URLs
-  return normalizedInternal === '/' ? '/tr' : `/tr${normalizedInternal}`;
+  return (normalizedInternal === '/' ? '/tr' : `/tr${normalizedInternal}`) + suffix;
 }

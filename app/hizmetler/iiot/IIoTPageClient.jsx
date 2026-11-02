@@ -188,7 +188,7 @@ export default function IIoTPageClient({ trData, enData, roData }) {
                   {system.title}
                 </h3>{" "}
                 <p
-                  className="text-[#31E2FF] text-[0.95rem] md:text-[1.05rem] font-semibold leading-[1.45rem] md:leading-[1.7rem] mb-4 md:mb-5 !text-center"
+                  className="text-[#0E7490] text-[0.95rem] md:text-[1.05rem] font-semibold leading-[1.45rem] md:leading-[1.7rem] mb-4 md:mb-5 !text-center"
                   style={{ textAlignLast: "center" }}
                 >
                   {system.spot}

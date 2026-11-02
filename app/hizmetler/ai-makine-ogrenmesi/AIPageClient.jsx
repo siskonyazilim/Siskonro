@@ -217,7 +217,7 @@ export default function AIPageClient({ trData, enData, roData }) {
                 type="button"
                 onClick={() => setShowAllSolutions((prev) => !prev)}
                 aria-expanded={showAllSolutions}
-                className="mt-2 mx-auto flex items-center justify-center gap-2 rounded-md bg-[#0388d1] px-5 py-2 text-white font-semibold"
+                className="mt-2 mx-auto flex items-center justify-center gap-2 rounded-md bg-[#0277bd] px-5 py-2 text-white font-semibold"
               >
                 <span>{showAllSolutions ? showLessLabel : showMoreLabel}</span>
                 <svg

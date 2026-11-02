@@ -117,7 +117,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
 
           {/* Hizmetler */}
           <div>
-            <h5 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('services')}</h5>
+            <h2 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('services')}</h2>
             <ul className="space-y-2 text-white text-base font-semibold">
               {services.map((item) => (
                 <li key={item.name}>
@@ -129,7 +129,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
 
           {/* Ürünler & Bilgi */}
           <div>
-            <h5 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('products')}</h5>
+            <h2 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('products')}</h2>
             <ul className="space-y-2 text-white text-base font-semibold mb-8">
               {products.map((item) => (
                 <li key={item.name}>
@@ -138,7 +138,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
               ))}
             </ul>
 
-            <h5 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('insights')}</h5>
+            <h2 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('insights')}</h2>
             <ul className="space-y-2 text-white text-base font-semibold">
               {infoLinks.map((item) => (
                 <li key={item.name}>
@@ -150,7 +150,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
 
           {/* Kurumsal */}
           <div>
-            <h5 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('corporate')}</h5>
+            <h2 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('corporate')}</h2>
             <ul className="space-y-2 text-white text-base font-semibold">
               {corporate.map((item) => (
                 <li key={item.name}>
@@ -168,7 +168,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
 
           {/* Sosyal Medya */}
           <div>
-            <h5 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('stayConnected')}</h5>
+            <h2 className="font-black tracking-wide text-sm uppercase mb-5 text-sky-300">{t('stayConnected')}</h2>
             <ul className="space-y-3 text-white text-base font-semibold mb-8">
               <li>
                 <a href={social.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-300 inline-flex items-center gap-3 leading-none">
@@ -221,7 +221,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
 
         <div className="mt-12 pt-6 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-300 text-sm font-semibold">
           <div className="space-y-2 text-center md:text-left">
-            <p>© {new Date().getFullYear()} Siskon Endüstriyel Otomasyon Sistemleri San. ve Tic. A.Ş. {t('allRights')}</p>
+            <p className="text-slate-300">© {new Date().getFullYear()} Siskon Endüstriyel Otomasyon Sistemleri San. ve Tic. A.Ş. {t('allRights')}</p>
           </div>
           <p className="uppercase tracking-wide font-black text-slate-300 text-xs">{slogan}</p>
         </div>

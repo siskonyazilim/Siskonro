@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import AnimatedButton from '../components/AnimatedButton';
 import PropTypes from 'prop-types';
 import PageHero from '../components/PageHero';
@@ -96,36 +96,87 @@ function resolveLogoSrc(logo, strapiBase) {
   return `/assets/Logos/${logo}`;
 }
 
+const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 function ReferenceModal({ selectedReference, onClose, t, strapiBase }) {
+  const dialogRef = useRef(null);
+  const closeRef = useRef(null);
+  const isOpen = Boolean(selectedReference);
+
+  // Açılışta odağı kapatma düğmesine taşı, kapanınca eski öğeye geri ver; Escape kapatır, Tab pencere içinde döner.
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const previouslyFocused = document.activeElement;
+    closeRef.current?.focus();
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+      if (event.key !== 'Tab' || !dialogRef.current) return;
+      const items = Array.from(dialogRef.current.querySelectorAll(FOCUSABLE));
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      if (previouslyFocused instanceof HTMLElement) previouslyFocused.focus();
+    };
+  }, [isOpen, onClose]);
+
   if (!selectedReference) return null;
 
   // Logo: Strapi'den tam URL (başında / varsa) ya da null
   const logoSrc = resolveLogoSrc(selectedReference.logo, strapiBase);
+  const titleId = 'reference-modal-title';
 
   return (
-    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-6 bg-[#031426]/80 backdrop-blur-md animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-[200] flex items-center justify-center p-3 md:p-6 bg-[#031426]/80 backdrop-blur-md animate-in fade-in duration-300">
       <button
         type="button"
+        tabIndex={-1}
         aria-label={t('referencesPage.closeModal')}
         className="absolute inset-0 -z-10"
         onClick={onClose}
       />
-      <div className="w-full max-w-3xl rounded-[30px] md:rounded-[36px] overflow-hidden relative animate-in zoom-in-95 duration-300 border border-sky-100 shadow-[0_28px_70px_rgba(2,6,23,0.45)]">
+      {/* Kart ekran yüksekliğiyle sınırlı: içerik kayar, kapatma düğmeleri sabit kalır */}
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        className="w-full max-w-3xl max-h-[calc(100dvh-1.5rem)] md:max-h-[calc(100dvh-3rem)] flex flex-col rounded-[24px] md:rounded-[36px] overflow-hidden relative animate-in zoom-in-95 duration-300 border border-sky-100 shadow-[0_28px_70px_rgba(2,6,23,0.45)]"
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-[#f3faff] via-white to-[#f7fbff]" />
-        <div className="relative">
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-full bg-white text-slate-500 border border-slate-200 hover:bg-red-50 hover:text-red-500 transition-all z-20"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        <button
+          ref={closeRef}
+          type="button"
+          onClick={onClose}
+          aria-label={t('referencesPage.closeModal')}
+          className="absolute top-3 right-3 md:top-6 md:right-6 p-2 rounded-full bg-white text-slate-500 border border-slate-200 hover:bg-red-50 hover:text-red-500 transition-all z-20"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
 
-          <div className="p-6 md:p-10 lg:p-12">
+        <div className="relative flex-1 min-h-0 overflow-y-auto overscroll-contain">
+          <div className="p-5 pt-14 sm:p-6 sm:pt-14 md:p-10 md:pt-12 lg:p-12 lg:pt-12">
             <div className="mb-6 rounded-2xl border border-sky-100 bg-gradient-to-r from-[#eaf6ff] via-white to-[#eef7ff] p-5 md:p-6">
               <div className="flex flex-col sm:flex-row sm:items-center gap-5 md:gap-6">
-                <div className="w-28 h-28 md:w-32 md:h-32 bg-white rounded-3xl flex items-center justify-center p-5 border border-slate-200 shadow-sm">
+                <div className="w-28 h-28 md:w-32 md:h-32 shrink-0 bg-white rounded-3xl flex items-center justify-center p-5 border border-slate-200 shadow-sm">
                   {logoSrc ? (
                     <SmartImage
                       src={logoSrc}
@@ -139,14 +190,14 @@ function ReferenceModal({ selectedReference, onClose, t, strapiBase }) {
                     <span className="text-center text-slate-700 font-black">{selectedReference.name}</span>
                   )}
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs uppercase tracking-[0.16em] text-sky-700 font-black mb-2">Siskon Reference</p>
-                  <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-2">{selectedReference.name}</h3>
+                  <h3 id={titleId} className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-2 break-words">{selectedReference.name}</h3>
                   <a
                     href={selectedReference.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-full bg-slate-900 text-white px-4 py-2 text-sm md:text-base font-bold hover:bg-sky-700 transition-colors"
+                    className="inline-flex max-w-full items-center rounded-full bg-slate-900 text-white px-4 py-2 text-sm md:text-base font-bold hover:bg-sky-700 transition-colors break-all"
                   >
                     {selectedReference.website}
                   </a>
@@ -155,13 +206,13 @@ function ReferenceModal({ selectedReference, onClose, t, strapiBase }) {
             </div>
 
             <ReferenceDetails reference={selectedReference} t={t} />
-
-            <div className="mt-10 pt-8 border-t border-slate-200">
-              <AnimatedButton asButton onClick={onClose} className="w-full bg-slate-900">
-                {t('referencesPage.closeButton')}
-              </AnimatedButton>
-            </div>
           </div>
+        </div>
+
+        <div className="relative shrink-0 border-t border-slate-200 bg-white/90 px-5 py-3 md:px-10 md:py-4">
+          <AnimatedButton asButton onClick={onClose} className="w-full bg-slate-900">
+            {t('referencesPage.closeButton')}
+          </AnimatedButton>
         </div>
       </div>
     </div>
@@ -180,6 +231,7 @@ export default function ReferencesPageClient({ pageData, groupedData, locale, st
   const { t, localizePath } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedReference, setSelectedReference] = useState(null);
+  const closeReference = useCallback(() => setSelectedReference(null), []);
 
   const categories = getCategories(t);
   const visibleReferences = getVisibleReferences(groupedData, activeCategory);
@@ -253,7 +305,7 @@ export default function ReferencesPageClient({ pageData, groupedData, locale, st
 
       <ReferenceModal
         selectedReference={selectedReference}
-        onClose={() => setSelectedReference(null)}
+        onClose={closeReference}
         t={t}
         strapiBase={strapiBase}
       />

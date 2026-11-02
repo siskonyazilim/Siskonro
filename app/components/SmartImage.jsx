@@ -50,6 +50,7 @@ export default function SmartImage({
   height,
   fallbackLabel,
   unoptimized,
+  fetchPriority,
 }) {
   const [hasError, setHasError] = useState(false);
   const [nativeFallbackFailed, setNativeFallbackFailed] = useState(false);
@@ -174,6 +175,7 @@ export default function SmartImage({
       sizes={resolvedSizes}
       quality={quality}
       priority={priority}
+      fetchPriority={fetchPriority}
       loading={resolvedLoading}
       placeholder={blurDataURL ? 'blur' : 'empty'}
       blurDataURL={blurDataURL}
@@ -197,6 +199,7 @@ SmartImage.propTypes = {
   height: PropTypes.number,
   fallbackLabel: PropTypes.string,
   unoptimized: PropTypes.bool,
+  fetchPriority: PropTypes.oneOf(['high', 'low', 'auto']),
 };
 
 SmartImage.defaultProps = {

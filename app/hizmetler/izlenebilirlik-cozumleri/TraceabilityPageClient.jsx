@@ -229,7 +229,7 @@ export default function TraceabilityPageClient({ trData, enData, roData }) {
                 type="button"
                 onClick={() => setShowAllBenefits((prev) => !prev)}
                 aria-expanded={showAllBenefits}
-                className="mx-auto mt-2 flex items-center justify-center gap-2 rounded-md bg-[#0388d1] px-5 py-2 text-white font-semibold"
+                className="mx-auto mt-2 flex items-center justify-center gap-2 rounded-md bg-[#0277bd] px-5 py-2 text-white font-semibold"
               >
                 {" "}
                 <span>

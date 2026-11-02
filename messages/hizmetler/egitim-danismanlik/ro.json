@@ -38,7 +38,7 @@
       "reverse": false
     },
     {
-      "title": "Instruire Beckhoff Twincat 2 și 3SCADA",
+      "title": "Instruire Beckhoff TwinCAT 2 și 3SCADA",
       "details": [
         "Siemens WinCC"
       ],
@@ -71,7 +71,7 @@
   "topicsTitle": "Subiectele noastre de formare",
   "topics": [
     "Instruire PLC și HMI",
-    "Instruire Beckhoff Twincat 2 și 3SCADA",
+    "Instruire Beckhoff TwinCAT 2 și 3SCADA",
     "Instruire Microsoft Power Platform",
     "Microsoft SQL Server"
   ]

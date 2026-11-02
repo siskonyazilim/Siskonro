@@ -38,9 +38,9 @@
       "reverse": false
     },
     {
-      "title": "Beckhoff Twincat 2 ve 3SCADA Eğitimi",
+      "title": "Beckhoff TwinCAT 2 ve 3SCADA Eğitimi",
       "details": [
-        "Siemens Wincc"
+        "Siemens WinCC"
       ],
       "image": "/assets/new/hizmetler/egitim-danismanlik/1-9-egitim-ve-danismanlik-cozumleri-16-9-2-camera.webp",
       "reverse": true
@@ -71,7 +71,7 @@
   "topicsTitle": "Eğitim Konularımız",
   "topics": [
     "PLC ve HMI Eğitimleri",
-    "Beckhoff Twincat 2 ve 3SCADA Eğitimi",
+    "Beckhoff TwinCAT 2 ve 3SCADA Eğitimi",
     "Microsoft Power Platform Eğitimleri",
     "Microsoft SQL Server"
   ]

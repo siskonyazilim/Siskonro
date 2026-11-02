@@ -105,8 +105,11 @@ export default function OnSuitePageClient({ data, locale }) {
                   height={1080}
                   className="w-full xl:w-[116%] max-w-none h-auto object-contain xl:-ml-10 xl:-translate-y-20 drop-shadow-2xl"
                   style={{ maxHeight: 'none' }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 860px"
-                  priority
+                  // Masaüstü görseli yalnızca xl+'da görünür: mobilde gizli kopya indirilmez (lazy + küçük sizes),
+                  // masaüstünde yüksek öncelikle yüklenir.
+                  sizes="(min-width: 1280px) 1200px, 16px"
+                  loading="lazy"
+                  fetchPriority="high"
                   quality={75}
                 />
               </div>
@@ -120,8 +123,11 @@ export default function OnSuitePageClient({ data, locale }) {
                 height={1080}
                 className="w-full max-w-none h-auto object-contain drop-shadow-2xl xl:hidden"
                 style={{ maxHeight: 'none' }}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 96vw"
+                // LCP görseli: mobil genişliğe uygun boyut (xl+ altında 100vw), preload + yüksek öncelik, lazy değil.
+                // xl+'da bu kopya gizli olduğundan en küçük varyanta düşer.
+                sizes="(min-width: 1280px) 16px, 100vw"
                 priority
+                fetchPriority="high"
                 quality={75}
               />
               <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-7 md:p-9 shadow-sm">
@@ -233,7 +239,7 @@ export default function OnSuitePageClient({ data, locale }) {
                     <div className="flex items-center justify-between gap-6">
                       <div className="flex items-center gap-4">
                         <span className="h-[2px] w-10 bg-sky-500" aria-hidden="true"></span>
-                        <span className="text-xs font-black text-sky-600 tracking-[0.12em]">
+                        <span className="text-xs font-black text-sky-700 tracking-[0.12em]">
                           {data.moduleOverviewLabel}
                         </span>
                       </div>
@@ -248,7 +254,7 @@ export default function OnSuitePageClient({ data, locale }) {
 
                     <h3 className="text-3xl md:text-5xl font-black text-slate-900 leading-[1.08] tracking-tight">
                       {modules[activeTab]?.name} <br />
-                      <span className="text-sky-500">{modules[activeTab]?.sub}</span>
+                      <span className="text-sky-600">{modules[activeTab]?.sub}</span>
                     </h3>
 
                     <p className="text-slate-600 text-lg leading-relaxed max-w-3xl">

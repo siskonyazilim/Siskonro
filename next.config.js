@@ -49,7 +49,7 @@ const nextConfig = {
       // public/ altındaki statik dosyalar varsayılan olarak max-age=0 ile gelir (Lighthouse
       // "efficient cache lifetimes"). Dosya adları hash'li olmadığı için immutable değil,
       // 30 gün + stale-while-revalidate.
-      ...['images', 'assets', 'icons', 'og', 'SiteIcon'].map((dir) => ({
+      ...['images', 'assets', 'icons', 'og', 'SiteIcon', 'fonts'].map((dir) => ({
         source: `/${dir}/:path*`,
         headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }],
       })),
@@ -57,6 +57,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // İletişim sayfasının EN adresi /en/contact; /iletisim eki bu dilde geçerli değil
+      { source: '/en/iletisim', destination: '/en/contact', permanent: true },
       // Legacy /ro/... URLs -> clean RO URLs (no prefix)
       { source: '/ro', destination: '/', permanent: true },
       { source: '/ro/search', destination: '/search', permanent: true },

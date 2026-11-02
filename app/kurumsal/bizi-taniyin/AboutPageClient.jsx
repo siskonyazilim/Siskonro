@@ -116,9 +116,9 @@ export default function AboutPageClient({ data }) {
                   />
                 </div>
                 <div className="relative z-10 flex h-full flex-col">
-                  <h3 className="text-[1.85rem] md:text-[2rem] font-black mb-4 leading-tight text-[#03499D] min-h-[4.8rem] md:min-h-[5.6rem]">
+                  <h2 className="tracking-tight text-[1.85rem] md:text-[2rem] font-black mb-4 leading-tight text-[#03499D] min-h-[4.8rem] md:min-h-[5.6rem]">
                     {item.title}
-                  </h3>
+                  </h2>
                   <p className="text-base md:text-[1.06rem] leading-[1.65] font-normal text-[#03408B]">
                     {item.text}
                   </p>
@@ -175,21 +175,21 @@ export default function AboutPageClient({ data }) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch relative z-10">
             <article className="reveal group relative h-full rounded-[18px] border-[1.5px] border-[#08DCFF] bg-white p-8 md:p-10 text-left shadow-[0_10px_22px_rgba(3,64,139,0.08)] transition-all duration-300 hover:-translate-y-0.5">
               <div className="flex h-full flex-col">
-                <h3 className="font-['Belfast_Grotesk'] text-[2rem] md:text-[2.15rem] leading-[1.28] font-bold mb-5 text-[#03499D]">{visionTitle}</h3>
+                <h2 className="tracking-tight font-['Belfast_Grotesk'] text-[2rem] md:text-[2.15rem] leading-[1.28] font-bold mb-5 text-[#03499D]">{visionTitle}</h2>
                 <p className="font-['Lufga'] text-base md:text-[1.08rem] leading-[1.68] font-normal text-[#03408B] text-left">{visionText}</p>
               </div>
             </article>
 
             <article className="reveal group relative h-full rounded-[18px] border-[1.5px] border-[#08DCFF] bg-white p-8 md:p-10 text-left shadow-[0_10px_22px_rgba(3,64,139,0.08)] transition-all duration-300 hover:-translate-y-0.5">
               <div className="flex h-full flex-col">
-                <h3 className="font-['Belfast_Grotesk'] text-[2rem] md:text-[2.15rem] leading-[1.28] font-bold mb-5 text-[#03499D]">{missionTitle}</h3>
+                <h2 className="tracking-tight font-['Belfast_Grotesk'] text-[2rem] md:text-[2.15rem] leading-[1.28] font-bold mb-5 text-[#03499D]">{missionTitle}</h2>
                 <p className="font-['Lufga'] text-base md:text-[1.08rem] leading-[1.68] font-normal text-[#03408B] text-left">{missionText}</p>
               </div>
             </article>
 
             <article className="reveal group relative h-full rounded-[18px] border-[1.5px] border-[#08DCFF] bg-white p-8 md:p-10 text-left shadow-[0_10px_22px_rgba(3,64,139,0.08)] transition-all duration-300 hover:-translate-y-0.5">
               <div className="flex h-full flex-col">
-                <h3 className="font-['Belfast_Grotesk'] text-[2rem] md:text-[2.15rem] leading-[1.28] font-bold mb-5 text-[#03499D]">{valuesTitle}</h3>
+                <h2 className="tracking-tight font-['Belfast_Grotesk'] text-[2rem] md:text-[2.15rem] leading-[1.28] font-bold mb-5 text-[#03499D]">{valuesTitle}</h2>
                 <ul className="space-y-2.5 md:space-y-3 font-['Lufga'] text-base md:text-[1.08rem] leading-[1.68] font-normal text-[#03408B]">
                   {values.map((v) => (
                     <li key={v} className="flex items-start gap-3">

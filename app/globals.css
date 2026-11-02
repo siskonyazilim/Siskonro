@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Belfast Grotesk';
-  src: url('/fonts/belfast/BelfastGrotesk-SemiExpanded.ttf') format('truetype');
+  src: url('/fonts/belfast/BelfastGrotesk-SemiExpanded.woff2') format('woff2'), url('/fonts/belfast/BelfastGrotesk-SemiExpanded.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Belfast Grotesk';
-  src: url('/fonts/belfast/BelfastGrotesk-MedSemExp.ttf') format('truetype');
+  src: url('/fonts/belfast/BelfastGrotesk-MedSemExp.woff2') format('woff2'), url('/fonts/belfast/BelfastGrotesk-MedSemExp.ttf') format('truetype');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Belfast Grotesk';
-  src: url('/fonts/belfast/BelfastGrotesk-SemBdSemExp.ttf') format('truetype');
+  src: url('/fonts/belfast/BelfastGrotesk-SemBdSemExp.woff2') format('woff2'), url('/fonts/belfast/BelfastGrotesk-SemBdSemExp.ttf') format('truetype');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: 'Belfast Grotesk';
-  src: url('/fonts/belfast/BelfastGrotesk-BoldSemExp.ttf') format('truetype');
+  src: url('/fonts/belfast/BelfastGrotesk-BoldSemExp.woff2') format('woff2'), url('/fonts/belfast/BelfastGrotesk-BoldSemExp.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: 'Lufga';
-  src: url('/fonts/lufga/Lufga-Regular.ttf') format('truetype');
+  src: url('/fonts/lufga/Lufga-Regular.woff2') format('woff2'), url('/fonts/lufga/Lufga-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -42,7 +42,7 @@
 
 @font-face {
   font-family: 'Lufga';
-  src: url('/fonts/lufga/Lufga-Medium.ttf') format('truetype');
+  src: url('/fonts/lufga/Lufga-Medium.woff2') format('woff2'), url('/fonts/lufga/Lufga-Medium.ttf') format('truetype');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -50,7 +50,7 @@
 
 @font-face {
   font-family: 'Lufga';
-  src: url('/fonts/lufga/Lufga-SemiBold.ttf') format('truetype');
+  src: url('/fonts/lufga/Lufga-SemiBold.woff2') format('woff2'), url('/fonts/lufga/Lufga-SemiBold.ttf') format('truetype');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -59,7 +59,7 @@
 /* ── Archivo Font Ailesi: Normal, İtalik ve Hero (public/fonts/Archivo) ── */
 @font-face {
   font-family: 'Archivo';
-  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.woff2') format('woff2'), url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: normal;
   font-weight: 100 900;
   font-stretch: 62% 125%;
@@ -69,7 +69,7 @@
 
 @font-face {
   font-family: 'Archivo';
-  src: url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.woff2') format('woff2'), url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: italic;
   font-weight: 100 900;
   font-stretch: 62% 125%;
@@ -79,7 +79,7 @@
 
 @font-face {
   font-family: 'Archivo Hero';
-  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.woff2') format('woff2'), url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: normal;
   font-weight: 100 900;
   font-stretch: 62% 125%;
@@ -657,7 +657,7 @@ p {
 
   .eyebrow {
     @apply inline-block text-xs uppercase tracking-widest font-bold mb-4;
-    color: var(--color-accent);
+    color: #0e7490; /* açık zeminde okunur (5.4:1); koyu zeminlerde aşağıdaki kurallar vurgu rengini geri verir */
   }
 
   .btn-ghost {
