@@ -43,8 +43,9 @@ const EN_TO_TR_ROUTES = {
   '/legal/cookie-policy': '/yasal/cerez-politikasi',
 };
 
+// İlk eşleşme kazanır: sondaki "/sektorler/..." takma adları gerçek yerel yolların üzerine yazmasın.
 const TR_TO_EN_ROUTES = Object.entries(EN_TO_TR_ROUTES).reduce((acc, [enPath, trPath]) => {
-  acc[trPath] = enPath;
+  if (!(trPath in acc)) acc[trPath] = enPath;
   return acc;
 }, {});
 
@@ -93,8 +94,9 @@ const RO_TO_TR_ROUTES = {
   '/legal/politica-de-cookie-uri': '/yasal/cerez-politikasi',
 };
 
+// İlk eşleşme kazanır: sondaki "/sektorler/..." takma adları gerçek yerel yolların üzerine yazmasın.
 const TR_TO_RO_ROUTES = Object.entries(RO_TO_TR_ROUTES).reduce((acc, [roPath, trPath]) => {
-  acc[trPath] = roPath;
+  if (!(trPath in acc)) acc[trPath] = roPath;
   return acc;
 }, {});
 
