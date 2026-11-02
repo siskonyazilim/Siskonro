@@ -10,11 +10,12 @@ Use these environment variables in Coolify for the contact form.
 | SMTP_PASS | app password | Yes |
 | CONTACT_FORM_FROM | bilgi@siskon.com.tr | Yes |
 | CONTACT_FORM_TO | web@siskon.com.tr | Yes |
-| NEXT_PUBLIC_RECAPTCHA_SITE_KEY | your-site-key | No |
-| RECAPTCHA_SECRET_KEY | your-secret-key | No |
+| NEXT_PUBLIC_TURNSTILE_SITE_KEY | 0x4AAAA... (Cloudflare Turnstile site key, build variable) | Yes |
+| TURNSTILE_SECRET_KEY | Cloudflare Turnstile secret key (runtime only) | Yes |
 
 ## Notes
 
 - For Office365 on port 587, STARTTLS is used with `secure=false` and `requireTLS=true`.
 - Do not commit real SMTP passwords into git.
-- If you leave `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` empty, form submission still works without captcha.
+- In production the form is rejected (HTTP 503) when `TURNSTILE_SECRET_KEY` is missing, so the captcha cannot be skipped by accident. Locally (no secret) the check is skipped.
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` is inlined at build time: tick "Build Variable" in Coolify and redeploy (rebuild) after changing it.

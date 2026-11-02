@@ -1142,7 +1142,7 @@ p {
 @media (max-width: 1023px) {
   .services-subpage-shift > div > section:nth-of-type(2) .responsive-media-shell:first-of-type img,
   .services-subpage-shift > section:nth-of-type(2) .responsive-media-shell:first-of-type img {
-    width: 112% !important;
+    width: min(112%, calc(100vw - 2rem)) !important;
     max-width: none !important;
     margin-left: auto !important;
     margin-right: auto !important;

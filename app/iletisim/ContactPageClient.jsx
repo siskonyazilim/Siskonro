@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import TurnstileWidget from '../components/TurnstileWidget';
 import PageHero from '../components/PageHero';
 import SmartImage from '../components/SmartImage';
 import FooterDocsBar from '../components/FooterDocsBar';
@@ -92,7 +92,7 @@ function getCookieValue(name) {
   return decodeURIComponent(cookie.slice(encodedName.length));
 }
 
-function validateForm(formData, pt, { requireRecaptcha, hasRecaptchaToken }) {
+function validateForm(formData, pt, { requireTurnstile, hasTurnstileToken }) {
   const nextErrors = {};
   if (!formData.firstName.trim()) nextErrors.firstName = pt('requiredField');
   if (!formData.lastName.trim())  nextErrors.lastName  = pt('requiredField');
@@ -107,7 +107,7 @@ function validateForm(formData, pt, { requireRecaptcha, hasRecaptchaToken }) {
     nextErrors.email = pt('invalidEmail');
   }
   if (!formData.consent) nextErrors.consent = pt('consentRequired');
-  if (requireRecaptcha && !hasRecaptchaToken) nextErrors.recaptcha = pt('recaptchaMissing');
+  if (requireTurnstile && !hasTurnstileToken) nextErrors.turnstile = pt('recaptchaMissing');
   return nextErrors;
 }
 
@@ -180,7 +180,7 @@ function ContactInfoPanel({ strapiContent, contactInfos, pt }) {
 }
 
 /* ── ContactFormPanel ─────────────────────────────────────────────────────── */
-function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubmit, recaptchaSiteKey, recaptchaToken, onRecaptchaChange, recaptchaRef, formData, formErrors, onFieldChange, onConsentChange, isSubmitting }) {
+function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubmit, turnstileSiteKey, turnstileToken, onTurnstileChange, turnstileRef, formData, formErrors, onFieldChange, onConsentChange, isSubmitting }) {
   const { localizePath } = useLanguage();
   const formTitle    = strapiContent?.formTitle    || pt('formTitle');
   const formSubtitle = strapiContent?.formSubtitle || pt('formSubtitle');
@@ -307,14 +307,13 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
               </span>
             </label>
             {formErrors.consent ? <p id={fieldErrorId('consent')} className="form-error-text -mt-2">{formErrors.consent}</p> : null}
-            {recaptchaSiteKey ? (
+            {turnstileSiteKey ? (
               <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 flex justify-center">
-                <ReCAPTCHA ref={recaptchaRef} sitekey={recaptchaSiteKey}
-                  onChange={(token) => onRecaptchaChange(token || '')}
-                  onExpired={() => onRecaptchaChange('')} theme="dark" />
+                <TurnstileWidget ref={turnstileRef} sitekey={turnstileSiteKey}
+                  onChange={(token) => onTurnstileChange(token || '')} theme="dark" />
               </div>
             ) : null}
-            {formErrors.recaptcha ? <p id={fieldErrorId('recaptcha')} className="form-error-text -mt-2">{formErrors.recaptcha}</p> : null}
+            {formErrors.turnstile ? <p id={fieldErrorId('turnstile')} className="form-error-text -mt-2">{formErrors.turnstile}</p> : null}
             <button type="submit"
               disabled={isSubmitting}
               className="w-full py-3 md:py-5 bg-sky-600 hover:bg-sky-500 disabled:bg-slate-600 disabled:cursor-not-allowed text-white font-bold rounded-xl md:rounded-2xl shadow-xl shadow-sky-600/30 transition-all active:scale-[0.98] text-base md:text-lg min-h-[44px] md:min-h-[48px] flex items-center justify-center">
@@ -385,7 +384,7 @@ function OfficesSection({ strapiContent, offices, pt }) {
  * `data` prop'u server-side Strapi'den gelir:
  *   { pageContent, contactInfos, offices }
  *
- * Form state, ReCAPTCHA ve submit mantığı burada tutulur.
+ * Form state, Turnstile ve submit mantığı burada tutulur.
  * JSON fallback: Strapi veri gelmezse usePageLocale() kullanılır.
  */
 export default function ContactPageClient({ data }) {
@@ -409,12 +408,12 @@ export default function ContactPageClient({ data }) {
 
   // Form state
   const [status, setStatus]         = useState({ type: '', msg: '' });
-  const [recaptchaToken, setReCaptchaToken] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
   const [formData, setFormData]     = useState(INITIAL_FORM_DATA);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const recaptchaRef = useRef(null);
-  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
+  const turnstileRef = useRef(null);
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -443,7 +442,7 @@ export default function ContactPageClient({ data }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const validationErrors = validateForm(formData, pt, { requireRecaptcha: Boolean(recaptchaSiteKey), hasRecaptchaToken: Boolean(recaptchaToken) });
+    const validationErrors = validateForm(formData, pt, { requireTurnstile: Boolean(turnstileSiteKey), hasTurnstileToken: Boolean(turnstileToken) });
     if (Object.keys(validationErrors).length > 0) {
       setFormErrors(validationErrors);
       setStatus({ type: 'error', msg: pt('formValidationError') });
@@ -459,7 +458,7 @@ export default function ContactPageClient({ data }) {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-csrf-token': csrfToken },
-        body: JSON.stringify({ ...formData, locale, recaptchaToken: recaptchaToken || undefined }),
+        body: JSON.stringify({ ...formData, locale, turnstileToken: turnstileToken || undefined }),
       });
       if (!response.ok) {
         const payload = await response.json().catch(() => ({}));
@@ -467,8 +466,8 @@ export default function ContactPageClient({ data }) {
       }
       setStatus({ type: 'success', msg: pt('formSuccess') });
       setFormData(INITIAL_FORM_DATA);
-      setReCaptchaToken('');
-      recaptchaRef.current?.reset();
+      setTurnstileToken('');
+      turnstileRef.current?.reset();
     } catch (error) {
       setStatus({ type: 'error', msg: error.message || pt('formSubmitError') });
     } finally {
@@ -489,9 +488,9 @@ export default function ContactPageClient({ data }) {
             <ContactFormPanel
               strapiContent={strapiContent} pt={pt}
               statusMessage={status.msg} statusType={status.type}
-              onSubmit={handleSubmit} recaptchaSiteKey={recaptchaSiteKey}
-              recaptchaToken={recaptchaToken} onRecaptchaChange={setReCaptchaToken}
-              recaptchaRef={recaptchaRef} formData={formData} formErrors={formErrors}
+              onSubmit={handleSubmit} turnstileSiteKey={turnstileSiteKey}
+              turnstileToken={turnstileToken} onTurnstileChange={setTurnstileToken}
+              turnstileRef={turnstileRef} formData={formData} formErrors={formErrors}
               onFieldChange={handleFieldChange} onConsentChange={handleConsentChange}
               isSubmitting={isSubmitting} />
           </div>

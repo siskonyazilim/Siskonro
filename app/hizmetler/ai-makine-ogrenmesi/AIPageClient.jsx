@@ -332,7 +332,7 @@ export default function AIPageClient({ trData, enData, roData }) {
                 alt={pt("diagramAlt")}
                 width={1200}
                 height={800}
-                className="responsive-contain-image w-full md:w-[110%] md:max-w-[920px] md:-ml-4 mx-auto origin-center object-contain drop-shadow-2xl"
+                className="responsive-contain-image w-full lg:w-[110%] md:max-w-[920px] lg:-ml-4 mx-auto origin-center object-contain drop-shadow-2xl"
                 style={{ maxHeight: "min(640px, 78vh)" }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 768px"
                 quality={90}

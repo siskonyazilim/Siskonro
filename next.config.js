@@ -7,13 +7,13 @@ const CONTENT_SECURITY_POLICY = [
   "form-action 'self'",
   "frame-ancestors 'none'",
   "object-src 'none'",
-  `script-src 'self' 'unsafe-inline' ${IS_DEV ? "'unsafe-eval'" : ''} https://www.google.com https://www.gstatic.com https://cdn.cerezgo.com https://static.cloudflareinsights.com https://www.googletagmanager.com`,
+  `script-src 'self' 'unsafe-inline' ${IS_DEV ? "'unsafe-eval'" : ''} https://www.google.com https://www.gstatic.com https://cdn.cerezgo.com https://challenges.cloudflare.com https://static.cloudflareinsights.com https://www.googletagmanager.com`,
   "style-src 'self' 'unsafe-inline' https:",
   "img-src 'self' data: blob: https:",
   "media-src 'self' data: blob: https:",
   "font-src 'self' data: https:",
   `connect-src 'self' https: https://cdn.cerezgo.com ${IS_DEV ? 'ws: wss:' : ''}`,
-  "frame-src 'self' https://maps.google.com https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com",
+  "frame-src 'self' https://challenges.cloudflare.com https://maps.google.com https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com",
   'upgrade-insecure-requests',
 ].filter(Boolean).join('; ');
 

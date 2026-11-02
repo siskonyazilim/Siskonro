@@ -132,22 +132,22 @@ const MAIL_LABELS = {
 // Kullanıcıya dönen API hata mesajları (form bunları olduğu gibi gösteriyor)
 const API_MESSAGES = {
   tr: {
-    recaptchaMissing: 'Lütfen reCAPTCHA doğrulamasını tamamlayın.',
-    recaptchaFailed: 'reCAPTCHA doğrulaması başarısız.',
+    captchaMissing: 'Lütfen robot olmadığınızı doğrulayın.',
+    captchaFailed: 'Güvenlik doğrulaması başarısız oldu. Lütfen sayfayı yenileyip tekrar deneyin.',
     missingFields: 'Lütfen zorunlu alanların tamamını doldurun.',
     invalidEmail: 'Lütfen geçerli bir e-posta adresi girin.',
     sendFailed: 'Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.',
   },
   en: {
-    recaptchaMissing: 'Please complete the reCAPTCHA.',
-    recaptchaFailed: 'reCAPTCHA verification failed.',
+    captchaMissing: 'Please verify that you are not a robot.',
+    captchaFailed: 'Security verification failed. Please refresh the page and try again.',
     missingFields: 'Please fill all required fields.',
     invalidEmail: 'Please enter a valid email address.',
     sendFailed: 'Your message could not be sent. Please try again later.',
   },
   ro: {
-    recaptchaMissing: 'Vă rugăm să completați verificarea reCAPTCHA.',
-    recaptchaFailed: 'Verificarea reCAPTCHA a eșuat.',
+    captchaMissing: 'Vă rugăm să verificați că nu sunteți un robot.',
+    captchaFailed: 'Verificarea de securitate a eșuat. Vă rugăm să reîncărcați pagina și să încercați din nou.',
     missingFields: 'Vă rugăm să completați toate câmpurile obligatorii.',
     invalidEmail: 'Vă rugăm să introduceți o adresă de e-mail validă.',
     sendFailed: 'Mesajul dumneavoastră nu a putut fi trimis. Vă rugăm să încercați din nou mai târziu.',
@@ -375,37 +375,47 @@ export async function POST(request) {
     const payload = await request.json();
     locale = SUPPORTED_LOCALES.includes(payload?.locale) ? payload.locale : 'ro';
 
-    // reCAPTCHA server-side verification (only when secret key is configured)
-    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
-    if (recaptchaSecret) {
-      // Strip to printable ASCII only — prevents ByteString errors in Node.js fetch (undici)
-      // when the token contains non-Latin1 characters before percent-encoding.
-      const recaptchaToken = String(payload?.recaptchaToken || '').replace(/[^\x20-\x7E]/g, '');
-      if (!recaptchaToken) {
-        log('warn', 'contact_recaptcha_missing', { ip });
+    // Cloudflare Turnstile sunucu doğrulaması.
+    // Üretimde secret tanımlı değilse form KAPALI kalır (sessizce atlanmaz); geliştirmede atlanır.
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+    if (turnstileSecret) {
+      // Token'ı yazdırılabilir ASCII ile sınırla (undici ByteString hatalarını önler)
+      const turnstileToken = String(payload?.turnstileToken || '').replace(/[^ -~]/g, '').slice(0, 2048);
+      if (!turnstileToken) {
+        log('warn', 'contact_turnstile_missing', { ip });
         return NextResponse.json(
-          { message: API_MESSAGES[locale].recaptchaMissing },
+          { message: API_MESSAGES[locale].captchaMissing },
           { status: 400 }
         );
       }
 
-      // Use explicit encodeURIComponent instead of URLSearchParams to avoid
-      // undici ByteString validation issues in certain Node.js versions.
-      const verifyBody = `secret=${encodeURIComponent(recaptchaSecret)}&response=${encodeURIComponent(recaptchaToken)}`;
-      const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: verifyBody,
-      });
-      const verifyData = await verifyRes.json();
+      const verifyBody = new URLSearchParams({ secret: turnstileSecret, response: turnstileToken });
+      if (ip && ip !== 'unknown') verifyBody.set('remoteip', ip);
 
-      if (!verifyData.success) {
-        log('warn', 'contact_recaptcha_failed', { ip, codes: verifyData['error-codes'] });
+      let verifyData;
+      try {
+        const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: verifyBody,
+          signal: AbortSignal.timeout(10_000),
+        });
+        verifyData = await verifyRes.json();
+      } catch (err) {
+        log('error', 'contact_turnstile_unreachable', { ip, message: err?.message });
+        return NextResponse.json({ message: API_MESSAGES[locale].sendFailed }, { status: 503 });
+      }
+
+      if (!verifyData?.success) {
+        log('warn', 'contact_turnstile_failed', { ip, codes: verifyData?.['error-codes'] });
         return NextResponse.json(
-          { message: API_MESSAGES[locale].recaptchaFailed },
+          { message: API_MESSAGES[locale].captchaFailed },
           { status: 403 }
         );
       }
+    } else if (process.env.NODE_ENV === 'production') {
+      log('error', 'contact_turnstile_not_configured', { ip });
+      return NextResponse.json({ message: API_MESSAGES[locale].sendFailed }, { status: 503 });
     }
 
     const missingFields = getMissingFields(payload);
