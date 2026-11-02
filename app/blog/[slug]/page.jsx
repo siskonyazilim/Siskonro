@@ -45,7 +45,7 @@ export async function generateMetadata(props) {
       languages[loc.locale] = `${localePrefix(loc.locale)}/blog/${loc.slug}`;
     }
   }
-  languages['x-default'] = languages.tr ?? canonicalPath;
+  languages['x-default'] = languages.ro ?? canonicalPath;
 
   const title = `${post.title} | Siskon`;
   const description = post.excerpt || undefined;
@@ -77,7 +77,8 @@ export async function generateMetadata(props) {
 }
 
 const LOCALES = ['tr', 'en', 'ro'];
-const localePrefix = (l) => (l === 'tr' ? '' : `/${l}`);
+// Romence varsayılan dil: önek yok; EN ve TR için /en ve /tr.
+const localePrefix = (l) => (l === 'ro' ? '' : `/${l}`);
 
 // Strapi içeriği güvenilmez kabul edilir: HTML kaçırılmadan innerHTML'e basılırsa
 // <img onerror=...> veya href="..." kırılması ile XSS mümkün olur.

@@ -2,7 +2,8 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { buildLocalizedMetadata } from '../lib/seo/routeMetadata';
+import { ROUTE_META, buildLocalizedMetadata } from '../lib/seo/routeMetadata';
+import { toInternalPath } from '../lib/i18n/routes';
 
 function upsertMetaTag(attribute, key, content) {
   if (!content) return;
@@ -37,6 +38,11 @@ export default function ClientMetadataSync() {
 
   useEffect(() => {
     if (!pathname || globalThis.window === undefined) return;
+
+    // Yalnızca ROUTE_META'da tanımlı sayfalar senkronlanır. Blog yazısı gibi dinamik sayfalar kendi
+    // sunucu metadatasını taşır; burada ana sayfa metasıyla ezilmesin ve ikinci bir canonical oluşmasın.
+    const internalPath = toInternalPath(pathname).replace(/(.)\/$/, '$1');
+    if (!ROUTE_META[internalPath]) return;
 
     const siteUrl = globalThis.window.location.origin;
     const metadata = buildLocalizedMetadata({ pathname, siteUrl });
