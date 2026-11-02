@@ -806,6 +806,8 @@ function buildMenuItems({ t, canonicalServiceMenu, strapiData }) {
 function localizeMenuItems(menuItems, localizePath) {
   return menuItems.map((item) => ({
     ...item,
+    // Yerelleştirmeden önce belirlenir; RO'da href '/servicii' olduğundan sonradan kontrol edilemez
+    isServicesMenu: item.href.includes('/hizmetler'),
     href: localizePath(item.href),
     submenu: item.submenu?.map((subItem) => ({
       ...subItem,
@@ -816,7 +818,7 @@ function localizeMenuItems(menuItems, localizePath) {
 
 function DesktopNavItem({ item, scrolled, pathname, isMegaOpen, onOpenMega, onCloseMega, openMenuKey, onOpenMenu, onCloseMenu }) {
   // Hizmetler: özel mega menü
-  if (item.submenu && item.href.includes('/hizmetler')) {
+  if (item.submenu && item.isServicesMenu) {
     return (
       <div
         key={item.href}
@@ -878,7 +880,7 @@ function DesktopNavItem({ item, scrolled, pathname, isMegaOpen, onOpenMega, onCl
 
 function renderDesktopMenuItem(item, scrolled, pathname, isMegaOpen, onOpenMega, onCloseMega) {
   // Legacy wrapper — kept for compatibility, use DesktopNavItem where possible
-  if (item.submenu && item.href.includes('/hizmetler')) {
+  if (item.submenu && item.isServicesMenu) {
     return (
       <div
         key={item.href}

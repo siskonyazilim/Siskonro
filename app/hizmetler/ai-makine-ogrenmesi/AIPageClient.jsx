@@ -86,8 +86,8 @@ export default function AIPageClient({ trData, enData, roData }) {
                   alt={pt("heroImageAlt")}
                   width={1920}
                   height={1080}
-                  className="w-full md:w-[95%] md:max-w-[760px] md:ml-0 h-auto object-contain mx-auto drop-shadow-2xl"
-                  style={{ maxHeight: "min(500px, 66vh)" }}
+                  className="w-full md:w-[95%] md:max-w-[900px] md:ml-0 h-auto object-contain mx-auto drop-shadow-2xl"
+                  style={{ maxHeight: "min(600px, 72vh)" }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 860px"
                   priority
                   quality={75}
@@ -95,10 +95,10 @@ export default function AIPageClient({ trData, enData, roData }) {
               </div>
             </div>
             <div className="reveal order-1 lg:order-2 h-full flex flex-col justify-center">
-              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-7 md:p-9 shadow-sm">
+              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-8 md:p-12 lg:min-h-[420px] lg:justify-center shadow-sm">
                 <span className="eyebrow self-start">{pt("serviceLabel")}</span>
                 <p
-                  className="text-slate-600 text-lg leading-relaxed text-justify hyphens-auto"
+                  className="text-slate-600 text-lg md:text-xl leading-relaxed text-justify hyphens-auto"
                   lang="tr"
                 >
                   {pt("description")}

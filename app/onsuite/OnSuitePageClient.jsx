@@ -130,7 +130,7 @@ export default function OnSuitePageClient({ data, locale }) {
                 fetchPriority="high"
                 quality={75}
               />
-              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-7 md:p-9 shadow-sm">
+              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-8 md:p-12 lg:min-h-[420px] lg:justify-center shadow-sm">
                 <span className="eyebrow self-start">{data.productBadge}</span>
                 <p className={`text-slate-600 text-lg leading-relaxed ${isRo || isEn ? '' : 'text-justify hyphens-auto'}`} lang={isRo ? 'ro' : isEn ? 'en' : 'tr'}>
                   {data.productDetailDesc}

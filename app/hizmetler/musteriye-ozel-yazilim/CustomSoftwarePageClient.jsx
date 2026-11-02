@@ -59,7 +59,7 @@ export default function CustomSoftwarePageClient({ trData, enData, roData }) {
                   width={1920}
                   height={1080}
                   className="w-full max-w-[520px] sm:max-w-[640px] md:max-w-[860px] h-auto object-contain mx-auto drop-shadow-2xl"
-                  style={{ maxHeight: "min(600px, 76vh)" }}
+                  style={{ maxHeight: "min(720px, 82vh)" }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 860px"
                   priority
                   quality={90}
@@ -68,7 +68,7 @@ export default function CustomSoftwarePageClient({ trData, enData, roData }) {
             </div>{" "}
             <div className="reveal order-1 lg:order-2 h-full flex flex-col justify-center">
               {" "}
-              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-9 md:p-11 shadow-sm lg:-mr-12">
+              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-10 md:p-14 lg:min-h-[420px] lg:justify-center shadow-sm lg:-mr-12">
                 {" "}
                 <span className="eyebrow self-start">{pt("service")}</span>{" "}
                 <p

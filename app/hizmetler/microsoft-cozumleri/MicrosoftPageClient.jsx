@@ -102,7 +102,7 @@ export default function MicrosoftPageClient({ trData, enData, roData }) {
                   width={1920}
                   height={1080}
                   className="w-full md:w-[100%] md:max-w-[860px] md:ml-0 object-contain drop-shadow-2xl"
-                  style={{ maxHeight: "min(600px, 76vh)" }}
+                  style={{ maxHeight: "min(720px, 82vh)" }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 860px"
                   priority
                   quality={75}
@@ -111,11 +111,11 @@ export default function MicrosoftPageClient({ trData, enData, roData }) {
             </div>{" "}
             <div className="reveal order-1 lg:order-2 h-full flex flex-col justify-center">
               {" "}
-              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-7 md:p-9 shadow-sm">
+              <div className="hidden lg:flex flex-col gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-8 md:p-12 lg:min-h-[420px] lg:justify-center shadow-sm">
                 {" "}
                 <span className="eyebrow self-start">{pt("service")}</span>{" "}
                 <p
-                  className="text-slate-600 text-lg leading-relaxed text-justify hyphens-auto"
+                  className="text-slate-600 text-lg md:text-xl leading-relaxed text-justify hyphens-auto"
                   lang="tr"
                 >
                   {" "}
