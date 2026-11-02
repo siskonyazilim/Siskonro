@@ -58,6 +58,8 @@ const TurnstileWidget = forwardRef(function TurnstileWidget({ sitekey, onChange,
           sitekey,
           theme,
           language: 'auto',
+          // Kutu yalnızca ziyaretçiden etkileşim gerekirse görünür; aksi halde doğrulama arka planda sessizce yapılır
+          appearance: 'interaction-only',
           callback: (token) => onChangeRef.current?.(token || ''),
           'expired-callback': () => onChangeRef.current?.(''),
           'error-callback': () => onChangeRef.current?.(''),

@@ -308,7 +308,7 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
             </label>
             {formErrors.consent ? <p id={fieldErrorId('consent')} className="form-error-text -mt-2">{formErrors.consent}</p> : null}
             {turnstileSiteKey ? (
-              <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 flex justify-center">
+              <div className="flex justify-center">
                 <TurnstileWidget ref={turnstileRef} sitekey={turnstileSiteKey}
                   onChange={(token) => onTurnstileChange(token || '')} theme="dark" />
               </div>
