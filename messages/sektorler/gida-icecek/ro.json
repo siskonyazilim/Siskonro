@@ -1,0 +1,107 @@
+{
+  "title": "Alimente și băuturi",
+  "metrics": "ISO 22005:2007 · Organic Track & Trace",
+  "pack": "Organic Track & Trace",
+  "summary": "Trasabilitatea alimentară necesită gestionarea unitară a genealogiei loturilor, a înregistrărilor CCP și a datelor de inspecție, de la recepția materiilor prime până pe raft.",
+  "needs": [
+    {
+      "title": "Genealogia lotului de la materia primă la raft",
+      "description": "Înregistrați ce lot, rețetă și tură a produs fiecare lot final."
+    },
+    {
+      "title": "Date privind punctele critice de control",
+      "description": "Captați înregistrările detectoarelor de metale, ale cântarelor de control și ale timpului/temperaturii de pasteurizare."
+    },
+    {
+      "title": "Validarea proceselor CIP/SIP",
+      "description": "Urmăriți circulația, temperatura și durata curățării și sterilizării."
+    },
+    {
+      "title": "Retrageri rapide și țintite",
+      "description": "Vizați doar loturile afectate, nu acțiuni de retragere extinse."
+    },
+    {
+      "title": "Sincronizare MES - ERP",
+      "description": "Date consistente despre rețete, alergeni și expedieri între sisteme."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Organic Track & Trace",
+      "description": "Pachet dedicat industriei alimentare, aliniat la ISO 22005:2007."
+    },
+    {
+      "title": "OnSuite Trace",
+      "description": "Gestionarea loturilor, genealogia produselor și controlul componentelor critice."
+    },
+    {
+      "title": "OnSuite Connect",
+      "description": "Integrare PLC pentru detectoare de metale, cântare de control și echipamente de umplere."
+    },
+    {
+      "title": "OnSuite Forms (DSF)",
+      "description": "Formulare de teren CCP/HACCP și înregistrări ca dovezi de audit."
+    },
+    {
+      "title": "OnSuite Integra",
+      "description": "Punte MES-ERP pentru date sincronizate despre rețete, alergeni și expedieri."
+    }
+  ],
+  "results": [
+    {
+      "title": "Domeniu de retragere redus semnificativ",
+      "description": "Loturile afectate pot fi izolate precis, în loc de retrageri în masă."
+    },
+    {
+      "title": "Dovezi CCP auditabile",
+      "description": "Datele de temperatură, greutate și respingere sunt asociate fiecărui lot."
+    },
+    {
+      "title": "Pregătire mai rapidă pentru HACCP și ISO",
+      "description": "Săptămânile de consolidare manuală a datelor înainte de audit sunt eliminate."
+    },
+    {
+      "title": "Conformitate îmbunătățită la export",
+      "description": "Producția este aliniată la așteptările de trasabilitate ale piețelor din UE."
+    }
+  ],
+  "featured": {
+    "mark": "O",
+    "label": "Pachet pentru industrie",
+    "title": "Organic Track & Trace - ISO 22005:2007",
+    "description": "Un pachet complet de trasabilitate pentru siguranța alimentară, cu referințe precum Mey Diageo, Turk Tuborg, Ajinomoto și Duru Bulgur.",
+    "linkText": "Vezi detalii →",
+    "linkUrl": "https://www.izlenebilirlik.com.tr"
+  },
+  "highlights": [
+    "Genealogia loturilor",
+    "Dovezi CCP",
+    "Reducerea domeniului de retragere"
+  ],
+  "references": [
+    {
+      "name": "Mey Diageo",
+      "logo": "/assets/Logos/mey-diageo.svg"
+    },
+    {
+      "name": "Turk Tuborg",
+      "logo": "/assets/Logos/turk-tuborg_logo.svg"
+    },
+    {
+      "name": "Ajinomoto",
+      "logo": "/assets/Logos/ajinomoto-global-seeklogo.svg"
+    },
+    {
+      "name": "Duru Bulgur",
+      "logo": "/assets/Logos/durubulgur-min-removebg-preview.webp"
+    },
+    {
+      "name": "Orkide",
+      "logo": "/assets/Logos/orkide_yag-removebg-preview.png"
+    },
+    {
+      "name": "Bomi Group",
+      "logo": "/assets/Logos/bomi-international-vector-logo.svg"
+    }
+  ]
+}

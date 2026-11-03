@@ -27,8 +27,8 @@
   "companyPlaceholder": "Şirket adı",
   "phone": "Telefon",
   "phonePlaceholder": "+90 5xx xxx xx xx",
-  "position": "Pozisyon",
-  "positionPlaceholder": "Pozisyon seçin",
+  "position": "Talep Konusu",
+  "positionPlaceholder": "Talep konusu seçin",
   "positionOptions": [
     "Genel Başvuru",
     "Satış",

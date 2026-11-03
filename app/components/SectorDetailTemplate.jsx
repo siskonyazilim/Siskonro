@@ -342,6 +342,7 @@ function ListSection({ title, items, background = 'white', accent }) {
 }
 
 function FeaturedSection({ featured, accent }) {
+  const { localizePath } = useLanguage();
   if (!featured) {
     return null;
   }
@@ -363,7 +364,7 @@ function FeaturedSection({ featured, accent }) {
                 <Link
                   className="inline-flex mt-6 items-center justify-center rounded-xl px-5 py-2.5 text-white font-semibold transition-colors"
                   style={{ backgroundColor: accent }}
-                  href={featured.linkUrl}
+                  href={featured.linkUrl.startsWith('/') ? localizePath(featured.linkUrl) : featured.linkUrl}
                 >
                   {featured.linkText}
                 </Link>
@@ -443,8 +444,10 @@ export default function SectorDetailTemplate({ content }) { // NOSONAR
   const isRo = locale === 'ro';
   const isEn = locale === 'en';
   const view = isEn ? content.en : isRo ? (content.ro || content.en) : content.tr;
-  const palette = getSectorPalette(view.title);
-  const sectorImage = getSectorImage(view.title);
+  // Renk ve görsel eşleşmesi başlıktaki sözcüklerle yapıldığından Romence sayfada İngilizce başlık kullanılır
+  const matchTitle = isRo ? content.en.title : view.title;
+  const palette = getSectorPalette(matchTitle);
+  const sectorImage = getSectorImage(matchTitle);
   const templateRef = useRef(null);
   const summarySource = String(view.summary || '').trim();
   // İlk cümleyi tamamen al (kapanış tırnağı dahil); cümle ortasında kesme

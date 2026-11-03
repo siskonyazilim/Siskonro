@@ -1,0 +1,120 @@
+{
+  "title": "Mașini, proces și automatizare CNC",
+  "metrics": "Soluții Machine Whispering",
+  "pack": "OnSuite CNC",
+  "summary": "De la liniile de asamblare la instalațiile de proces și flotele CNC multi-brand, Siskon oferă inginerie de automatizare cap-coadă printr-o arhitectură unitară.",
+  "needs": [
+    {
+      "title": "Automatizarea mașinilor",
+      "description": "Soluții PLC și HMI pentru linii de asamblare, ambalare și umplere."
+    },
+    {
+      "title": "Automatizarea proceselor",
+      "description": "Control multi-stație pentru liniile de galvanizare, anodizare, curățare chimică și tratare a suprafețelor."
+    },
+    {
+      "title": "Medii CNC multi-brand",
+      "description": "Supraveghere unificată pentru mașinile Siemens, Fanuc, Heidenhain, Mazak și Mori Seiki."
+    },
+    {
+      "title": "Control servo și al mișcării",
+      "description": "Poziționare precisă și coordonare multi-axă pentru fluxuri de lucru complexe."
+    },
+    {
+      "title": "Automatizare pentru siguranță funcțională",
+      "description": "Logică de siguranță bazată pe PL/SIL și scenarii sigure de bypass."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite CNC",
+      "description": "Strat de integrare pentru MTConnect, OPC UA, Siemens S7, Fanuc FOCAS și Heidenhain."
+    },
+    {
+      "title": "OnSuite Connect + Live + Optima",
+      "description": "Achiziție de date, OEE, istoric de alarme și semnale pentru mentenanța predictivă."
+    },
+    {
+      "title": "Inginerie SCADA și HMI personalizată",
+      "description": "Vizualizare la nivel de fabrică folosind WinCC Professional sau platforme personalizate."
+    },
+    {
+      "title": "Proiectare de tablouri și livrare la fața locului",
+      "description": "Selecția hardware-ului, construcția tablourilor, software PLC/HMI, punere în funcțiune și instruire."
+    },
+    {
+      "title": "Metode protejate prin brevete",
+      "description": "Portofoliu de proprietate intelectuală axat pe CNC, inclusiv cereri PCT."
+    }
+  ],
+  "results": [
+    {
+      "title": "Livrare completă de la un singur furnizor",
+      "description": "Un singur partener, de la hardware și software până la punere în funcțiune și instruire."
+    },
+    {
+      "title": "O singură interfață pentru flote multi-brand",
+      "description": "Echipele de operațiuni nu mai trebuie să monitorizeze zeci de panouri neconectate."
+    },
+    {
+      "title": "Opriri neplanificate reduse",
+      "description": "Mentenanță predictivă susținută de corelarea uzurii sculelor cu alarmele."
+    },
+    {
+      "title": "Protejarea investițiilor (CapEx)",
+      "description": "Randament mai mare din parcul de mașini existent, prin îmbunătățiri bazate pe software."
+    },
+    {
+      "title": "Bază mai solidă de proprietate intelectuală tehnică",
+      "description": "Brevetele oferă un temei științific și juridic metodelor implementate."
+    }
+  ],
+  "featured": {
+    "mark": "C",
+    "label": "Modul recomandat",
+    "title": "OnSuite CNC - Integrare CNC multi-brand",
+    "description": "Platformă de integrare CNC cu o singură interfață, bazată pe MTConnect și OPC UA, protejată prin cereri de brevet, inclusiv PCT.",
+    "linkText": "OnSuite CNC →",
+    "linkUrl": "/onsuite"
+  },
+  "caseStudy": {
+    "label": "Caz din teren",
+    "title": "Automatizarea unei instalații de tratare a suprafețelor - linie de galvanizare",
+    "description": "Control sincronizat al stațiilor de degresare, clătire, curățare chimică, anodizare, zinc, galvanizare și spălare, cu monitorizare KPI în timp real prin panouri Andon."
+  },
+  "techStack": [
+    "Siemens TIA Portal",
+    "SIMATIC",
+    "Beckhoff TwinCAT",
+    "CODESYS",
+    "WinCC Professional",
+    "OPC UA",
+    "SICK AppSpace",
+    "MTConnect",
+    "Fanuc Focas",
+    "Heidenhain"
+  ],
+  "highlights": [
+    "Integrare PLC/SCADA",
+    "Pregătire pentru mentenanță predictivă",
+    "Unificarea CNC multi-brand"
+  ],
+  "references": [
+    {
+      "name": "TEI",
+      "logo": "/assets/Logos/TEI.svg"
+    },
+    {
+      "name": "Phinia",
+      "logo": "/assets/Logos/phinia.svg"
+    },
+    {
+      "name": "Nemak",
+      "logo": "/assets/Logos/nemak.svg"
+    },
+    {
+      "name": "BorgWarner",
+      "logo": "/assets/Logos/borgwarner-seeklogo.svg"
+    }
+  ]
+}

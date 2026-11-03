@@ -27,8 +27,8 @@
   "companyPlaceholder": "Numele companiei",
   "phone": "Telefon",
   "phonePlaceholder": "+40 7xx xxx xxx",
-  "position": "Poziție",
-  "positionPlaceholder": "Selectați poziția",
+  "position": "Tipul solicitării",
+  "positionPlaceholder": "Selectați tipul solicitării",
   "positionOptions": [
     "Solicitare generală",
     "Vânzări",

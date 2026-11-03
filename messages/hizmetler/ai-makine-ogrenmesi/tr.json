@@ -1,7 +1,7 @@
 {
   "title": "AI ve Makine Öğrenmesi Çözümleri",
   "subtitle": "Verilerinizi güçlü kararlara dönüştürün!",
-  "description": "AI ve Makine Öğrenmesi Çözümleri, verilerinizden elde edilen içgörülerle işletmenizi geleceğe hazırlar. İleri analitik ve makine öğrenmesi algoritmaları sayesinde, sahadan topladığınız veri setlerindeki gizli potansiyeli açığa çıkarır, süreçlerinizi optimize eder ve daha doğru iş kararları almanızı sağlar. Makine Öğrenmesi çözümlerimizle sizde verinizi stratejik fırsatlara dönüştürün.",
+  "description": "AI ve Makine Öğrenmesi Çözümleri, verilerinizden elde edilen içgörülerle işletmenizi geleceğe hazırlar. İleri analitik ve makine öğrenmesi algoritmaları sayesinde, sahadan topladığınız veri setlerindeki gizli potansiyeli açığa çıkarır, süreçlerinizi optimize eder ve daha doğru iş kararları almanızı sağlar. Makine Öğrenmesi çözümlerimizle siz de verinizi stratejik fırsatlara dönüştürün.",
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbServices": "Hizmetler",
   "serviceLabel": "Hizmet",
@@ -20,7 +20,7 @@
   "showLess": "Daha Az Göster",
   "benefits": [
     "Geniş endüstri tecrübesi ile sektöre özel çözümler",
-    "Geniş endüstri tecrübesi ile sektöre özel çözümler",
+    "İş süreçlerinizle uyumlu, özelleştirilmiş makine öğrenmesi uygulamaları",
     "Mevcut sistemlerle entegre edilebilen esnek altyapı",
     "Gerçek zamanlı veri işleme ile hızlandırılmış karar süreçleri",
     "Veriye dayalı optimizasyon ile operasyonel maliyet tasarrufu",
@@ -52,7 +52,7 @@
   },
   "heroTitle": "AI ve Makine Öğrenmesi Çözümleri",
   "heroSubtitle": "Verilerinizi güçlü kararlara dönüştürün!",
-  "heroDescription": "AI ve Makine Öğrenmesi Çözümleri, verilerinizden elde edilen içgörülerle işletmenizi geleceğe hazırlar. İleri analitik ve makine öğrenmesi algoritmaları sayesinde, sahadan topladığınız veri setlerindeki gizli potansiyeli açığa çıkarır, süreçlerinizi optimize eder ve daha doğru iş kararları almanızı sağlar. Makine Öğrenmesi çözümlerimizle sizde verinizi stratejik fırsatlara dönüştürün.",
+  "heroDescription": "AI ve Makine Öğrenmesi Çözümleri, verilerinizden elde edilen içgörülerle işletmenizi geleceğe hazırlar. İleri analitik ve makine öğrenmesi algoritmaları sayesinde, sahadan topladığınız veri setlerindeki gizli potansiyeli açığa çıkarır, süreçlerinizi optimize eder ve daha doğru iş kararları almanızı sağlar. Makine Öğrenmesi çözümlerimizle siz de verinizi stratejik fırsatlara dönüştürün.",
   "heroImage": "/assets/strapi/aivemakineogrenmesi_477c412326.webp",
   "solutionsImage": "/assets/strapi/aivemakineogrenmesi2_7f2eecf3bc.webp",
   "deepLearningImage": "/assets/strapi/AI_Makine_Ogrenmesi_Iliski_9013d65cd3.svg",

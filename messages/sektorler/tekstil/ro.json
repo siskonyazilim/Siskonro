@@ -1,0 +1,83 @@
+{
+  "title": "Textile și confecții",
+  "metrics": "Rețetă · Trasabilitatea lotului · Proces mare consumator de energie",
+  "pack": "Textile Production Intelligence",
+  "summary": "Producția textilă se întinde de la fibră până la produsul finit și necesită un flux continuu de date între filare, țesere, vopsitorie și procesele de confecții.",
+  "referencesTitle": "Parteneri de soluții",
+  "needs": [
+    {
+      "title": "Trasabilitatea loturilor",
+      "description": "Urmăriți fibra, firul, țesătura și produsul finit, cu genealogie la nivel de rolă."
+    },
+    {
+      "title": "Verificarea rețetelor de vopsire",
+      "description": "Validați rețeta pe vas, dozarea și țintele standardului de culoare."
+    },
+    {
+      "title": "Monitorizarea energiei, a aburului și a apei",
+      "description": "Măsurați consumul de electricitate, gaz, abur și apă în operațiunile vopsitoriei."
+    },
+    {
+      "title": "Controlul calității pe loturi",
+      "description": "Păstrați hărți de defecte, clase de calitate și înregistrări de respingere pe rola de țesătură."
+    },
+    {
+      "title": "Performanța operatorilor și a turelor",
+      "description": "Monitorizați tendințele de producție și de rebut pe mașină, operator și tură."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite Connect",
+      "description": "Colectați date de la PLC-urile și controlerele de țesere, tricotaj, vopsitorie și mașini."
+    },
+    {
+      "title": "OnSuite Trace",
+      "description": "Trasabilitate la nivel de lot, vas și rolă de țesătură."
+    },
+    {
+      "title": "OnSuite Live + Optima",
+      "description": "Dashboard-uri la nivel de mașină, urmărirea OEE și analize MTBF."
+    },
+    {
+      "title": "OnSuite Energy",
+      "description": "Monitorizarea electricității, gazului, aburului și apei pentru liniile de vopsitorie."
+    },
+    {
+      "title": "OnSuite Forms (DSF)",
+      "description": "Formulare digitale de calitate, înregistrări de predare între ture și liste de verificare a inspecțiilor."
+    },
+    {
+      "title": "Guvernanța rețetelor și a documentelor",
+      "description": "Control centralizat al rețetelor de vopsire, al standardelor de culoare și al specificațiilor clienților."
+    }
+  ],
+  "results": [
+    {
+      "title": "Consistență îmbunătățită a culorii",
+      "description": "Validarea rețetelor crește performanța potrivirii culorii din prima încercare."
+    },
+    {
+      "title": "Economii de energie și abur",
+      "description": "Tiparele de consum vizibile scot la iveală ineficiențele din operațiunile vopsitoriei."
+    },
+    {
+      "title": "Trasabilitate la nivel de rolă",
+      "description": "Reclamațiile clienților pot fi urmărite până la nivelul rolei de țesătură."
+    },
+    {
+      "title": "Onorare mai fiabilă a comenzilor",
+      "description": "Starea comenzilor și blocajele devin vizibile instantaneu."
+    },
+    {
+      "title": "Pregătire pentru raportarea de sustenabilitate",
+      "description": "Datele privind apa, energia și carbonul pot fi raportate către clienții de brand."
+    }
+  ],
+  "highlights": [
+    "Genealogia loturilor",
+    "Verificarea rețetelor",
+    "Vizibilitate energetică"
+  ],
+  "references": []
+}

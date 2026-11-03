@@ -27,8 +27,8 @@
   "companyPlaceholder": "Company name",
   "phone": "Phone",
   "phonePlaceholder": "+90 5xx xxx xx xx",
-  "position": "Position",
-  "positionPlaceholder": "Select position",
+  "position": "Inquiry Type",
+  "positionPlaceholder": "Select inquiry type",
   "positionOptions": [
     "General Inquiry",
     "Sales",

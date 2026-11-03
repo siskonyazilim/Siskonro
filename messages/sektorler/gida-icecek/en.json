@@ -1,0 +1,107 @@
+{
+  "title": "Food & Beverage",
+  "metrics": "ISO 22005:2007 · Organic Track & Trace",
+  "pack": "Organic Track & Trace",
+  "summary": "Food traceability requires unified management of lot genealogy, CCP records, and inspection data from raw material intake to shelf.",
+  "needs": [
+    {
+      "title": "Raw material to shelf lot genealogy",
+      "description": "Record which lot, recipe, and shift produced each final batch."
+    },
+    {
+      "title": "Critical Control Point data",
+      "description": "Capture metal detector, check-weigher, and pasteurization time-temperature records."
+    },
+    {
+      "title": "CIP/SIP process validation",
+      "description": "Track cleaning and sterilization circulation, temperature, and duration."
+    },
+    {
+      "title": "Fast and narrow recall execution",
+      "description": "Target only affected lots instead of broad recall actions."
+    },
+    {
+      "title": "MES to ERP synchronization",
+      "description": "Consistent recipe, allergen, and shipment data across systems."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Organic Track & Trace",
+      "description": "Food-specific package aligned with ISO 22005:2007."
+    },
+    {
+      "title": "OnSuite Trace",
+      "description": "Lot management, product genealogy, and critical component control."
+    },
+    {
+      "title": "OnSuite Connect",
+      "description": "PLC integration for metal detectors, check-weighers, and filling equipment."
+    },
+    {
+      "title": "OnSuite Forms (DSF)",
+      "description": "CCP/HACCP field forms and audit evidence records."
+    },
+    {
+      "title": "OnSuite Integra",
+      "description": "MES-ERP bridge for synchronized recipe, allergen, and shipment data."
+    }
+  ],
+  "results": [
+    {
+      "title": "Significantly reduced recall scope",
+      "description": "Affected lots can be isolated precisely instead of mass recalls."
+    },
+    {
+      "title": "Auditable CCP evidence",
+      "description": "Temperature, weight, and reject data are linked to each lot."
+    },
+    {
+      "title": "Faster HACCP and ISO readiness",
+      "description": "Weeks of manual pre-audit data consolidation are eliminated."
+    },
+    {
+      "title": "Improved export compliance",
+      "description": "Production is aligned with traceability expectations for EU markets."
+    }
+  ],
+  "featured": {
+    "mark": "O",
+    "label": "Industry Package",
+    "title": "Organic Track & Trace - ISO 22005:2007",
+    "description": "A full food-safety traceability package with references including Mey Diageo, Turk Tuborg, Ajinomoto, and Duru Bulgur.",
+    "linkText": "View Details →",
+    "linkUrl": "https://www.izlenebilirlik.com.tr"
+  },
+  "highlights": [
+    "Lot genealogy",
+    "CCP evidence",
+    "Recall scope reduction"
+  ],
+  "references": [
+    {
+      "name": "Mey Diageo",
+      "logo": "/assets/Logos/mey-diageo.svg"
+    },
+    {
+      "name": "Turk Tuborg",
+      "logo": "/assets/Logos/turk-tuborg_logo.svg"
+    },
+    {
+      "name": "Ajinomoto",
+      "logo": "/assets/Logos/ajinomoto-global-seeklogo.svg"
+    },
+    {
+      "name": "Duru Bulgur",
+      "logo": "/assets/Logos/durubulgur-min-removebg-preview.webp"
+    },
+    {
+      "name": "Orkide",
+      "logo": "/assets/Logos/orkide_yag-removebg-preview.png"
+    },
+    {
+      "name": "Bomi Group",
+      "logo": "/assets/Logos/bomi-international-vector-logo.svg"
+    }
+  ]
+}

@@ -12,6 +12,18 @@ import trLocale from '../../../messages/blog/tr.json';
 import enLocale from '../../../messages/blog/en.json';
 import roLocale from '../../../messages/blog/ro.json';
 
+// HTML içeriğinden ~155 karakterlik, kelime sınırında kesilmiş düz metin özeti
+function excerptFromContent(content, max = 155) {
+  const text = String(content ?? '')
+    .replaceAll(/<[^>]+>/g, ' ')
+    .replaceAll(/&nbsp;/g, ' ')
+    .replaceAll(/\s+/g, ' ')
+    .trim();
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return `${cut.slice(0, Math.max(cut.lastIndexOf(' '), 100)).replace(/[\s,.;:–-]+$/, '')}…`;
+}
+
 export async function generateMetadata(props) {
   const params = await props.params;
   const slug = params?.slug;
@@ -48,7 +60,8 @@ export async function generateMetadata(props) {
   languages['x-default'] = languages.ro ?? canonicalPath;
 
   const title = `${post.title} | Siskon`;
-  const description = post.excerpt || undefined;
+  // Özet girilmemişse açıklama yazının ilk cümlelerinden üretilir; etiket hiç boş kalmasın
+  const description = post.excerpt || excerptFromContent(post.content) || undefined;
   const image = post.coverImage || '/og/siskon-default.webp';
   const isoDate = toIsoDate(parseDateToTime(post.date), post.date);
 
@@ -173,7 +186,7 @@ function renderContent(content) {
     // H2
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={i} className="font-archivo text-2xl md:text-3xl font-black text-white mt-10 mb-4 leading-tight">
+        <h2 key={i} className="font-archivo text-xl md:text-2xl font-bold text-white mt-10 mb-4 leading-snug">
           {line.slice(3)}
         </h2>
       );
@@ -184,7 +197,7 @@ function renderContent(content) {
     // H3
     if (line.startsWith('### ')) {
       elements.push(
-        <h3 key={i} className="font-archivo text-xl font-bold text-sky-300 mt-7 mb-3 leading-tight">
+        <h3 key={i} className="font-archivo text-lg md:text-xl font-semibold text-sky-300 mt-7 mb-3 leading-snug">
           {line.slice(4)}
         </h3>
       );
@@ -317,7 +330,7 @@ export default async function BlogPostPage(props) {
               </p>
             </div>
 
-            <h1 className="font-archivo text-[1.75rem] sm:text-[2.05rem] md:text-[2.35rem] lg:text-[2.55rem] font-black text-white leading-[1.16] tracking-tight mb-0">
+            <h1 className="font-archivo text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.15rem] font-bold text-white leading-[1.22] tracking-tight mb-0">
               {post.title}
             </h1>
           </div>

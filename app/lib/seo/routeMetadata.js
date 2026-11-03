@@ -208,15 +208,15 @@ export const ROUTE_META = {
   },
   '/onsuite': {
     ro: {
-      title: 'OnSuite: platformă MES cu 11 module',
+      title: 'OnSuite: platformă MES cu 12 module',
       description: 'OnSuite reunește OEE, calitate, trasabilitate, energie și mentenanță într-o singură platformă MES, folosită în peste 60 de fabrici inteligente din lume.',
     },
     en: {
-      title: 'OnSuite: an 11-module MES platform',
+      title: 'OnSuite: a 12-module MES platform',
       description: 'OnSuite brings OEE, quality, traceability, energy and maintenance into one MES platform, used in more than 60 smart factories worldwide.',
     },
     tr: {
-      title: 'OnSuite: 11 modüllü MES platformu',
+      title: 'OnSuite: 12 modüllü MES platformu',
       description: 'OnSuite; OEE, kalite, izlenebilirlik, enerji ve bakımı tek MES platformunda toplar ve dünya genelinde 60\'tan fazla akıllı fabrikada kullanılır.',
     },
   },

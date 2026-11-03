@@ -1,0 +1,80 @@
+{
+  "title": "Produse farmaceutice și sănătate",
+  "metrics": "GMP · Serializare · Capsule T&T",
+  "pack": "Capsule Track & Trace",
+  "summary": "Serializarea, urmărirea loturilor și a datelor de expirare și trasabilitatea lanțului frigorific sunt obligatorii și trebuie gestionate cu o guvernanță cu zero defecte în operațiunile farmaceutice.",
+  "needs": [
+    {
+      "title": "Serializare la nivel de unitate",
+      "description": "Identitate digitală unică pentru fiecare cutie, blister și flacon."
+    },
+    {
+      "title": "Conformitate și validare GMP",
+      "description": "Aliniere la 21 CFR Part 11 și înregistrări validate ale sistemului."
+    },
+    {
+      "title": "Monitorizarea lanțului frigorific",
+      "description": "Jurnale de temperatură și umiditate de la materia primă până la livrarea către client."
+    },
+    {
+      "title": "Integrare ITS",
+      "description": "Conformitate cu sistemele naționale de track-and-trace pentru medicamente."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Capsule Track & Trace",
+      "description": "Pachet pentru industrie, conceput pentru operațiunile farmaceutice."
+    },
+    {
+      "title": "OnSuite Trace",
+      "description": "Gestionarea ciclului de viață al serializării, loturilor și datelor de expirare."
+    },
+    {
+      "title": "OnSuite Forms (DSF)",
+      "description": "Formulare de calitate în linie și înregistrări digitale de validare."
+    },
+    {
+      "title": "Sisteme de viziune",
+      "description": "Verificarea asistată de AI a conținutului ambalajului și a etichetării."
+    }
+  ],
+  "results": [
+    {
+      "title": "Identitate digitală anticontrafacere",
+      "description": "Fiecare unitate are un istoric și o proveniență verificabile în teren."
+    },
+    {
+      "title": "Pregătire mai rapidă pentru audit",
+      "description": "Dovezile de inspecție pot fi raportate imediat, când este nevoie."
+    },
+    {
+      "title": "Rate mai mici ale defectelor",
+      "description": "Asigurare pe două niveluri, prin viziune artificială și verificări cu cod de bare."
+    },
+    {
+      "title": "Pregătire pentru conformitatea la export",
+      "description": "Pregătit pentru cerințele de serializare de pe piețele globale."
+    }
+  ],
+  "highlights": [
+    "Guvernanța serializării",
+    "Vizibilitatea lanțului frigorific",
+    "Conformitate pregătită pentru audit"
+  ],
+  "referencesTitle": "Parteneri de soluții",
+  "references": [
+    {
+      "name": "SICK RFID",
+      "logo": "/assets/Logos/sick.svg"
+    },
+    {
+      "name": "Beckhoff",
+      "logo": "/assets/Logos/Beckhoff_red.svg"
+    },
+    {
+      "name": "Markem-Imaje",
+      "logo": "/assets/Logos/project_markem.svg"
+    }
+  ]
+}

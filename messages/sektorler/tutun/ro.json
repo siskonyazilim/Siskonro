@@ -1,1 +1,130 @@
-{}
+{
+  "title": "Industria tutunului",
+  "metrics": "9 țări · 300 de mașini · 28 de OEM-uri",
+  "pack": "OnSuite TMC",
+  "summary": "Producția de tutun necesită controlul simultan al mașinilor OPC UA, al fluxurilor de evenimente GSCA și al obligațiilor TPD privind trasabilitatea (track-and-trace). OnSuite TMC oferă un strat de date neutru față de furnizori, bazat pe standarde, pentru acest mediu.",
+  "detail": "Funcționează în producție în 9 țări, cu 300 de mașini conectate de la 28 de mărci OEM.",
+  "kpis": [
+    {
+      "value": "9",
+      "title": "Țări",
+      "note": "cu implementare OPC UA TMC activă"
+    },
+    {
+      "value": "300+",
+      "title": "Mașini conectate",
+      "note": "cu flux de date în timp real"
+    },
+    {
+      "value": "13",
+      "title": "Unități de conformitate",
+      "note": "acoperite de domeniul OPC UA TMC"
+    },
+    {
+      "value": "28",
+      "title": "Mărci OEM",
+      "note": "inclusiv Hauni, Decoufle, GD și Comas"
+    }
+  ],
+  "needs": [
+    {
+      "title": "Parc de mașini multi-brand",
+      "description": "Hauni, Decoufle, Comas, GD și altele, fiecare cu un comportament de comunicare diferit."
+    },
+    {
+      "title": "Guvernanța evenimentelor GSCA",
+      "description": "Gestionarea cap-coadă a incidentelor de calitate și siguranță, cu pregătire pentru audit."
+    },
+    {
+      "title": "TPD și trasabilitate la nivel de unitate",
+      "description": "Serializare obligatorie conform cerințelor Directivei UE privind produsele din tutun."
+    },
+    {
+      "title": "Integrare MES/SCADA/historian",
+      "description": "Interoperabilitate plug-and-play cu sistemele enterprise existente."
+    },
+    {
+      "title": "Punere rapidă în funcțiune",
+      "description": "Efort redus de inginerie și de pornire pentru linii și locații noi."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite TMC - neutru față de furnizori",
+      "description": "Standardul OPC UA Tobacco Machine Communication, fără dependență de un singur furnizor (vendor lock-in)."
+    },
+    {
+      "title": "Suport pentru 13 unități de conformitate",
+      "description": "Acoperire pentru clase de mașini precum mașini de țigarete, mașini de filtre și mașini de ambalat."
+    },
+    {
+      "title": "Arhitectură OPC UA securizată",
+      "description": "Criptare, autentificare bazată pe certificate și fiabilitate dovedită în teren."
+    },
+    {
+      "title": "Model standardizat de date și alarme",
+      "description": "Structuri de tag-uri consistente pe toate liniile, pentru comparabilitate globală."
+    },
+    {
+      "title": "OnSuite Trace + Live + Optima",
+      "description": "Genealogia producției, urmărirea OEE și analiza blocajelor/opririlor."
+    },
+    {
+      "title": "GSCA Kanban și dashboard",
+      "description": "Gestionarea incidentelor, analiza cauzei principale și dovezi de conformitate."
+    }
+  ],
+  "results": [
+    {
+      "title": "Dependența de un singur furnizor dispare",
+      "description": "Schimbarea mărcii de mașini nu mai necesită inginerie de integrare repetată."
+    },
+    {
+      "title": "Timpul de punere în funcțiune se reduce",
+      "description": "Abordarea plug-and-play OPC UA TMC reduce durata implementării de la săptămâni la zile."
+    },
+    {
+      "title": "KPI consecvenți pe toate liniile",
+      "description": "OEE pentru același SKU poate fi comparat între fabrici folosind un model comun de metrici."
+    },
+    {
+      "title": "Pregătire mai rapidă pentru audit",
+      "description": "Înregistrările GSCA sunt disponibile instantaneu prin sistem."
+    },
+    {
+      "title": "Retrageri țintite de produse",
+      "description": "Sunt izolate doar unitățile afectate, în loc să fie retrase loturi întregi."
+    }
+  ],
+  "featured": {
+    "mark": "T",
+    "label": "Produs recomandat - site dedicat",
+    "title": "OnSuite TMC - Comunicare standardizată a datelor pentru industria tutunului",
+    "description": "O soluție OPC UA TMC neutră față de furnizori, sigură și scalabilă, cu un site de produs dedicat și un flux de demonstrație disponibile live.",
+    "linkText": "opcuatmc.com",
+    "linkUrl": "https://www.opcuatmc.com"
+  },
+  "highlights": [
+    "Conectivitate neutră față de furnizori",
+    "Aliniere GSCA/TPD",
+    "Integrare rapidă MES/SCADA"
+  ],
+  "references": [
+    {
+      "name": "JTI",
+      "logo": "/assets/Logos/JTI_Logo.svg"
+    },
+    {
+      "name": "Philip Morris International",
+      "logo": "/assets/Logos/philip_morris_sa.svg"
+    },
+    {
+      "name": "Philsa",
+      "logo": "/assets/Logos/philip_morris_sa.svg"
+    },
+    {
+      "name": "Turkish Tobacco",
+      "logo": "/assets/Logos/G.D_tobacco.svg"
+    }
+  ]
+}

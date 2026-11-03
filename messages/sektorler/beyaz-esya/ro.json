@@ -1,0 +1,103 @@
+{
+  "title": "Electrocasnice și aparate de uz casnic",
+  "metrics": "A+++ Track & Trace · Volum mare",
+  "pack": "A+++ Track & Trace",
+  "summary": "Producția de electrocasnice în volum mare necesită controlul sincronizat al fluxului de variante, al testării în linie și al corelării produs-ambalaj.",
+  "needs": [
+    {
+      "title": "Asamblare secvențială multi-variantă",
+      "description": "ECU-ul, etichetele și accesoriile corecte trebuie să corespundă fiecărui SKU pe aceeași linie."
+    },
+    {
+      "title": "Integrarea stațiilor de testare în linie",
+      "description": "Rezultatele testelor high-pot, funcționale și ale controlului final de calitate trebuie asociate fiecărei unități."
+    },
+    {
+      "title": "Trasabilitate produs-ambalaj",
+      "description": "Lanț produs-ambalaj-palet verificat înainte de expediere."
+    },
+    {
+      "title": "Vizibilitate energetică și de carbon",
+      "description": "Consumul de electricitate, aer și gaz pe linie, presă, cuptor și etapă de asamblare."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "A+++ Track & Trace",
+      "description": "Pachet dedicat electrocasnicelor, cu pașaport digital la nivel de unitate."
+    },
+    {
+      "title": "OnSuite Connect + Trace",
+      "description": "Integrarea datelor de la stațiile de testare, scannere și infrastructura PLC."
+    },
+    {
+      "title": "OnSuite Live + Optima",
+      "description": "Monitorizarea performanței liniei, secvențierea variantelor și analize OEE."
+    },
+    {
+      "title": "OnSuite Energy",
+      "description": "Monitorizarea energiei pe linie, echipament și tură."
+    },
+    {
+      "title": "OnSuite Green",
+      "description": "Pregătire pentru amprenta de carbon a produsului și suport pentru raportarea CBAM."
+    }
+  ],
+  "results": [
+    {
+      "title": "Garanție de zero amestecuri",
+      "description": "Livrarea unui ECU sau accesoriu greșit este prevenită prin poka-yoke și controale cu cod de bare."
+    },
+    {
+      "title": "Istoric de testare legat de fiecare produs",
+      "description": "Reclamațiile clienților pot fi investigate instantaneu, cu dovezi de testare asociate."
+    },
+    {
+      "title": "Îmbunătățire OEE măsurabilă",
+      "description": "Blocajele sunt optimizate prin decizii operaționale bazate pe date."
+    },
+    {
+      "title": "Pregătire pentru conformitatea la export",
+      "description": "Susține cerințele UE privind ecodesign-ul, pașaportul produsului și documentația CBAM."
+    }
+  ],
+  "featured": {
+    "mark": "A+",
+    "label": "Pachet pentru industrie",
+    "title": "A+++ Track & Trace - Electrocasnice",
+    "description": "Pachet de trasabilitate optimizat pentru liniile de electrocasnice de volum mare, cu referințe globale precum BSH, Vestel, Whirlpool și Haier.",
+    "linkText": "Vezi detalii →",
+    "linkUrl": "https://www.izlenebilirlik.com.tr"
+  },
+  "highlights": [
+    "Asamblare sigură pe variante",
+    "Trasabilitate a testării în linie",
+    "Vizibilitate energetică și OEE"
+  ],
+  "references": [
+    {
+      "name": "BSH Hausgerate",
+      "logo": "/assets/Logos/BSH_Bosch_und_Siemens_Hausgerate_logo.svg"
+    },
+    {
+      "name": "Vestel",
+      "logo": "/assets/Logos/Vestel_logo.svg"
+    },
+    {
+      "name": "Whirlpool",
+      "logo": "/assets/Logos/whirlpool_corporation_logo_-as_of_2017.svg"
+    },
+    {
+      "name": "Haier Europe",
+      "logo": "/assets/Logos/Haier_logo.svg"
+    },
+    {
+      "name": "Bosch",
+      "logo": "/assets/Logos/Bosch-logo.svg"
+    },
+    {
+      "name": "Groupe Atlantic",
+      "logo": "/assets/Logos/groupe-atlantic-logo-vector.svg"
+    }
+  ]
+}

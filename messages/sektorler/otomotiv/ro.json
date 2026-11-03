@@ -1,0 +1,119 @@
+{
+  "title": "Industria auto (OEM și ecosistemul de furnizori)",
+  "metrics": "IATF 16949 · Track & Trace hibrid",
+  "pack": "Hybrid Track & Trace",
+  "summary": "Lanțurile de aprovizionare auto cer trasabilitate strictă la nivel de unitate, verificarea componentelor critice și execuție în celule de calitate cu zero defecte.",
+  "needs": [
+    {
+      "title": "Trasabilitate la nivel de unitate",
+      "description": "Genealogie completă de la materia primă până la livrarea către client, prin urmărire DataMatrix și QR."
+    },
+    {
+      "title": "Verificarea componentelor critice",
+      "description": "Prevenirea pieselor greșite la stații prin metode Pick-to-Light și poka-yoke."
+    },
+    {
+      "title": "Retrageri izolate",
+      "description": "Se retrag doar unitățile afectate, nu campanii de retragere extinse."
+    },
+    {
+      "title": "Pregătire pentru auditul IATF 16949",
+      "description": "Acces continuu la dovezile de proces, FMEA și PPAP."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Hybrid Track & Trace",
+      "description": "Pachet dedicat industriei auto, cu mapare pe serie, lot, palet și plan de control."
+    },
+    {
+      "title": "OnSuite Trace + Connect",
+      "description": "Fundație de trasabilitate integrată cu PLC, pentru orchestrarea la nivel de linie."
+    },
+    {
+      "title": "Pick-to-Light / Put-to-Light",
+      "description": "Ghidaj fizic al operatorului, care reduce erorile de asamblare."
+    },
+    {
+      "title": "Jidoka și celula de calitate",
+      "description": "Controale de calitate în linie, cu manipulare automată a probelor și fluxuri NCM."
+    },
+    {
+      "title": "Ident Gate Pro",
+      "description": "Verificarea pieselor prin RFID/cod de bare la intrarea în linie."
+    }
+  ],
+  "results": [
+    {
+      "title": "Domeniu de retragere restrâns",
+      "description": "Izolarea țintită a unităților afectate reduce semnificativ costul retragerilor."
+    },
+    {
+      "title": "Zero piese greșite livrate",
+      "description": "Verificarea listei de materiale (BOM) previne expedierea unei componente incorecte."
+    },
+    {
+      "title": "Gestionare mai solidă a garanțiilor",
+      "description": "Istoricul de testare, asamblare și expediere poate fi accesat printr-o singură interogare."
+    },
+    {
+      "title": "Risc redus la audit",
+      "description": "Se elimină munca manuală de colectare a datelor înainte de audit."
+    },
+    {
+      "title": "Îmbunătățiri OEE măsurabile",
+      "description": "Blocajele sunt identificate și îmbunătățite prin cicluri bazate pe date."
+    }
+  ],
+  "featured": {
+    "mark": "H",
+    "label": "Soluție recomandată · Track Wisely",
+    "title": "Hybrid Track & Trace - Pachetul pentru industria auto",
+    "description": "Un pachet adaptat industriei auto, construit pe nucleul OnSuite Trace, cu tehnologii RFID, cod de bare, QR și beacon.",
+    "linkText": "izlenebilirlik.com.tr →",
+    "linkUrl": "https://www.izlenebilirlik.com.tr"
+  },
+  "highlights": [
+    "Flux aliniat la IATF",
+    "Verificarea componentelor critice",
+    "Reducerea domeniului de retragere"
+  ],
+  "references": [
+    {
+      "name": "Bosch",
+      "logo": "/assets/Logos/Bosch-logo.svg"
+    },
+    {
+      "name": "Phinia",
+      "logo": "/assets/Logos/phinia.svg"
+    },
+    {
+      "name": "Delphi Technologies",
+      "logo": "/assets/Logos/delphi.svg"
+    },
+    {
+      "name": "Nemak",
+      "logo": "/assets/Logos/nemak.svg"
+    },
+    {
+      "name": "BorgWarner",
+      "logo": "/assets/Logos/borgwarner-seeklogo.svg"
+    },
+    {
+      "name": "Tirsan",
+      "logo": "/assets/Logos/tirsan-seeklogo.webp"
+    },
+    {
+      "name": "Stackpole",
+      "logo": "/assets/Logos/Stackpole.svg"
+    },
+    {
+      "name": "Maxion Inci Celik",
+      "logo": "/assets/Logos/maxion_inci.svg"
+    },
+    {
+      "name": "Turk Demir Dokum",
+      "logo": "/assets/Logos/demirdokum-seeklogo.svg"
+    }
+  ]
+}

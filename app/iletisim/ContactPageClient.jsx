@@ -217,7 +217,7 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
     lastName: 'family-name',
     company: 'organization',
     phone: 'tel',
-    position: 'organization-title',
+    position: 'off', // iş unvanı değil, talep konusu seçimi: uygun autocomplete değeri yok
     email: 'email',
   };
 

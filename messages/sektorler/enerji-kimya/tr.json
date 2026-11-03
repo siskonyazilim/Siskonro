@@ -1,0 +1,72 @@
+{
+  "title": "Enerji, Kimya & Sürdürülebilirlik",
+  "metrics": "SCADA · CBAM · TÜBİTAK + EUROGIA",
+  "pack": "OnSuite Green",
+  "sectorLabel": "Sektör 08",
+  "industryTitle": "Enerji, Kimya & Sürdürülebilirlik",
+  "summary": "Avrupa Yeşil Mutabakatı, CBAM ve ESG raporlaması artık ihracatçı sanayinin gündeminde en üstte. OnSuite Green - TÜBİTAK ve EUROGIA2030 destekli karbon ayak izi platformumuz fabrikaların enerji tüketimini, üretim çıktısını ve karbon ayak izini tek sistemde ölçer ve raporlar.",
+  "referencesTitle": "Çözüm Ortakları",
+  "needs": [
+    {
+      "title": "SCADA & proses otomasyonu",
+      "description": "Kesintisiz akış için kararlı saha kontrol altyapısı."
+    },
+    {
+      "title": "Enerji tüketim görünürlüğü",
+      "description": "Hat, ekipman ve süreç bazında elektrik, doğalgaz, su, hava."
+    },
+    {
+      "title": "CBAM & karbon raporlaması",
+      "description": "AB Sınırda Karbon Düzenlemesine uyum."
+    },
+    {
+      "title": "ESG & sürdürülebilirlik",
+      "description": "Yatırımcı ve müşteri talepleri için raporlanabilir veri."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite Green",
+      "description": "Karbon ayak izi platformu; TÜBİTAK ve EUROGIA2030 destekli."
+    },
+    {
+      "title": "OnSuite Energy",
+      "description": "Saha enerji analizörleri entegrasyonu, hat bazında tüketim."
+    },
+    {
+      "title": "Proses Otomasyonu",
+      "description": "Siemens, Allen-Bradley, Beckhoff tabanlı SCADA çözümleri."
+    },
+    {
+      "title": "RIO-Energy Donanımı",
+      "description": "Siskon mühendisliğiyle geliştirilmiş IoT enerji ölçüm donanımı."
+    }
+  ],
+  "results": [
+    {
+      "title": "Karbon raporlaması otomatize olur",
+      "description": "Manuel hesap yerine sistemden direkt raporlama."
+    },
+    {
+      "title": "Enerji tasarrufu",
+      "description": "Görünmeyen tüketim noktalarının tespiti ile ölçülebilir kazanım."
+    },
+    {
+      "title": "İhracat avantajı",
+      "description": "CBAM dosyaları, AB müşteri talepleri karşılanır."
+    },
+    {
+      "title": "ESG raporları zenginleşir",
+      "description": "Yatırımcıya sunulabilir veri tabanlı sürdürülebilirlik anlatımı."
+    }
+  ],
+  "featured": {
+    "mark": "C+",
+    "label": "Öne Çıkan Platform",
+    "title": "OnSuite Green — Karbon & Enerji Platformu",
+    "description": "TÜBİTAK ve EUROGIA2030 destekli, CBAM ve ESG raporlamasına yönelik karbon ayak izi yönetim platformu.",
+    "linkText": "OnSuite Green →",
+    "linkUrl": "/onsuite"
+  },
+  "references": []
+}

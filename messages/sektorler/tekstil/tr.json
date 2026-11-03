@@ -1,0 +1,80 @@
+{
+  "title": "Tekstil & Konfeksiyon",
+  "metrics": "Reçete · Batch İzlenebilirlik · Enerji Yoğun Proses",
+  "pack": "Textile Production Intelligence",
+  "sectorLabel": "Sektör 07",
+  "industryTitle": "Tekstil & Konfeksiyon",
+  "summary": "Tekstil; elyaftan ipliğe, iplikten kumaşa, kumaştan mamule uzanan çok katmanlı bir üretim zinciridir. Her katmanda parti, reçete ve operatör değişir; boyahane ise sektörün en enerji yoğun proseslerinden biridir. Siskon, bu zincirin her halkasında veriyi sahadan toplayıp boya kazanından kumaş topuna, vardiyadan buhar tüketimine ortak bir veri omurgasına bağlar.",
+  "referencesTitle": "Çözüm Ortakları",
+  "needs": [
+    {
+      "title": "Batch traceability",
+      "description": "Elyaf → iplik → kumaş → mamul parti zinciri, kumaş topu bazında izleme."
+    },
+    {
+      "title": "Boya reçete doğrulama",
+      "description": "Kazan reçetesi, dozaj, renk standardı (dE) doğrulaması."
+    },
+    {
+      "title": "Enerji ve buhar/su izleme",
+      "description": "Boyahanenin elektrik, doğalgaz, buhar ve su tüketim verisi."
+    },
+    {
+      "title": "Lot bazlı kalite kontrol",
+      "description": "Kumaş topu defekt haritası, kalite sınıfı, reddiyet kayıtları."
+    },
+    {
+      "title": "Operatör & vardiya performansı",
+      "description": "Tezgâh, operatör, vardiya bazında üretim ve fire takibi."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite Connect",
+      "description": "Dokuma, örme, boyahane PLC ve tezgâh kontrolcülerinden veri toplama."
+    },
+    {
+      "title": "OnSuite Trace",
+      "description": "Parti, kazan, kumaş topu seviyesinde izlenebilirlik."
+    },
+    {
+      "title": "OnSuite Live + Optima",
+      "description": "Tezgâh bazında üretim panosu, OEE, MTBF analitiği."
+    },
+    {
+      "title": "OnSuite Energy",
+      "description": "Boyahane elektrik, gaz, buhar ve su tüketim izleme."
+    },
+    {
+      "title": "OnSuite Forms (DSF)",
+      "description": "Kalite kontrol formları, vardiya devir kayıtları, denetim listeleri."
+    },
+    {
+      "title": "Reçete & Doküman Yönetimi",
+      "description": "Boya reçeteleri, renk standartları, müşteri spesifikasyonları."
+    }
+  ],
+  "results": [
+    {
+      "title": "Renk doğruluğunda iyileşme",
+      "description": "Reçete doğrulamayla ilk üretimde renk tutma oranı artar."
+    },
+    {
+      "title": "Enerji ve buhar tasarrufu",
+      "description": "Görünür hale gelen tüketim ile boyahane verimsizlikleri tespit edilir."
+    },
+    {
+      "title": "Kumaş topu seviyesinde izlenebilirlik",
+      "description": "Müşteri reklamasyonunda kumaş topu bazında geriye dönüş sağlanır."
+    },
+    {
+      "title": "Sipariş teslim güvenilirliği",
+      "description": "Hangi siparişin hangi durumda olduğu anlık görünür."
+    },
+    {
+      "title": "Sürdürülebilirlik raporlaması",
+      "description": "Marka müşterileri için su, enerji ve karbon verisi raporlanabilir."
+    }
+  ],
+  "references": []
+}

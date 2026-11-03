@@ -1,0 +1,75 @@
+{
+  "title": "Energie, chimie și sustenabilitate",
+  "metrics": "SCADA · CBAM · TÜBİTAK + EUROGIA",
+  "pack": "OnSuite Green",
+  "summary": "Cerințele CBAM și ESG impun o platformă unitară pentru măsurarea, gestionarea și raportarea performanței energetice și a emisiilor.",
+  "referencesTitle": "Parteneri de soluții",
+  "needs": [
+    {
+      "title": "SCADA și automatizarea proceselor",
+      "description": "Arhitectură fiabilă de control în teren pentru operațiuni industriale neîntrerupte."
+    },
+    {
+      "title": "Vizibilitatea consumului de energie",
+      "description": "Urmăriți electricitatea, gazul, apa și aerul comprimat pe linie și echipament."
+    },
+    {
+      "title": "CBAM și raportarea carbonului",
+      "description": "Pregătiți fluxuri de raportare conforme cu cerințele UE privind Mecanismul de ajustare a carbonului la frontieră."
+    },
+    {
+      "title": "Transparență ESG",
+      "description": "Produceți date de sustenabilitate auditabile pentru investitori și clienți."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite Green",
+      "description": "Platformă de inteligență a carbonului, susținută de programele TUBITAK și EUROGIA2030."
+    },
+    {
+      "title": "OnSuite Energy",
+      "description": "Integrare cu analizoare din teren și monitorizarea consumului la nivel de linie."
+    },
+    {
+      "title": "Inginerie de automatizare a proceselor",
+      "description": "Soluții SCADA construite pe ecosistemele Siemens, Allen-Bradley și Beckhoff."
+    },
+    {
+      "title": "Hardware RIO-Energy",
+      "description": "Hardware IoT proiectat de Siskon pentru măsurarea energiei industriale."
+    }
+  ],
+  "results": [
+    {
+      "title": "Raportare automată a carbonului",
+      "description": "Înlocuiți calculele manuale cu rezultate de raportare generate de sistem."
+    },
+    {
+      "title": "Economii de energie măsurabile",
+      "description": "Punctele ascunse de consum devin vizibile și pot fi tratate."
+    },
+    {
+      "title": "Competitivitate la export",
+      "description": "Răspundeți cererilor de documentație legate de CBAM din partea clienților din UE."
+    },
+    {
+      "title": "Poveste ESG mai bogată",
+      "description": "Oferiți narațiuni de sustenabilitate la nivel de investitor, susținute de date reale."
+    }
+  ],
+  "featured": {
+    "mark": "C+",
+    "label": "Platformă recomandată",
+    "title": "OnSuite Green - Platformă pentru carbon și energie",
+    "description": "Platformă de gestionare a amprentei de carbon, axată pe raportarea CBAM și ESG, susținută de programele TUBITAK și EUROGIA2030.",
+    "linkText": "OnSuite Green →",
+    "linkUrl": "/onsuite"
+  },
+  "highlights": [
+    "Pregătire CBAM",
+    "Inteligență energetică",
+    "Raportare ESG"
+  ],
+  "references": []
+}

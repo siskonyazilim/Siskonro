@@ -1,0 +1,117 @@
+{
+  "title": "Makine, Proses & CNC Otomasyonu",
+  "metrics": "Machine Whispering Solutions",
+  "pack": "OnSuite CNC",
+  "sectorLabel": "Sektör 06",
+  "industryTitle": "Makine, Proses & CNC Otomasyonu",
+  "summary": "Siskon'un üretim hattındaki sloganı: \"Makinelerin fısıldamasını bizden daha iyi kimse anlayamaz.\" Bu yetkinlikle 25+ yıldır montaj, paketleme ve dolum makinelerinden kaplama ve galvaniz tesislerine, servo/motion uygulamalarından çok markalı CNC parkurlarına ve fabrika geneli SCADA omurgalarına kadar üretim hattının her noktasında otomasyon teslim ediyoruz. Teknoloji yığını sektörden değil, mühendislikten gelir.",
+  "needs": [
+    {
+      "title": "Makine otomasyonu",
+      "description": "Montaj, paketleme ve dolum hatlarında PLC + HMI çözümleri."
+    },
+    {
+      "title": "Proses otomasyonu",
+      "description": "Galvaniz, eloksal, çinko, kimyasal temizleme; çok istasyonlu hat kontrolü."
+    },
+    {
+      "title": "Çok markalı CNC parkuru",
+      "description": "Siemens, Fanuc, Heidenhain, Mazak, Mori Seiki tek arayüzde."
+    },
+    {
+      "title": "Servo & motion uygulamaları",
+      "description": "Hassas pozisyonlama, çoklu eksen koordinasyonu."
+    },
+    {
+      "title": "Güvenlik otomasyonu",
+      "description": "PL/SIL kademeli güvenlik mantığı, devreden çıkarma senaryoları."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite CNC",
+      "description": "MTConnect, OPC UA, Siemens S7, Fanuc Focas, Heidenhain entegrasyonu."
+    },
+    {
+      "title": "OnSuite Connect + Live + Optima",
+      "description": "Veri toplama, OEE, alarm geçmişi, kestirimci bakım uyarıları."
+    },
+    {
+      "title": "Özel SCADA & HMI geliştirme",
+      "description": "WinCC Professional veya özel platformda fabrika geneli görselleştirme."
+    },
+    {
+      "title": "Pano tasarımı + saha teslim",
+      "description": "Donanım seçimi, pano üretimi, PLC/HMI yazılım, devreye alma, eğitim."
+    },
+    {
+      "title": "Patent portföyü",
+      "description": "PCT dahil ulusal ve uluslararası CNC patent başvuruları."
+    }
+  ],
+  "results": [
+    {
+      "title": "Tek tedarikçiden eksiksiz teslim",
+      "description": "Donanımdan yazılıma, devreye almadan eğitime kadar tek elden."
+    },
+    {
+      "title": "Çok markalı parkur, tek arayüz",
+      "description": "Yöneticilerin onlarca panele bakma yükü ortadan kalkar."
+    },
+    {
+      "title": "Plansız duruşlarda azalma",
+      "description": "Takım aşınması ve kritik alarm korelasyonuyla kestirimci bakım."
+    },
+    {
+      "title": "CapEx korunması",
+      "description": "Mevcut makine parkuru üzerinde yazılım yatırımıyla kazanım."
+    },
+    {
+      "title": "Bilimsel/IP zemin",
+      "description": "Patent portföyü, çözüme akademik ve hukuki zemin sağlar."
+    }
+  ],
+  "featured": {
+    "mark": "C",
+    "label": "Öne Çıkan Modül",
+    "title": "OnSuite CNC — Çok Markalı CNC Bütünleşmesi",
+    "description": "PCT dahil patent başvurularıyla korunan, MTConnect ve OPC UA tabanlı tek arayüz çözümü. TEI, Phinia, Nemak referansları.",
+    "linkText": "OnSuite CNC →",
+    "linkUrl": "/onsuite"
+  },
+  "caseStudy": {
+    "label": "Saha Örneği",
+    "title": "Kaplama Tesisi Otomasyonu — Galvaniz Hattı",
+    "description": "Yağ alma → durulama → kimyasal temizleme → eloksal → çinko → galvaniz → yıkama istasyonlarının senkron kontrolü; saha üzerindeki Andon panelinden gerçek zamanlı Hedef / Üretim / Fark / Verim KPI'larıyla izleme. SICK sensör entegrasyonu, Beckhoff TwinCAT PLC ve özel SCADA katmanı ile uçtan uca teslim."
+  },
+  "techStack": [
+    "Siemens TIA Portal",
+    "SIMATIC",
+    "Beckhoff TwinCAT",
+    "CODESYS",
+    "WinCC Professional",
+    "OPC UA",
+    "SICK AppSpace",
+    "MTConnect",
+    "Fanuc Focas",
+    "Heidenhain"
+  ],
+  "references": [
+    {
+      "name": "TEI (TUSAŞ)",
+      "logo": "/assets/Logos/TEI.svg"
+    },
+    {
+      "name": "Phinia",
+      "logo": "/assets/Logos/phinia.svg"
+    },
+    {
+      "name": "Nemak",
+      "logo": "/assets/Logos/nemak.svg"
+    },
+    {
+      "name": "BorgWarner",
+      "logo": "/assets/Logos/borgwarner-seeklogo.svg"
+    }
+  ]
+}

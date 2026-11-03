@@ -5,7 +5,7 @@
   "breadcrumbProducts": "Produse",
   "breadcrumbOnSuite": "OnSuite",
   "introEyebrow": "Produs",
-  "introDesc": "OnSuite este o familie de software industrial constând din 11 module. Fiecare modul poate fi implementat independent sau ca o suită integrată, on-premise sau în cloud. Este proiectat cu arhitectura React + C# API + MS SQL, abordare centrată pe proceduri stocate și testare SQL complet automatizată cu tSQLt. Oferă suport pentru protocoale deschise cu OPC UA, PackML, ISA-88, MTConnect, REST și MQTT.",
+  "introDesc": "OnSuite este o familie de software industrial constând din 12 module. Fiecare modul poate fi implementat independent sau ca o suită integrată, on-premise sau în cloud. Este proiectat cu arhitectura React + C# API + MS SQL, abordare centrată pe proceduri stocate și testare SQL complet automatizată cu tSQLt. Oferă suport pentru protocoale deschise cu OPC UA, PackML, ISA-88, MTConnect, REST și MQTT.",
   "modulesEyebrow": "Module",
   "modulesTitle": "Module OnSuite",
   "modulesDesc": "Implementați modulele OnSuite individual sau configurați-le ca un singur ecosistem conectat de la producție la management.",
@@ -22,7 +22,7 @@
   "ctaButton": "Contactați-ne",
   "title": "OnSuite - platformă inteligentă de producție",
   "subtitle": "Platformă industrială scalabilă și modulară care reunește datele din fabrică sub o singură coloană vertebrală.",
-  "modulesSub": "Toate operațiunile din fabrică sub control cu 11 module",
+  "modulesSub": "Toate operațiunile din fabrică sub control cu 12 module",
   "gainsTitle": "Beneficii cheie obținute cu OnSuite",
   "faqTitle": "Întrebări frecvente",
   "modules": [
@@ -297,7 +297,7 @@
     }
   ],
   "productBadge": "Produs",
-  "productDetailDesc": "OnSuite este o familie de software industrial cu 11 module. Fiecare modul poate fi implementat independent sau ca o suită complet integrată, on-premise sau în cloud. Arhitectura React + C# API + MS SQL este concepută cu o abordare axată pe proceduri stocate și testare SQL complet automatizată cu tSQLt. Suportul pentru protocoale deschise include OPC UA, PackML, ISA-88, MTConnect, REST și MQTT.",
+  "productDetailDesc": "OnSuite este o familie de software industrial cu 12 module. Fiecare modul poate fi implementat independent sau ca o suită complet integrată, on-premise sau în cloud. Arhitectura React + C# API + MS SQL este concepută cu o abordare axată pe proceduri stocate și testare SQL complet automatizată cu tSQLt. Suportul pentru protocoale deschise include OPC UA, PackML, ISA-88, MTConnect, REST și MQTT.",
   "productImageAlt": "Suita de producție inteligentă OnSuite - platformă integrată de management al producției",
   "viewAllModules": "Vezi toate modulele",
   "showLessModules": "Arată mai puțin",

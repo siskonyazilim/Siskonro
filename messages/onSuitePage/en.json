@@ -5,7 +5,7 @@
   "breadcrumbProducts": "Products",
   "breadcrumbOnSuite": "OnSuite",
   "introEyebrow": "Product",
-  "introDesc": "OnSuite is an industrial software family consisting of 11 modules. Each module can be deployed independently or as an integrated suite, on-premise or in the cloud. It is designed with React + C# API + MS SQL architecture, stored procedure-focused approach and fully automated SQL testing with tSQLt. It offers open protocol support with OPC UA, PackML, ISA-88, MTConnect, REST and MQTT.",
+  "introDesc": "OnSuite is an industrial software family consisting of 12 modules. Each module can be deployed independently or as an integrated suite, on-premise or in the cloud. It is designed with React + C# API + MS SQL architecture, stored procedure-focused approach and fully automated SQL testing with tSQLt. It offers open protocol support with OPC UA, PackML, ISA-88, MTConnect, REST and MQTT.",
   "modulesEyebrow": "Modules",
   "modulesTitle": "OnSuite Modules",
   "modulesDesc": "Deploy OnSuite modules individually or configure them as a single connected ecosystem from production to management.",
@@ -22,7 +22,7 @@
   "ctaButton": "Contact Us",
   "title": "OnSuite - Smart Manufacturing Platform",
   "subtitle": "Scalable and modular industrial platform uniting shopfloor data under a single backbone.",
-  "modulesSub": "All Shopfloor Operations Under Control with 11 Modules",
+  "modulesSub": "All Shopfloor Operations Under Control with 12 Modules",
   "gainsTitle": "Key Gains Achieved with OnSuite",
   "faqTitle": "Frequently Asked Questions",
   "modules": [
@@ -297,7 +297,7 @@
     }
   ],
   "productBadge": "Product",
-  "productDetailDesc": "OnSuite is an industrial software family with 11 modules. Each module can be deployed independently or as a fully integrated suite, on-premise or in the cloud. React + C# API + MS SQL architecture is designed with a stored procedure focused approach and fully automated SQL testing with tSQLt. Open protocol support includes OPC UA, PackML, ISA-88, MTConnect, REST, and MQTT.",
+  "productDetailDesc": "OnSuite is an industrial software family with 12 modules. Each module can be deployed independently or as a fully integrated suite, on-premise or in the cloud. React + C# API + MS SQL architecture is designed with a stored procedure focused approach and fully automated SQL testing with tSQLt. Open protocol support includes OPC UA, PackML, ISA-88, MTConnect, REST, and MQTT.",
   "productImageAlt": "OnSuite Smart Manufacturing Suite - Integrated Production Management Platform",
   "viewAllModules": "View All Modules",
   "showLessModules": "Show Less",

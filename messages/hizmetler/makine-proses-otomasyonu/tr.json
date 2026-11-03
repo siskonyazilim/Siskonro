@@ -3,7 +3,7 @@
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbServices": "Hizmetler",
   "service": "HİZMET",
-  "title": "Makine ve Proses Otomasyon",
+  "title": "Makine ve Proses Otomasyonu",
   "description": "Siskon otomasyon çözümleri, makinelerinizin ve proseslerinizin güvenli yazılım altyapıları ile kontrol edilmesini sağlar. Üretim süreçlerinizi daha hızlı, esnek ve verimli hale getirirken, maliyetleri düşürür ve insan hatalarını minimize eder. Yenilikçi otomasyon çözümlerimizle işletmenizin rekabet gücünü artırın.",
   "getInfo": "Bilgi Alın",
   "benefits": "AVANTAJLAR",
@@ -91,7 +91,7 @@
       "title": "Sistem Optimizasyonu ve Sürekli İyileştirme"
     }
   ],
-  "heroTitle": "Makine ve Proses Otomasyon",
+  "heroTitle": "Makine ve Proses Otomasyonu",
   "heroSubtitle": "Otomasyon çözümlerimiz ile üretimin geleceğini şekillendirin",
   "heroDescription": "Siskon otomasyon çözümleri, makinelerinizin ve proseslerinizin güvenli yazılım altyapıları ile kontrol edilmesini sağlar. Üretim süreçlerinizi daha hızlı, esnek ve verimli hale getirirken, maliyetleri düşürür ve insan hatalarını minimize eder. Yenilikçi otomasyon çözümlerimizle işletmenizin rekabet gücünü artırın.",
   "heroImage": "/assets/strapi/siskon_1_4_makine_ve_proses_otomasyonu_16_9_dikey_3_camera_zeminsiz_2_ee1925aa7f.webp",

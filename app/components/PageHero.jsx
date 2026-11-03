@@ -5,14 +5,17 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '../_context/LanguageContext';
 
 const NON_LINKABLE_SEGMENTS = new Set(['yasal', 'legal']);
 
 export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
   const pathname = usePathname() || '/';
+  const { localizePath } = useLanguage();
   const pathSegments = pathname.split('/').filter(Boolean);
-  const hasLocalePrefix = pathSegments[0] === 'en';
-  const localePrefix = hasLocalePrefix ? '/en' : '';
+  // Romence varsayılan dil (önek yok); EN ve TR sayfaları /en ve /tr önekiyle gelir
+  const hasLocalePrefix = pathSegments[0] === 'en' || pathSegments[0] === 'tr';
+  const localePrefix = hasLocalePrefix ? `/${pathSegments[0]}` : '';
   const routeSegments = hasLocalePrefix ? pathSegments.slice(1) : pathSegments;
 
   const getCrumbHref = (idx) => {
@@ -21,12 +24,12 @@ export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
     }
 
     if (idx === 0) {
-      return localePrefix || '/';
+      return localizePath('/');
     }
 
     const ancestorSegments = routeSegments.slice(0, idx);
     if (ancestorSegments.length === 0) {
-      return localePrefix || '/';
+      return localizePath('/');
     }
 
     // /yasal (ve /legal) bir indeks sayfası değil; bağlantı vermeden düz metin göster
@@ -34,7 +37,8 @@ export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
       return null;
     }
 
-    return `${localePrefix}/${ancestorSegments.join('/')}`;
+    // Yol, geçerli dile çevrilir: /tr/... sayfalarında bağlantı Romence değil Türkçe olur
+    return localizePath(`${localePrefix}/${ancestorSegments.join('/')}`);
   };
 
   return (

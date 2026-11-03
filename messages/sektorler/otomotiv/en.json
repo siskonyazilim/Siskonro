@@ -1,0 +1,119 @@
+{
+  "title": "Automotive OEM & Supplier Ecosystem",
+  "metrics": "IATF 16949 · Hybrid Track & Trace",
+  "pack": "Hybrid Track & Trace",
+  "summary": "Automotive supply chains require strict unit-level traceability, critical component checks, and zero-defect quality-cell execution.",
+  "needs": [
+    {
+      "title": "Unit-level traceability",
+      "description": "Full genealogy from raw material to customer delivery through DataMatrix and QR tracking."
+    },
+    {
+      "title": "Critical component verification",
+      "description": "Wrong-part prevention at stations with Pick-to-Light and poka-yoke methods."
+    },
+    {
+      "title": "Isolated recalls",
+      "description": "Recall only impacted units instead of broad recall campaigns."
+    },
+    {
+      "title": "IATF 16949 audit readiness",
+      "description": "Continuous accessibility of process, FMEA, and PPAP evidence."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Hybrid Track & Trace",
+      "description": "Automotive-focused package with serial, lot, pallet, and control-plan mapping."
+    },
+    {
+      "title": "OnSuite Trace + Connect",
+      "description": "PLC-integrated traceability foundation for line-level orchestration."
+    },
+    {
+      "title": "Pick-to-Light / Put-to-Light",
+      "description": "Physical operator guidance that minimizes assembly errors."
+    },
+    {
+      "title": "Jidoka and quality cell",
+      "description": "In-line quality controls with automatic sample handling and NCM workflows."
+    },
+    {
+      "title": "Ident Gate Pro",
+      "description": "RFID/barcode-based part verification at line entry."
+    }
+  ],
+  "results": [
+    {
+      "title": "Narrowed recall scope",
+      "description": "Targeted isolation of affected units significantly reduces recall cost."
+    },
+    {
+      "title": "Zero wrong-part releases",
+      "description": "Bill-of-material verification prevents incorrect component shipment."
+    },
+    {
+      "title": "Stronger warranty operations",
+      "description": "Test, assembly, and dispatch history is accessible in one query."
+    },
+    {
+      "title": "Reduced audit risk",
+      "description": "Manual pre-audit data collection workload is removed."
+    },
+    {
+      "title": "Measurable OEE gains",
+      "description": "Bottlenecks are identified and improved with data-driven loops."
+    }
+  ],
+  "featured": {
+    "mark": "H",
+    "label": "Featured Solution · Track Wisely",
+    "title": "Hybrid Track & Trace - Automotive Pack",
+    "description": "An automotive-tailored package built on the OnSuite Trace core with RFID, barcode, QR, and beacon technologies.",
+    "linkText": "izlenebilirlik.com.tr →",
+    "linkUrl": "https://www.izlenebilirlik.com.tr"
+  },
+  "highlights": [
+    "IATF-aligned flow",
+    "Critical component verification",
+    "Recall scope reduction"
+  ],
+  "references": [
+    {
+      "name": "Bosch",
+      "logo": "/assets/Logos/Bosch-logo.svg"
+    },
+    {
+      "name": "Phinia",
+      "logo": "/assets/Logos/phinia.svg"
+    },
+    {
+      "name": "Delphi Technologies",
+      "logo": "/assets/Logos/delphi.svg"
+    },
+    {
+      "name": "Nemak",
+      "logo": "/assets/Logos/nemak.svg"
+    },
+    {
+      "name": "BorgWarner",
+      "logo": "/assets/Logos/borgwarner-seeklogo.svg"
+    },
+    {
+      "name": "Tirsan",
+      "logo": "/assets/Logos/tirsan-seeklogo.webp"
+    },
+    {
+      "name": "Stackpole",
+      "logo": "/assets/Logos/Stackpole.svg"
+    },
+    {
+      "name": "Maxion Inci Celik",
+      "logo": "/assets/Logos/maxion_inci.svg"
+    },
+    {
+      "name": "Turk Demir Dokum",
+      "logo": "/assets/Logos/demirdokum-seeklogo.svg"
+    }
+  ]
+}

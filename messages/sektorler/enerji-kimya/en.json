@@ -1,0 +1,75 @@
+{
+  "title": "Energy, Chemicals & Sustainability",
+  "metrics": "SCADA · CBAM · TÜBİTAK + EUROGIA",
+  "pack": "OnSuite Green",
+  "summary": "CBAM and ESG requirements demand a unified platform to measure, manage, and report energy and emissions performance.",
+  "referencesTitle": "Solution Partners",
+  "needs": [
+    {
+      "title": "SCADA and process automation",
+      "description": "Reliable field-control architecture for uninterrupted industrial operations."
+    },
+    {
+      "title": "Energy consumption visibility",
+      "description": "Track electricity, gas, water, and compressed air by line and equipment."
+    },
+    {
+      "title": "CBAM and carbon reporting",
+      "description": "Prepare compliant reporting workflows for EU Carbon Border Adjustment requirements."
+    },
+    {
+      "title": "ESG transparency",
+      "description": "Produce auditable sustainability data for investors and customers."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "OnSuite Green",
+      "description": "Carbon intelligence platform supported by TUBITAK and EUROGIA2030 programs."
+    },
+    {
+      "title": "OnSuite Energy",
+      "description": "Integration with field analyzers and line-level consumption monitoring."
+    },
+    {
+      "title": "Process automation engineering",
+      "description": "SCADA solutions built on Siemens, Allen-Bradley, and Beckhoff ecosystems."
+    },
+    {
+      "title": "RIO-Energy hardware",
+      "description": "Siskon-engineered IoT hardware for industrial energy measurement."
+    }
+  ],
+  "results": [
+    {
+      "title": "Automated carbon reporting",
+      "description": "Replace manual calculations with system-generated reporting outputs."
+    },
+    {
+      "title": "Measurable energy savings",
+      "description": "Hidden consumption points become visible and actionable."
+    },
+    {
+      "title": "Export competitiveness",
+      "description": "Meet CBAM-related documentation requests from EU customers."
+    },
+    {
+      "title": "Richer ESG storytelling",
+      "description": "Provide investor-grade sustainability narratives backed by real data."
+    }
+  ],
+  "featured": {
+    "mark": "C+",
+    "label": "Featured Platform",
+    "title": "OnSuite Green - Carbon and Energy Platform",
+    "description": "A carbon-footprint management platform focused on CBAM and ESG reporting, supported by TUBITAK and EUROGIA2030 programs.",
+    "linkText": "OnSuite Green →",
+    "linkUrl": "/onsuite"
+  },
+  "highlights": [
+    "CBAM readiness",
+    "Energy intelligence",
+    "ESG reporting"
+  ],
+  "references": []
+}

@@ -5,7 +5,7 @@
   "breadcrumbProducts": "Ürünler",
   "breadcrumbOnSuite": "OnSuite",
   "introEyebrow": "Ürün",
-  "introDesc": "OnSuite, 11 modülden oluşan endüstriyel yazılım ailesidir. Her modül bağımsız olarak ya da entegre bir süit şeklinde, on-premise veya bulutta konuşlandırılabilir. React + C# API + MS SQL mimarisi, stored procedure odaklı yaklaşım ve tSQLt ile tam otomatik SQL testleriyle tasarlanmıştır. OPC UA, PackML, ISA-88, MTConnect, REST ve MQTT ile açık protokol desteği sunar.",
+  "introDesc": "OnSuite, 12 modülden oluşan endüstriyel yazılım ailesidir. Her modül bağımsız olarak ya da entegre bir süit şeklinde, on-premise veya bulutta konuşlandırılabilir. React + C# API + MS SQL mimarisi, stored procedure odaklı yaklaşım ve tSQLt ile tam otomatik SQL testleriyle tasarlanmıştır. OPC UA, PackML, ISA-88, MTConnect, REST ve MQTT ile açık protokol desteği sunar.",
   "modulesEyebrow": "Modüller",
   "modulesTitle": "OnSuite Modülleri",
   "modulesDesc": "OnSuite modüllerini tek tek devreye alın ya da üretimden yönetime kadar bağlı çalışan tek bir ekosistem olarak kurgulayın.",
@@ -22,7 +22,7 @@
   "ctaButton": "Bize Ulaşın",
   "title": "OnSuite - Akıllı Üretim Platformu",
   "subtitle": "Üretim sahanızdaki veriyi tek omurgada toplayan, ölçeklenebilir ve modüler endüstriyel platform.",
-  "modulesSub": "11 Modül ile Tüm Saha Operasyonlarınız Kontrol Altında",
+  "modulesSub": "12 Modül ile Tüm Saha Operasyonlarınız Kontrol Altında",
   "gainsTitle": "OnSuite ile Elde Edeceğiniz Temel Kazanımlar",
   "faqTitle": "Sıkça Sorulan Sorular",
   "modules": [
