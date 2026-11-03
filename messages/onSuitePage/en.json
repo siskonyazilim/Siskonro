@@ -172,7 +172,7 @@
     {
       "sub": "Crisis Management",
       "desc": "Dual-channel emergency roll-call and crisis management system for industrial facilities. Provides simultaneous querying via WhatsApp and SMS, centralized visibility, and automatic escalation.",
-      "icon": "/SiteIcon/products/Engage.svg",
+      "icon": "/SiteIcon/products/engage.svg",
       "link": "https://www.onsuite.ro/en/engage",
       "name": "OnSuite Engage",
       "features": [
