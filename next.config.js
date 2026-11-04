@@ -38,7 +38,8 @@ if (process.env.NODE_ENV === 'production') {
 
 const nextConfig = {
   output: 'standalone',
-  experimental: { inlineCss: true },
+  // inlineCss kapalı: açıkken ~166 KB CSS her sayfaya 3 kez gömülüyor (ana sayfa HTML ~745 KB); kapalıyken CSS tek, önbelleğe alınan dosya (HTML ~241 KB).
+  // experimental: { inlineCss: true },
   reactStrictMode: true,
   async headers() {
     return [
