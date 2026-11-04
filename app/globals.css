@@ -56,33 +56,35 @@
   font-display: swap;
 }
 
-/* ── Archivo Font Ailesi: Normal, İtalik ve Hero (public/fonts/Archivo) ── */
+/* ── Archivo Font Ailesi: Normal, İtalik ve Hero (public/fonts/Archivo) ──
+   .subset.woff2 (186 KB → 81 KB): kaynak .ttf'ten fontTools ile üretildi — varLib.instancer wdth=100:125 wght=200:900,
+   ardından subset (Latin, Latin Ext-A, Ș/Ț, noktalama, ₺/€) --flavor=woff2. Kaynak değişirse yeniden üretin. */
 @font-face {
   font-family: 'Archivo';
-  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.woff2') format('woff2'), url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.subset.woff2') format('woff2'), url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: normal;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
+  font-weight: 200 900;
+  font-stretch: 100% 125%;
   size-adjust: 104%; /* açıklama metinleri bir tık büyük */
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Archivo';
-  src: url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.woff2') format('woff2'), url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.subset.woff2') format('woff2'), url('/fonts/Archivo/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: italic;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
+  font-weight: 200 900;
+  font-stretch: 100% 125%;
   size-adjust: 104%; /* açıklama metinleri bir tık büyük */
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Archivo Hero';
-  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.woff2') format('woff2'), url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.subset.woff2') format('woff2'), url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: normal;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
+  font-weight: 200 900;
+  font-stretch: 100% 125%;
   font-display: swap;
 }
 
@@ -512,6 +514,13 @@ p {
     opacity: 0.03;
     mix-blend-mode: overlay;
     pointer-events: none;
+  }
+
+  /* %3 opaklıktaki gürültü telefonda fark edilmiyor ama tam ekran feTurbulence + blend ilk boyamayı yavaşlatıyor */
+  @media (max-width: 767px) {
+    .hero-section::after {
+      display: none;
+    }
   }
 
   @media (min-width: 768px) {

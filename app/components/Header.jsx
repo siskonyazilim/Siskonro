@@ -103,6 +103,9 @@ function NavLink({ href, children, onClick, scrolled = false, pathname = '' }) {
 
 function NavDropdown({ title, href, items, scrolled = false, isOpen = false, onOpen, onClose, sidePanel, useMegaPalette = false }) {
   const [focusedIndex, setFocusedIndex] = useState(-1);
+  // İkonlar dropdown ilk kez açılınca render edilir (bkz. MegaMenu)
+  const [hasOpened, setHasOpened] = useState(isOpen);
+  if (isOpen && !hasOpened) setHasOpened(true);
   const closeTimeoutRef = useRef(null);
   const containerRef = useRef(null);
   const triggerRef = useRef(null);
@@ -454,7 +457,7 @@ function NavDropdown({ title, href, items, scrolled = false, isOpen = false, onO
                     className={cardClass}
                   >
                     <div className={iconContainerClass}>
-                      {renderDropdownIcon(item)}
+                      {hasOpened && renderDropdownIcon(item)}
                     </div>
                     <div className={isMegaStyleDropdown ? 'onsuit-mega-card-content' : 'min-w-0 flex-1'}>
                       {renderDropdownLabel(item)}

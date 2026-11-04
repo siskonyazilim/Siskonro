@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -51,6 +51,10 @@ const MEGA_MENU_ICONS = {
 
 export default function MegaMenu({ isOpen, onClose, services, onMouseEnter, onMouseLeave }) {
   const { localizePath, t } = useLanguage();
+  // Kapalı menünün 20 ikonu ilk açılışta inmesin (mobil LCP ile bant genişliği yarışıyordu);
+  // ikonlar menü ilk kez açılınca render edilir, linkler DOM'da kalır.
+  const [hasOpened, setHasOpened] = useState(isOpen);
+  if (isOpen && !hasOpened) setHasOpened(true);
 
   const currentSidebar = {
     label: t('megaMenu.label'),
@@ -142,6 +146,7 @@ export default function MegaMenu({ isOpen, onClose, services, onMouseEnter, onMo
                   className={`onsuit-mega-card`}
                 >
                   <div className="onsuit-mega-card-icon">
+                    {hasOpened && (<>
                     {/* Dark Icon (Default) */}
                     <div className="onsuit-mega-icon-dark relative w-6 h-6">
                       <Image
@@ -164,6 +169,7 @@ export default function MegaMenu({ isOpen, onClose, services, onMouseEnter, onMo
                         aria-hidden="true"
                       />
                     </div>
+                    </>)}
                   </div>
                   <div className="onsuit-mega-card-content">
                     <h4 className="onsuit-mega-card-title">

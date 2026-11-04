@@ -1,6 +1,11 @@
-import Image from 'next/image';
+import { getImageProps } from 'next/image';
 import AnimatedButton from '../AnimatedButton';
 import { toLocalizedPath } from '../../lib/i18n/routes';
+
+const {
+  props: { srcSet: desktopBg },
+} = getImageProps({ src: '/images/homepage_back.webp', alt: '', width: 1920, height: 1001, sizes: '100vw', quality: 60 });
+const { props: mobileBg } = getImageProps({ src: '/images/homepage_back_mobile.webp', alt: '', width: 828, height: 1300, sizes: '100vw', quality: 60 });
 
 /**
  * Ana sayfa Hero bölümü — Server Component
@@ -14,34 +19,21 @@ export default function HeroSection({ data, locale }) {
 
   return (
     <section className="hero-section min-h-screen h-[100dvh] flex items-center relative overflow-hidden">
-      {/* Mobil / masaüstü arka plan: lazy görsel LCP'yi geciktirdiği için eager + fetchPriority="high".
-          Kaynaklar küçültüldü (≈13–22 KB); gizli olanın da inmesi önemsiz. `preload` kullanılmıyor. */}
-      {/* Mobil arka plan */}
-      <Image
-        src="/images/homepage_back_mobile.webp"
-        alt=""
-        aria-hidden="true"
-        fill
-        loading="eager"
-        fetchPriority="high"
-        className="object-cover opacity-20 mix-blend-luminosity pointer-events-none lg:hidden"
-        style={{ objectPosition: 'center center' }}
-        sizes="100vw"
-        quality={60}
-      />
-      {/* Masaüstü arka plan */}
-      <Image
-        src="/images/homepage_back.webp"
-        alt=""
-        aria-hidden="true"
-        fill
-        loading="eager"
-        fetchPriority="high"
-        className="hidden lg:block object-cover opacity-15 mix-blend-luminosity pointer-events-none"
-        style={{ objectPosition: 'center right' }}
-        sizes="100vw"
-        quality={60}
-      />
+      {/* Mobil / masaüstü arka plan: tek <picture> — tarayıcı yalnızca ekrana uyan kaynağı indirir.
+          İki ayrı <Image fetchPriority="high"> iken React ikisi için de <head>'e preload basıyordu;
+          mobilde gizli masaüstü görseli de yüksek öncelikle iniyordu. */}
+      <picture>
+        <source media="(min-width: 1024px)" srcSet={desktopBg} sizes="100vw" />
+        <img
+          {...mobileBg}
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center lg:object-right opacity-20 lg:opacity-15 mix-blend-luminosity pointer-events-none"
+        />
+      </picture>
       {/* Alt degrade katmanı */}
       <div
         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A192F]/40"
@@ -52,13 +44,13 @@ export default function HeroSection({ data, locale }) {
         <div className="mx-auto lg:mx-0 w-full max-w-[420px] md:max-w-[640px] lg:max-w-3xl text-center lg:text-left space-y-6 lg:space-y-7 pt-12 pb-10 lg:py-0">
           <div className="space-y-3">
             <h1
-              className="text-[clamp(1.3rem,6.9vw,2.5rem)] md:text-[3.2rem] lg:text-[3.55rem] font-black leading-[1.1] md:leading-[1.04] tracking-tight drop-shadow-2xl"
+              className="text-[clamp(1.3rem,6.9vw,2.5rem)] md:text-[3.2rem] lg:text-[3.55rem] font-black leading-[1.1] md:leading-[1.04] tracking-tight md:drop-shadow-2xl"
               style={{ color: '#D9ECFE' }}
             >
               {data.heroTitle}
             </h1>
             <p
-              className="text-[clamp(1.25rem,6.6vw,2.2rem)] md:text-4xl lg:text-5xl font-black text-white leading-[1.2] md:leading-[1.12] tracking-tight drop-shadow-2xl"
+              className="text-[clamp(1.25rem,6.6vw,2.2rem)] md:text-4xl lg:text-5xl font-black text-white leading-[1.2] md:leading-[1.12] tracking-tight md:drop-shadow-2xl"
               style={{ fontWeight: 900, opacity: 1, color: '#FFFFFF' }}
             >
               {data.heroTaglineLine1}
