@@ -684,9 +684,7 @@ export function buildLocalizedMetadata({ pathname, siteUrl = SITE_URL }) {
         'x-default': toLocalizedPath(internalPath, 'ro'),
       },
     },
-    icons: {
-      icon: '/icon.svg',
-    },
+    // icons yok: app/ dosya kuralları (favicon.ico, icon.svg, icon1.png, apple-icon.png) kullanılır.
   };
 }
 

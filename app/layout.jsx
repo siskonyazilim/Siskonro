@@ -43,9 +43,8 @@ export async function generateMetadata() {
       },
     },
     manifest: '/manifest.webmanifest',
-    icons: {
-      icon: '/icon.svg',
-    },
+    // İkonlar app/ dosya kurallarından gelir: favicon.ico, icon.svg, icon1.png (PNG yedeği), apple-icon.png.
+    // Burada `icons` tanımlamak bu dosyaları bastırır.
   };
 }
 
