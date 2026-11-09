@@ -70,6 +70,7 @@
   "contactInfoSupport": "Suport tehnic",
   "contactInfoPhone": "Telefon",
   "contactInfo": [
+    { "label": "General", "val": "info@siskon.ro", "href": "mailto:info@siskon.ro" },
     { "label": "HR", "val": "hr@siskon.ro", "href": "mailto:hr@siskon.ro" },
     { "label": "Vânzări", "val": "sales@siskon.ro", "href": "mailto:sales@siskon.ro" },
     { "label": "Contabilitate", "val": "accounting@siskon.ro", "href": "mailto:accounting@siskon.ro" },

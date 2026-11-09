@@ -80,7 +80,7 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
       });
 
   const logoSrc = localeData?.logo ?? '/assets/new/common/siskon-logo.svg';
-  const email   = locale === 'ro' ? 'sales@siskon.ro' : (localeData?.email ?? 'info@siskon.com.tr');
+  const email   = locale === 'ro' ? 'info@siskon.ro' : (localeData?.email ?? 'info@siskon.com.tr');
   const phones  = [
     { label: 'Telefon (RO)', val: '+40 368 402 002', href: 'tel:+40368402002' },
     ...(locale === 'ro' ? [] : [{ label: 'Telefon (TR)', val: '+90 232 245 00 76', href: 'tel:+902322450076' }]),
