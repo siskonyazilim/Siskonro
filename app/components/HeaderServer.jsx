@@ -1,30 +1,21 @@
 /**
  * HeaderServer — Server Component
  *
- * Next.js'in rewrite sistemi /en → /?_locale=en şeklinde çalışıyor.
- * Bu yüzden layout.jsx server-side'da locale'i path'ten tespit edemiyor.
- * LanguageContext ise client-side window.location.pathname'den doğru locale'i biliyor.
- *
- * Çözüm: 3 locale için veriyi paralel çekip hepsini birden Header'a geçir.
- * Header client-side'da useLanguage() locale'ini kullanarak doğru veriyi seçer.
+ * Yalnızca aktif dilin (layout'ın tespit ettiği locale) verisini Strapi'den çekip Header'a verir.
+ * Kullanıcı dili client tarafında değiştirirse Header eksik dilin verisini /api/layout-data'dan ister
+ * (bkz. useLocaleLayoutData). Böylece HTML/RSC payload'ında 3 dil yerine 1 dil taşınır.
  */
 
 import { getHeaderData } from '@/lib/strapi/services/header';
 import Header from './Header';
 
-export default async function HeaderServer() {
-  // 3 locale için paralel fetch — biri başarısız olursa diğerleri devam eder
-  const [trData, enData, roData] = await Promise.allSettled([
-    getHeaderData('tr'),
-    getHeaderData('en'),
-    getHeaderData('ro'),
-  ]);
+export default async function HeaderServer({ locale = 'ro' }) {
+  let data = null;
+  try {
+    data = await getHeaderData(locale);
+  } catch {
+    data = null;
+  }
 
-  const allLocaleData = {
-    tr: trData.status === 'fulfilled' ? trData.value : null,
-    en: enData.status === 'fulfilled' ? enData.value : null,
-    ro: roData.status === 'fulfilled' ? roData.value : null,
-  };
-
-  return <Header allLocaleData={allLocaleData} />;
+  return <Header allLocaleData={{ [locale]: data }} />;
 }

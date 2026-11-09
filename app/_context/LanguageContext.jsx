@@ -4,7 +4,14 @@ import React, { createContext, useCallback, useContext, useMemo, useState, useEf
 import PropTypes from 'prop-types';
 import { usePathname, useRouter } from 'next/navigation';
 import { detectLocale, toLocalizedPath } from '../lib/i18n/routes';
-import { trMessages, enMessages, roMessages } from '../../messages';
+
+// Çeviriler dil başına ayrı modüldür: ilk dil sunucudan prop olarak gelir (bundle'a girmez),
+// diğer diller yalnızca kullanıcı dili değiştirince dinamik import ile yüklenir.
+const MESSAGE_LOADERS = {
+  tr: () => import('../../messages/tr'),
+  en: () => import('../../messages/en'),
+  ro: () => import('../../messages/ro'),
+};
 
 const LanguageContext = createContext();
 
@@ -16,7 +23,7 @@ function getWindowLocale() {
 }
 
 export function LanguageProvider(props) {
-  const { children, initialLocale = 'ro' } = props;
+  const { children, initialLocale = 'ro', initialMessages } = props;
   const pathname = usePathname();
   const router = useRouter();
   const currentPathname = pathname || '/';
@@ -26,6 +33,8 @@ export function LanguageProvider(props) {
   const [clientLocale, setClientLocale] = useState(() => initialLocale);
   const [version, setVersion] = useState(0); // Force re-render trigger
   const lastPathnameRef = useRef(currentPathname);
+  // Yüklenmiş çeviriler: { tr: {...}, en: {...} } — ilk dil sunucudan hazır gelir
+  const [loadedMessages, setLoadedMessages] = useState(() => (initialMessages ? { [initialLocale]: initialMessages } : {}));
 
   // After mount: correct locale from the real URL (window) in case of rewrite
   useEffect(() => {
@@ -55,7 +64,23 @@ export function LanguageProvider(props) {
   }, [locale]);
 
   const lang = locale === 'en' ? 'EN' : locale === 'ro' ? 'RO' : 'TR';
-  const messages = locale === 'en' ? enMessages : locale === 'ro' ? roMessages : trMessages;
+
+  // Aktif dilin çevirisi yoksa dinamik yükle (dil değişimi / rewrite sonrası locale düzeltmesi)
+  useEffect(() => {
+    if (loadedMessages[locale]) return undefined;
+    let cancelled = false;
+    MESSAGE_LOADERS[locale]()
+      .then((mod) => {
+        if (!cancelled) setLoadedMessages((prev) => ({ ...prev, [locale]: mod.default }));
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [locale, loadedMessages]);
+
+  // Yeni dil yüklenirken önceki dilin metinleri gösterilir (anahtar adları görünmesin)
+  const messages = loadedMessages[locale] ?? loadedMessages[initialLocale] ?? Object.values(loadedMessages)[0] ?? {};
 
   const setLang = useCallback((value) => {
     const normalized = (value || '').toUpperCase();
@@ -102,6 +127,7 @@ export function LanguageProvider(props) {
 LanguageProvider.propTypes = {
   children: PropTypes.node.isRequired,
   initialLocale: PropTypes.oneOf(['tr', 'en', 'ro']),
+  initialMessages: PropTypes.object,
 };
 
 export function useLanguage() {

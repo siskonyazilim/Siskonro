@@ -5,13 +5,16 @@ import Script from 'next/script';
 import HeaderServer from './components/HeaderServer';
 import FooterServer from './components/FooterServer';
 import Interactions from './components/Interactions';
-import SearchModal from './components/SearchModal';
+import SearchModal from './components/SearchModalLazy';
 import ClientMetadataSync from './components/ClientMetadataSync';
 import { LanguageProvider } from './_context/LanguageContext';
 import JsonLd from './components/JsonLd';
 import { detectLocale, toInternalPath } from './lib/i18n/routes';
 import { buildLocalizedMetadata, getRequestPathFromHeaders, getSiteUrlFromHeaders } from './lib/seo/routeMetadata';
 import { buildSiteGraph } from './lib/seo/jsonld';
+
+const loadMessages = (locale) =>
+  locale === 'en' ? import('../messages/en') : locale === 'ro' ? import('../messages/ro') : import('../messages/tr');
 
 // Üçüncü taraf anahtarları (tarayıcıya zaten açık, gizli değil). Env ile değiştirilebilir.
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-5MMBST5Z';
@@ -58,6 +61,8 @@ export default async function RootLayout({ children }) {
   // HeaderServer tüm locale'leri paralel çekip client'a bırakıyor.
   // Bu locale sadece <html lang=> ve LanguageProvider initialLocale için kullanılıyor.
   const locale = detectLocale(requestPath);
+  // Yalnızca aktif dilin çevirileri client'a gider (diğerleri dil değişince dinamik yüklenir).
+  const initialMessages = (await loadMessages(locale)).default;
   const htmlLang = locale === 'en' ? 'en' : locale === 'ro' ? 'ro' : 'tr';
 
   // Tek @graph: Organization + WebSite + (varsa) sayfaya özel WebPage/Service/Breadcrumb düğümleri.
@@ -110,11 +115,11 @@ window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
           />
         </noscript>
         <JsonLd data={structuredData} />
-        <LanguageProvider initialLocale={locale}>
+        <LanguageProvider initialLocale={locale} initialMessages={initialMessages}>
           <ClientMetadataSync />
-          <HeaderServer />
+          <HeaderServer locale={locale} />
           <main className="w-full flex-1 flex flex-col">{children}</main>
-          <FooterServer />
+          <FooterServer locale={locale} />
           <Interactions />
           <SearchModal />
         </LanguageProvider>

@@ -63,16 +63,23 @@ export default function Interactions() {
           el.style.setProperty('--reveal-delay', `${Math.min((index % 8) * 70, 420)}ms`);
         });
 
+      // Önce TÜM ölçümler (tek yerleşim hesabı), sonra TÜM yazımlar: okuma/yazma karışırsa
+      // tarayıcı her öğe için yerleşimi yeniden hesaplar (layout thrashing).
       const items = document.querySelectorAll('.reveal, .reveal-auto, .tl-item');
+      const viewportHeight = globalThis.window.innerHeight;
+      const visibleNow = [];
+      const belowFold = [];
       items.forEach((el) => {
-        // If already in viewport, show immediately
         const rect = el.getBoundingClientRect();
-        if (rect.top < globalThis.window.innerHeight && rect.bottom > 0) {
-          el.classList.add('in-view');
+        // If already in viewport, show immediately
+        if (rect.top < viewportHeight && rect.bottom > 0) {
+          visibleNow.push(el);
         } else {
-          revealObserver.observe(el);
+          belowFold.push(el);
         }
       });
+      visibleNow.forEach((el) => el.classList.add('in-view'));
+      belowFold.forEach((el) => revealObserver.observe(el));
 
       const buttonTargets = document.querySelectorAll(
         "main a.focus-ring.inline-flex.rounded-xl, main button.focus-ring.rounded-xl, main .btn-primary, main .btn-outline, main .btn-global, main .btn-cta, main button[type='submit']"

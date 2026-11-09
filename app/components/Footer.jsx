@@ -5,6 +5,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { useLanguage } from '../_context/LanguageContext';
 import { SERVICE_CATALOG } from '../../config/services';
+import { useLocaleLayoutData } from './useLocaleLayoutData';
 
 // JSON fallback verileri — Strapi geldiğinde kullanılmaz,
 // ama FooterServer data aktarmadan çağrılırsa (eski kullanım) korunur.
@@ -33,7 +34,8 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
   const serviceLocale = locale === 'en' ? 'en' : locale === 'ro' ? 'ro' : 'tr';
 
   // Aktif dilin Strapi verisi (yoksa tek dilli `data`); olmazsa JSON fallback
-  const localeData = allLocaleData?.[locale] ?? (allLocaleData ? null : data);
+  const localeDataStore = useLocaleLayoutData(allLocaleData, locale, 'footer');
+  const localeData = localeDataStore[locale] ?? (allLocaleData ? null : data);
   const msgs = localeData ?? LOCALE_MAP[locale] ?? roLocale;
 
   // Kısa yardımcı: Strapi veya fallback'ten string al

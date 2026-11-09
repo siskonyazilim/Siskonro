@@ -35,6 +35,7 @@ export default function CustomSoftwarePageClient({ trData, enData, roData }) {
       {" "}
       <PageHero
         title={pt("title") || serviceName}
+        singleLineTitle
         subtitle={pt("subtitle")}
         breadcrumbs={[
           pt("breadcrumbHome"),

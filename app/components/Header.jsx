@@ -9,6 +9,7 @@ import { useUIStore } from '@/app/store/useUIStore';
 import { useLanguage } from '../_context/LanguageContext';
 import { SERVICE_CATALOG } from '../../config/services';
 import MegaMenu from './MegaMenu';
+import { useLocaleLayoutData } from './useLocaleLayoutData';
 
 const MENU_ICON_BY_PATH = {
   '/hizmetler/ai-makine-ogrenmesi': '/SiteIcon/MegaMenu/AiMakine.svg',
@@ -1080,8 +1081,10 @@ export default function Header({ initialData = null, allLocaleData = null }) {
 
   // allLocaleData varsa locale'e göre doğru veriyi seç (client-side locale doğru olur)
   // initialData yoksa allLocaleData'dan al; her ikisi de yoksa null
+  // (sunucu yalnızca ilk dili verir; diğer diller dil değişince API'den gelir, o ana kadar eldeki veri kullanılır)
+  const localeDataStore = useLocaleLayoutData(allLocaleData, locale, 'header');
   const resolvedData = allLocaleData
-    ? (allLocaleData[locale] ?? allLocaleData.tr ?? null)
+    ? (localeDataStore[locale] ?? Object.values(localeDataStore).find(Boolean) ?? null)
     : initialData;
 
   const strapiDescriptions = resolvedData?.descriptions ?? {};

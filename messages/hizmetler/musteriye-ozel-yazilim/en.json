@@ -3,7 +3,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbServices": "Services",
   "service": "SERVICE",
-  "title": "Needs-Based Software Development",
+  "title": "Custom Software Solutions",
   "description": "With our custom software development services, we offer flexible and innovative solutions tailored to your needs. We develop custom software to digitalize your industrial processes, increase efficiency and gain competitive advantage.",
   "startProject": "Start Project",
   "benefits": [
@@ -55,7 +55,7 @@
     "Microsoft applications",
     " Other devices that provide data input to the system (Barcode, RFID, etc.)"
   ],
-  "heroTitle": "Needs-Based Software Development",
+  "heroTitle": "Custom Software Solutions",
   "heroSubtitle": "Solutions that include the most suitable software and hardware products designed to complement each other according to your needs",
   "heroDescription": "With our custom software development services, we offer flexible and innovative solutions tailored to your needs. We develop custom software to digitalize your industrial processes, increase efficiency and gain competitive advantage.",
   "heroImage": "/assets/strapi/musteriye_ozel_yazilim_cozumleri_banner_1_1_zeminsiz_2_83e6fef40e.webp",

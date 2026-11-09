@@ -9,7 +9,8 @@ import { useLanguage } from '../_context/LanguageContext';
 
 const NON_LINKABLE_SEGMENTS = new Set(['yasal', 'legal']);
 
-export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
+// singleLineTitle: md ve üstü ekranlarda başlık tek satırda kalır (kutu genişler, kelime aşağı sarkmaz)
+export default function PageHero({ title, subtitle, breadcrumbs, logoSrc, singleLineTitle = false }) {
   const pathname = usePathname() || '/';
   const { localizePath } = useLanguage();
   const pathSegments = pathname.split('/').filter(Boolean);
@@ -87,7 +88,7 @@ export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
 
           {/* 2. Title / Logo - Inside a Box (Glassmorphism) */}
           <div className="min-h-[80px] md:min-h-[104px] lg:min-h-[128px] flex items-center">
-            <div className="inline-block relative max-w-full md:max-w-3xl">
+            <div className={`inline-block relative max-w-full ${singleLineTitle ? 'md:max-w-5xl' : 'md:max-w-3xl'}`}>
               {/* Box Background */}
               <div className="absolute -inset-x-3 md:-inset-x-6 -inset-y-2 md:-inset-y-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl -z-10 shadow-xl" />
               {logoSrc ? (
@@ -102,7 +103,7 @@ export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
                   />
                 </h1>
               ) : (
-                <h1 className="text-[clamp(1.35rem,4.2vw,2.7rem)] font-bold text-white tracking-tight leading-[1.18] md:leading-[1.22] break-words">
+                <h1 className={`text-[clamp(1.35rem,4.2vw,2.7rem)] font-bold text-white tracking-tight leading-[1.18] md:leading-[1.22] break-words${singleLineTitle ? ' md:whitespace-nowrap' : ''}`}>
                   {title}
                 </h1>
               )}
@@ -134,6 +135,7 @@ export default function PageHero({ title, subtitle, breadcrumbs, logoSrc }) {
 PageHero.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
+  singleLineTitle: PropTypes.bool,
   breadcrumbs: PropTypes.arrayOf(PropTypes.string),
   logoSrc: PropTypes.string,
 };
