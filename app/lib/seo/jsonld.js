@@ -63,7 +63,7 @@ const ORG = {
       name: 'Siskon Software and Automation SRL',
       mapsUrl: 'https://www.google.com/maps/place/?q=place_id:0x40b35b910e74964b:0xac8086acca35f96a',
       address: {
-        streetAddress: 'Str. Turnului Nr. 5, Clădirea M.U.M. Scara 3, Etajul 2, Biroul 5',
+        streetAddress: 'Str. Turnului Nr. 25, Clădirea M.U.M. Scara 3, Etajul 2, Biroul 5',
         addressLocality: 'Brașov',
         postalCode: '500152',
         addressCountry: 'RO',
