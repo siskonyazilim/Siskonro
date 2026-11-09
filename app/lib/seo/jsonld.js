@@ -293,11 +293,10 @@ export function buildPageNodes({ pathname, siteUrl }) {
     webPage.mainEntity = { '@id': orgId(siteUrl) };
   }
 
-  if (!isHome) {
-    const crumbs = buildRouteCrumbs(internalPath, locale, siteUrl);
-    nodes.push(buildBreadcrumbNode({ crumbs, pageUrl }));
-    webPage.breadcrumb = { '@id': `${pageUrl}#breadcrumb` };
-  }
+  // Ana sayfa dahil her sayfada BreadcrumbList (ana sayfada tek öğe: kendisi).
+  const crumbs = buildRouteCrumbs(internalPath, locale, siteUrl);
+  nodes.push(buildBreadcrumbNode({ crumbs, pageUrl }));
+  webPage.breadcrumb = { '@id': `${pageUrl}#breadcrumb` };
 
   // Hizmet detay sayfaları → Service
   if (internalPath.startsWith('/hizmetler/')) {
