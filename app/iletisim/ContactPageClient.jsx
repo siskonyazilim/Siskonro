@@ -303,7 +303,7 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
                 aria-describedby={formErrors.consent ? fieldErrorId('consent') : undefined} />
               <span>
                 {pt('consent')}{' '}
-                <a href={localizePath('/yasal/kvkk')} className="underline hover:text-sky-300" target="_blank" rel="noopener noreferrer">{pt('consentKvkkLinkLabel')}</a>
+                <a href={localizePath('/kurumsal/kvkk')} className="underline hover:text-sky-300" target="_blank" rel="noopener noreferrer">{pt('consentKvkkLinkLabel')}</a>
               </span>
             </label>
             {formErrors.consent ? <p id={fieldErrorId('consent')} className="form-error-text -mt-2">{formErrors.consent}</p> : null}

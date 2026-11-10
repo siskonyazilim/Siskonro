@@ -37,5 +37,11 @@
   "isoLogoAlt": "ISO logo",
   "ctaSectionTitle": "Let's advance your corporate vision together",
   "ctaSectionDesc": "Contact us for detailed information about our corporate culture, engineering approach and working model.",
-  "ctaSectionButton": "Contact Us"
+  "ctaSectionButton": "Contact Us",
+  "policiesSectionTitle": "Our Policies",
+  "policyPrivacyTitle": "Privacy Policy",
+  "policyCookieTitle": "Cookie Policy",
+  "policyEysTitle": "IMS Policy",
+  "policyAiTitle": "AI Policy",
+  "policiesView": "View"
 }

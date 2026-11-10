@@ -133,25 +133,25 @@
   "continentMaps": {
     "europe": {
       "label": "Avrupa",
-      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_avrupa_67a5e16b5d.svg"
+      "src": "/assets/new/map/web_avrupa.svg"
     },
     "africa": {
       "label": "Afrika",
-      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_afrika_54d71c120b.svg"
+      "src": "/assets/new/map/web_afrika.svg"
     },
     "asia": {
       "label": "Asya",
-      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_asya_ef128e81c6.svg"
+      "src": "/assets/new/map/web_asya.svg"
     },
     "northAmerica": {
       "label": "Kuzey Amerika",
-      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_k_amerika_78010c63c2.svg"
+      "src": "/assets/new/map/web_k.amerika.svg"
     },
     "southAmerica": {
       "label": "Güney Amerika",
-      "src": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fweb_g_amerika_cde8998b25.svg"
+      "src": "/assets/new/map/web_g.amerika.svg"
     }
   },
-  "defaultMapSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Fworld2_c3758b5125.svg",
-  "legendImageSrc": "/api/media?url=https%3A%2F%2Fsiskonwebdb.domainmanager.com.tr%2Fuploads%2Frenk_kartela_white_687d02e3db.svg"
+  "defaultMapSrc": "/assets/new/map/world2.svg",
+  "legendImageSrc": "/assets/new/map/renk_kartela_white.svg"
 }

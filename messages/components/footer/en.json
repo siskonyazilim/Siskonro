@@ -17,7 +17,8 @@
   "privacy": "Privacy Policy",
   "cookie": "Cookie Policy",
   "aiPolicy": "AI Policy",
-  "logo": "https://siskonwebdb.domainmanager.com.tr//uploads/siskon_logo_7664c291e7.svg",
+  "eysPolicy": "IMS Policy",
+  "logo": "/assets/new/common/siskon-logo.svg",
   "socialLinks": {
     "linkedinUrl": "https://www.linkedin.com/company/siskonyazilimveotomasyon",
     "linkedinLabel": "LinkedIn",

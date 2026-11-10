@@ -94,7 +94,7 @@ export default async function LegalPage({ endpoint, messages, searchParams }) {
         <div className="container text-center max-w-3xl mx-auto">
           <h2>{d.ctaTitle}</h2>
           <p>{d.ctaText}</p>
-          <AnimatedCTALink href={`${toLocalizedPath('/iletisim', locale)}#contact-form`}>
+          <AnimatedCTALink href={d.ctaHref ?? fallback.ctaHref ?? `${toLocalizedPath('/iletisim', locale)}#contact-form`}>
             {d.ctaButton}
           </AnimatedCTALink>
         </div>

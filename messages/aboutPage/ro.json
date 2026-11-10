@@ -37,5 +37,11 @@
   "isoLogoAlt": "Logo ISO",
   "ctaSectionTitle": "Să avansăm împreună viziunea dvs. corporativă",
   "ctaSectionDesc": "Contactați-ne pentru informații detaliate despre cultura noastră corporativă, abordarea de inginerie și modelul de lucru.",
-  "ctaSectionButton": "Contactați echipa corporativă"
+  "ctaSectionButton": "Contactați echipa corporativă",
+  "policiesSectionTitle": "Politicile noastre",
+  "policyPrivacyTitle": "Politica de confidențialitate",
+  "policyCookieTitle": "Politica de cookie-uri",
+  "policyEysTitle": "Politica SMI",
+  "policyAiTitle": "Politica privind IA",
+  "policiesView": "Vezi"
 }

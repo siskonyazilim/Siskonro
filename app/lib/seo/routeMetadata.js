@@ -486,7 +486,7 @@ export const ROUTE_META = {
       description: 'Siskon Romanya sitesinde hizmet, sektör, makale ve sayfalarda arama yapın.',
     },
   },
-  '/yasal/kvkk': {
+  '/kurumsal/kvkk': {
     ro: {
       title: 'Politica de confidențialitate Siskon',
       description: 'Cum colectăm, folosim și protejăm datele vizitatorilor și contactelor de afaceri: temeiuri legale, perioade de păstrare și drepturile persoanelor vizate (GDPR).',
@@ -500,7 +500,7 @@ export const ROUTE_META = {
       description: 'Kişisel verileri nasıl işlediğimiz, hukuki sebepler, saklama süreleri ve ilgili kişilerin hakları.',
     },
   },
-  '/yasal/cerez-politikasi': {
+  '/kurumsal/cerez-politikasi': {
     ro: {
       title: 'Politica de utilizare a cookie-urilor',
       description: 'Ce cookie-uri folosim pe acest site, în ce scop, cât timp sunt păstrate și cum vă puteți modifica oricând preferințele.',

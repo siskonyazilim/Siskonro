@@ -17,6 +17,7 @@ const LOCALE_MAP = { tr: trLocale, en: enLocale, ro: roLocale };
 
 // Yapay Zeka Yönetim Sistemi Çerçeve Politikası — yeni sekmede açılan PDF
 const AI_POLICY_PDF = '/downloads/siskon-yapay-zeka-politikasi.pdf';
+const EYS_POLICY_PDF = '/downloads/siskon-eys-politikasi.pdf';
 
 /**
  * Footer istemci bileşeni.
@@ -60,8 +61,8 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
     { name: t('about'),       href: '/kurumsal/bizi-taniyin' },
     { name: t('career'),      href: '/kurumsal/kariyer' },
     { name: 'Blog',           href: '/blog' },
-    { name: t('kvkk'),        href: '/yasal/kvkk' },
-    { name: t('cookie'),      href: '/yasal/cerez-politikasi' },
+    { name: t('kvkk'),        href: '/kurumsal/kvkk' },
+    { name: t('cookie'),      href: '/kurumsal/cerez-politikasi' },
   ];
 
   // Sosyal medya linkleri — Strapi gelirse ondan al, yoksa sabit değerler
@@ -159,7 +160,12 @@ export default function Footer({ data, allLocaleData }) { // NOSONAR
                   <Link href={localizePath(item.href)} className="text-white hover:text-sky-300">{item.name}</Link>
                 </li>
               ))}
-              {/* Politika yalnızca Türkçe hazırlandığı için sadece Türkçe sitede gösterilir */}
+              {/* Politikalar yalnızca Türkçe hazırlandığı için sadece Türkçe sitede gösterilir */}
+              {locale === 'tr' && (
+                <li>
+                  <a href={EYS_POLICY_PDF} target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-300">{t('eysPolicy')}</a>
+                </li>
+              )}
               {locale === 'tr' && (
                 <li>
                   <a href={AI_POLICY_PDF} target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-300">{t('aiPolicy')}</a>
@@ -252,6 +258,7 @@ const footerDataShape = PropTypes.shape({
   kvkk:          PropTypes.string,
   cookie:        PropTypes.string,
   aiPolicy:      PropTypes.string,
+  eysPolicy:     PropTypes.string,
   socialLinks: PropTypes.shape({
     linkedinUrl:   PropTypes.string,
     youtubeUrl:    PropTypes.string,

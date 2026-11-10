@@ -60,7 +60,7 @@ export default function CookieConsent() { // NOSONAR
     setHasConsent(true);
 
     if (value === 'settings') {
-      router.push(localizePath('/yasal/cerez-politikasi'));
+      router.push(localizePath('/kurumsal/cerez-politikasi'));
     }
   };
 
@@ -76,7 +76,7 @@ export default function CookieConsent() { // NOSONAR
       <MiniTrigger
         label={isEn ? 'Cookie Preferences' : isRo ? 'Preferințe Cookie' : 'Çerez Tercihleri'}
         ariaLabel={isEn ? 'Cookie preferences' : isRo ? 'Preferințe cookie' : 'Çerez tercihleri'}
-        onClick={() => router.push(localizePath('/yasal/cerez-politikasi'))}
+        onClick={() => router.push(localizePath('/kurumsal/cerez-politikasi'))}
       />
     );
   }

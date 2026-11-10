@@ -39,8 +39,8 @@ const EN_TO_TR_ROUTES = {
   '/about/sustainability': '/kurumsal/surdurulebilirlik',
   '/blog': '/blog',
   '/contact': '/iletisim',
-  '/legal/kvkk': '/yasal/kvkk',
-  '/legal/cookie-policy': '/yasal/cerez-politikasi',
+  '/about/kvkk': '/kurumsal/kvkk',
+  '/about/cookie-policy': '/kurumsal/cerez-politikasi',
 };
 
 // İlk eşleşme kazanır: sondaki "/sektorler/..." takma adları gerçek yerel yolların üzerine yazmasın.
@@ -90,8 +90,8 @@ const RO_TO_TR_ROUTES = {
   '/compania/sustenabilitate': '/kurumsal/surdurulebilirlik',
   '/blog': '/blog',
   '/contact': '/iletisim',
-  '/legal/gdpr': '/yasal/kvkk',
-  '/legal/politica-de-cookie-uri': '/yasal/cerez-politikasi',
+  '/compania/gdpr': '/kurumsal/kvkk',
+  '/compania/politica-de-cookie-uri': '/kurumsal/cerez-politikasi',
 };
 
 // İlk eşleşme kazanır: sondaki "/sektorler/..." takma adları gerçek yerel yolların üzerine yazmasın.

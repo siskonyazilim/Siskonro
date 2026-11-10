@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import AnimatedCTALink from '../../components/AnimatedCTALink';
 import PageHero from '../../components/PageHero';
 import MilestonesSlider from '../../components/MilestonesSlider';
@@ -67,6 +68,18 @@ export default function AboutPageClient({ data }) {
   const goalsVisualAlt = isRo ? 'Imagine cu obiectivele noastre' : isEn ? 'Our goals visual' : 'Hedeflerimiz görseli';
 
   const breadcrumbs = [pt('breadcrumbHome'), pt('breadcrumbCorporate'), pt('breadcrumbAbout')];
+
+  // Politikalar: gizlilik (SiskonRo’da KVKK/GDPR sayfasıyla aynı belge) ve çerez sayfaları üç dilde var; EYS ve Yapay Zeka politikaları PDF olarak yalnızca Türkçe hazırlandığından sadece Türkçe sitede gösterilir
+  const policies = [
+    { key: 'privacy', title: pt('policyPrivacyTitle'), href: localizePath('/kurumsal/kvkk'), pdf: false },
+    { key: 'cookie', title: pt('policyCookieTitle'), href: localizePath('/kurumsal/cerez-politikasi'), pdf: false },
+    ...(locale === 'tr'
+      ? [
+        { key: 'eys', title: pt('policyEysTitle'), href: '/downloads/siskon-eys-politikasi.pdf', pdf: true },
+        { key: 'ai', title: pt('policyAiTitle'), href: '/downloads/siskon-yapay-zeka-politikasi.pdf', pdf: true },
+      ]
+      : []),
+  ];
 
   return (
     <div className="bg-white">
@@ -230,6 +243,36 @@ export default function AboutPageClient({ data }) {
                 <p className="text-[#0F4D9A] font-bold text-base md:text-xl leading-tight">{iso.label || pt('isoLabel')}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Politikalarımız */}
+      <section className="py-14 md:py-24 lg:py-32 px-4 md:px-6 bg-gradient-to-br from-[#f3fcff] via-white to-[#f9fdff] text-slate-900 relative overflow-hidden">
+        <div className="container-wide text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-black text-[#0F4D9A] mb-12 md:mb-16 lg:mb-20">
+            {pt('policiesSectionTitle')}
+          </h2>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 ${policies.length > 2 ? 'lg:grid-cols-4' : 'max-w-3xl mx-auto'}`}>
+            {policies.map((policy) => {
+              const card = (
+                <>
+                  <h3 className="text-[#0F4D9A] font-black text-xl md:text-2xl leading-tight tracking-tight mb-5">{policy.title}</h3>
+                  <span className="inline-flex items-center gap-2 text-sm md:text-[15px] font-bold text-sky-700 group-hover:text-[#0F4D9A]">
+                    {pt('policiesView')}
+                    <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </>
+              );
+              const cardClass = 'reveal group flex h-full min-h-[170px] md:min-h-[220px] flex-col items-center justify-center text-center rounded-2xl border border-sky-100 bg-white px-6 py-10 md:px-7 md:py-12 shadow-[0_10px_30px_rgba(15,77,154,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-[0_18px_40px_rgba(15,77,154,0.14)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600';
+              return policy.pdf ? (
+                <a key={policy.key} href={policy.href} target="_blank" rel="noopener noreferrer" className={cardClass}>{card}</a>
+              ) : (
+                <Link key={policy.key} href={policy.href} className={cardClass}>{card}</Link>
+              );
+            })}
           </div>
         </div>
       </section>

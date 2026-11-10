@@ -37,5 +37,11 @@
   "isoLogoAlt": "ISO logosu",
   "ctaSectionTitle": "Kurumsal vizyonunuzu birlikte ileri taşıyalım",
   "ctaSectionDesc": "Kurum kültürümüz, mühendislik yaklaşımımız ve çalışma modelimiz hakkında detaylı bilgi için bizimle iletişime geçin.",
-  "ctaSectionButton": "Bize Ulaşın"
+  "ctaSectionButton": "Bize Ulaşın",
+  "policiesSectionTitle": "Politikalarımız",
+  "policyPrivacyTitle": "Gizlilik Politikası",
+  "policyCookieTitle": "Çerez Politikası",
+  "policyEysTitle": "EYS Politikası",
+  "policyAiTitle": "Yapay Zeka Politikası",
+  "policiesView": "İncele"
 }
