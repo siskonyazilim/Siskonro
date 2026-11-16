@@ -1,5 +1,30 @@
 [
   {
+    "slug": "siskon-a-12-a-editie-a-evenimentului-kaizen",
+    "title": "Siskon și-a prezentat soluțiile pentru digitalizarea producției la cea de-a 12-a ediție a Evenimentului de Împărtășire Kaizen",
+    "excerpt": "La cea de-a 12-a ediție a Evenimentului de Împărtășire Kaizen, Siskon a prezentat soluțiile OnSuite pentru monitorizarea producției în timp real și trasabilitate end-to-end.",
+    "date": "11-2026",
+    "author": "Siskon Basın",
+    "category": "Târguri și evenimente",
+    "readTime": 3,
+    "coverImage": "/assets/blog/Kaizen_12_Paylasimlari_2026.jpg",
+    "youtubeUrl": null,
+    "content": "Participând la cea de-a 12-a ediție a Evenimentului de Împărtășire Kaizen organizat anul acesta, Siskon și-a reunit profesioniștii din sector cu soluțiile sale privind managementul producției, transformarea digitală și utilizarea eficientă a datelor de producție.\n\n**În cadrul atelierului intitulat „De la ordinul de lucru la produs: Producție în timp real și trasabilitate end-to-end cu OnSuite”, s-au prezentat modalitățile de gestionare a proceselor de producție într-un mediu digital și modul în care datele colectate din teren pot fi corelate cu operațiunile de producție.**\n\nÎn prezent, în unitățile de producție, nu mai este suficientă simpla monitorizare a cantităților produse. Gestionarea corectă a relației dintre comenzile de lucru, operațiunile de producție, înregistrările de calitate, materiile prime utilizate și produsele finale este de o importanță critică pentru eficiența operațională, asigurarea calității și eforturile de îmbunătățire durabilă. Platforma OnSuite, dezvoltată de Siskon, permite gestionarea acestor informații sub o singură structură unificată.\n\nPe parcursul evenimentului, echipa Siskon a schimbat idei cu participanții din diverse sectoare privind digitalizarea proceselor de producție, monitorizarea producției în timp real, colectarea datelor și aplicațiile de trasabilitate. De asemenea, au fost evaluate împreună cu participanții aplicațiile pentru utilizarea datelor obținute din zonele de producție în procesele de luare a deciziilor.\n\nPentru informații detaliate despre OnSuite: https://onsuite.ro\n\nSursă: https://embk.mmoizmir.org/kaizen/kaizen-2026/otomatik-taslak\n",
+    "locale": "ro",
+    "localizations": [
+      {
+        "slug": "siskon-12-kaizen-paylasimlari-etkinligi",
+        "locale": "tr",
+        "title": "Siskon, 12. Kaizen Paylaşımları Etkinliği'nde Üretimin Dijitalleşmesine Yönelik Çözümlerini Paylaştı"
+      },
+      {
+        "slug": "siskon-12th-kaizen-sharing-event",
+        "locale": "en",
+        "title": "Siskon Shared Its Solutions for Production Digitalization at the 12th Kaizen Sharing Event"
+      }
+    ]
+  },
+  {
     "slug": "programul-tusiad-sd2-transformare-digitala-in-industrie-2019",
     "title": "Programul TÜSİAD SD2 Transformare digitală în industrie 2019",
     "excerpt": "Programul TÜSİAD privind transformarea digitală în industrie oferă instruire cuprinzătoare și consultanță pentru a pregăti companiile industriale turcești pentru Industria 4.0.",

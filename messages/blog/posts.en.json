@@ -1,5 +1,30 @@
 [
   {
+    "slug": "siskon-12th-kaizen-sharing-event",
+    "title": "Siskon Shared Its Solutions for Production Digitalization at the 12th Kaizen Sharing Event",
+    "excerpt": "At the 12th Kaizen Sharing Event, Siskon shared its OnSuite solutions for live production tracking and end-to-end traceability with industry professionals.",
+    "date": "11-2026",
+    "author": "Siskon Basın",
+    "category": "Trade Shows & Events",
+    "readTime": 3,
+    "coverImage": "/assets/blog/Kaizen_12_Paylasimlari_2026.jpg",
+    "youtubeUrl": null,
+    "content": "By participating in the 12th Kaizen Sharing Event held this year, Siskon brought its solutions for production management, digital transformation, and the effective use of production data together with industry professionals.\n\n**In the workshop titled \"From Work Order to Product: Live Production and End-to-End Traceability with OnSuite\" held as part of the event, it was shared how production processes can be managed in a digital environment and how data obtained from the field can be correlated with production operations.**\n\nIn today's manufacturing facilities, simply tracking production quantities is no longer sufficient. Managing the relationship between work orders, production operations, quality records, raw materials used, and final products correctly is of critical importance for operational efficiency, quality assurance, and sustainable improvement efforts. Siskon's OnSuite platform supports the management of this information under a single unified structure.\n\nThroughout the event, the Siskon team exchanged views with participants from various sectors on the digitalization of production processes, live production tracking, data collection, and traceability applications. Applications regarding the use of data obtained from production sites in decision-making processes were evaluated with the participants.\n\nFor detailed information about OnSuite: https://onsuite.ro/en\n\nSource: https://embk.mmoizmir.org/kaizen/kaizen-2026/otomatik-taslak\n",
+    "locale": "en",
+    "localizations": [
+      {
+        "slug": "siskon-12-kaizen-paylasimlari-etkinligi",
+        "locale": "tr",
+        "title": "Siskon, 12. Kaizen Paylaşımları Etkinliği'nde Üretimin Dijitalleşmesine Yönelik Çözümlerini Paylaştı"
+      },
+      {
+        "slug": "siskon-a-12-a-editie-a-evenimentului-kaizen",
+        "locale": "ro",
+        "title": "Siskon și-a prezentat soluțiile pentru digitalizarea producției la cea de-a 12-a ediție a Evenimentului de Împărtășire Kaizen"
+      }
+    ]
+  },
+  {
     "slug": "depark-december-bulletin",
     "title": "DEPARK December Bulletin",
     "excerpt": "DEPARK's December newsletter presents the latest developments in technology development zones, events, and up-to-date news for companies, all in one place.",
