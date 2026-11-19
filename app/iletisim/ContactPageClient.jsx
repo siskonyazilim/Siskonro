@@ -8,6 +8,7 @@ import SmartImage from '../components/SmartImage';
 import FooterDocsBar from '../components/FooterDocsBar';
 import { useLanguage } from '../_context/LanguageContext';
 import { usePageLocale } from '../lib/i18n/usePageLocale';
+import { isHrTopic, needsSector } from '../../lib/contactTopics';
 import trLocale from '../../messages/contactPage/tr.json';
 import enLocale from '../../messages/contactPage/en.json';
 import roLocale from '../../messages/contactPage/ro.json';
@@ -99,7 +100,8 @@ function validateForm(formData, pt, { requireTurnstile, hasTurnstileToken }) {
   if (!formData.company.trim())   nextErrors.company   = pt('requiredField');
   if (!formData.phone.trim())     nextErrors.phone     = pt('requiredField');
   if (!formData.position.trim())  nextErrors.position  = pt('requiredField');
-  if (!formData.sector.trim())    nextErrors.sector    = pt('requiredField');
+  // Sektör yalnızca Genel Başvuru / Satış / Teknik Destek için sorulur (Kariyer / Staj / Diğer → İK)
+  if (needsSector(formData.position) && !formData.sector.trim()) nextErrors.sector = pt('requiredField');
   if (!formData.message.trim())   nextErrors.message   = pt('requiredField');
   if (!formData.email.trim()) {
     nextErrors.email = pt('requiredField');
@@ -269,6 +271,7 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
               </select>
               {formErrors.position ? <p id={fieldErrorId('position')} className="form-error-text">{formErrors.position}</p> : null}
             </div>
+            {needsSector(formData.position) ? (
             <div className="space-y-1.5 md:space-y-2">
               <label htmlFor="sector" className="form-label">{pt('sector')}</label>
               <select id="sector" name="sector" value={formData.sector} onChange={onFieldChange}
@@ -279,6 +282,7 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
               </select>
               {formErrors.sector ? <p id={fieldErrorId('sector')} className="form-error-text">{formErrors.sector}</p> : null}
             </div>
+            ) : null}
             <div className="space-y-1.5 md:space-y-2">
               <label htmlFor="email" className="form-label">{pt('email')}</label>
               <input id="email" type="email" name="email" value={formData.email} onChange={onFieldChange}
@@ -430,8 +434,17 @@ export default function ContactPageClient({ data }) {
 
   const handleFieldChange = (event) => {
     const { name, value } = event.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (formErrors[name]) setFormErrors((prev) => { const n = { ...prev }; delete n[name]; return n; });
+    // Kariyer / Staj / Diğer'e geçilince gizlenen Sektör alanının değeri ve hatası da temizlenir
+    const clearSector = name === 'position' && isHrTopic(value);
+    setFormData((prev) => ({ ...prev, [name]: value, ...(clearSector ? { sector: '' } : {}) }));
+    if (formErrors[name] || (clearSector && formErrors.sector)) {
+      setFormErrors((prev) => {
+        const n = { ...prev };
+        delete n[name];
+        if (clearSector) delete n.sector;
+        return n;
+      });
+    }
   };
 
   const handleConsentChange = (event) => {
