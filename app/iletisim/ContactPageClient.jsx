@@ -8,7 +8,7 @@ import SmartImage from '../components/SmartImage';
 import FooterDocsBar from '../components/FooterDocsBar';
 import { useLanguage } from '../_context/LanguageContext';
 import { usePageLocale } from '../lib/i18n/usePageLocale';
-import { isHrTopic, needsSector } from '../../lib/contactTopics';
+import { isHrTopic, needsCompany, needsSector } from '../../lib/contactTopics';
 import trLocale from '../../messages/contactPage/tr.json';
 import enLocale from '../../messages/contactPage/en.json';
 import roLocale from '../../messages/contactPage/ro.json';
@@ -97,7 +97,8 @@ function validateForm(formData, pt, { requireTurnstile, hasTurnstileToken }) {
   const nextErrors = {};
   if (!formData.firstName.trim()) nextErrors.firstName = pt('requiredField');
   if (!formData.lastName.trim())  nextErrors.lastName  = pt('requiredField');
-  if (!formData.company.trim())   nextErrors.company   = pt('requiredField');
+  // Şirket Kariyer / Staj / Diğer için boş bırakılabilir
+  if (needsCompany(formData.position) && !formData.company.trim()) nextErrors.company = pt('requiredField');
   if (!formData.phone.trim())     nextErrors.phone     = pt('requiredField');
   if (!formData.position.trim())  nextErrors.position  = pt('requiredField');
   // Sektör yalnızca Genel Başvuru / Satış / Teknik Destek için sorulur (Kariyer / Staj / Diğer → İK)
@@ -437,11 +438,11 @@ export default function ContactPageClient({ data }) {
     // Kariyer / Staj / Diğer'e geçilince gizlenen Sektör alanının değeri ve hatası da temizlenir
     const clearSector = name === 'position' && isHrTopic(value);
     setFormData((prev) => ({ ...prev, [name]: value, ...(clearSector ? { sector: '' } : {}) }));
-    if (formErrors[name] || (clearSector && formErrors.sector)) {
+    if (formErrors[name] || (clearSector && (formErrors.sector || formErrors.company))) {
       setFormErrors((prev) => {
         const n = { ...prev };
         delete n[name];
-        if (clearSector) delete n.sector;
+        if (clearSector) { delete n.sector; delete n.company; } // şirket de artık zorunlu değil
         return n;
       });
     }

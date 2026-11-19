@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { strapiGet } from '@/lib/strapi/client';
 import { isRateLimited } from '@/lib/security/http';
-import { needsSector } from '@/lib/contactTopics';
+import { needsCompany, needsSector } from '@/lib/contactTopics';
 
 // ── Strapi'ye form kaydı gönderen yardımcı ──────────────────────────────────
 async function saveToStrapi(payload, locale) {
@@ -44,8 +44,9 @@ async function saveToStrapi(payload, locale) {
   }
 }
 
-// Sektör yalnızca Genel Başvuru / Satış / Teknik Destek için zorunlu (bkz. getMissingFields)
-const REQUIRED_FIELDS = ['firstName', 'lastName', 'company', 'phone', 'position', 'email', 'message'];
+// Şirket ve sektör konuya göre zorunlu (bkz. getMissingFields): Kariyer / Staj / Diğer'de şirket boş olabilir,
+// sektör yalnızca Genel Başvuru / Satış / Teknik Destek'te sorulur.
+const REQUIRED_FIELDS = ['firstName', 'lastName', 'phone', 'position', 'email', 'message'];
 const CSRF_COOKIE_NAME = 'csrf_token';
 const MAX_FIELD_LENGTH = 2000;
 
@@ -234,7 +235,11 @@ function sanitize(value) {
 }
 
 function getMissingFields(payload) {
-  const required = needsSector(payload.position) ? [...REQUIRED_FIELDS, 'sector'] : REQUIRED_FIELDS;
+  const required = [
+    ...REQUIRED_FIELDS,
+    ...(needsCompany(payload.position) ? ['company'] : []),
+    ...(needsSector(payload.position) ? ['sector'] : []),
+  ];
   return required.filter((field) => !String(payload[field] || '').trim());
 }
 
@@ -291,7 +296,7 @@ function buildMailContent(payload, locale) {
   const message = cleanMessage(payload.message);
   const sentAt = formatSentAt(locale);
 
-  const subject = `[${site}] ${t.title} - ${fullName} - ${company}`;
+  const subject = [`[${site}] ${t.title}`, fullName, company].filter(Boolean).join(' - ');
 
   const infoRows = [
     [t.source, t.sourceValue(site)],
@@ -305,7 +310,7 @@ function buildMailContent(payload, locale) {
     [t.sector, sanitize(payload.sector)],
     [t.phone, sanitize(payload.phone)],
     [t.email, sanitize(payload.email)],
-  ].filter(([label, value]) => label !== t.sector || value); // İK konularında sektör sorulmaz
+  ].filter(([label, value]) => (label !== t.sector && label !== t.company) || value); // İK konularında sektör/şirket boş olabilir
 
   const pad = Math.max(...[...infoRows, ...senderRows].map(([label]) => label.length));
   const textRow = ([label, value]) => `${label.padEnd(pad)} : ${value}`;
