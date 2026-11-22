@@ -9,6 +9,7 @@ import FooterDocsBar from '../components/FooterDocsBar';
 import { useLanguage } from '../_context/LanguageContext';
 import { usePageLocale } from '../lib/i18n/usePageLocale';
 import { isHrTopic, needsCompany, needsSector } from '../../lib/contactTopics';
+import { trackLead } from '../../lib/analytics';
 import trLocale from '../../messages/contactPage/tr.json';
 import enLocale from '../../messages/contactPage/en.json';
 import roLocale from '../../messages/contactPage/ro.json';
@@ -478,6 +479,7 @@ export default function ContactPageClient({ data }) {
         const payload = await response.json().catch(() => ({}));
         throw new Error(payload?.message || pt('formSubmitError'));
       }
+      trackLead('contact');
       setStatus({ type: 'success', msg: pt('formSuccess') });
       setFormData(INITIAL_FORM_DATA);
       setTurnstileToken('');
