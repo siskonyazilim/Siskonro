@@ -90,17 +90,14 @@ const UI = {
       references: { title: 'Referanslar', sub: '40+ ülke · 60+ fabrika' },
       blog: { title: 'Blog ve Haberler', sub: 'Fuar · Etkinlik · İçgörü' },
     },
-    servicesTitle: 'Hizmetlerimiz',
-    seeAll: 'Tümünü gör',
     emptyTitle: 'Sonuç bulunamadı',
     emptyDesc: (query) => `“${query}” için eşleşen içerik yok.`,
     didYouMean: 'Bunu mu demek istediniz?',
     popularTitle: 'Popüler sayfalar',
-    ctaIdle: 'Size en uygun çözümü birlikte tasarlayalım',
-    ctaIdleBtn: 'Bize Ulaşın',
     ctaResults: 'Aradığınızı bulamadınız mı?',
     ctaEmpty: 'Uzmanımız yardımcı olsun',
     ctaBtn: 'Doğrudan Destek Alın',
+    contactBtn: 'Bize Ulaşın',
     categories: { blog: 'Blog', reference: 'Referans', partner: 'İş Birliği', service: 'Hizmet', product: 'Ürün', sector: 'Sektör', corporate: 'Kurumsal', legal: 'Yasal', page: 'Sayfa' },
     tabs: { blog: 'Blog', reference: 'Referanslar', partner: 'İş Birlikleri', service: 'Hizmetler', product: 'Ürünler', sector: 'Sektörler', corporate: 'Kurumsal', legal: 'Yasal', page: 'Sayfalar' },
     terms: ['OnSuite', 'izlenebilirlik', 'IIoT', 'görüntü işleme', 'otomasyon', 'robot', 'yazılım', 'kariyer', 'referanslar', 'blog', 'Microsoft', 'Velotic', 'eğitim', 'yapay zeka', 'sürdürülebilirlik'],
@@ -129,17 +126,14 @@ const UI = {
       references: { title: 'References', sub: '40+ countries · 60+ factories' },
       blog: { title: 'Blog and News', sub: 'Trade fairs · Events · Insights' },
     },
-    servicesTitle: 'Our Services',
-    seeAll: 'View all',
     emptyTitle: 'No results found',
     emptyDesc: (query) => `No content matches “${query}”.`,
     didYouMean: 'Did you mean',
     popularTitle: 'Popular pages',
-    ctaIdle: 'Let’s design the right solution for you together',
-    ctaIdleBtn: 'Contact Us',
     ctaResults: 'Could not find what you need?',
     ctaEmpty: 'Let our experts help',
     ctaBtn: 'Get Direct Support',
+    contactBtn: 'Contact Us',
     categories: { blog: 'Blog', reference: 'Reference', partner: 'Partner', service: 'Service', product: 'Product', sector: 'Industry', corporate: 'Corporate', legal: 'Legal', page: 'Page' },
     tabs: { blog: 'Blog', reference: 'References', partner: 'Partners', service: 'Services', product: 'Products', sector: 'Industries', corporate: 'Corporate', legal: 'Legal', page: 'Pages' },
     terms: ['OnSuite', 'traceability', 'IIoT', 'machine vision', 'automation', 'robotics', 'software', 'careers', 'references', 'blog', 'Microsoft', 'Velotic', 'training', 'artificial intelligence', 'sustainability'],
@@ -168,17 +162,14 @@ const UI = {
       references: { title: 'Referințe', sub: '40+ țări · 60+ fabrici' },
       blog: { title: 'Blog și Noutăți', sub: 'Târguri · Evenimente · Perspective' },
     },
-    servicesTitle: 'Serviciile noastre',
-    seeAll: 'Vedeți toate',
     emptyTitle: 'Niciun rezultat',
     emptyDesc: (query) => `Niciun conținut nu corespunde cu “${query}”.`,
     didYouMean: 'Ați vrut să spuneți',
     popularTitle: 'Pagini populare',
-    ctaIdle: 'Să proiectăm împreună soluția potrivită pentru dvs.',
-    ctaIdleBtn: 'Contactați-ne',
     ctaResults: 'Nu ați găsit ce căutați?',
     ctaEmpty: 'Experții noștri vă pot ajuta',
     ctaBtn: 'Obțineți Asistență',
+    contactBtn: 'Contactați-ne',
     categories: { blog: 'Blog', reference: 'Referință', partner: 'Partener', service: 'Serviciu', product: 'Produs', sector: 'Industrie', corporate: 'Corporativ', legal: 'Legal', page: 'Pagină' },
     tabs: { blog: 'Blog', reference: 'Referințe', partner: 'Parteneri', service: 'Servicii', product: 'Produse', sector: 'Industrii', corporate: 'Corporativ', legal: 'Legal', page: 'Pagini' },
     terms: ['OnSuite', 'trasabilitate', 'IIoT', 'viziune artificială', 'automatizare', 'robotică', 'software', 'cariere', 'referințe', 'blog', 'Microsoft', 'Velotic', 'instruire', 'inteligență artificială', 'sustenabilitate'],
@@ -388,7 +379,7 @@ function FeaturedOnSuite({ ui, query, locale, localizePath }) {
 
 function CtaBand({ title, children }) {
   return (
-    <section className="flex flex-col items-start gap-6 rounded-2xl bg-[linear-gradient(110deg,#0B4F86_0%,#0B2F57_45%,#0A192F_100%)] p-6 md:flex-row md:items-center md:gap-8 md:p-10">
+    <section className="flex flex-col items-start gap-6 rounded-2xl border border-white/10 bg-[linear-gradient(110deg,#0B4F86_0%,#0B2F57_45%,#0A192F_100%)] p-6 md:flex-row md:items-center md:gap-8 md:p-10">
       <h2 className="m-0 flex-1 text-xl font-bold leading-tight text-white md:text-[1.75rem]">{title}</h2>
       <div className="flex w-full flex-col gap-3 sm:flex-row md:w-auto">{children}</div>
     </section>
@@ -399,6 +390,19 @@ const CTA_PRIMARY =
   'inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-white px-6 text-sm font-semibold text-[#0A192F] no-underline transition-colors hover:bg-sky-50 hover:text-[#0A192F]';
 const CTA_GHOST =
   'inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-white/30 px-6 text-sm font-semibold text-white no-underline transition-colors hover:bg-white/10 hover:text-white';
+
+// Sitedeki diğer hero'larla aynı arka plan katmanları (bkz. components/PageHero.jsx)
+function HeroLayers() {
+  return (
+    <>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A192F]/40" aria-hidden="true" />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.02] md:opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M60 60H0V0h60v60zM30 0v60M0 30h60%22 fill=%22none%22 stroke=%22white%22 stroke-width=%221%22/%3E%3C/svg%3E')]"
+        aria-hidden="true"
+      />
+    </>
+  );
+}
 
 export default function SearchPage() {
   const searchParamsHook = useSearchParams();
@@ -501,16 +505,12 @@ export default function SearchPage() {
   const serviceName = (svc) => t(`services.${svc.key}`);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    // Hero arka planı tüm ekranlarda footer'a kadar tek parça uzanır
+    <div className="page-hero-section relative flex min-h-screen flex-col overflow-hidden text-slate-900">
+      <HeroLayers />
       {/* ── Başlık + arama kutusu ── */}
-      <section className="page-hero-section relative overflow-hidden text-white">
-        {/* Sitedeki diğer hero'larla aynı arka plan katmanları (bkz. components/PageHero.jsx) */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A192F]/40" aria-hidden="true" />
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.02] md:opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M60 60H0V0h60v60zM30 0v60M0 30h60%22 fill=%22none%22 stroke=%22white%22 stroke-width=%221%22/%3E%3C/svg%3E')]"
-          aria-hidden="true"
-        />
-        <div className={`container-wide relative z-10 pt-[clamp(7rem,14vw,8.5rem)] md:pt-[clamp(8rem,12vw,9.5rem)] ${hasQuery ? 'pb-20 md:pb-24' : 'pb-28 md:pb-32'}`}>
+      <section className="relative text-white">
+        <div className={`container-wide relative z-10 pt-[clamp(7rem,14vw,8.5rem)] md:pt-[clamp(8rem,12vw,9.5rem)] ${hasQuery ? 'pb-20 md:pb-24' : 'pb-14 md:pb-20'}`}>
           <div className="mx-auto flex max-w-[850px] flex-col items-center gap-5 text-center md:gap-7">
             <h1 className="m-0 text-balance text-[clamp(1.35rem,4.2vw,2.7rem)] font-bold leading-[1.18] tracking-tight text-white md:leading-[1.22]">{hasQuery ? ui.heroTitle : ui.idleTitle}</h1>
 
@@ -566,11 +566,12 @@ export default function SearchPage() {
         </div>
       </section>
 
-      <div className="container-wide relative z-10 flex flex-col gap-14 pb-20 md:gap-20 md:pb-28 lg:gap-24 lg:pb-32">
-        {/* ── Sorgu yok: hızlı kartlar + hizmetler ── */}
+      <div className={`container-wide relative z-10 flex w-full flex-1 flex-col gap-14 md:gap-20 lg:gap-24 ${hasQuery ? 'pb-20 md:pb-28 lg:pb-32' : 'pb-14 md:pb-20'}`}>
+        {/* ── Sorgu yok: hızlı kartlar ── */}
         {!hasQuery && (
-          <>
-            <div className="-mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-1 flex-col justify-center gap-8 pt-12 md:gap-10 md:pt-16">
+            {/* Kartlar hero çizgisine binmez; beyaz alanın içinde durur */}
+            <div className="grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
               <SearchLink
                 href={onsuiteHref(locale)}
                 localizePath={localizePath}
@@ -597,38 +598,14 @@ export default function SearchPage() {
               ))}
             </div>
 
-            <section className="flex flex-col gap-6 md:gap-8">
-              <div className="flex flex-wrap items-end justify-between gap-4">
-                <h2 className="m-0 text-2xl font-bold leading-tight text-[#0A192F] md:text-4xl">{ui.servicesTitle}</h2>
-                <Link
-                  href={localizePath('/hizmetler')}
-                  className="flex min-h-11 items-center gap-1.5 text-sm font-semibold text-[#0369a1] no-underline hover:text-[#0A192F] md:text-base"
-                >
-                  {ui.seeAll}
-                  <ChevronIcon className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-                {SERVICES.map((svc) => (
-                  <Link
-                    key={svc.href}
-                    href={localizePath(svc.href)}
-                    className={`${CARD_BASE} flex min-h-[132px] flex-col gap-3.5 px-5 py-5 md:min-h-[140px]`}
-                  >
-                    <ItemIcon href={svc.href} category="service" plain />
-                    <span className="text-[15px] font-bold leading-snug text-[#0A192F] [font-family:var(--font-heading-primary)] md:text-base">{serviceName(svc)}</span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-
-            <CtaBand title={ui.ctaIdle}>
-              <Link href={localizePath('/iletisim#contact-form')} className={CTA_PRIMARY}>
-                {ui.ctaIdleBtn}
-                <ArrowIcon className="h-4 w-4 text-[#0369a1]" />
-              </Link>
-            </CtaBand>
-          </>
+            <Link
+              href={localizePath('/iletisim#contact-form')}
+              className="inline-flex min-h-12 items-center justify-center gap-3 self-center rounded-lg bg-[#0369a1] px-8 text-sm font-semibold text-white no-underline transition-colors hover:bg-[#075985] hover:text-white md:text-base"
+            >
+              {ui.contactBtn}
+              <ArrowIcon />
+            </Link>
+          </div>
         )}
 
         {/* ── Yükleniyor ── */}
@@ -669,7 +646,7 @@ export default function SearchPage() {
                 })}
               </nav>
 
-              <label className="flex items-center gap-2 font-archivo text-sm text-slate-600 md:mt-7">
+              <label className="flex items-center gap-2 font-archivo text-sm text-slate-200 md:mt-7">
                 {ui.sort}
                 <select
                   value={sortBy}
@@ -738,7 +715,7 @@ export default function SearchPage() {
             </section>
 
             <section className="flex flex-col gap-6 md:gap-8">
-              <h2 className="m-0 text-center text-xl font-bold leading-tight text-[#0A192F] md:text-2xl">{ui.popularTitle}</h2>
+              <h2 className="m-0 text-center text-xl font-bold leading-tight text-white md:text-2xl">{ui.popularTitle}</h2>
               <div className="grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-4">
                 <SearchLink
                   href={onsuiteHref(locale)}
