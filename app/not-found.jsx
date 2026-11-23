@@ -56,28 +56,28 @@ export default function NotFound() {
       <section className="bg-[#0A192F] bg-[radial-gradient(circle_at_0_0,rgba(14,165,233,0.42)_0%,rgba(14,165,233,0)_55%)] text-slate-50 lg:flex lg:min-h-[clamp(40rem,92vh,54rem)] lg:items-center">
         <div className="container-wide flex w-full flex-col gap-x-16 gap-y-8 pb-[clamp(88px,10vw,152px)] pt-[clamp(144px,16vw,208px)] lg:flex-row lg:items-center">
           <div className="flex min-w-0 flex-col items-center gap-6 text-center lg:flex-[1_1_56%] lg:items-start lg:text-left">
-            <h1 className="m-0 text-balance text-[clamp(2rem,4.1vw,3.5rem)] font-extrabold leading-[1.08] tracking-[-0.02em] text-[#F1F8FF]">
+            <h1 className="m-0 text-balance font-bold text-[#F1F8FF]">
               {t('notFoundPage.title')}
             </h1>
 
             <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
               <Link
                 href={localizePath('/')}
-                className={`inline-flex min-h-12 items-center gap-2.5 rounded bg-[#31E2FF] px-6 font-semibold text-[#0A192F] no-underline transition-colors hover:bg-[#7DEBFF] hover:text-[#0A192F] ${FOCUS_RING}`}
+                className={`inline-flex min-h-12 items-center gap-2.5 rounded bg-[#31E2FF] px-6 text-sm font-semibold text-[#0A192F] no-underline transition-colors hover:bg-[#7DEBFF] hover:text-[#0A192F] ${FOCUS_RING}`}
               >
                 {t('notFoundPage.home')}
                 <ArrowIcon />
               </Link>
               <Link
                 href={localizePath('/iletisim')}
-                className={`inline-flex min-h-12 items-center rounded border border-white/40 px-6 font-semibold text-white no-underline transition-colors hover:bg-white/10 hover:text-white ${FOCUS_RING}`}
+                className={`inline-flex min-h-12 items-center rounded border border-white/40 px-6 text-sm font-semibold text-white no-underline transition-colors hover:bg-white/10 hover:text-white ${FOCUS_RING}`}
               >
                 {t('notFoundPage.contact')}
               </Link>
             </div>
 
             <form role="search" onSubmit={handleSearch} className="flex w-full max-w-[640px] flex-col gap-2 pt-2 text-left">
-              <label htmlFor="not-found-search" className="text-sm leading-[1.4] text-slate-300 [font-family:var(--font-desc-primary)]">
+              <label htmlFor="not-found-search" className="font-archivo text-sm text-slate-300">
                 {t('notFoundPage.searchLabel')}
               </label>
               <div className="flex flex-wrap gap-2">
@@ -94,7 +94,7 @@ export default function NotFound() {
                 />
                 <button
                   type="submit"
-                  className={`inline-flex h-[52px] items-center gap-2 rounded border border-white/20 bg-[#1B3A63] px-6 text-base font-semibold text-white transition-colors hover:bg-[#24497A] ${FOCUS_RING}`}
+                  className={`inline-flex h-[52px] items-center gap-2 rounded border border-white/20 bg-[#1B3A63] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#24497A] ${FOCUS_RING}`}
                 >
                   <SearchIcon />
                   {t('notFoundPage.searchSubmit')}
@@ -107,7 +107,7 @@ export default function NotFound() {
             <div
               role="img"
               aria-label="404"
-              className="flex items-center justify-center gap-[0.03em] text-[clamp(116px,29vw,216px)] lg:text-[clamp(104px,16vw,248px)] font-black leading-none tracking-[-0.02em] text-[#D9ECFE] [font-family:var(--font-heading-primary)]"
+              className="flex items-center justify-center gap-[0.03em] text-[clamp(116px,29vw,216px)] lg:text-[clamp(104px,16vw,248px)] font-bold leading-none tracking-[-0.02em] text-[#D9ECFE] [font-family:var(--font-heading-primary)]"
             >
               <span aria-hidden="true">4</span>
               {/* Ortadaki "0": Siskon logosundaki dişli/mercek simgesi */}
@@ -121,7 +121,7 @@ export default function NotFound() {
 
       <section className="bg-white">
         <div className="container-wide flex flex-col gap-8 py-20 md:gap-10 md:py-28 lg:py-36">
-          <h2 className="m-0 text-[clamp(1.5rem,2.6vw,2.25rem)] font-extrabold leading-[1.15] tracking-[-0.01em] text-slate-900">
+          <h2 className="m-0 font-bold text-slate-900">
             {t('notFoundPage.popularTitle')}
           </h2>
 
@@ -132,11 +132,11 @@ export default function NotFound() {
                 href={localizePath(card.href)}
                 className="flex min-h-[148px] flex-col gap-2 rounded-[20px] border border-slate-900/[0.08] bg-white p-6 text-slate-900 no-underline shadow-[0_4px_12px_rgba(10,25,47,0.04)] transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-sky-300 hover:text-slate-900 hover:shadow-[0_10px_28px_rgba(10,25,47,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
               >
-                <span className="flex items-center justify-between gap-3 text-xl font-bold leading-tight [font-family:var(--font-heading-primary)]">
+                <h3 className="m-0 flex items-center justify-between gap-3 text-lg font-bold leading-tight text-slate-900 md:text-xl">
                   {t(`notFoundPage.cards.${card.key}.title`)}
                   <ArrowIcon className="h-5 w-5 text-sky-700" />
-                </span>
-                <span className="text-[15px] leading-[1.6] text-slate-600 [font-family:var(--font-desc-primary)]">
+                </h3>
+                <span className="font-archivo text-sm leading-[1.55] text-slate-600 md:text-base">
                   {t(`notFoundPage.cards.${card.key}.desc`)}
                 </span>
               </Link>
@@ -145,14 +145,14 @@ export default function NotFound() {
 
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4 rounded-[20px] border border-slate-900/[0.08] bg-slate-50 px-7 py-6">
             <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-0.5">
-              <p className="m-0 text-[17px] font-semibold leading-[1.4] text-slate-900 [font-family:var(--font-body-primary)]">
+              <p className="m-0 font-sans text-base font-semibold leading-snug text-slate-900 md:text-lg">
                 {t('notFoundPage.reportTitle')}
               </p>
-              <p className="m-0 text-[15px] leading-[1.6] text-slate-600">
+              <p className="m-0 text-sm text-slate-600 md:text-base">
                 {t('notFoundPage.reportDesc')}
               </p>
             </div>
-            <div className="flex flex-wrap gap-x-7 gap-y-2 font-semibold">
+            <div className="flex flex-wrap gap-x-7 gap-y-2 text-sm font-semibold md:text-base">
               <a href={`mailto:${t('notFoundPage.email')}`} className="inline-flex min-h-11 items-center gap-2 text-sky-700 no-underline hover:text-[#0A192F]">
                 <svg aria-hidden="true" className="h-[18px] w-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="5" width="18" height="14" rx="2" />
