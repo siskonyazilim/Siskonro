@@ -69,7 +69,7 @@ const UI = {
   tr: {
     heroTitle: 'Arama Sonuçları',
     idleTitle: 'Site Araması',
-    placeholder: 'Hizmet, ürün veya içerik',
+    placeholder: 'Aramak istediğiniz anahtar kelimeyi giriniz...',
     queryLabel: 'Sitede ara',
     submit: 'Ara',
     clear: 'Temizle',
@@ -108,7 +108,7 @@ const UI = {
   en: {
     heroTitle: 'Search Results',
     idleTitle: 'Site Search',
-    placeholder: 'Service, product or content',
+    placeholder: 'Enter the keyword you are looking for...',
     queryLabel: 'Search the site',
     submit: 'Search',
     clear: 'Clear',
@@ -147,7 +147,7 @@ const UI = {
   ro: {
     heroTitle: 'Rezultatele Căutării',
     idleTitle: 'Căutare pe Site',
-    placeholder: 'Serviciu, produs sau conținut',
+    placeholder: 'Introduceți cuvântul cheie căutat...',
     queryLabel: 'Căutați pe site',
     submit: 'Caută',
     clear: 'Șterge',
@@ -511,21 +511,21 @@ export default function SearchPage() {
           aria-hidden="true"
         />
         <div className={`container-wide relative z-10 pt-[clamp(7rem,14vw,8.5rem)] md:pt-[clamp(8rem,12vw,9.5rem)] ${hasQuery ? 'pb-20 md:pb-24' : 'pb-28 md:pb-32'}`}>
-          <div className="mx-auto flex max-w-[820px] flex-col items-center gap-6 text-center">
+          <div className="mx-auto flex max-w-[850px] flex-col items-center gap-5 text-center md:gap-7">
             <h1 className="m-0 text-balance text-[clamp(1.35rem,4.2vw,2.7rem)] font-bold leading-[1.18] tracking-tight text-white md:leading-[1.22]">{hasQuery ? ui.heroTitle : ui.idleTitle}</h1>
 
             <form
               role="search"
               onSubmit={handleSubmit}
-              className="flex h-[60px] w-full items-center gap-3 rounded-[14px] bg-white pl-5 pr-2 shadow-[0_18px_40px_rgba(4,16,36,0.35)] focus-within:ring-2 focus-within:ring-[#31E2FF] md:h-[66px]"
+              className="relative flex w-full items-center gap-3 border-b-2 border-white/25 pb-2 transition-colors duration-300 focus-within:border-[#08DCFF] md:gap-4"
             >
               {isLoading ? (
-                <svg className="h-5 w-5 shrink-0 animate-spin text-[#0369a1]" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="h-6 w-6 shrink-0 animate-spin text-[#08DCFF]" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                 </svg>
               ) : (
-                <SearchGlyph className="h-5 w-5 text-[#0369a1]" />
+                <SearchGlyph className="h-6 w-6 text-white/80" />
               )}
               <label htmlFor="search-page-input" className="sr-only">{ui.queryLabel}</label>
               <input
@@ -537,14 +537,14 @@ export default function SearchPage() {
                 value={inputValue}
                 onChange={handleInput}
                 placeholder={ui.placeholder}
-                className="h-full min-w-0 flex-1 border-0 bg-transparent text-base font-medium text-slate-900 outline-none placeholder:text-slate-400 md:text-lg [&::-webkit-search-cancel-button]:hidden"
+                className="w-full min-w-0 flex-1 border-0 bg-transparent py-2 text-lg font-medium text-white outline-none placeholder:text-white/40 md:text-2xl [&::-webkit-search-cancel-button]:hidden"
               />
               {inputValue && (
                 <button
                   type="button"
                   onClick={handleClear}
                   aria-label={ui.clear}
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white/60 transition-colors hover:bg-white/10 hover:text-white"
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" />
@@ -553,7 +553,7 @@ export default function SearchPage() {
               )}
               <button
                 type="submit"
-                className="h-[46px] shrink-0 rounded-[10px] bg-[#0369a1] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#075985] md:h-[50px] md:px-8"
+                className="min-h-[44px] shrink-0 rounded-md bg-[#0369a1] px-5 text-sm font-bold text-white transition-colors duration-300 hover:bg-[#075985] md:px-7 md:text-base"
               >
                 {ui.submit}
               </button>
