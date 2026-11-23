@@ -26,6 +26,7 @@ import microsoftTr from './hizmetler/microsoft-cozumleri/tr.json';
 import veloticTr from './hizmetler/velotic/tr.json';
 import trainingTr from './hizmetler/egitim-danismanlik/tr.json';
 import sectorTr from './sektorler/tr.json';
+import notFoundTr from './notFoundPage/tr.json';
 
 const trMessages = {
   common: commonTr,
@@ -53,6 +54,7 @@ const trMessages = {
   microsoftPage: microsoftTr,
   veloticPage: veloticTr,
   trainingPage: trainingTr,
+  notFoundPage: notFoundTr,
   ...sectorTr
 };
 

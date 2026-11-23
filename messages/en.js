@@ -26,6 +26,7 @@ import microsoftEn from './hizmetler/microsoft-cozumleri/en.json';
 import veloticEn from './hizmetler/velotic/en.json';
 import trainingEn from './hizmetler/egitim-danismanlik/en.json';
 import sectorEn from './sektorler/en.json';
+import notFoundEn from './notFoundPage/en.json';
 
 const enMessages = {
   common: commonEn,
@@ -53,6 +54,7 @@ const enMessages = {
   microsoftPage: microsoftEn,
   veloticPage: veloticEn,
   trainingPage: trainingEn,
+  notFoundPage: notFoundEn,
   ...sectorEn
 };
 

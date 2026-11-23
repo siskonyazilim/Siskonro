@@ -1,0 +1,20 @@
+{
+  "title": "Aradığınız sayfa bu adreste bulunamadı.",
+  "home": "Ana Sayfaya Dön",
+  "contact": "Bize Ulaşın",
+  "searchLabel": "Ya da sitede arayın",
+  "searchPlaceholder": "Örn. izlenebilirlik, OnSuite, IIoT",
+  "searchSubmit": "Ara",
+  "popularTitle": "Sık ziyaret edilen sayfalar",
+  "cards": {
+    "services": { "title": "Hizmetler", "desc": "Endüstriye özel yazılım ve otomasyon çözümleri." },
+    "onsuite": { "title": "OnSuite", "desc": "Üretim, kalite ve operasyonel zekayı tek bir dijital omurgada birleştirir." },
+    "references": { "title": "Referanslar", "desc": "40+ ülkede, 60+ fabrikada Siskon imzası." },
+    "blog": { "title": "Blog", "desc": "Endüstri 4.0, yapay zeka ve üretim teknolojileri üzerine içgörüler." }
+  },
+  "reportTitle": "Bu bağlantıya sitemizden mi ulaştınız?",
+  "reportDesc": "Bize bildirin, en kısa sürede düzeltelim.",
+  "email": "info@siskon.com.tr",
+  "phone": "+40 368 402 002",
+  "phoneHref": "tel:+40368402002"
+}

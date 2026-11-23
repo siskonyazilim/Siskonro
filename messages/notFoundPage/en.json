@@ -1,0 +1,20 @@
+{
+  "title": "The page you’re looking for isn’t at this address.",
+  "home": "Back to Home",
+  "contact": "Contact Us",
+  "searchLabel": "Or search the site",
+  "searchPlaceholder": "E.g. traceability, OnSuite, IIoT",
+  "searchSubmit": "Search",
+  "popularTitle": "Frequently visited pages",
+  "cards": {
+    "services": { "title": "Services", "desc": "Industry-specific software and automation solutions." },
+    "onsuite": { "title": "OnSuite", "desc": "Brings production, quality and operational intelligence together on a single digital backbone." },
+    "references": { "title": "References", "desc": "The Siskon signature in 60+ factories across 40+ countries." },
+    "blog": { "title": "Blog", "desc": "Insights on Industry 4.0, artificial intelligence and manufacturing technologies." }
+  },
+  "reportTitle": "Did you reach this link from our website?",
+  "reportDesc": "Let us know and we’ll fix it as soon as possible.",
+  "email": "info@siskon.com.tr",
+  "phone": "+40 368 402 002",
+  "phoneHref": "tel:+40368402002"
+}

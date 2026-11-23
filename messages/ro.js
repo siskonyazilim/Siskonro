@@ -26,6 +26,7 @@ import microsoftRo from './hizmetler/microsoft-cozumleri/ro.json';
 import veloticRo from './hizmetler/velotic/ro.json';
 import trainingRo from './hizmetler/egitim-danismanlik/ro.json';
 import sectorRo from './sektorler/ro.json';
+import notFoundRo from './notFoundPage/ro.json';
 
 const roMessages = {
   common: commonRo,
@@ -53,6 +54,7 @@ const roMessages = {
   microsoftPage: microsoftRo,
   veloticPage: veloticRo,
   trainingPage: trainingRo,
+  notFoundPage: notFoundRo,
   ...sectorRo
 };
 

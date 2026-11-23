@@ -1,0 +1,20 @@
+{
+  "title": "Pagina pe care o căutați nu a fost găsită la această adresă.",
+  "home": "Înapoi la pagina principală",
+  "contact": "Contactați-ne",
+  "searchLabel": "Sau căutați pe site",
+  "searchPlaceholder": "Ex. trasabilitate, OnSuite, IIoT",
+  "searchSubmit": "Caută",
+  "popularTitle": "Pagini vizitate frecvent",
+  "cards": {
+    "services": { "title": "Servicii", "desc": "Soluții software și de automatizare dedicate industriei." },
+    "onsuite": { "title": "OnSuite", "desc": "Reunește producția, calitatea și inteligența operațională într-o singură coloană vertebrală digitală." },
+    "references": { "title": "Referințe", "desc": "Semnătura Siskon în peste 60 de fabrici din peste 40 de țări." },
+    "blog": { "title": "Blog", "desc": "Perspective despre Industria 4.0, inteligența artificială și tehnologiile de producție." }
+  },
+  "reportTitle": "Ați ajuns la acest link de pe site-ul nostru?",
+  "reportDesc": "Anunțați-ne și îl vom corecta în cel mai scurt timp.",
+  "email": "info@siskon.ro",
+  "phone": "+40 368 402 002",
+  "phoneHref": "tel:+40368402002"
+}
