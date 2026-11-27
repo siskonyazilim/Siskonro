@@ -3,6 +3,8 @@ import nodemailer from 'nodemailer';
 import { strapiGet } from '@/lib/strapi/client';
 import { isRateLimited } from '@/lib/security/http';
 import { needsCompany, needsSector } from '@/lib/contactTopics';
+import { buildLeadEmail, withFromName } from '@/lib/email/leadEmail';
+import { toRequestTypeKey } from '@/lib/contactRequestTypes';
 import {
   getClientIp,
   verifyFormTicket,
@@ -80,69 +82,8 @@ function log(level, event, data = {}) {
   }
 }
 
-// ── Bu proje siskon.ro'dur: tüm formlar siskon.ro olarak etiketlenir; dil yalnızca mail dilini belirler ──
+// Bu proje siskon.ro: e-posta şablonu formun dilinde üretilir (lib/email/leadEmail.js)
 const SUPPORTED_LOCALES = ['tr', 'en', 'ro'];
-
-const SITE = { site: 'siskon.ro', timeZone: 'Europe/Bucharest' };
-const DATE_LOCALE_BY_LOCALE = { tr: 'tr-TR', en: 'en-GB', ro: 'ro-RO' };
-
-// Mail içeriğinde kullanılan etiketler (alıcı tarafı dili)
-const MAIL_LABELS = {
-  tr: {
-    title: 'İletişim Formu',
-    language: 'Dil',
-    languageName: 'Türkçe',
-    source: 'Kaynak',
-    sourceValue: (site) => `${site} web sitesi - İletişim Formu`,
-    date: 'Tarih',
-    sender: 'GÖNDEREN BİLGİLERİ',
-    name: 'Ad Soyad',
-    company: 'Şirket',
-    position: 'Talep Konusu',
-    sector: 'Sektör',
-    phone: 'Telefon',
-    email: 'E-posta',
-    message: 'MESAJ',
-    footer: (site) => `Bu mesaj ${site} internet sitesi iletişim formu aracılığıyla iletilmiştir.`,
-    replyHint: 'Göndereni yanıtlamak için bu e-postayı doğrudan yanıtlayabilirsiniz.',
-  },
-  en: {
-    title: 'Contact Form',
-    language: 'Language',
-    languageName: 'English',
-    source: 'Source',
-    sourceValue: (site) => `${site} website - Contact Form`,
-    date: 'Date',
-    sender: 'SENDER DETAILS',
-    name: 'Name',
-    company: 'Company',
-    position: 'Inquiry Type',
-    sector: 'Sector',
-    phone: 'Phone',
-    email: 'Email',
-    message: 'MESSAGE',
-    footer: (site) => `This message was submitted via the ${site} website contact form.`,
-    replyHint: 'You can reply directly to this email to respond to the sender.',
-  },
-  ro: {
-    title: 'Formular de contact',
-    language: 'Limbă',
-    languageName: 'Română',
-    source: 'Sursă',
-    sourceValue: (site) => `Site-ul ${site} - Formular de contact`,
-    date: 'Data',
-    sender: 'DATELE EXPEDITORULUI',
-    name: 'Nume și prenume',
-    company: 'Companie',
-    position: 'Tipul solicitării',
-    sector: 'Domeniu',
-    phone: 'Telefon',
-    email: 'E-mail',
-    message: 'MESAJ',
-    footer: (site) => `Acest mesaj a fost transmis prin formularul de contact al site-ului ${site}.`,
-    replyHint: 'Puteți răspunde direct la acest e-mail pentru a contacta expeditorul.',
-  },
-};
 
 // Kullanıcıya dönen API hata mesajları (form bunları olduğu gibi gösteriyor)
 const API_MESSAGES = {
@@ -270,97 +211,7 @@ function isValidCsrfToken(value) {
   return /^[a-f0-9]{64}$/i.test(String(value || ''));
 }
 
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
-}
-
 // Mesaj gövdesi için: satır sonlarını korur, kontrol karakterlerini temizler
-function cleanMessage(value) {
-  return String(value || '')
-    .slice(0, MAX_FIELD_LENGTH)
-    .replace(/\r\n?/g, '\n')
-    .replace(/[^\S\n]+/g, ' ')
-    .replace(/[\u0000-\u0008\u000B-\u001F\u007F]/g, '')
-    .trim();
-}
-
-function formatSentAt(locale) {
-  const { timeZone } = SITE;
-  const formatted = new Intl.DateTimeFormat(DATE_LOCALE_BY_LOCALE[locale], {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-    timeZone,
-  }).format(new Date());
-  return `${formatted} (${timeZone})`;
-}
-
-function buildMailContent(payload, locale) {
-  const { site } = SITE;
-  const t = MAIL_LABELS[locale];
-
-  const fullName = `${sanitize(payload.firstName)} ${sanitize(payload.lastName)}`.trim();
-  const company = sanitize(payload.company);
-  const message = cleanMessage(payload.message);
-  const sentAt = formatSentAt(locale);
-
-  const subject = [`[${site}] ${t.title}`, fullName, company].filter(Boolean).join(' - ');
-
-  const infoRows = [
-    [t.source, t.sourceValue(site)],
-    [t.language, t.languageName],
-    [t.date, sentAt],
-  ];
-  const senderRows = [
-    [t.name, fullName],
-    [t.company, company],
-    [t.position, sanitize(payload.position)],
-    [t.sector, sanitize(payload.sector)],
-    [t.phone, sanitize(payload.phone)],
-    [t.email, sanitize(payload.email)],
-  ].filter(([label, value]) => (label !== t.sector && label !== t.company) || value); // İK konularında sektör/şirket boş olabilir
-
-  const pad = Math.max(...[...infoRows, ...senderRows].map(([label]) => label.length));
-  const textRow = ([label, value]) => `${label.padEnd(pad)} : ${value}`;
-
-  const text = [
-    ...infoRows.map(textRow),
-    '',
-    t.sender,
-    ...senderRows.map(textRow),
-    '',
-    t.message,
-    message,
-    '',
-    '--',
-    t.footer(site),
-    t.replyHint,
-  ].join('\n');
-
-  const htmlRow = ([label, value]) =>
-    `<tr><td style="padding:4px 16px 4px 0;color:#555;white-space:nowrap;vertical-align:top;">${escapeHtml(label)}</td>` +
-    `<td style="padding:4px 0;">${escapeHtml(value)}</td></tr>`;
-  const htmlHeading = (label) =>
-    `<p style="margin:20px 0 6px;font-weight:bold;border-bottom:1px solid #ccc;padding-bottom:4px;">${escapeHtml(label)}</p>`;
-
-  const html = `
-    <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222;line-height:1.5;">
-      <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;">${infoRows.map(htmlRow).join('')}</table>
-      ${htmlHeading(t.sender)}
-      <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;">${senderRows.map(htmlRow).join('')}</table>
-      ${htmlHeading(t.message)}
-      <p style="margin:0;white-space:pre-wrap;">${escapeHtml(message)}</p>
-      <hr style="border:none;border-top:1px solid #ccc;margin:24px 0 8px;" />
-      <p style="margin:0;font-size:12px;color:#777;">${escapeHtml(t.footer(site))}<br/>${escapeHtml(t.replyHint)}</p>
-    </div>
-  `;
-
-  return { subject, text, html };
-}
 
 export async function POST(request) {
   // cf-connecting-ip → x-real-ip → x-forwarded-for (bkz. formGuard.getClientIp)
@@ -487,11 +338,28 @@ export async function POST(request) {
     const duplicate = checkDuplicateSubmission(GUARD_SITE, { email: payload.email, message: payload.message });
     if (duplicate.suspicious) log('warn', 'contact_duplicate_flagged', { ip, reasons: duplicate.reasons });
 
-    const { subject: baseSubject, text, html } = buildMailContent(payload, locale);
+    // Ortak kurumsal e-posta şablonu (lib/email/leadEmail.js)
+    const { subject: baseSubject, text, html, fromName } = buildLeadEmail({
+      theme: 'siskon',
+      site: 'siskon.ro',
+      timeZone: 'Europe/Bucharest',
+      formLocale: locale,
+      requestType: toRequestTypeKey(payload.position),
+      topic: sanitize(payload.position),
+      firstName: sanitize(payload.firstName),
+      lastName: sanitize(payload.lastName),
+      email: sanitize(payload.email),
+      phone: sanitize(payload.phone),
+      company: sanitize(payload.company),
+      sector: sanitize(payload.sector),
+      message: String(payload.message ?? ''),
+      pageUrl: request.headers.get('referer'),
+      consents: [{ label: 'KVKK', value: payload.consent === true || payload.consent === 'true' }],
+    });
     const subject = markSubject(baseSubject, duplicate.suspicious);
 
     await transporter.sendMail({
-      from,
+      from: withFromName(from, fromName),
       to,
       replyTo: sanitize(payload.email),
       subject,
