@@ -84,6 +84,7 @@ ToastPopup.defaultProps = { title: '', message: '' };
 const INITIAL_FORM_DATA = {
   firstName: '', lastName: '', company: '', phone: '',
   position: '', sector: '', email: '', message: '', consent: false,
+  _hp: '', // honeypot: insanlar görmez/doldurmaz; dolu gelirse sunucu e-posta göndermez
 };
 
 function getCookieValue(name) {
@@ -313,6 +314,12 @@ function ContactFormPanel({ strapiContent, pt, statusMessage, statusType, onSubm
               </span>
             </label>
             {formErrors.consent ? <p id={fieldErrorId('consent')} className="form-error-text -mt-2">{formErrors.consent}</p> : null}
+            {/* Honeypot: ekran dışı, ekran okuyucu ve klavye için gizli. Botlar doldurursa sunucu sessizce yok sayar. */}
+            <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+              <label htmlFor="_hp">Website</label>
+              <input id="_hp" name="_hp" type="text" tabIndex={-1} autoComplete="off"
+                value={formData._hp} onChange={onFieldChange} />
+            </div>
             {turnstileSiteKey ? (
               <div className="flex justify-center">
                 <TurnstileWidget ref={turnstileRef} sitekey={turnstileSiteKey}
@@ -416,6 +423,23 @@ export default function ContactPageClient({ data }) {
   const [status, setStatus]         = useState({ type: '', msg: '' });
   const [turnstileToken, setTurnstileToken] = useState('');
   const [formData, setFormData]     = useState(INITIAL_FORM_DATA);
+  // İmzalı form bileti (sunucu formun açılış zamanını imzalar; bkz. lib/security/formGuard.js)
+  const [formTicket, setFormTicket] = useState('');
+  const loadFormTicket = useCallback(async () => {
+    try {
+      const res = await fetch('/api/form-ticket', { cache: 'no-store' });
+      const data = await res.json();
+      if (typeof data?.ticket === 'string') setFormTicket(data.ticket);
+    } catch {
+      // bilet alınamazsa sunucu gönderimi reddeder ve kullanıcıya yenileme mesajı gösterir
+    }
+  }, []);
+  useEffect(() => {
+    queueMicrotask(loadFormTicket); // ilk bilet (effect içinde senkron setState olmasın)
+    // Sekme uzun süre açık kalırsa bilet süresi (2 saat) dolmasın
+    const timer = setInterval(loadFormTicket, 30 * 60 * 1000);
+    return () => clearInterval(timer);
+  }, [loadFormTicket]);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const turnstileRef = useRef(null);
@@ -473,10 +497,11 @@ export default function ContactPageClient({ data }) {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-csrf-token': csrfToken },
-        body: JSON.stringify({ ...formData, locale, turnstileToken: turnstileToken || undefined }),
+        body: JSON.stringify({ ...formData, locale, formTicket, turnstileToken: turnstileToken || undefined }),
       });
       if (!response.ok) {
         const payload = await response.json().catch(() => ({}));
+        if (payload?.code === 'form_ticket') loadFormTicket();
         throw new Error(payload?.message || pt('formSubmitError'));
       }
       trackLead('contact');
@@ -484,6 +509,7 @@ export default function ContactPageClient({ data }) {
       setFormData(INITIAL_FORM_DATA);
       setTurnstileToken('');
       turnstileRef.current?.reset();
+      loadFormTicket();
     } catch (error) {
       setStatus({ type: 'error', msg: error.message || pt('formSubmitError') });
     } finally {

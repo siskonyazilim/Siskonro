@@ -3,6 +3,18 @@ import nodemailer from 'nodemailer';
 import { strapiGet } from '@/lib/strapi/client';
 import { isRateLimited } from '@/lib/security/http';
 import { needsCompany, needsSector } from '@/lib/contactTopics';
+import {
+  getClientIp,
+  verifyFormTicket,
+  checkDuplicateSubmission,
+  markSubject,
+  checkTurnstileResult,
+} from '@/lib/security/formGuard';
+
+// formGuard sayaç anahtarı öneki (siteler arası anahtar çakışmasın)
+const GUARD_SITE = 'siskon-ro';
+// Turnstile token'ının üretilmesine izin verilen alan adları (www. hali otomatik; TURNSTILE_ALLOWED_HOSTNAMES ile ezilebilir)
+const TURNSTILE_HOSTNAMES = ['siskon.ro'];
 
 // ── Strapi'ye form kaydı gönderen yardımcı ──────────────────────────────────
 async function saveToStrapi(payload, locale) {
@@ -351,10 +363,8 @@ function buildMailContent(payload, locale) {
 }
 
 export async function POST(request) {
-  const ip =
-    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
-    request.headers.get('x-real-ip') ??
-    'unknown';
+  // cf-connecting-ip → x-real-ip → x-forwarded-for (bkz. formGuard.getClientIp)
+  const ip = getClientIp(request);
 
   let locale = 'ro';
 
@@ -382,6 +392,27 @@ export async function POST(request) {
 
     const payload = await request.json();
     locale = SUPPORTED_LOCALES.includes(payload?.locale) ? payload.locale : 'ro';
+
+    // Honeypot: gizli alan doluysa bot kabul edilir. Bota ipucu vermemek için başarılı yanıt
+    // döner, ama e-posta gönderilmez ve Strapi'ye kayıt atılmaz.
+    if (String(payload?._hp ?? '').trim()) {
+      log('warn', 'contact_honeypot_triggered', { ip });
+      return NextResponse.json({ success: true });
+    }
+
+    // İmzalı form bileti: formun açılış zamanını sunucu imzalar, bot taklit edemez.
+    const ticket = verifyFormTicket(payload?.formTicket);
+    if (!ticket.ok) {
+      log('warn', 'contact_ticket_rejected', { ip, reason: ticket.reason, ageMs: ticket.ageMs });
+      if (ticket.reason === 'too_fast') {
+        // Bota ipucu verme: başarılı görün, e-posta gönderme.
+        return NextResponse.json({ success: true });
+      }
+      if (ticket.reason === 'not_configured') {
+        return NextResponse.json({ message: API_MESSAGES[locale].sendFailed }, { status: 503 });
+      }
+      return NextResponse.json({ message: API_MESSAGES[locale].captchaFailed, code: 'form_ticket' }, { status: 400 });
+    }
 
     // Cloudflare Turnstile sunucu doğrulaması.
     // Üretimde secret tanımlı değilse form KAPALI kalır (sessizce atlanmaz); geliştirmede atlanır.
@@ -414,8 +445,10 @@ export async function POST(request) {
         return NextResponse.json({ message: API_MESSAGES[locale].sendFailed }, { status: 503 });
       }
 
-      if (!verifyData?.success) {
-        log('warn', 'contact_turnstile_failed', { ip, codes: verifyData?.['error-codes'] });
+      // success + hostname + action (bkz. formGuard.checkTurnstileResult)
+      const turnstileCheck = checkTurnstileResult(verifyData, TURNSTILE_HOSTNAMES);
+      if (!turnstileCheck.ok) {
+        log('warn', 'contact_turnstile_failed', { ip, codes: verifyData?.['error-codes'], reason: turnstileCheck.reason, hostname: turnstileCheck.hostname, action: turnstileCheck.action });
         return NextResponse.json(
           { message: API_MESSAGES[locale].captchaFailed },
           { status: 403 }
@@ -450,7 +483,12 @@ export async function POST(request) {
     const transporter = getTransporter();
     const { from, to } = await getMailAddresses(locale);
 
-    const { subject, text, html } = buildMailContent(payload, locale);
+    // Aynı e-posta / aynı metin kısa sürede tekrar geldiyse reddetme, konuyu [ŞÜPHELİ] işaretle.
+    const duplicate = checkDuplicateSubmission(GUARD_SITE, { email: payload.email, message: payload.message });
+    if (duplicate.suspicious) log('warn', 'contact_duplicate_flagged', { ip, reasons: duplicate.reasons });
+
+    const { subject: baseSubject, text, html } = buildMailContent(payload, locale);
+    const subject = markSubject(baseSubject, duplicate.suspicious);
 
     await transporter.sendMail({
       from,

@@ -60,6 +60,8 @@ const TurnstileWidget = forwardRef(function TurnstileWidget({ sitekey, onChange,
           language: 'auto',
           // Kutu yalnızca ziyaretçiden etkileşim gerekirse görünür; aksi halde doğrulama arka planda sessizce yapılır
           appearance: 'interaction-only',
+          // Sunucu siteverify yanıtında action === 'contact' kontrol eder (lib/security/formGuard.js)
+          action: 'contact',
           callback: (token) => onChangeRef.current?.(token || ''),
           'expired-callback': () => onChangeRef.current?.(''),
           'error-callback': () => onChangeRef.current?.(''),
